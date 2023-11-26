@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Remove Background from Image for Free | Image Background Remover</title>
+    <meta name="description"
+        content="A fast and free online background remover. Our free tool makes removing a background quick and easy.">
+    <meta name="keywords" content="Remove Background, BG Remover, Background Remover, Remove Photo background">
+    <link rel="icon" type="image/x-icon" href="https://www.famral.com/favicon.png" />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.famral.com/style.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script asyncsrc="https://www.googletagmanager.com/gtag/js?id=G-77313KVE2V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        functiongtag(){ dataLayer.push(arguments); }
+        gtag('js', newDate());
+
+        gtag('config', 'G-77313KVE2V');
+    </script>
+
+    <script type="text/javascript"
+        src="https://platform-api.sharethis.com/js/sharethis.js#property=6531636a1ce419001afe7464&product=inline-share-buttons&source=platform"
+        async="async"></script>
+
+</head>
+
+<body>
+    <!-- Main-Common-partial:index.partial.html -->
+    <div class="menu-btn">
+        <i class="fas fa-bars fa-1.5x"></i>
+    </div>
+
+    <div class="container">
+        <!-- Main-Common-Nav -->
+        <nav class="main-nav">
+            <img src="https://www.famral.com/logo.png" alt="Famral" class="logo">
+
+            <ul class="main-menu">
+                <li><a href="https://www.famral.com/tools">Home</a></li>
+                <li><a href="https://images.famral.com/" target="_blank">Images</a></li>
+                <li><a href="https://www.famral.com/tools/qr-code-generator" target="_blank">QR Code</a></li>
+                <li><a href="https://www.famral.com/tools/css-gradient-generator" target="_blank">CSS Gradient</a></li>
+                <li><a href="https://www.famral.com/tools/utm-generator" target="_blank">UTM Generator</a></li>
+            </ul>
+
+            <ul class="right-menu">
+                <li>
+                    <a href="https://www.famral.com/search">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none"
+                            stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">&lt;!--!
+                            Famral Icons - https://icons.famral.com/ (Icons: CC BY 4.0) Copyright Famral Icons --&gt;
+                            <circle cx="11" cy="11" r="9" fill="none"></circle>
+                            <line x1="17.5" y1="17.5" x2="22" y2="22"></line>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <style>
+            * {
+                margin: o;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: Arial, sans-serif;
+            }
+
+
+            /*----------- main image -------------*/
+
+
+            .row2 {
+                display: flex;
+                width: 100%;
+                margin-bottom: 30px;
+                align-items: center;
+            }
+
+            .row1 {
+                display: flex;
+                width: 100%;
+                align-items: center;
+            }
+
+            .row {
+                display: flex;
+                width: 100%;
+            }
+
+            .text-col {
+                flex-basis: 50%;
+                margin: 20px;
+            }
+
+            .img-col {
+                flex-basis: 50%;
+            }
+
+            .img-col img {
+                display: block;
+                width: 90%;
+            }
+
+            .features h2 {
+                font-size: 40px;
+                font-weight: 600;
+                margin-bottom: 20px;
+            }
+
+            .features p {
+                font-size: 18px;
+            }
+
+            .btn1 {
+                background-color: rgb(255, 59, 59);
+                padding: 3px 15px;
+                outline: rgb(255, 59, 59) solid 3px;
+                border: rgb(255, 59, 59) dashed 2px;
+                border-radius: 0px;
+                color: #fff;
+                text-transform: none;
+                cursor: pointer;
+                margin-top: 0px;
+                margin-bottom: 0px;
+                transition: 0.5s;
+            }
+
+            .btn1:hover {
+                background-color: gray;
+                outline: gray solid 3px;
+                border: rgb(255, 255, 255) dashed 2px;
+                color: white;
+            }
+
+            /* ----- instructing steps ------- */
+            .img-col1 {
+                flex-basis: 50%;
+                margin-bottom: 0px;
+            }
+
+            .img-col1 img {
+                display: block;
+                width: 100%;
+            }
+
+            .btn2 {
+                background-color: rgb(2, 181, 139);
+                padding: 10px 10px;
+                outline: none;
+                border: none;
+                border-radius: 50px;
+                color: white;
+                text-transform: uppercase;
+                cursor: pointer;
+                margin-top: 0px;
+                margin-bottom: 0px;
+                transition: 0.5s;
+            }
+
+            .btn2:hover {
+                background-color: black;
+            }
+
+            /* -------FAQ------- */
+
+            .faq {
+                color: #000;
+                background: linear-gradient(to top right, rgb(134, 35, 228), rgb(244, 99, 239));
+                padding: 10px 12%;
+                text-align: center;
+                font-size: 18px;
+            }
+
+            .faq h2 {
+                font-weight: 600;
+                font-size: 40px;
+            }
+
+            .accordion {
+                margin: 60px auto;
+                width: 100%;
+                max-width: 750px;
+            }
+
+            .accordion li {
+                list-style: none;
+                width: 100%;
+                padding: 5px;
+            }
+
+            .accordion li label {
+                display: flex;
+                align-items: center;
+                padding: 20px;
+                font-size: 18px;
+                font-weight: 500;
+                background: #fff;
+                margin-bottom: 2px;
+                cursor: pointer;
+                position: relative;
+            }
+
+            label::after {
+                content: '+';
+                font-size: 34px;
+                position: absolute;
+                right: 20px;
+            }
+
+            input[type="radio"] {
+                display: none;
+            }
+
+            .accordion .content {
+                background: #fff;
+                text-align: left;
+                padding: 0 20px;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.5s, padding 0.5s;
+            }
+
+            .accordion input[type="radio"]:checked+label+.content {
+                max-height: 600px;
+                padding: 30px 20px;
+            }
+
+            .accordion input[type="radio"]:checked+label::after {
+                transform: rotate(45deg);
+            }
+
+            .faq .email-signup {
+                max-width: 600px;
+                margin: 20px auto 60px;
+            }
+
+            .faq small {
+                font-size: 15px;
+            }
+
+            .upload {
+                padding: 20px 15%;
+                text-align: center;
+
+                flex-basis: 100%;
+                text-align: center;
+
+
+            }
+
+            .upload h1 {
+                color: #200000;
+                font-family: 'Trebuchet MS';
+                font-size: 40px;
+                font-weight: 900;
+                text-align: center;
+            }
+
+            .btn3 {
+                background-color: rgb(7, 0, 48);
+                padding: 10px 410px;
+                outline: none;
+                border: none;
+                border-radius: 5px;
+                color: white;
+                text-transform: uppercase;
+                cursor: pointer;
+                margin-top: 0px;
+                margin-bottom: 0px;
+                transition: 0.5s;
+                align-self: auto;
+            }
+
+            .btn3:hover {
+                background-color: black;
+            }
+
+            .btn4 {
+                background-color: rgb(54, 54, 54);
+                padding: 10px 420px;
+                outline: none;
+                border: none;
+                border-radius: 5px;
+                color: white;
+                text-transform: uppercase;
+                cursor: pointer;
+                margin-top: 0px;
+                margin-bottom: 20px;
+                transition: 0.5s;
+                align-self: auto;
+            }
+
+            .btn4:hover {
+                background-color: black;
+            }
+        </style>
+        </head>
+
+        <body>
+
+
+            <br>
+
+
+            <div class="upload">
+                <h1> &#128071 Upload an image to remove the background</h1>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <form>
+                            <div class="form-group">
+                                <input class="form-control" id="filepicker" type="file">
+                            </div>
+                            <button class="btn4" onclick="handleUpload()" type="button">Upload</button>
+                        </form>
+                        <button class="btn3" onclick="downloadFile()">Download</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <br>
+
+
+            <script>
+                let imageURL;
+                function handleUpload() {
+                    const fileInput = document.getElementById('filepicker');
+                    const image = fileInput.files[0];
+                    const formData = new FormData();
+                    formData.append("image_file", image);
+                    formData.append('size', 'auto')
+                    const apiKey = "MfVSuLGjgmv8va3FBygBP1KN"
+                    fetch('https://api.remove.bg/v1.0/removebg', {
+                        method: 'POST',
+                        headers: {
+                            'X-Api-Key': apiKey,
+                        },
+                        body: formData
+                    })
+                        .then(function (response) {
+                            return response.blob();
+                        })
+                        .then(function (blob) {
+                            console.log(blob);
+                            const url = URL.createObjectURL(blob);
+                            imageURL = url;
+                            const img = document.createElement('img');
+                            img.src = url;
+                            document.body.appendChild(img);
+                        })
+                        .catch();
+                    console.log("clicked");
+                }
+
+                function downloadFile() {
+                    var anchorElement = document.createElement('a');
+                    anchorElement.href = imageURL;
+                    anchorElement.download = 'img-pullout.png';
+                    document.body.appendChild(anchorElement);
+
+                    anchorElement.click();
+
+                    document.body.removeChild(a)
+                }
+            </script>
+
+
+            <br>
+            <div class="sharethis-inline-share-buttons"></div>
+
+            <br>
+            <br>
+
+
+    </div>
+
+
+
+    <!-- Main-Common-JS -->
+    <script>document.querySelector('.menu-btn').addEventListener('click', () => document.querySelector('.main-menu').classList.toggle('show'));</script>
+
+</body>
+
+</html>
