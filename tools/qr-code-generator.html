@@ -1,216 +1,398 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/svg+xml" href="https://www.famral.com/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>QR Code Generator | Generate Free QR Code for Link</title>
+    <meta name="description"
+        content="A user-friendly and customizable QR code generator that allows you to create QR codes with ease.">
+    <meta name="keywords"
+        content="QR code, generator, Free QR Code Generator, custom, design qr code, QR code creator, QR code maker">
+    <link rel="icon" type="image/x-icon" href="https://www.famral.com/favicon.png" />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css'>
+    <link rel="stylesheet" href="https://www.famral.com/style.css">
 
-<!-- Google tag (gtag.js) -->
-<script asyncsrc="https://www.googletagmanager.com/gtag/js?id=G-77313KVE2V"></script>
-<script>
-  window.dataLayer= window.dataLayer|| [];
-  functiongtag(){dataLayer.push(arguments);}
-  gtag('js', newDate());
+    <!-- Google tag (gtag.js) -->
+    <script asyncsrc="https://www.googletagmanager.com/gtag/js?id=G-77313KVE2V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        functiongtag(){ dataLayer.push(arguments); }
+        gtag('js', newDate());
 
-  gtag('config', 'G-77313KVE2V');
-</script>
+        gtag('config', 'G-77313KVE2V');
+    </script>
 
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-
-        header {
-            background-color: #2f4050;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-
-        h1 {
-            margin: 0;
-            font-size: 36px;
-        }
-
-        main {
-            display: flex;
-            justify-content: space-between;
-            max-width: 90%;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #ecf0f1;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            text-align: center;
-        }
-
-        left-container {
-            flex: 1;
-            text-align: left;
-            padding-right: 10px; /* Adjusted padding */
-        }
-
-        right-container {
-            flex: 1;
-            text-align: center;
-            padding-left: 10px; /* Adjusted padding */
-        }
-
-        label {
-            font-size: 18px;
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        input {
-            width: calc(100% - 20px);
-            padding: 10px;
-            margin-bottom: 20px;
-            box-sizing: border-box;
-        }
-
-        button {
-            background-color: #2ecc71;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            margin-right: 10px;
-        }
-
-        img {
-            margin-top: 20px;
-            margin-bottom: 20px;
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            border: 4px solid #fff;
-        }
-
-        footer {
-            background-color: rgb(199, 199, 199);
-            color: #000000;
-            text-align: center;
-            padding: 10px;
-            text-decoration: none;
-        }
-
-        footer a{
-            color: #000000;
-            text-decoration: none;
-        }
-
-        @media (max-width: 600px) {
-            main {
-                flex-direction: column;
-            }
-
-            left-container, right-container {
-                width: 100%;
-                padding: 0;
-            }
-        }
-    </style>
 </head>
+
 <body>
-
-<header>
-    <h1>QR Code Generator</h1>
-</header>
-
-<main>
-    <div class="left-container">
-        <label for="content">Enter website link:</label>
-        <input type="text" id="content" placeholder="e.g., https://www.example.com">
-
-        <label for="size">Enter QR code size (pixels):</label>
-        <input type="number" id="size" placeholder="Enter size" min="1" value="200">
-
-        <label for="color">Choose QR code color:</label>
-        <input type="color" id="color" value="#000000">
-
-        <label for="backgroundColor">Choose background color:</label>
-        <input type="color" id="backgroundColor" value="#ffffff">
-
-        <button onclick="generateQRCode()">Generate QR Code</button>
+    <!-- Main-Common-partial:index.partial.html -->
+    <div class="menu-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#000000"
+            stroke-width="2" stroke-linecap="square" stroke-linejoin="miter">&lt;!--!
+            Famral Icons Free 1.00 - https://icons.famral.com/license/ (Icons: CC
+            BY 4.0) Copyright 2021 Famral Icons --&gt;<line x1="5.99" y1="6" x2="6" y2="6" stroke-linecap="round"
+                stroke-width="3"></line>
+            <line x1="11.99" y1="6" x2="12" y2="6" stroke-linecap="round" stroke-width="3"></line>
+            <line x1="17.99" y1="6" x2="18" y2="6" stroke-linecap="round" stroke-width="3"></line>
+            <line x1="5.99" y1="12" x2="6" y2="12" stroke-linecap="round" stroke-width="3"></line>
+            <line x1="11.99" y1="12" x2="12" y2="12" stroke-linecap="round" stroke-width="3"></line>
+            <line x1="17.99" y1="12" x2="18" y2="12" stroke-linecap="round" stroke-width="3"></line>
+            <line x1="5.99" y1="18" x2="6" y2="18" stroke-linecap="round" stroke-width="3"></line>
+            <line x1="11.99" y1="18" x2="12" y2="18" stroke-linecap="round" stroke-width="3"></line>
+            <line x1="17.99" y1="18" x2="18" y2="18" stroke-linecap="round" stroke-width="3"></line>
+        </svg>
     </div>
 
-    <div class="right-container">
-        <div id="qrcode"></div>
-        <button id="downloadButton" onclick="downloadQRCode()" style="display: none;">Download QR Code</button>
+    <div class="container">
+        <!-- Main-Common-Nav -->
+        <nav class="main-nav">
+            <img src="https://www.famral.com/logo.png" alt="Famral" class="logo">
+
+            <ul class="main-menu">
+                <li><a href="https://www.famral.com/tools">Tools</a></li>
+                <li><a href="https://stock.famral.com/" target="_blank">Stock Photos</a></li>
+                <li><a href="https://useoftools.com/" target="_blank">Online Tools</a></li>
+                <li><a href="https://blog.famral.com/" target="_blank">Blogs</a></li>
+                <li><a href="https://www.famral.com/search" target="_blank">Search</a></li>
+            </ul>
+
+        </nav>
+
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #ffffff;
+            }
+
+
+            main {
+                display: flex;
+                justify-content: space-around;
+                max-width: 95%;
+                margin: 20px auto;
+                padding: 20px;
+                background-color: #f1f1f1;
+                border-radius: 0px;
+                text-align: center;
+            }
+
+            left-container {
+                flex: 1;
+                text-align: left;
+                padding-right: 10px;
+                /* Adjusted padding */
+            }
+
+            right-container {
+                flex: 1;
+                text-align: center;
+                padding-left: 10px;
+                /* Adjusted padding */
+            }
+
+            label {
+                font-size: 18px;
+                display: block;
+                margin-bottom: 10px;
+            }
+
+            input {
+                width: calc(100% - 20px);
+                padding: 10px;
+                margin-bottom: 20px;
+                box-sizing: border-box;
+            }
+
+            button {
+                background-color: #0084ff;
+                color: #fff;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 0px;
+                font-size: 16px;
+                cursor: pointer;
+                margin-right: 10px;
+            }
+
+            button:hover {
+                background-color: #0070da;
+            }
+
+            button:focus {
+                background-color: #0084ff;
+                border: dashed 2px black;
+            }
+
+            img {
+                margin-top: 20px;
+                margin-bottom: 20px;
+                max-width: 100%;
+                height: auto;
+                border-radius: 0px;
+                border: 4px solid #fff;
+            }
+
+
+            .faq-container {
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: #fafafa;
+                border: 1px solid #e9e9e9;
+                border-radius: 5px;
+            }
+
+            .faq {
+                margin: 20px 0;
+            }
+
+            .question {
+                cursor: pointer;
+                font-weight: bold;
+                color: #007BFF;
+            }
+
+            .answer {
+                display: none;
+                margin: 10px 0;
+                color: #333;
+            }
+
+            .question::before {
+                content: "➕";
+                margin-right: 10px;
+            }
+
+            .open::before {
+                content: "➖";
+            }
+        </style>
+        </head>
+
+        <body>
+
+
+
+            <main>
+                <div class="left-container">
+                    <label for="content">Enter website URL:</label>
+                    <input type="text" id="content" placeholder="e.g., https://www.example.com">
+
+                    <label for="size">Enter QR code size (pixels):</label>
+                    <input type="number" id="size" placeholder="Enter size" min="1" value="200">
+
+                    <label for="color">Choose QR code color:</label>
+                    <input type="color" id="color" value="#000000">
+
+                    <label for="backgroundColor">Choose background color:</label>
+                    <input type="color" id="backgroundColor" value="#ffffff">
+
+                    <button onclick="generateQRCode()">Generate QR Code</button>
+                </div>
+
+                <div class="right-container">
+                    <div id="qrcode"></div>
+                    <button id="downloadButton" onclick="downloadQRCode()" style="display: none;">Download QR
+                        Code</button>
+                </div>
+            </main>
+
+            <br>
+            <br>
+
+            <div class="faq-container">
+                <div class="faq">
+                    <div class="question">What is a QR code, and why would I need a free QR code generator?</div>
+                    <div class="answer">A QR code is a two-dimensional barcode that stores information and can be easily
+                        scanned using a smartphone or a QR code reader. A <a
+                            href="https://www.famral.com/tools/qr-code-generator" target="_self">free QR code
+                            generator</a> allows you to create
+                        these codes without any cost. This can be useful for sharing contact information, website links,
+                        or other data in a quick and accessible format.</div>
+                </div>
+
+                <div class="faq">
+                    <div class="question">How do I use a free QR code generator to create a QR code for my website?
+                    </div>
+                    <div class="answer">Using a free QR code generator is typically straightforward. Input the desired
+                        information, such as your website URL, contact details, or text, and the generator will create a
+                        unique QR code. You can then download and use the generated QR code on your website, business
+                        cards, or marketing materials.
+                    </div>
+                </div>
+
+                <div class="faq">
+                    <div class="question">Are free QR code generators secure, and can I trust them with my information?
+                    </div>
+                    <div class="answer">Reputable free QR code generators prioritize user privacy and data security.
+                        However, it's essential to choose a well-known and trustworthy generator to ensure the safety of
+                        your information (like, <a
+                        href="https://qrcode.famral.com/" target="_blank">Famral QR Code Generator</a>). Before using a specific tool, read reviews
+                        and check for any privacy policies
+                        provided by the generator.</div>
+                </div>
+
+                <div class="faq">
+                    <div class="question">Can I customize the appearance of the QR codes generated by free QR code
+                        generators?</div>
+                    <div class="answer">Yes, our free QR code generator offer customization options. You can usually
+                        choose colors, add a logo, or customize the design to match your brand. This allows you to
+                        create visually appealing QR codes that align with your branding while maintaining their
+                        functionality.</div>
+                </div>
+
+                <div class="faq">
+                    <div class="question">Are there any limitations to using a free QR code generator compared to paid
+                        alternatives?</div>
+                    <div class="answer">While free QR code generators offer basic functionalities, some paid
+                        alternatives may provide additional features such as advanced analytics, more customization
+                        options, or higher resolution codes. Evaluate your specific needs and budget to determine
+                        whether a free generator or a paid service is more suitable for your requirements.</div>
+                </div>
+            </div>
+
+
+            <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+            <script>
+                function generateQRCode() {
+                    var content = document.getElementById('content').value;
+                    var size = document.getElementById('size').value;
+                    var color = document.getElementById('color').value;
+                    var backgroundColor = document.getElementById('backgroundColor').value;
+
+                    if (content.trim() === '') {
+                        alert('Please enter content for the QR code.');
+                        return;
+                    }
+
+                    // Clear the existing QR code
+                    document.getElementById('qrcode').innerHTML = '';
+
+                    // Generate the new QR code with customization
+                    var qrcode = new QRCode(document.getElementById('qrcode'), {
+                        text: content,
+                        width: size,
+                        height: size,
+                        colorDark: color,
+                        colorLight: backgroundColor,
+                    });
+
+                    // Show the download button
+                    document.getElementById('downloadButton').style.display = 'inline-block';
+                }
+
+                function downloadQRCode() {
+                    var canvas = document.createElement('canvas');
+                    var context = canvas.getContext('2d');
+
+                    var qrCodeCanvas = document.getElementById('qrcode').querySelector('canvas');
+
+                    if (!qrCodeCanvas) {
+                        alert('No QR code to download. Generate a QR code first.');
+                        return;
+                    }
+
+                    var size = parseInt(document.getElementById('size').value, 10);
+                    var margin = 20;
+
+                    canvas.width = qrCodeCanvas.width + 2 * margin;
+                    canvas.height = qrCodeCanvas.height + 2 * margin;
+
+                    context.fillStyle = '#fff'; // Set the margin color to white
+                    context.fillRect(0, 0, canvas.width, canvas.height);
+
+                    context.drawImage(qrCodeCanvas, margin, margin);
+
+                    var dataURL = canvas.toDataURL('image/png');
+
+                    var a = document.createElement('a');
+                    a.href = dataURL;
+                    a.download = 'qrcode.png';
+                    a.click();
+                }
+            </script>
+
+
+            <script>
+                // Add event listeners to toggle the answers
+                const questions = document.querySelectorAll('.question');
+                questions.forEach(question => {
+                    const answer = question.nextElementSibling;
+                    answer.style.display = 'block'; // Open the answers by default
+                    question.classList.add('open');
+                    question.addEventListener('click', () => {
+                        answer.style.display = (answer.style.display === 'block') ? 'none' : 'block';
+                        question.classList.toggle('open');
+                    });
+                });
+            </script>
+
+            <br>
+
+
+            <br>
+            <br>
+
+
     </div>
-</main>
+    <!-- Main-Common-Footer-Links -->
+    <section class="links">
+        <div class="links-inner">
+            <ul>
+                <li>
+                </li>
+                <li><a href="https://www.famral.com/tools/html-link-generator" target="_blank">HTML Link Generator</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                </li>
+                <li><a href="https://www.famral.com/tools/qr-code-generator" target="_blank">QR Code Generator</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                </li>
+                <li><a href="https://www.famral.com/tools/css-gradient-generator" target="_blank">CSS Gradient</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                </li>
+                <li><a href="https://www.famral.com/tools/image-background-remover" target="_blank">Background
+                        Remover</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                </li>
+                <li><a href="https://www.famral.com/tools/utm-generator" target="_blank">UTM Generator</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                </li>
+                <li><a href="https://useoftools.com/" target="_blank">100+ Online Tools</a>
+                </li>
+            </ul>
 
-<footer>
-    <p>&copy; <a href="https://www.famral.com/tools/qr-code-generator">Free QR Code Generator</a>.</p>
-</footer>
+    </section>
 
-<script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
-<script>
-    function generateQRCode() {
-        var content = document.getElementById('content').value;
-        var size = document.getElementById('size').value;
-        var color = document.getElementById('color').value;
-        var backgroundColor = document.getElementById('backgroundColor').value;
+    <!-- Main-Common-Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <ul>
+                <li><a href="https://www.famral.com/">Copyright © Famral. All rights reserved.</a></li>
+            </ul>
+        </div>
+    </footer>
 
-        if (content.trim() === '') {
-            alert('Please enter content for the QR code.');
-            return;
-        }
-
-        // Clear the existing QR code
-        document.getElementById('qrcode').innerHTML = '';
-
-        // Generate the new QR code with customization
-        var qrcode = new QRCode(document.getElementById('qrcode'), {
-            text: content,
-            width: size,
-            height: size,
-            colorDark: color,
-            colorLight: backgroundColor,
-        });
-
-        // Show the download button
-        document.getElementById('downloadButton').style.display = 'inline-block';
-    }
-
-    function downloadQRCode() {
-        var canvas = document.createElement('canvas');
-        var context = canvas.getContext('2d');
-
-        var qrCodeCanvas = document.getElementById('qrcode').querySelector('canvas');
-
-        if (!qrCodeCanvas) {
-            alert('No QR code to download. Generate a QR code first.');
-            return;
-        }
-
-        var size = parseInt(document.getElementById('size').value, 10);
-        var margin = 20;
-
-        canvas.width = qrCodeCanvas.width + 2 * margin;
-        canvas.height = qrCodeCanvas.height + 2 * margin;
-
-        context.fillStyle = '#fff'; // Set the margin color to white
-        context.fillRect(0, 0, canvas.width, canvas.height);
-
-        context.drawImage(qrCodeCanvas, margin, margin);
-
-        var dataURL = canvas.toDataURL('image/png');
-
-        var a = document.createElement('a');
-        a.href = dataURL;
-        a.download = 'qrcode.png';
-        a.click();
-    }
-</script>
+    <!-- Main-Common-JS -->
+    <script>document.querySelector('.menu-btn').addEventListener('click', () => document.querySelector('.main-menu').classList.toggle('show'));</script>
 
 </body>
+
 </html>
