@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Famral Notes - Digital Note Taking App | Famral</title>
+    <link rel="icon" type="image/x-icon" href="https://www.famral.com/favicon.png" />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css'>
+    <link rel="stylesheet" href="https://www.famral.com/style.css">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-77313KVE2V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-77313KVE2V');
+</script>
+
+    <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "d6mx8dly6k");
+</script>
+    
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <div class="menu-btn">
+        <i class="fas fa-bars fa-1.5x"></i>
+    </div>
+
+    <div class="container">
+        <!-- Nav -->
+        <nav class="main-nav">
+            <img src="https://www.famral.com/logo.png" alt="Famral" class="logo">
+
+            <ul class="main-menu">
+                <li><a href="https://www.famral.com">Home</a></li>
+                <li><a href="https://www.famral.com/notes">Notes</a></li>
+                <li><a href="https://www.famral.com/tools">Tools</a></li>
+                <li><a href="https://stock.famral.com/photos">Free Photos</a></li>
+                <li><a href="https://blog.famral.com">Blogs</a></li>
+            </ul>
+
+            <ul class="right-menu">
+                <li>
+                    <a href="https://www.famral.com/search">
+                        <i class="fas fa-search"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Showcase -->
+        <section class="showcase">
+            <div class="content">
+                <h2>Famral Notes</h2>
+                <p>Note Taking Made Easy</p>
+                <a href="https://notes.famral.com" class="btn">
+                    Take Notes <i class="fas fa-chevron-right"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Home cards 1 -->
+        <section class="home-cards">
+            <div>
+                <img src="https://i.ibb.co/zVqhWn2/card5.png" alt="" />
+                <h3>Enhance Your Productivity </h3>
+                <p>
+                    Be more productive whole day, save all your tasks on Famral Notes.
+                </p>
+            </div>
+            <div>
+                <img src="https://i.ibb.co/mGZcxcn/card6.jpg" alt="" />
+                <h3>Access Your Notes Easily </h3>
+                <p>
+                    Take notes, save easily and access all notes by our advance search.
+                </p>
+            </div>
+            <div>
+                <img src="https://i.ibb.co/LkP4L5T/card8.png" alt="" />
+                <h3>No Signin Required* </h3>
+                <p>
+                    You do not required to signup or sign to save your notes.
+                </p>
+            </div>
+            <div>
+                <img src="https://i.ibb.co/NpPvVHj/card7.png" alt="" />
+                <h3>Works on All Devices </h3>
+                <p>
+                    Take notes in any device and at any time, works on all devices.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- Follow -->
+        <section class="follow">
+            <p>Follow Famral</p>
+            <a href="https://facebook.com/FamralCompany">
+                <img src="https://i.ibb.co/LrVMXNR/social-fb.png" alt="Facebook">
+            </a>
+            <a href="https://twitter.com/FamralCompany">
+                <img src="https://i.ibb.co/vJvbLwm/social-twitter.png" alt="Twitter">
+            </a>
+            <a href="https://linkedin.com/company/Famral">
+                <img src="https://i.ibb.co/b30HMhR/social-linkedin.png" alt="Linkedin">
+            </a>
+        </section>
+    </div>
+      <!-- Links -->
+      <section class="links">
+        <div class="links-inner">
+          <ul>
+            <li><h3>What's New</h3></li>
+            <li><a href="https://www.famral.com/tools/html-link-generator" target="_blank">HTML Link Generator</a></li>
+            <li><a href="https://www.famral.com/tools/qr-code-generator" target="_blank">Free QR Code Generator</a></li>
+            <li><a href="https://www.famral.com/tools/css-gradient-generator" target="_blank">CSS Gradient Generator</a></li>
+            <li><a href="https://www.famral.com/tools/password-generator" target="_blank">Password Generator</a></li>
+            <li><a href="https://www.famral.com/tools/image-background-remover" target="_blank">Remove Background</a></li>
+          </ul>
+          <ul>
+            <li><h3>Learning</h3></li>
+            <li><a href="https://blog.famral.com" target="_blank">Famral Blog</a></li>
+            <li><a href="https://useoftools.com/blog" target="_blank">Web Tools Blogs</a></li>
+            <li><a href="https://www.sciencebaba.com" target="_blank">Science Baba</a></li>
+          </ul>
+          <ul>
+            <li><h3>Products</h3></li>
+            <li><a href="https://www.famral.com/tools" target="_blank">Famral Tools</a></li>
+            <li><a href="https://stock.famral.com" target="_blank">Famral Stock</a></li>
+	    <li><a href="https://daily.famral.com" target="_blank">Famral Daily</a></li>
+	    <li><a href="https://www.famral.com/notes">Famral Notes</a></li>
+            <li><a href="https://games.famral.com" target="_blank">Famral Games</a></li>
+          </ul>
+          <ul>
+            <li><h3>Sister Sites</h3></li>
+            <li><a href="https://www.sciencebaba.com/" target="_blank">Science Baba</a></li>
+            <li><a href="https://useoftools.com/" target="_blank">Use of Tools</a></li>
+            <li><a href="https://wallpapers.sciencebaba.com/" target="_blank">Free Wallpapers</a></li>
+            <li><a href="https://daily.famral.com/" target="_blank">Famral Daily</a></li>
+            <li><a href="https://a-ztalkies.com/" target="_blank">A-Z Talkies</a></li>
+          </ul>
+          <ul>
+            <li><h3>Developer & IT</h3></li>
+            <li><a href="https://www.famral.com/tools" target="_blank">Basic Tools</a></li>
+            <li><a href="https://useoftools.com" target="_blank">Developement Tools</a></li>
+            <li><a href="https://www.famral.com/tools" target="_blank">Website Tools</a></li>
+            <li><a href="https://icons.famral.com/" target="_blank">Free Icons</a></li>
+          </ul>
+          <ul>
+            <li><h3>Company</h3></li>
+            <li><a href="https://about.famral.com" target="_blank">About Famral</a></li>
+            <li><a href="https://policies.famral.com/privacy" target="_blank">Privacy Policy</a></li>
+            <li><a href="https://policies.famral.com/terms" target="_blank">Terms of Use</a></li>
+            <li><a href="https://www.famral.com/contact" target="_blank">Contact Famral</a></li>
+            <li><a href="https://blog.famral.com" target="_blank">Famral Blog</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer-inner">
+          <ul>
+          <li><a href="https://www.famral.com">Copyright © Famral. All rights reserved.</a></li>
+                    <li><a href="https://policies.famral.com" target="_blank">Policies</a></li>
+	  </ul>
+        </div>
+      </footer>
+    <!-- partial -->
+    <script src="https://www.famral.com/script.js"></script>
+
+</body>
+
+</html>
