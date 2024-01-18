@@ -7,70 +7,83 @@
 
 
 <url>
-  <loc>https://www.famral.com/</loc>
-  <lastmod>2024-01-12T12:59:36+00:00</lastmod>
-  <priority>1.00</priority>
+<loc>https://www.famral.com/</loc>
+<lastmod>2024-01-18T13:24:30+00:00</lastmod>
+<priority>1.00</priority>
 </url>
 <url>
-  <loc>https://www.famral.com/tools</loc>
-  <lastmod>2024-01-12T12:59:36+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.famral.com/tools</loc>
+<lastmod>2024-01-18T13:24:29+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.famral.com/search</loc>
-  <lastmod>2024-01-12T12:59:36+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.famral.com/search</loc>
+<lastmod>2024-01-18T13:24:30+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.famral.com/notes</loc>
-  <lastmod>2024-01-12T12:59:36+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.famral.com/tools/svg-editor</loc>
+<lastmod>2024-01-18T13:24:29+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.famral.com/qr-code/qr-code-generator</loc>
-  <lastmod>2024-01-12T12:59:36+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.famral.com/tools/photo-editor</loc>
+<lastmod>2024-01-18T13:24:29+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.famral.com/tools/html-link-generator</loc>
-  <lastmod>2024-01-12T12:59:36+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.famral.com/notes/digital-note-taking-app</loc>
+<lastmod>2024-01-18T13:24:30+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.famral.com/tools/qr-code-generator</loc>
-  <lastmod>2024-01-12T12:59:36+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.famral.com/qr-code/qr-code-generator</loc>
+<lastmod>2024-01-18T13:24:30+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.famral.com/tools/css-gradient-generator</loc>
-  <lastmod>2024-01-12T12:59:36+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.famral.com/tools/html-link-generator</loc>
+<lastmod>2024-01-18T13:24:30+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.famral.com/tools/password-generator</loc>
-  <lastmod>2024-01-12T12:59:36+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.famral.com/tools/qr-code-generator</loc>
+<lastmod>2024-01-18T13:24:29+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.famral.com/tools/image-background-remover</loc>
-  <lastmod>2024-01-12T12:59:36+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.famral.com/tools/css-gradient-generator</loc>
+<lastmod>2024-01-18T13:24:29+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.famral.com/contact</loc>
-  <lastmod>2024-01-12T12:59:36+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.famral.com/tools/password-generator</loc>
+<lastmod>2024-01-18T13:24:29+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.famral.com/tools/utm-generator</loc>
-  <lastmod>2024-01-12T12:59:36+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://www.famral.com/tools/image-background-remover</loc>
+<lastmod>2024-01-18T13:24:29+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.famral.com/tools/keyword-density-checker</loc>
-  <lastmod>2024-01-12T12:59:36+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://www.famral.com/contact</loc>
+<lastmod>2024-01-18T13:24:29+00:00</lastmod>
+<priority>0.80</priority>
 </url>
-
-
+<url>
+<loc>https://www.famral.com/tools/css-background-generator</loc>
+<lastmod>2024-01-18T13:24:30+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://www.famral.com/tools/utm-generator</loc>
+<lastmod>2024-01-18T13:24:29+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://www.famral.com/tools/keyword-density-checker</loc>
+<lastmod>2024-01-18T13:24:29+00:00</lastmod>
+<priority>0.64</priority>
+</url>
 </urlset>
