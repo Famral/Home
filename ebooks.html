@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Coping code is not allowed. All rights reserved by Famral -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Famral Store</title>
+    <meta name="description" content="Get Famral eBooks"/>
+    <link rel="icon" type="image/x-icon" href="https://www.famral.com/favicon.png" />
+
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f3f3;
+        }
+
+        header {
+            background-color: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 25px;
+            background-color: #f1f1f1;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .product {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 0px;
+            box-shadow: 0 0 10px rgba(83, 83, 83, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .product:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0px;
+            margin-bottom: 10px;
+        }
+
+        .product h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .product p {
+            font-size: 14px;
+            color: #707070;
+            margin-bottom: 20px;
+        }
+
+        .prod-button {
+            background-color: #0000D1;
+            color: #FFFFFF;
+            padding: 8px 10px 8px 2px;
+            text-decoration: none;
+            font-weight: bold;
+            border: 2px solid #0000D1;
+            transition: background-color 0.2s;
+        }
+
+        .prod-button:hover {
+            background-color: #003B73;
+
+        }
+
+        .prod-button:focus {
+            background-color: #003B73;
+            padding: 8px 10px 8px 2px;
+            text-decoration: none;
+        }
+
+        footer {
+            background-color: #f0f0f0;
+            color: #7e7e7e;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <img src="./logo.png" alt="Famral" style="height: 24px;">
+        </div>
+    </header>
+
+    <main>
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product">
+                <img src="The-True-Parenting.png" alt="Parenting eBook Guide">
+                <h2>The True Parenting - eBook</h2>
+    <br>
+                <a href="https://store.famral.com/ebook/the-true-parenting" class="prod-button">Learn More</a>
+            </div>
+
+                        <!-- Product 2 -->
+            <div class="product">
+                <img src="How_to_Make_Good_Notes.png" alt="How to Make Good Notes Guide">
+                <h2>How to Make Good Notes (eBook)</h2>
+    <br>
+                <a href="https://pages.razorpay.com/HowToMakeGoodNotes" class="prod-button">Buy Now</a>
+            </div>
+            
+
+            <!-- Add more products as needed -->
+
+        </div>
+
+    </main>
+
+
+    <br>
+    <br>
+
+    <footer>
+        <p>&copy; 2024 Famral. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
