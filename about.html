@@ -62,22 +62,6 @@
 </head>
 
 <body>
-  <!-- partial:index.partial.html -->
-  <div class="menu-btn">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#272727"
-      stroke-width="3" stroke-linecap="round" stroke-linejoin="round">&lt;!--! Famral Icons Free 1.00 by License -
-      https://www.famral.com/ (Icons: CC BY 4.0) Copyright 2021 Famral Icons --&gt;<line x1="5.99" y1="6" x2="6" y2="6"
-        stroke-linecap="round" stroke-width="4"></line>
-      <line x1="11.99" y1="6" x2="12" y2="6" stroke-linecap="round" stroke-width="4"></line>
-      <line x1="17.99" y1="6" x2="18" y2="6" stroke-linecap="round" stroke-width="4"></line>
-      <line x1="5.99" y1="12" x2="6" y2="12" stroke-linecap="round" stroke-width="4"></line>
-      <line x1="11.99" y1="12" x2="12" y2="12" stroke-linecap="round" stroke-width="4"></line>
-      <line x1="17.99" y1="12" x2="18" y2="12" stroke-linecap="round" stroke-width="4"></line>
-      <line x1="5.99" y1="18" x2="6" y2="18" stroke-linecap="round" stroke-width="4"></line>
-      <line x1="11.99" y1="18" x2="12" y2="18" stroke-linecap="round" stroke-width="4"></line>
-      <line x1="17.99" y1="18" x2="18" y2="18" stroke-linecap="round" stroke-width="4"></line>
-    </svg>
-  </div>
 
   <!-- partial:index.partial.html -->
   <div class="menu-btn">
@@ -236,12 +220,14 @@
   <footer class="footer">
     <div class="footer-inner">
       <ul>
-        <li><a href="https://www.famral.com">Copyright © Famral. All rights reserved.</a></li>
+        <li><a href="https://www.famral.com">Copyright © 2024 Famral. All rights reserved.</a></li>
+        <li><a href="https://www.famral.com/support/contact-us">Contact Support</a></li>
       </ul>
     </div>
   </footer>
   <!-- partial -->
-  <script src="https://www.famral.com/script.js"></script>
+  <script>document.querySelector('.menu-btn').addEventListener('click', () => document.querySelector('.main-menu').classList.toggle('show'));</script>
+
 
 </body>
 
