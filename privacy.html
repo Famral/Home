@@ -3,31 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="https://www.famral.com/favicon.ico" />
-    <title>Privacy Policy - Famral</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png" />
+    <title>Famral – Privacy Policy</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css'>
+    <link rel="stylesheet" href="./style.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            color: #4f4f4f;
-        }
-        header {
-            background: #dadada;
-            padding: 1rem 2rem;
-            text-align: center;
-        }
-        nav {
-            padding: 0.5rem 2rem;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-        }
         nav ul li {
             margin: 0 1rem;
         }
@@ -61,20 +41,41 @@
             color: #0078D7;
             text-decoration: none;
         }
-        a:hover {
-            text-decoration: underline;
-        }
     </style>
 </head>
 <body>
 
-<header>
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="https://www.useoftools.com/">Web Tools</a></li>
-        </ul>
-    </nav></header>
+  <!-- partial:index.partial.html -->
+  <div class="menu-btn">
+    <i class="fas fa-bars fa-1.5x"></i>
+  </div>
+
+  <div class="container">
+    <!-- Nav -->
+    <nav class="main-nav">
+      <img src="./logo.png" alt="Famral" class="logo">
+
+      <ul class="main-menu">
+        <li><a href="https://www.famral.com/">Home</a></li>
+        <li><a href="https://designer.famral.com/">Designer</a></li>
+        <li><a href="https://images.famral.com/" target="_blank">Images</a></li>
+        <li><a href="https://www.useoftools.com/" target="_blank">Online Tools</a></li>
+      </ul>
+
+      <ul class="right-menu">
+        <li>
+          <a href="https://www.useoftools.com/search">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none"
+              stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">&lt;!--!
+              Famral Icons -
+              https://icons.famral.com/ (Copyright Famral Icons) --&gt;<circle cx="11" cy="11" r="9" fill="none">
+              </circle>
+              <line x1="17.5" y1="17.5" x2="22" y2="22"></line>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
 
 <main>
     <section id="introduction">
@@ -127,7 +128,7 @@
 
     <section id="contact">
         <h2>Contact Us</h2>
-        <p>If you have any questions about this privacy policy, please contact us at <a href="mailto:contact@famral.com">contact@famral.com</a>.</p>
+        <p>If you have any questions about this privacy policy, please contact us <a href="https://www.famral.com/contact">here</a>.</p>
     </section>
 </main>
 
@@ -135,5 +136,8 @@
     <p>&copy; 2025 Famral. All Rights Reserved.</p>
 </footer>
 
+
+ <!-- partial -->
+ <script>document.querySelector('.menu-btn').addEventListener('click', () => document.querySelector('.main-menu').classList.toggle('show'));</script>
 </body>
 </html>
