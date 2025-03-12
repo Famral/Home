@@ -138,14 +138,27 @@
             }
 
             qrCodeDiv.innerHTML = '';
-            const qrImage = document.createElement('img');
-            const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(input)}`;
-            qrImage.src = qrUrl;
-            qrCodeDiv.appendChild(qrImage);
 
-            downloadLink.href = qrUrl;
-            downloadLink.style.display = 'inline-block';
-            downloadLink.innerText = 'Download QR Code';
+            const canvas = document.createElement('canvas');
+            const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(input)}`;
+            const qrImage = new Image();
+            qrImage.crossOrigin = 'anonymous';
+            qrImage.src = qrUrl;
+
+            qrImage.onload = function () {
+                canvas.width = qrImage.width;
+                canvas.height = qrImage.height;
+                const ctx = canvas.getContext('2d');
+                ctx.drawImage(qrImage, 0, 0);
+                qrCodeDiv.appendChild(qrImage);
+
+                canvas.toBlob(function (blob) {
+                    const url = URL.createObjectURL(blob);
+                    downloadLink.href = url;
+                    downloadLink.style.display = 'inline-block';
+                    downloadLink.innerText = 'Download QR Code';
+                });
+            };
         }
     </script>
 </body>
