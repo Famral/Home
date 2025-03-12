@@ -61,29 +61,30 @@
         .qr-section {
             text-align: center;
             margin: 50px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
         }
 
         .qr-section h2 {
             font-size: 32px;
             color: #2f3f88;
-            margin-bottom: 20px;
         }
 
-        .qr-section input, .qr-section select {
+        .qr-section input, .qr-section select, .qr-section button, .qr-section input[type="color"] {
             padding: 12px;
             width: 80%;
             max-width: 500px;
             border: 1px solid #cecece;
             border-radius: 8px;
-            margin-bottom: 20px;
+            margin: 5px 0;
         }
 
         .qr-section button {
-            padding: 12px 24px;
             background-color: #2f3f88;
             color: #fff;
             border: none;
-            border-radius: 8px;
             cursor: pointer;
             transition: background-color 0.3s;
         }
@@ -122,6 +123,14 @@
                 flex-direction: column;
                 text-align: center;
             }
+
+            .qr-section input, .qr-section select, .qr-section button, .qr-section input[type="color"] {
+                width: 100%;
+            }
+
+            #download-container {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
@@ -152,8 +161,8 @@
             <div id="qr-code"></div>
 
             <div id="download-container">
-                <a id="download-link-png" class="download-btn" download="qrcode.png">Download as PNG</a>
-                <a id="download-link-svg" class="download-btn" download="qrcode.svg">Download as SVG</a>
+                <a id="download-link-png" class="download-btn">Download as PNG</a>
+                <a id="download-link-svg" class="download-btn">Download as SVG</a>
             </div>
         </div>
     </div>
@@ -185,6 +194,9 @@
                 qrCodeDiv.appendChild(qrImage);
                 downloadPng.href = qrPngUrl;
                 downloadSvg.href = qrSvgUrl;
+
+                downloadPng.download = 'qrcode.png';
+                downloadSvg.download = 'qrcode.svg';
 
                 downloadPng.style.display = 'inline-block';
                 downloadSvg.style.display = 'inline-block';
