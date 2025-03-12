@@ -69,7 +69,7 @@
             margin-bottom: 20px;
         }
 
-        .qr-section input {
+        .qr-section input, .qr-section select {
             padding: 12px;
             width: 80%;
             max-width: 500px;
@@ -96,6 +96,27 @@
             margin-top: 30px;
         }
 
+        #download-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .download-btn {
+            padding: 12px 24px;
+            background-color: #4a5fc1;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+            display: none;
+        }
+
+        .download-btn:hover {
+            background-color: #2f3f88;
+        }
+
         @media (max-width: 768px) {
             nav.main-nav {
                 flex-direction: column;
@@ -119,10 +140,21 @@
         <div class="qr-section">
             <h2>Generate Your QR Code</h2>
             <input type="text" id="qr-input" placeholder="Enter text or URL">
+            <select id="qr-size">
+                <option value="150">150x150</option>
+                <option value="200" selected>200x200</option>
+                <option value="300">300x300</option>
+                <option value="500">500x500</option>
+            </select>
+            <input type="color" id="qr-color" value="#000000">
             <button onclick="generateQRCode()">Generate QR Code</button>
 
             <div id="qr-code"></div>
-            <a id="download-link" style="display:none; margin-top: 20px;" download="qrcode.png">Download QR Code</a>
+
+            <div id="download-container">
+                <a id="download-link-png" class="download-btn" download="qrcode.png">Download as PNG</a>
+                <a id="download-link-svg" class="download-btn" download="qrcode.svg">Download as SVG</a>
+            </div>
         </div>
     </div>
 
@@ -130,7 +162,10 @@
         function generateQRCode() {
             const input = document.getElementById('qr-input').value;
             const qrCodeDiv = document.getElementById('qr-code');
-            const downloadLink = document.getElementById('download-link');
+            const downloadPng = document.getElementById('download-link-png');
+            const downloadSvg = document.getElementById('download-link-svg');
+            const qrSize = document.getElementById('qr-size').value;
+            const qrColor = document.getElementById('qr-color').value.substring(1);
 
             if (!input) {
                 alert('Please enter text or a URL to generate a QR code.');
@@ -139,25 +174,20 @@
 
             qrCodeDiv.innerHTML = '';
 
-            const canvas = document.createElement('canvas');
-            const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(input)}`;
+            const qrPngUrl = `https://api.qrserver.com/v1/create-qr-code/?size=${qrSize}x${qrSize}&color=${qrColor}&data=${encodeURIComponent(input)}`;
+            const qrSvgUrl = `https://api.qrserver.com/v1/create-qr-code/?size=${qrSize}x${qrSize}&color=${qrColor}&data=${encodeURIComponent(input)}&format=svg`;
+
             const qrImage = new Image();
             qrImage.crossOrigin = 'anonymous';
-            qrImage.src = qrUrl;
+            qrImage.src = qrPngUrl;
 
             qrImage.onload = function () {
-                canvas.width = qrImage.width;
-                canvas.height = qrImage.height;
-                const ctx = canvas.getContext('2d');
-                ctx.drawImage(qrImage, 0, 0);
                 qrCodeDiv.appendChild(qrImage);
+                downloadPng.href = qrPngUrl;
+                downloadSvg.href = qrSvgUrl;
 
-                canvas.toBlob(function (blob) {
-                    const url = URL.createObjectURL(blob);
-                    downloadLink.href = url;
-                    downloadLink.style.display = 'inline-block';
-                    downloadLink.innerText = 'Download QR Code';
-                });
+                downloadPng.style.display = 'inline-block';
+                downloadSvg.style.display = 'inline-block';
             };
         }
     </script>
