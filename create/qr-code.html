@@ -162,7 +162,6 @@
 
             <div id="download-container">
                 <a id="download-link-png" class="download-btn">Download as PNG</a>
-                <a id="download-link-svg" class="download-btn">Download as SVG</a>
             </div>
         </div>
     </div>
@@ -172,7 +171,6 @@
             const input = document.getElementById('qr-input').value;
             const qrCodeDiv = document.getElementById('qr-code');
             const downloadPng = document.getElementById('download-link-png');
-            const downloadSvg = document.getElementById('download-link-svg');
             const qrSize = document.getElementById('qr-size').value;
             const qrColor = document.getElementById('qr-color').value.substring(1);
 
@@ -184,7 +182,6 @@
             qrCodeDiv.innerHTML = '';
 
             const qrPngUrl = `https://api.qrserver.com/v1/create-qr-code/?size=${qrSize}x${qrSize}&color=${qrColor}&data=${encodeURIComponent(input)}`;
-            const qrSvgUrl = `https://api.qrserver.com/v1/create-qr-code/?size=${qrSize}x${qrSize}&color=${qrColor}&data=${encodeURIComponent(input)}&format=svg`;
 
             const qrImage = new Image();
             qrImage.crossOrigin = 'anonymous';
@@ -193,13 +190,8 @@
             qrImage.onload = function () {
                 qrCodeDiv.appendChild(qrImage);
                 downloadPng.href = qrPngUrl;
-                downloadSvg.href = qrSvgUrl;
-
                 downloadPng.download = 'qrcode.png';
-                downloadSvg.download = 'qrcode.svg';
-
                 downloadPng.style.display = 'inline-block';
-                downloadSvg.style.display = 'inline-block';
             };
         }
     </script>
