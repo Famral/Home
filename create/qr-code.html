@@ -183,16 +183,18 @@
 
             const qrPngUrl = `https://api.qrserver.com/v1/create-qr-code/?size=${qrSize}x${qrSize}&color=${qrColor}&data=${encodeURIComponent(input)}`;
 
-            const qrImage = new Image();
-            qrImage.crossOrigin = 'anonymous';
-            qrImage.src = qrPngUrl;
+            fetch(qrPngUrl)
+                .then(response => response.blob())
+                .then(blob => {
+                    const qrImage = new Image();
+                    qrImage.src = URL.createObjectURL(blob);
+                    qrCodeDiv.appendChild(qrImage);
 
-            qrImage.onload = function () {
-                qrCodeDiv.appendChild(qrImage);
-                downloadPng.href = qrPngUrl;
-                downloadPng.download = 'qrcode.png';
-                downloadPng.style.display = 'inline-block';
-            };
+                    const downloadUrl = URL.createObjectURL(blob);
+                    downloadPng.href = downloadUrl;
+                    downloadPng.download = 'qrcode.png';
+                    downloadPng.style.display = 'inline-block';
+                });
         }
     </script>
 </body>
