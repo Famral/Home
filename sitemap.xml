@@ -12,6 +12,11 @@
   <priority>1.00</priority>
 </url>
 <url>
+  <loc>https://www.famral.com/create</loc>
+  <lastmod>2025-02-19T14:26:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
   <loc>https://www.famral.com/privacy</loc>
   <lastmod>2025-01-19T14:26:47+00:00</lastmod>
   <priority>0.80</priority>
