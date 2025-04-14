@@ -1,36 +1,68 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<script src="chrome-extension://hoklmmgfnpapgjgcpechhaamimifchmp/frame_ant/frame_ant.js"/>
 <url>
-  <loc>https://www.famral.com/</loc>
-  <lastmod>2025-01-19T14:26:47+00:00</lastmod>
-  <priority>1.00</priority>
+<loc>https://www.famral.com/</loc>
+<lastmod>2025-04-13T11:45:44+00:00</lastmod>
+<priority>1.00</priority>
 </url>
 <url>
-  <loc>https://www.famral.com/create</loc>
-  <lastmod>2025-02-19T14:26:47+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.famral.com/create</loc>
+<lastmod>2025-04-13T11:45:44+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.famral.com/privacy</loc>
-  <lastmod>2025-01-19T14:26:47+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.famral.com/tools</loc>
+<lastmod>2025-04-13T11:45:44+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.famral.com/terms</loc>
-  <lastmod>2025-01-19T14:26:47+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.famral.com/create/qr-code</loc>
+<lastmod>2025-04-13T11:45:44+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.famral.com/contact</loc>
-  <lastmod>2025-01-19T14:26:47+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.famral.com/create/svg</loc>
+<lastmod>2025-04-13T11:45:44+00:00</lastmod>
+<priority>0.80</priority>
 </url>
-
-
+<url>
+<loc>https://www.famral.com/privacy</loc>
+<lastmod>2025-04-13T11:45:44+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.famral.com/terms</loc>
+<lastmod>2025-04-13T11:45:44+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.famral.com/contact</loc>
+<lastmod>2025-04-13T11:45:44+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.famral.com/tools/merge-pdf</loc>
+<lastmod>2025-04-13T11:45:44+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://www.famral.com/tools/image-compressor</loc>
+<lastmod>2025-04-13T11:45:44+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://www.famral.com/tools/add-text-to-photo</loc>
+<lastmod>2025-04-13T11:45:44+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://www.famral.com/tools/crop-image</loc>
+<lastmod>2025-04-13T11:45:44+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://www.famral.com/tools/color-palette-generator</loc>
+<lastmod>2025-04-13T11:45:44+00:00</lastmod>
+<priority>0.64</priority>
+</url>
 </urlset>
