@@ -2,153 +2,764 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Famral – Website Development & Graphic Design Services</title>
+  <!-- SEO Meta Description and Keywords -->
   <meta name="description"
-    content="Famral offers professional web development and creative graphic design services. Custom websites, e-commerce, and marketing materials to elevate your brand online.">
+    content="Explore our web development, graphic design, and online tools. Create stunning visuals, build websites, and access free productivity tools to enhance your creativity and efficiency.">
   <meta name="keywords"
-    content="web development, graphic design, website design, e-commerce, branding, logo design, marketing materials, Famral, creative agency website tools">
-  <link rel="icon" type="image/x-icon" href="favicon.png" />
-  <title>Famral – Web Development & Graphic Design Services </title>
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css'>
-  <link rel="stylesheet" href="./style.css">
+    content="graphic design services, web development, free stock photos, free svg icons, online web tools, creativity tools, productivity tools, Famral">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./favicon.png"> <!-- Assuming favicon.png exists -->
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Embedded CSS Styles -->
+  <style>
+    /* --- Base Styles & Variables --- */
+    :root {
+      --primary: #005ec2;
+      /* Blue */
+      --primary-dark: #0056b3;
+      --primary-light: #0056b3;
+      --secondary: #6c757d;
+      /* Gray */
+      --success: #28a745;
+      /* Green */
+      --danger: #dc3545;
+      /* Red */
+      --warning: #ffc107;
+      /* Yellow */
+      --info: #17a2b8;
+      /* Teal */
+      --light: #f8f9fa;
+      /* Very Light Gray */
+      --dark: #343a40;
+      /* Dark Gray / Almost Black */
+      --card: #ffffff;
+      /* White */
+      --gray: #adb5bd;
+      --gray-dark: #495057;
+
+      --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+      --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+      --border-light: 1px solid #dee2e6;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-family-sans-serif);
+      line-height: 1.6;
+      color: var(--dark);
+      background-color: var(--light);
+      font-size: 16px;
+      /* Base font size */
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: color 0.2s ease-in-out;
+    }
+
+    a:hover {
+      color: var(--primary-dark);
+      text-decoration: underline;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      /* Prevent bottom space */
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-bottom: 0.75rem;
+      font-weight: 600;
+      line-height: 1.2;
+      color: var(--dark);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    h3 {
+      font-size: 1.75rem;
+    }
+
+    h4 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      color: var(--gray-dark);
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    /* --- Utility Classes --- */
+    .container,
+    .nav-container,
+    .footer-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      /* Add horizontal padding */
+    }
+
+    .section {
+      padding: 4rem 0;
+    }
+
+    .section h2 {
+      text-align: center;
+      margin-bottom: 3rem;
+      font-size: 2.25rem;
+      color: var(--dark);
+    }
+
+    .section h2 i {
+      margin-right: 0.5rem;
+      color: var(--primary);
+    }
+
+    /* --- Navbar --- */
+    .navbar {
+      background-color: #ffffff;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: var(--shadow-sm);
+      border-bottom: var(--border-light);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--dark);
+      text-decoration: none;
+      display: flex;
+      /* Added for logo alignment */
+      align-items: center;
+      /* Added for logo alignment */
+    }
+
+    .nav-logo:hover {
+      text-decoration: none;
+      color: var(--primary);
+    }
+
+    .nav-logo img {
+      height: 30px;
+      /* Control logo image height */
+      margin-right: 8px;
+      /* Space between image and text */
+    }
+
+
+    .nav-links-wrapper {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links-wrapper a {
+      color: var(--dark);
+      font-weight: 500;
+      padding: 0.5rem 0;
+      position: relative;
+      text-decoration: none;
+    }
+
+    .nav-links-wrapper a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--primary);
+      transition: width 0.3s ease;
+    }
+
+    .nav-links-wrapper a:hover,
+    .nav-links-wrapper a.active {
+      /* Style for active link if needed */
+      color: var(--primary);
+    }
+
+    .nav-links-wrapper a:hover::after {
+      width: 100%;
+    }
+
+    .nav-toggle {
+      display: none;
+      /* Hidden by default */
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--dark);
+      cursor: pointer;
+    }
+
+    /* --- Hero Section --- */
+    .hero {
+      background: linear-gradient(45deg, var(--primary), var(--primary-light));
+      color: #ffffff;
+      padding: 5rem 1.5rem;
+      /* Use padding on the section itself */
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      max-width: 700px;
+      margin: 0 auto 1rem auto;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    /* --- Services / Features Section --- */
+    .services-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .service-box {
+      background-color: var(--card);
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: var(--shadow-md);
+      border: var(--border-light);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-box:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .service-icon {
+      display: inline-block;
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+      background-color: rgba(0, 123, 255, 0.1);
+      /* Light primary background */
+      width: 70px;
+      height: 70px;
+      line-height: 70px;
+      /* Center icon vertically */
+      border-radius: 50%;
+      text-align: center;
+    }
+
+    .service-box h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: var(--dark);
+    }
+
+    .service-box p {
+      color: var(--gray-dark);
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+      /* Ensure space before link */
+    }
+
+    /* Styling for the links inside service-box */
+    .service-box a {
+      display: inline-block;
+      /* Allows margin-top */
+      margin-top: 1rem;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .service-box a:hover {
+      color: var(--primary-dark);
+      text-decoration: underline;
+    }
+
+    .service-box a i {
+      margin-left: 0.3rem;
+      font-size: 0.8em;
+      /* Make chevron slightly smaller */
+    }
+
+
+    /* --- CTA Section (Optional) --- */
+    .cta {
+      background-color: var(--primary);
+      color: #ffffff;
+      text-align: center;
+      padding: 4rem 1.5rem;
+      margin-top: 4rem;
+      /* Add space above CTA if used */
+    }
+
+    .cta h2 {
+      color: #ffffff;
+      margin-bottom: 1rem;
+    }
+
+    .cta p {
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+    }
+
+    .cta a {
+      display: inline-block;
+      background-color: #ffffff;
+      color: var(--primary);
+      padding: 0.8rem 2rem;
+      border-radius: 5px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .cta a:hover {
+      background-color: var(--light);
+      color: var(--primary-dark);
+      transform: translateY(-2px);
+      text-decoration: none;
+    }
+
+    /* --- Footer --- */
+    .site-footer {
+      background-color: var(--dark);
+      color: rgba(255, 255, 255, 0.7);
+      padding: 3rem 0 1rem 0;
+      /* More padding top, less bottom */
+      margin-top: 4rem;
+      /* Space above footer */
+    }
+
+    /* Footer Links Grid */
+    .footer-links-grid {
+      /* Added class for styling */
+      margin-bottom: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--gray-dark);
+      /* Darker border */
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1.5rem;
+      text-align: left;
+      /* Align text left for better readability */
+    }
+
+    .footer-links-grid h4 {
+      color: rgb(235, 235, 235);
+      margin-bottom: 1rem;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    .footer-links-grid ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-links-grid li {
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-links-grid a {
+      color: rgb(172, 172, 172);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links-grid a:hover {
+      color: #dadada;
+      text-decoration: underline;
+    }
+
+    /* Footer Bottom Content */
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      /* Allow wrapping on small screens */
+      gap: 1rem;
+      padding-top: 1.5rem;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    .footer-content p {
+      color: rgb(164, 164, 164);
+      margin-bottom: 0;
+      /* Reset paragraph margin */
+      flex-basis: 100%;
+      /* Default to full width */
+    }
+
+    @media (min-width: 768px) {
+      .footer-content {
+        text-align: left;
+        /* Align left on larger screens */
+      }
+
+      .footer-content p {
+        flex-basis: auto;
+        /* Allow side-by-side layout */
+      }
+    }
+
+
+    .back-to-top {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .back-to-top:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    .back-to-top i {
+      margin-left: 0.3rem;
+    }
+
+    /* --- Responsive Design --- */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.75rem;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .section {
+        padding: 3rem 0;
+      }
+
+      .section h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .nav-toggle {
+        display: block;
+        /* Show hamburger */
+      }
+
+      .nav-links-wrapper {
+        display: none;
+        /* Hide links by default */
+        position: absolute;
+        top: 100%;
+        /* Position below navbar */
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        flex-direction: column;
+        padding: 1rem 0;
+        box-shadow: var(--shadow-md);
+        border-top: var(--border-light);
+      }
+
+      .nav-links-wrapper.active {
+        display: flex;
+        /* Show when active */
+      }
+
+      .nav-links-wrapper a {
+        padding: 0.75rem 1.5rem;
+        /* Adjust padding for vertical layout */
+        text-align: center;
+        border-bottom: var(--border-light);
+      }
+
+      .nav-links-wrapper a:last-child {
+        border-bottom: none;
+      }
+
+      .nav-links-wrapper a::after {
+        display: none;
+        /* Hide underline effect on mobile */
+      }
+
+      .services-list {
+        grid-template-columns: 1fr;
+        /* Stack cards */
+        gap: 1.5rem;
+      }
+
+      .service-box {
+        padding: 1.5rem;
+      }
+
+      /* Adjust footer links grid for mobile */
+      .footer-links-grid {
+        text-align: center;
+        /* Center align footer links on mobile */
+        gap: 1rem;
+      }
+
+      .footer-links-grid h4 {
+        margin-bottom: 0.5rem;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        /* Stack copyright and back-to-top */
+        padding-top: 1rem;
+      }
+    }
+  </style>
+
 </head>
 
 <body>
 
-  <!-- partial:index.partial.html -->
-  <div class="menu-btn">
-    <i class="fas fa-bars fa-1.5x"></i>
-  </div>
+  <nav class="navbar">
+    <div class="nav-container">
+      <!-- Logo -->
+      <a href="https://www.famral.com/" class="nav-logo">
+        Famral
+      </a>
 
-  <div class="container">
-    <!-- Nav -->
-    <nav class="main-nav">
-      <img src="./logo.png" alt="Famral" class="logo">
+      <!-- Mobile Menu Toggle Button -->
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
+        <i class="fas fa-bars"></i>
+      </button>
 
-      <ul class="main-menu">
-        <li><a href="https://www.famral.com/">Home</a></li>
-        <li><a href="https://www.famral.com/services">Services</a></li>
-        <li><a href="https://images.famral.com/" target="_blank">Images</a></li>
-        <li><a href="https://www.famral.com/tools" target="_blank">Online Tools</a></li>
-      </ul>
-
-    </nav>
-
-
-    <!-- Top Feature -->
-    <section class="xxbox">
-      <div class="content">
-        <h1>Creativity & Productivity Meets Here.</h1>
-        <p>Unleash your creativity with our graphic design app and online tools! Whether you're designing stunning
-          visuals, crafting logos, or creating social media posts, our platform makes it simple and fun for everyone.
-        </p>
+      <!-- Navigation Links -->
+      <div class="nav-links-wrapper" id="navLinks">
+        <a href="https://www.famral.com/">Home</a>
+        <a href="https://www.famral.com/services">Services</a>
+        <a href="https://images.famral.com/" target="_blank">Images</a>
+        <a href="https://www.famral.com/tools" target="_blank">Online Tools</a>
       </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>Web Development & Graphic Design Services </h1>
+      <p>Elevate your brand with our expert web development, application design, and graphic design services.
+        We build high-performance websites, user-centric apps, and impactful branding to help your business thrive
+        online.
+      </p>
     </section>
 
-    <br>
+    <!-- Container for main content -->
+    <div class="container">
 
-    <!-- Home cards 1 -->
-    <section class="home-cards">
-      <div>
-        <img
-          src="./famral-designer.png"
-          alt="Graphic Design App" />
-        <h3>Famral Services</h3>
-        <p>
-          Famral Create helps you to create professional quality social media posts, logos, posters, SVG graphics, and more.
-        </p>
-        <a href="https://www.famral.com/services" target="_blank"> Our Services <i
-            class="fas fa-chevron-right"></i></a>
-      </div>
-      <div>
-        <img
-          src="./famral-images.png"
-          alt="Free Stock Images" />
-        <h3>Famral Images</h3>
-        <p>
-          Free stock photos you can use everywhere. Browse millions of high-quality royalty free images & copyright free
-          photos.
-        </p>
-        <a href="https://images.famral.com/" target="_blank"> Explore Free Images <i
-            class="fas fa-chevron-right"></i></a>
-      </div>
-      <div>
-        <img
-          src="./famral-icons.png"
-          alt="Free SVG Icons">
-        <h3>Famral Icons</h3>
-        <p>
-          Free Beautiful & Highly customizable SVG icons. 250+ Free icons which you can personalise for your project.
-        </p>
-        <a href="https://icons.famral.com/" target="_blank"> Explore SVG Icons <i class="fas fa-chevron-right"></i></a>
-      </div>
-      <div>
-        <img
-          src="./online-tools.png"
-          alt="Online Web Tools" />
-        <h3>Online Web Tools</h3>
-        <p>
-          All online tools you need in one website for free. Internet-based tools that are designed to assist
-          individuals in various professions.
-        </p>
-        <a href="https://www.famral.com/tools" target="_blank"> Free Online Tools <i
-            class="fas fa-chevron-right"></i></a>
-      </div>
-    </section>
+      <!-- Features/Products Section -->
+      <section class="section" id="features">
+        <h2><i class="fas fa-star" aria-hidden="true"></i> Explore Our Products & Services <i class="fas fa-star"
+            aria-hidden="true"></i></h2>
+        <div class="services-list">
 
-    <br>
+          <!-- Card 1: Famral Services -->
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true">
+              <i class="fas fa-pencil-ruler"></i>
+            </span>
+            <h3>Famral Services</h3>
+            <p>
+              We build unique and professional websites & application designs tailored to your brand’s goals and
+              identity. </p>
+            <a href="https://www.famral.com/services" target="_blank">Learn More <i
+                class="fas fa-chevron-right fa-xs"></i></a> <!-- Removed inline style -->
+          </div>
 
-<br>
-<br>
+          <!-- Card 2: Famral Images -->
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true">
+              <i class="fas fa-images"></i>
+            </span>
+            <h3>Famral Images</h3>
+            <p>
+              Free stock photos you can use everywhere. Browse millions of high-quality royalty free images &
+              copyright free photos.
+            </p>
+            <a href="https://images.famral.com/" target="_blank">Explore Images <i
+                class="fas fa-chevron-right fa-xs"></i></a> <!-- Removed inline style -->
+          </div>
 
+          <!-- Card 4: Online Web Tools -->
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true">
+              <i class="fas fa-tools"></i>
+            </span>
+            <h3>Online Web Tools</h3>
+            <p>
+              All online tools you need in one website for free. Internet-based tools that are designed to
+              assist individuals in various professions.
+            </p>
+            <a href="https://www.famral.com/tools" target="_blank">Explore Tools <i
+                class="fas fa-chevron-right fa-xs"></i></a> <!-- Removed inline style -->
+          </div>
 
-  </div>
-  <!-- Footer MenuLinks -->
-  <section class="links">
-    <div class="links-inner">
-      <ul>
-        <li><a href="https://www.famral.com/services" target="_blank">Services</a>
-        </li>
-      </ul>
-      <ul>
-        <li><a href="https://www.useoftools.com/add-text-to-photo" target="_blank">Add Text to Photo</a>
-        </li>
-      </ul>
-      <ul>
-        <li><a href="https://www.useoftools.com/html-link-generator" target="_blank">HTML Link Generator</a>
-        </li>
-      </ul>
-      <ul>
-        <li><a href="https://www.famral.com/tools/qr-code" target="_blank">Generate QR Code</a>
-        </li>
-      </ul>
-      <ul>
-        <li><a href="https://www.famral.com/services">Website Development</a>
-        </li>
-      </ul>
-      <ul>
-        <li><a href="https://www.useoftools.com/image-to-pdf" target="_blank">Convert Image to PDF</a>
-        </li>
-      </ul>
+        </div> <!-- End services-list -->
+      </section> <!-- End features section -->
 
+      <!-- Optional: Add a CTA section if desired -->
+      <!--
+            <section class="cta" id="contact">
+                <h2>Interested in Custom Solutions?</h2>
+                <p>Contact us for bespoke web development and graphic design services.</p>
+                <a href="https://www.famral.com/contact">Get a Quote</a>
+            </section>
+            -->
 
-  </section>
+    </div> <!-- End container -->
+  </main>
 
   <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-inner">
-      <ul>
-        <li><a href="/">Copyright © 2025 Famral. All rights reserved.</a></li>
-        <li><a href="/privacy">Privacy Policy</a></li>
-        <li><a href="/terms">Terms & Conditions</a></li>
-        <li><a href="/contact">Contact Us</a></li>
-      </ul>
+  <footer class="site-footer">
+    <div class="footer-container">
+
+      <!-- Footer Links Section -->
+      <div class="footer-links-grid"> <!-- Added class, removed inline style -->
+        <div>
+          <h4>Services</h4> <!-- Removed inline style -->
+          <ul> <!-- Removed inline style -->
+            <li><a href="https://www.famral.com/services" target="_blank">Web Development</a></li>
+            <!-- Removed inline style -->
+            <li><a href="https://www.famral.com/services" target="_blank">Graphic Design</a></li>
+            <!-- Removed inline style -->
+          </ul>
+        </div>
+        <div>
+          <h4>Web Tools</h4> <!-- Removed inline style -->
+          <ul> <!-- Removed inline style -->
+            <li><a href="https://www.useoftools.com/add-text-to-photo" target="_blank">Add Text to Photo</a></li>
+            <!-- Removed inline style -->
+            <li><a href="https://www.useoftools.com/html-link-generator" target="_blank">HTML Link Generator</a></li>
+            <!-- Removed inline style -->
+            <li><a href="https://www.useoftools.com/qr-code-generator" target="_blank">Generate QR Code</a></li>
+            <!-- Removed inline style -->
+            <li><a href="https://www.useoftools.com/image-to-pdf" target="_blank">Image to PDF</a></li>
+            <!-- Removed inline style -->
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4> <!-- Removed inline style -->
+          <ul> <!-- Removed inline style -->
+            <li><a href="/privacy">Privacy Policy</a></li> <!-- Removed inline style -->
+            <li><a href="/terms">Terms & Conditions</a></li> <!-- Removed inline style -->
+            <li><a href="/contact">Contact Us</a></li> <!-- Removed inline style -->
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Content (Copyright, etc.) -->
+      <div class="footer-content">
+        <p>&copy; <span id="current-year"></span> Famral. All Rights Reserved.</p>
+        <p><a href="#" class="back-to-top">Back to Top <i class="fas fa-arrow-up"></i></a></p>
+      </div>
     </div>
   </footer>
-  <!-- partial -->
-  <script>document.querySelector('.menu-btn').addEventListener('click', () => document.querySelector('.main-menu').classList.toggle('show'));</script>
 
+  <!-- Simple JS for Mobile Menu Toggle -->
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links-wrapper');
+    const toggleIcon = navToggle.querySelector('i'); // Get the icon element
+
+    navToggle.addEventListener('click', () => {
+      const isExpanded = navLinks.classList.toggle('active');
+      navToggle.setAttribute('aria-expanded', isExpanded);
+
+      // Change icon from bars to times (X) when open
+      if (isExpanded) {
+        toggleIcon.classList.remove('fa-bars');
+        toggleIcon.classList.add('fa-times');
+      } else {
+        toggleIcon.classList.remove('fa-times');
+        toggleIcon.classList.add('fa-bars');
+      }
+    });
+
+    // Close menu when a link is clicked
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (navLinks.classList.contains('active')) {
+          navLinks.classList.remove('active');
+          navToggle.setAttribute('aria-expanded', 'false');
+          toggleIcon.classList.remove('fa-times');
+          toggleIcon.classList.add('fa-bars');
+        }
+      });
+    });
+
+    // Update the copyright year automatically
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
 
 </body>
 
