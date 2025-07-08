@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./favicon.png">
+    <title>Famral Cloud – Web Hosting, Security & Domains</title>
+    <meta name="description"
+        content="Famral Cloud offers secure and reliable web hosting, website security solutions, and domain name registration. Get your website online today!">
+    <meta name="keywords"
+        content="Famral Cloud, web hosting, website security, domain names, secure hosting, cheap hosting, SSL certificates, domain registration">
+    <meta name="author" content="Famral">
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Famral Cloud – Web Hosting, Security & Domains">
+    <meta property="og:description"
+        content="Famral Cloud offers secure and reliable web hosting, website security solutions, and domain name registration. Get your website online today!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.famral.com/cloud">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1e40af;
+            --bg: #f9f9fb;
+            --text: #1e293b;
+            --card-bg: #fff;
+            --card-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+            --border-radius: 12px;
+            --transition: 0.2s ease-in-out;
+        }
+
+        * {
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            background-color: var(--bg);
+            line-height: 1.6;
+        }
+
+        /* Reusing Navbar styles from existing page */
+        /* Ensure to include the Navbar CSS here */
+        /* You can copy the relevant CSS from the previous HTML */
+
+        .hero {
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--primary-dark);
+            letter-spacing: -0.05em;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #4b5563;
+            max-width: 800px;
+            margin: 0 auto 2rem auto;
+        }
+
+        .cta-button {
+            background-color: var(--primary);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color var(--transition), transform var(--transition);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
+        }
+
+        .cta-button:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px) scale(1.05);
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 3rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--card-shadow);
+            text-align: center;
+            border: 1px solid #e2e8f0;
+            transition: transform var(--transition), box-shadow var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.7rem;
+            color: var(--primary-dark);
+        }
+
+        .service-card p {
+            color: #64748b;
+        }
+
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+        }
+
+
+        .navbar {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links-wrapper a {
+            color: var(--text);
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-weight: 500;
+            transition: color var(--transition);
+        }
+
+        .nav-links-wrapper a:hover {
+            color: var(--primary);
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text);
+        }
+
+        .hero {
+            padding: 6rem 2rem;
+            color: #64748b;
+        }
+
+        .site-footer {
+            background-color: #1e293b;
+            color: #cbd5e1;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-links-grid h4 {
+            font-size: 1.1rem;
+            color: #fff;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .footer-links-grid ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links-grid ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links-grid ul li a {
+            color: #cacaca;
+            text-decoration: none;
+            transition: color var(--transition);
+        }
+
+        .footer-links-grid ul li a:hover {
+            color: rgb(255, 255, 255);
+            text-decoration: underline;
+        }
+
+        .footer-content {
+            border-top: 1px solid #334155;
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+        }
+
+        .footer-content p {
+            margin: 0;
+        }
+
+        .back-to-top {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color var(--transition);
+        }
+
+        .back-to-top:hover {
+            color: var(--primary);
+        }
+
+    
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Include Navbar here -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="https://www.famral.com/cloud" class="nav-logo">
+                <img src="https://www.famral.com/favicon.png" alt="Famral Logo" style="height:30px; margin-right:8px; vertical-align:middle;">
+                <span style="vertical-align:middle;">Famral Cloud</span>
+            </a>
+            <button class="menu-toggle" aria-label="Open menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-links-wrapper">
+                <a href="/">Home</a>
+                <a href="https://cloud.famral.com">Get Started</a>
+                <a href="https://www.famral.com/contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Secure, Fast, and Reliable Cloud Solutions</h1>
+        <p>Famral Cloud offers a complete suite of services to host, secure, and manage your online presence. From blazing-fast hosting to top-notch security and seamless domain management, we've got you covered.</p>
+        <a href="https://cloud.famral.com" class="cta-button">Get Started Today</a>
+    </section>
+
+    <section class="services">
+        <div class="service-card">
+            <i class="fas fa-server service-icon"></i>
+            <h3>Web Hosting</h3>
+            <p>Experience lightning-fast loading speeds and rock-solid reliability with our optimized hosting solutions. Choose from shared, VPS, or dedicated servers tailored to your needs.</p>
+        </div>
+
+        <div class="service-card">
+            <i class="fas fa-shield-alt service-icon"></i>
+            <h3>Website Security</h3>
+            <p>Protect your website from cyber threats with our comprehensive security features, including SSL certificates, DDoS protection, and malware scanning.</p>
+        </div>
+
+        <div class="service-card">
+            <i class="fas fa-globe service-icon"></i>
+            <h3>Domain Names</h3>
+            <p>Find the perfect domain name for your website and manage it effortlessly with our user-friendly tools. Get access to a wide selection of extensions and privacy options.</p>
+        </div>
+    </section>
+
+    <!-- Include Footer here -->
+    <footer class="site-footer">
+        <div class="footer-container">
+
+            <!-- Footer Links Section -->
+            <div class="footer-links-grid">
+                <div>
+                    <h4>Products & Services</h4>
+                    <ul>
+                        <li><a href="https://cloud.famral.com/web-hosting">Web Hosting</a></li>
+                        <li><a href="https://cloud.famral.com/wordpress-hosting">WordPress Hosting</a></li>
+                        <li><a href="https://cloud.famral.com/website-security">Website Security</a></li>
+                        <li><a href="https://cloud.famral.com/domains">Domain Names</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Free Resources</h4>
+                    <ul>
+                        <li><a href="https://cloud.famral.com/domain-name-generator">Domain Name Generator</a></li>
+                        <li><a href="https://cloud.famral.com/whois">Whois Lookup</a></li>
+                        <li><a href="https://www.famral.com/create">Graphic Design Maker</a></li>
+                        <li><a href="https://stock.famral.com">Creative Content Library</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="https://www.famral.com/privacy">Privacy Policy</a></li>
+                        <li><a href="https://www.famral.com/terms">Terms & Conditions</a></li>
+                        <li><a href="https://www.famral.com/contact">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Content (Copyright, etc.) -->
+            <div class="footer-content">
+                <p>&copy; <span id="current-year"></span> Famral. All Rights Reserved.</p>
+                <p><a href="#" class="back-to-top">Back to Top <i class="fas fa-arrow-up"></i></a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Include Scripts (if any) -->
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links-wrapper');
+        menuToggle.addEventListener('click', function () {
+            navLinks.classList.toggle('show');
+        });
+        // Optional: close menu when clicking outside
+        document.addEventListener('click', function (e) {
+            if (!menuToggle.contains(e.target) && !navLinks.contains(e.target)) {
+                navLinks.classList.remove('show');
+            }
+        });
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        // Back to top smooth scroll
+        document.querySelector('.back-to-top').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        });
+    </script>
+
+</body>
+
+</html>
