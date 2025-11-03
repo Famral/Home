@@ -4,7 +4,6 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 
 <url>
@@ -44,11 +43,6 @@
 </url>
 <url>
   <loc>https://www.famral.com/pdf-editor/sign-pdf</loc>
-  <lastmod>2025-11-03T07:47:14+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.famral.com/features/add-text-to-photo</loc>
   <lastmod>2025-11-03T07:47:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
@@ -138,15 +132,11 @@
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.famral.com/features</loc>
-  <lastmod>2025-11-03T07:47:14+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.famral.com/features/qr-code-generator</loc>
+  <loc>https://www.famral.com/qr-code-generator</loc>
   <lastmod>2025-11-03T07:47:14+00:00</lastmod>
   <priority>0.51</priority>
 </url>
+
 
 
 </urlset>
