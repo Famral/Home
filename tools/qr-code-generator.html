@@ -1,0 +1,374 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator | Free Online QR Code Maker</title>
+    <meta name="description" content="Generate QR codes instantly for free. Enter your text, URL, or data and download your QR code as an image. No signup required!">
+    <meta name="keywords" content="qr code, qr code generator, free qr code, online qr code, qr code maker, qr code tool">
+    <meta name="author" content="Famral">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/x-icon" href="https://www.famral.com/favicon.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1e40af;
+            --gray-bg: #f8fafc;
+            --gray-border: #e5e7eb;
+            --gray-text: #334155;
+            --container-bg: #fff;
+            --shadow: 0 4px 24px rgba(37,99,235,0.08);
+            --radius: 16px;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: var(--gray-bg);
+            margin: 0;
+            padding: 0;
+            color: #1e293b;
+        }
+        /* Navbar Styles */
+        .navbar {
+            background: #fff;
+            border-bottom: 1px solid var(--gray-border);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 1.5rem;
+            height: 60px;
+        }
+        .navbar-logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: black;
+            text-decoration: none;
+            letter-spacing: -1px;
+        }
+        .navbar-logo img {
+            height: 32px;
+            margin-right: 10px;
+        }
+        .navbar-links {
+            display: flex;
+            gap: 1.2rem;
+        }
+        .navbar-links a {
+            color: #1e293b;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.05rem;
+            padding: 6px 14px;
+            border-radius: 6px;
+            transition: background 0.2s, color 0.2s;
+            display: block;
+        }
+        .navbar-links a:hover,
+        .navbar-links a.active {
+            background: #e0e7ff;
+            color: var(--primary);
+        }
+        .navbar-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            color: var(--primary);
+            cursor: pointer;
+        }
+        @media (max-width: 800px) {
+            .navbar-container {
+                padding: 0 0.7rem;
+            }
+            .navbar-links {
+                position: absolute;
+                top: 60px;
+                right: 0;
+                background: #fff;
+                flex-direction: column;
+                gap: 0;
+                min-width: 170px;
+                box-shadow: 0 4px 24px rgba(37,99,235,0.08);
+                border-radius: 0 0 10px 10px;
+                border: 1px solid var(--gray-border);
+                z-index: 2000;
+                padding: 0.5rem 0;
+                display: none;
+            }
+            .navbar-links.show {
+                display: flex;
+            }
+            .navbar-links a {
+                padding: 0.9rem 1.5rem;
+                border-radius: 0;
+                font-size: 1.08rem;
+                color: #1e293b;
+                background: none;
+                border-bottom: 1px solid #f1f5f9;
+                margin: 0;
+            }
+            .navbar-links a:last-child {
+                border-bottom: none;
+            }
+            .navbar-toggle {
+                display: block;
+            }
+        }
+
+        /* Main Content Styles */
+        .container {
+            max-width: 480px;
+            margin: 3.5rem auto 0 auto;
+            background: var(--container-bg);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 2.2rem 2rem 2.5rem 2rem;
+            position: relative;
+        }
+        h1 {
+            text-align: center;
+            color: var(--primary);
+            margin-bottom: 1.2rem;
+            font-size: 2.1rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+        .desc {
+            text-align: center;
+            color: var(--gray-text);
+            margin-bottom: 2.1rem;
+            font-size: 1.11rem;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        label {
+            font-weight: 500;
+            color: var(--gray-text);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        input[type="text"], textarea, select, input[type="number"] {
+            width: 100%;
+            padding: 0.7rem;
+            border: 1px solid var(--gray-border);
+            border-radius: 8px;
+            font-size: 1.07rem;
+            margin-bottom: 0.5rem;
+            background: #f1f5f9;
+            color: #1e293b;
+            resize: none;
+            box-sizing: border-box;
+            transition: border 0.18s;
+        }
+        input[type="color"] {
+            width: 100%;
+            height: 2.2rem;
+            padding: 0;
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+        .customize-row {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+        .customize-row > div {
+            flex: 1 1 120px;
+            min-width: 120px;
+        }
+        .btn-generate {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.13rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 0.5rem;
+            transition: background 0.2s, box-shadow 0.2s;
+            box-shadow: 0 2px 8px rgba(37,99,235,0.08);
+        }
+        .btn-generate:hover {
+            background: var(--primary-dark);
+            box-shadow: 0 4px 16px rgba(37,99,235,0.13);
+        }
+        .qr-section {
+            text-align: center;
+            margin-top: 2.2rem;
+        }
+        #qrcode {
+            margin: 0 auto 1.2rem auto;
+            background: #fff;
+            padding: 1rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(37,99,235,0.07);
+            display: inline-block;
+        }
+        .btn-download {
+            background: #22c55e;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 0.7rem 2rem;
+            font-size: 1.07rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 0.7rem;
+            transition: background 0.2s, box-shadow 0.2s;
+            box-shadow: 0 2px 8px rgba(34,197,94,0.08);
+        }
+        .btn-download:hover {
+            background: #16a34a;
+            box-shadow: 0 4px 16px rgba(34,197,94,0.13);
+        }
+        /* Responsive */
+        @media (max-width: 600px) {
+            .container {
+                padding: 1.2rem 0.5rem 1.5rem 0.5rem;
+            }
+            h1 {
+                font-size: 1.3rem;
+            }
+            .customize-row {
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="/" class="navbar-logo">
+                <img src="https://www.famral.com/favicon.png" alt="Famral Logo">
+                Famral
+            </a>
+            <button class="navbar-toggle" aria-label="Open menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="navbar-links">
+                <a href="/">Home</a>
+                <a href="/tools">All Tools</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h1><i class="fas fa-qrcode"></i> QR Code Generator</h1>
+        <div class="desc">
+            Enter your text, URL and generate a QR code instantly.
+        </div>
+        <div class="form-group">
+            <label for="qrdata">Text, URL, or Data</label>
+            <textarea id="qrdata" rows="3" placeholder="Enter text, URL, or any data..."></textarea>
+        </div>
+        <div class="customize-row">
+            <div>
+                <label for="qrsize">Size</label>
+                <input type="number" id="qrsize" min="100" max="600" value="220"/>
+            </div>
+            <div>
+                <label for="qrcolor">Foreground</label>
+                <input type="color" id="qrcolor" value="#2563eb">
+            </div>
+            <div>
+                <label for="qrbg">Background</label>
+                <input type="color" id="qrbg" value="#ffffff">
+            </div>
+            <div>
+                <label for="qrlevel">Error Level</label>
+                <select id="qrlevel">
+                    <option value="L">L (Low)</option>
+                    <option value="M">M (Medium)</option>
+                    <option value="Q">Q (Quartile)</option>
+                    <option value="H" selected>H (High)</option>
+                </select>
+            </div>
+        </div>
+        <button class="btn-generate" id="generateBtn"><i class="fas fa-bolt"></i> Generate QR Code</button>
+        <div class="qr-section" id="qrSection" style="display:none;">
+            <div id="qrcode"></div>
+            <button class="btn-download" id="downloadBtn"><i class="fas fa-download"></i> Download PNG</button>
+        </div>
+    </div>
+    <!-- QRCode.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+    <script>
+        // Navbar mobile toggle
+        const navbarToggle = document.querySelector('.navbar-toggle');
+        const navbarLinks = document.querySelector('.navbar-links');
+        navbarToggle.addEventListener('click', function () {
+            navbarLinks.classList.toggle('show');
+        });
+        document.addEventListener('click', function (e) {
+            if (!navbarToggle.contains(e.target) && !navbarLinks.contains(e.target)) {
+                navbarLinks.classList.remove('show');
+            }
+        });
+
+        // QR Code logic
+        const generateBtn = document.getElementById('generateBtn');
+        const qrData = document.getElementById('qrdata');
+        const qrSection = document.getElementById('qrSection');
+        const qrCodeDiv = document.getElementById('qrcode');
+        const downloadBtn = document.getElementById('downloadBtn');
+        const qrSize = document.getElementById('qrsize');
+        const qrColor = document.getElementById('qrcolor');
+        const qrBg = document.getElementById('qrbg');
+        const qrLevel = document.getElementById('qrlevel');
+        let qr;
+
+        function renderQR() {
+            const value = qrData.value.trim();
+            if (!value) {
+                qrSection.style.display = 'none';
+                qrCodeDiv.innerHTML = '';
+                return;
+            }
+            qrSection.style.display = 'block';
+            qrCodeDiv.innerHTML = '';
+            qr = new QRious({
+                element: document.createElement('canvas'),
+                value: value,
+                size: parseInt(qrSize.value) || 220,
+                background: qrBg.value,
+                foreground: qrColor.value,
+                level: qrLevel.value
+            });
+            qrCodeDiv.appendChild(qr.element);
+        }
+
+        generateBtn.addEventListener('click', renderQR);
+
+        // Live update on customization change if QR is visible
+        [qrSize, qrColor, qrBg, qrLevel].forEach(el => {
+            el.addEventListener('input', function() {
+                if (qrSection.style.display === 'block') renderQR();
+            });
+        });
+
+        downloadBtn.addEventListener('click', function() {
+            if (!qr) return;
+            const link = document.createElement('a');
+            link.href = qr.toDataURL('image/png');
+            link.download = 'qrcode.png';
+            link.click();
+        });
+    </script>
+</body>
+</html>
