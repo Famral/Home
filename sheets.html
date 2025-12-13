@@ -1,0 +1,394 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://www.famral.com/favicon.png">
+    <title>Famral Sheets – Free Online Spreadsheet Editor</title>
+    <meta name="description" content="Famral Sheets is a fast, easy, and free online spreadsheet editor. Create, edit, analyze data, and collaborate on spreadsheets like Google Sheets and MS Excel with ease!">
+    <meta name="keywords" content="Famral Sheets, spreadsheet editor, online excel, free office tool, edit sheets, collaborate, MS Excel alternative">
+    <meta name="author" content="Famral">
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Famral Sheets – Free Online Spreadsheet Editor">
+    <meta property="og:description" content="Famral Sheets is a fast, easy, and free online spreadsheet editor. Create, edit, analyze data, and collaborate on spreadsheets like Google Sheets and MS Excel with ease!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.famral.com/sheets">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Famral Sheets – Free Online Spreadsheet Editor">
+    <meta name="twitter:description" content="Famral Sheets is a fast, easy, and free online spreadsheet editor. Create, edit, analyze data, and collaborate on spreadsheets like Google Sheets and MS Excel with ease!">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        :root {
+            --primary: #16a34a;
+            --primary-dark: #15803d;
+            --bg: #f8fafc;
+            --text: #1e293b;
+            --card-bg: #fff;
+            --card-shadow: 0 4px 24px rgba(22,163,74,0.08);
+            --border-radius: 14px;
+            --transition: 0.2s cubic-bezier(.4,0,.2,1);
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.04);
+            --border-light: 1px solid #e5e7eb;
+            --dark: #1e293b;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+        }
+        .navbar {
+            background-color: #ffffff;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-sm);
+            border-bottom: var(--border-light);
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        .nav-logo:hover {
+            text-decoration: none;
+            color: var(--primary);
+        }
+        .nav-logo img {
+            height: 30px;
+            margin-right: 8px;
+        }
+        .nav-links-wrapper {
+            display: flex;
+            gap: 1.5rem;
+        }
+        .nav-links-wrapper a {
+            color: var(--dark);
+            font-weight: 500;
+            padding: 0.5rem 1.2rem;
+            border-radius: 6px;
+            position: relative;
+            text-decoration: none;
+            font-size: 1.07rem;
+            letter-spacing: 0.01em;
+            transition: 
+                color 0.2s,
+                background 0.2s,
+                box-shadow 0.2s;
+        }
+        .nav-links-wrapper a:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px var(--primary);
+            background: #e0e7ff;
+        }
+        .nav-links-wrapper a:hover,
+        .nav-links-wrapper a.active {
+            color: var(--primary);
+            background: #e0e7ff;
+        }
+        .nav-links-wrapper a::after {
+            content: '';
+            position: absolute;
+            left: 16px;
+            right: 16px;
+            bottom: 7px;
+            height: 2px;
+            background: var(--primary);
+            border-radius: 2px;
+            width: 0;
+            transition: width 0.3s;
+        }
+        .nav-links-wrapper a:hover::after,
+        .nav-links-wrapper a.active::after {
+            width: calc(100% - 32px);
+        }
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.7rem;
+            color: var(--dark);
+            cursor: pointer;
+            margin-left: 1rem;
+            transition: color 0.2s;
+        }
+        .menu-toggle:focus {
+            outline: none;
+            color: var(--primary);
+        }
+        @media (max-width: 800px) {
+            .nav-links-wrapper {
+                display: none;
+                position: absolute;
+                top: 60px;
+                right: 2rem;
+                background: #fff;
+                flex-direction: column;
+                gap: 0;
+                min-width: 170px;
+                box-shadow: 0 4px 24px rgba(22,163,74,0.08);
+                border-radius: 10px;
+                border: 1px solid #e5e7eb;
+                z-index: 2000;
+                padding: 0.5rem 0;
+            }
+            .nav-links-wrapper.show {
+                display: flex;
+            }
+            .nav-links-wrapper a {
+                padding: 0.9rem 1.5rem;
+                border-radius: 0;
+                font-size: 1.08rem;
+                color: var(--dark);
+                background: none;
+                border-bottom: 1px solid #f1f5f9;
+                margin: 0;
+            }
+            .nav-links-wrapper a:last-child {
+                border-bottom: none;
+            }
+            .nav-links-wrapper a:hover,
+            .nav-links-wrapper a.active {
+                background: #e0e7ff;
+                color: var(--primary);
+            }
+            .nav-links-wrapper a::after {
+                display: none;
+            }
+            .menu-toggle {
+                display: block;
+            }
+            .nav-container {
+                position: relative;
+            }
+        }
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 2rem 2rem 2rem;
+            background: linear-gradient(90deg, #e0ffe9 0%, #f8fafc 100%);
+            min-height: 50vh;
+        }
+        .hero-content {
+            max-width: 500px;
+            margin-right: 3rem;
+            flex: 1 1 350px;
+        }
+        .hero-title {
+            font-size: 2.8rem;
+            font-weight: bold;
+            color: var(--primary-dark);
+            margin-bottom: 1.2rem;
+            letter-spacing: -1px;
+        }
+        .hero-desc {
+            font-size: 1.18rem;
+            margin-bottom: 2.2rem;
+            color: #334155;
+            line-height: 1.6;
+        }
+        .cta-btn {
+            background: var(--primary);
+            color: white;
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.15rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background var(--transition), transform var(--transition);
+            box-shadow: 0 2px 12px rgba(22,163,74,0.08);
+        }
+        .cta-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px) scale(1.03);
+        }
+        .hero-image {
+            max-width: 370px;
+            width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: 0 8px 32px rgba(22,163,74,0.10);
+            flex: 1 1 300px;
+        }
+        @media (max-width: 900px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 2.5rem 1rem 1.5rem 1rem;
+            }
+            .hero-content {
+                margin-right: 0;
+                margin-bottom: 2rem;
+            }
+            .hero-image {
+                margin-top: 0;
+            }
+            .nav-container {
+                padding: 0 1rem;
+            }
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2.2rem;
+            padding: 3.5rem 2rem 2rem 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .feature-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+            padding: 2.2rem 1.5rem 1.7rem 1.5rem;
+            text-align: center;
+            transition: box-shadow var(--transition), transform var(--transition);
+            border: 1px solid #e0e7ef;
+        }
+        .feature-card:hover {
+            box-shadow: 0 8px 32px rgba(22,163,74,0.13);
+            transform: translateY(-4px) scale(1.03);
+        }
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1.1rem;
+        }
+        .feature-title {
+            font-size: 1.22rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--primary-dark);
+        }
+        .feature-desc {
+            font-size: 1.03rem;
+            color: #64748b;
+            line-height: 1.6;
+        }
+        .footer {
+            background: #1e293b;
+            color: #cbd5e1;
+            text-align: center;
+            padding: 2.2rem 1rem 1.2rem 1rem;
+            margin-top: 2.5rem;
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+        }
+        @media (max-width: 600px) {
+            .features {
+                padding: 2rem 0.5rem 1rem 0.5rem;
+                gap: 1.2rem;
+            }
+            .footer {
+                padding: 1.2rem 0.5rem 0.7rem 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="https://www.famral.com/sheets" class="nav-logo">
+                <img src="https://i.ibb.co/LXQc5XkZ/Sheets.png" alt="Famral Sheets"
+                    style="height:30px;width:30px;margin-right:8px;vertical-align:middle;border-radius:6px;">
+                Famral Sheets
+            </a>
+            <button class="menu-toggle" aria-label="Open menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-links-wrapper">
+                <a href="/">Home</a>
+                <a href="https://www.famral.com/sheets/features">Features</a>
+                <a href="https://sheets.famral.com">Get Started</a>
+            </div>
+        </div>
+    </nav>
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-title">Analyze and Collaborate Freely</div>
+            <div class="hero-desc">
+                Famral Sheets is your free, intelligent online spreadsheet editor. Organize data, analyze numbers, collaborate with your team in real-time, and export to any format instantly.
+            </div>
+            <a href="https://sheets.famral.com"><button class="cta-btn">Start Analyzing</button></a>
+        </div>
+        <img src="https://www.famral.com/pdf-editor.webp" alt="Famral Sheets" class="hero-image">
+    </section>
+    <section class="features" id="features">
+        <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-table"></i></div>
+            <div class="feature-title">Powerful Formulas</div>
+            <div class="feature-desc">Perform complex calculations with built-in formulas, functions, and data analysis tools at your fingertips.</div>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-users"></i></div>
+            <div class="feature-title">Real-time Collaboration</div>
+            <div class="feature-desc">Invite others to view, comment, or edit spreadsheets simultaneously. See changes as they happen.</div>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-chart-pie"></i></div>
+            <div class="feature-title">Data Visualization</div>
+            <div class="feature-desc">Turn data into insights with colorful charts, graphs, and pivot tables to visualize your information.</div>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-file-excel"></i></div>
+            <div class="feature-title">Excel Compatible</div>
+            <div class="feature-desc">Seamlessly import and export Microsoft Excel files (.xlsx) and CSVs without losing formatting.</div>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-shapes"></i></div>
+            <div class="feature-title">Rich Templates</div>
+            <div class="feature-desc">Start quickly with professionally designed templates for budgets, schedules, invoices, and more.</div>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-cloud"></i></div>
+            <div class="feature-title">Cloud Sync</div>
+            <div class="feature-desc">Your documents are automatically saved to the cloud, accessible from any device, anywhere.</div>
+        </div>
+    </section>
+    <section id="get-started" style="text-align:center; padding: 3rem 2rem;">
+        <h2 style="color:var(--primary-dark); font-size:2rem; margin-bottom:1rem;">Start Organizing Your Data</h2>
+        <p style="font-size:1.1rem; margin-bottom:2rem;">Get started for free and experience the easiest way to create spreadsheets online. No credit card required.</p>
+        <a href="https://sheets.famral.com/" style="text-decoration:none;"><button class="cta-btn">Start Analyzing</button></a>
+    </section>
+    <footer class="footer" id="contact">
+        <div>
+            &copy; 2025 Famral. All rights reserved.
+        </div>
+    </footer>
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links-wrapper');
+        menuToggle.addEventListener('click', function () {
+            navLinks.classList.toggle('show');
+        });
+        // Optional: close menu when clicking outside
+        document.addEventListener('click', function (e) {
+            if (!menuToggle.contains(e.target) && !navLinks.contains(e.target)) {
+                navLinks.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+</html>
