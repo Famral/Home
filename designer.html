@@ -18,43 +18,49 @@
     <meta property="og:description" content="Famral Designer is a free online graphic design tool. Create social media posts, presentations, posters, videos, logos and more with ease!">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.famral.com/designer">
-    <meta property="og:image" content="https://www.famral.com/famral-designer-banner.webp">
+    <meta property="og:image" content="https://www.famral.com/favicon.png">
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Famral Designer – Free Online Graphic Design Tool">
     <meta name="twitter:description" content="Famral Designer is a free online graphic design tool. Create social media posts, presentations, posters, videos, logos and more with ease!">
-    <meta name="twitter:image" content="https://www.famral.com/famral-designer-banner.webp">
+    <meta name="twitter:image" content="https://www.famral.com/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #2563eb;
-            --primary-dark: #1e40af;
+            --primary: #3b82f6;
+            --primary-dark: #2563eb;
+            --accent: #8b5cf6;
             --bg: #f8fafc;
-            --text: #1e293b;
-            --card-bg: #fff;
-            --card-shadow: 0 4px 24px rgba(37,99,235,0.08);
-            --border-radius: 14px;
-            --transition: 0.2s cubic-bezier(.4,0,.2,1);
-            --shadow-sm: 0 2px 8px rgba(0,0,0,0.04);
-            --border-light: 1px solid #e5e7eb;
-            --dark: #1e293b;
+            --text: #0f172a;
+            --text-light: #64748b;
+            --card-bg: #ffffff;
+            --card-shadow: 0 10px 30px -10px rgba(0,0,0,0.05);
+            --card-hover-shadow: 0 20px 40px -10px rgba(0,0,0,0.1);
+            --border-radius: 16px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --border-light: 1px solid rgba(226, 232, 240, 0.8);
+            --dark: #0f172a;
         }
         html {
             scroll-behavior: smooth;
         }
         body {
             margin: 0;
-            font-family: 'Segoe UI', Arial, sans-serif;
+            font-family: 'Inter', sans-serif;
             background: var(--bg);
             color: var(--text);
+            -webkit-font-smoothing: antialiased;
         }
         .navbar {
-            background-color: #ffffff;
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
             padding: 1rem 0;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: var(--shadow-sm);
             border-bottom: var(--border-light);
         }
         .nav-container {
@@ -67,11 +73,12 @@
         }
         .nav-logo {
             font-size: 1.5rem;
-            font-weight: 700;
+            font-weight: 800;
             color: var(--dark);
             text-decoration: none;
             display: flex;
             align-items: center;
+            letter-spacing: -0.02em;
         }
         .nav-logo:hover {
             text-decoration: none;
@@ -88,12 +95,11 @@
         .nav-links-wrapper a {
             color: var(--dark);
             font-weight: 500;
-            padding: 0.5rem 1.2rem;
-            border-radius: 6px;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
             position: relative;
             text-decoration: none;
-            font-size: 1.07rem;
-            letter-spacing: 0.01em;
+            font-size: 0.95rem;
             transition: 
                 color 0.2s,
                 background 0.2s,
@@ -102,12 +108,12 @@
         .nav-links-wrapper a:focus {
             outline: none;
             box-shadow: 0 0 0 2px var(--primary);
-            background: #e0e7ff;
+            background: rgba(59, 130, 246, 0.1);
         }
         .nav-links-wrapper a:hover,
         .nav-links-wrapper a.active {
             color: var(--primary);
-            background: #e0e7ff;
+            background: rgba(59, 130, 246, 0.08);
         }
         .nav-links-wrapper a::after {
             content: '';
@@ -172,7 +178,7 @@
             }
             .nav-links-wrapper a:hover,
             .nav-links-wrapper a.active {
-                background: #e0e7ff;
+                background: rgba(59, 130, 246, 0.08);
                 color: var(--primary);
             }
             .nav-links-wrapper a::after {
@@ -191,7 +197,7 @@
             align-items: center;
             justify-content: center;
             padding: 4rem 2rem 2rem 2rem;
-            background: linear-gradient(90deg, #e0e7ff 0%, #f8fafc 100%);
+            background: radial-gradient(circle at 50% 0%, #eff6ff 0%, #f8fafc 60%, #ffffff 100%);
             min-height: 50vh;
         }
         .hero-content {
@@ -200,40 +206,50 @@
             flex: 1 1 350px;
         }
         .hero-title {
-            font-size: 2.8rem;
-            font-weight: bold;
-            color: var(--primary-dark);
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--dark);
             margin-bottom: 1.2rem;
-            letter-spacing: -1px;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         .hero-desc {
             font-size: 1.18rem;
             margin-bottom: 2.2rem;
-            color: #334155;
+            color: var(--text-light);
             line-height: 1.6;
         }
         .cta-btn {
             background: var(--primary);
             color: white;
-            padding: 1rem 2.5rem;
+            padding: 1rem 2rem;
             border: none;
-            border-radius: 8px;
-            font-size: 1.15rem;
+            border-radius: 9999px;
+            font-size: 1.1rem;
             font-weight: 600;
             cursor: pointer;
             transition: background var(--transition), transform var(--transition);
-            box-shadow: 0 2px 12px rgba(37,99,235,0.08);
+            box-shadow: 0 4px 14px rgba(59, 130, 246, 0.3);
         }
         .cta-btn:hover {
             background: var(--primary-dark);
-            transform: translateY(-2px) scale(1.03);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
         }
         .hero-image {
             max-width: 370px;
             width: 100%;
             border-radius: var(--border-radius);
-            box-shadow: 0 8px 32px rgba(37,99,235,0.10);
+            box-shadow: 0 20px 40px -12px rgba(0,0,0,0.15);
             flex: 1 1 300px;
+            transform: perspective(1000px) rotateY(-5deg);
+            transition: transform 0.5s ease;
+        }
+        .hero-image:hover {
+            transform: perspective(1000px) rotateY(0deg);
         }
         @media (max-width: 900px) {
             .hero {
@@ -264,38 +280,121 @@
             background: var(--card-bg);
             border-radius: var(--border-radius);
             box-shadow: var(--card-shadow);
-            padding: 2.2rem 1.5rem 1.7rem 1.5rem;
-            text-align: center;
+            padding: 2rem;
+            text-align: left;
             transition: box-shadow var(--transition), transform var(--transition);
-            border: 1px solid #e0e7ef;
+            border: var(--border-light);
+        }
+        a.feature-card {
+            text-decoration: none;
+            color: inherit;
+            display: block;
         }
         .feature-card:hover {
-            box-shadow: 0 8px 32px rgba(37,99,235,0.13);
-            transform: translateY(-4px) scale(1.03);
+            box-shadow: var(--card-hover-shadow);
+            transform: translateY(-5px);
+            border-color: rgba(59, 130, 246, 0.3);
         }
         .feature-icon {
-            font-size: 2.5rem;
+            font-size: 2rem;
             color: var(--primary);
             margin-bottom: 1.1rem;
+            background: rgba(59, 130, 246, 0.1);
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
         }
         .feature-title {
-            font-size: 1.22rem;
-            font-weight: 600;
+            font-size: 1.25rem;
+            font-weight: 700;
             margin-bottom: 0.5rem;
-            color: var(--primary-dark);
+            color: var(--dark);
         }
         .feature-desc {
-            font-size: 1.03rem;
-            color: #64748b;
+            font-size: 1rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        .tools-section {
+            padding: 4rem 2rem;
+            background: linear-gradient(to bottom, var(--bg), #eff6ff);
+            text-align: center;
+        }
+        .section-header {
+            max-width: 600px;
+            margin: 0 auto 3rem;
+        }
+        .section-header h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+        }
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .tool-card {
+            background: #ffffff;
+            border-radius: var(--border-radius);
+            padding: 2.5rem 2rem;
+            text-decoration: none;
+            color: inherit;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+            border: var(--border-light);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--card-hover-shadow);
+            border-color: rgba(59, 130, 246, 0.3);
+        }
+        .tool-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            background: rgba(59, 130, 246, 0.1);
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+        .tool-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            color: var(--dark);
+        }
+        .tool-desc {
+            font-size: 1rem;
+            color: var(--text-light);
             line-height: 1.6;
         }
         .footer {
-            background: #1e293b;
-            color: #cbd5e1;
+            background: #ffffff;
+            color: var(--text-light);
+            border-top: var(--border-light);
             text-align: center;
             padding: 2.2rem 1rem 1.2rem 1rem;
             margin-top: 2.5rem;
-            border-radius: var(--border-radius) var(--border-radius) 0 0;
+            border-radius: 0;
         }
         @media (max-width: 600px) {
             .features {
@@ -312,17 +411,17 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="https://www.famral.com/designer" class="nav-logo">
-                <img src="https://i.ibb.co/STgCbbk/Docs.png" alt="Famral Designer"
+                <img src="https://www.famral.com/favicon.png" alt="Famral Designer"
                     style="height:30px;width:30px;margin-right:8px;vertical-align:middle;border-radius:6px;">
-                Famral Designer
+                Designer
             </a>
             <button class="menu-toggle" aria-label="Open menu">
                 <i class="fas fa-bars"></i>
             </button>
             <div class="nav-links-wrapper">
                 <a href="/">Home</a>
-                <a href="#">Features</a>
-                <a href="https://designer.famral.com">Get Started</a>
+                <a href="https://www.famral.com/tools/logo-maker">Create Logo</a>
+                <a href="https://www.famral.com/tools/poster-maker">Create Poster</a>
             </div>
         </div>
     </nav>
@@ -332,9 +431,8 @@
             <div class="hero-desc">
                 Famral Designer is your free, intelligent online design tool. Create professional graphics, collaborate with your team in real-time, and export to any format instantly.
             </div>
-            <a href="https://designer.famral.com"><button class="cta-btn">Start Designing</button></a>
         </div>
-        <img src="https://www.famral.com/famral-designer-banner.webp" alt="Famral Designer" class="hero-image">
+        <img src="https://cdn.pixabay.com/photo/2019/02/24/11/49/icon-4017417_1280.png" alt="Famral Designer" class="hero-image">
     </section>
     <section class="features" id="features">
         <div class="feature-card">
@@ -368,10 +466,27 @@
             <div class="feature-desc">Your designs are automatically saved to the cloud, accessible from any device, anywhere.</div>
         </div>
     </section>
+    <section class="tools-section">
+        <div class="section-header">
+            <h2>Specialized Design Tools</h2>
+            <p>Everything you need to build your brand identity.</p>
+        </div>
+        <div class="tools-grid">
+            <a href="https://www.famral.com/tools/logo-maker" class="tool-card">
+                <div class="tool-icon"><i class="fas fa-bezier-curve"></i></div>
+                <div class="tool-title">Logo Maker</div>
+                <div class="tool-desc">Design professional logos for your brand in minutes using our easy-to-use logo maker tool.</div>
+            </a>
+            <a href="https://www.famral.com/tools/poster-maker" class="tool-card">
+                <div class="tool-icon"><i class="fas fa-bullhorn"></i></div>
+                <div class="tool-title">Poster Maker</div>
+                <div class="tool-desc">Create eye-catching posters for events, promotions, and announcements with stunning templates.</div>
+            </a>
+        </div>
+    </section>
     <section id="get-started" style="text-align:center; padding: 3rem 2rem;">
         <h2 style="color:var(--primary-dark); font-size:2rem; margin-bottom:1rem;">Bring Your Ideas to Life</h2>
         <p style="font-size:1.1rem; margin-bottom:2rem;">Get started for free and experience the easiest way to create stunning designs online.</p>
-        <a href="https://designer.famral.com/" style="text-decoration:none;"><button class="cta-btn">Start Designing</button></a>
     </section>
     <footer class="footer" id="contact">
         <div>
