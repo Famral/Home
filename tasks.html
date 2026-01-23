@@ -1,0 +1,327 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://www.famral.com/favicon.png">
+
+    <title>Famral Tasks – Free Online To-Do List & Task Manager</title>
+
+    <meta name="description"
+        content="Famral Tasks is a fast, simple, and free online to-do list app. Manage tasks, organize projects, and track progress securely in your browser.">
+    <meta name="keywords"
+        content="Famral Tasks, task manager, to-do list, online tasks, free task app, productivity, project management">
+    <meta name="author" content="Famral">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Famral Tasks – Free Online To-Do List">
+    <meta property="og:description"
+        content="Manage tasks, organize projects, and stay productive with Famral Tasks. Simple, fast, and secure.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.famral.com/tasks">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1623276527153-fa38c1616b05">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Famral Tasks – Free Online To-Do List">
+    <meta name="twitter:description"
+        content="A simple and powerful task manager to get things done anytime, anywhere.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1623276527153-fa38c1616b05">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #4b8ffd;
+            --primary-dark: #235eff;
+            --bg: #eff6ff;
+            --text: #1e293b;
+            --card-bg: #ffffff;
+            --card-shadow: 0 4px 24px rgba(59,130,246,0.15);
+            --border-radius: 14px;
+            --transition: 0.2s cubic-bezier(.4,0,.2,1);
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
+            --border-light: 1px solid #bfdbfe;
+            --dark: #1e293b;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background: #ffffff;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-sm);
+            border-bottom: var(--border-light);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-logo:hover { color: var(--primary); }
+
+        .nav-logo img {
+            height: 30px;
+            width: 30px;
+            margin-right: 8px;
+            border-radius: 6px;
+        }
+
+        .nav-links-wrapper {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links-wrapper a {
+            text-decoration: none;
+            font-weight: 500;
+            padding: .5rem 1.2rem;
+            border-radius: 6px;
+            color: var(--dark);
+        }
+
+        .nav-links-wrapper a:hover {
+            background: #dbeafe;
+            color: var(--primary-dark);
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.6rem;
+            cursor: pointer;
+        }
+
+        @media (max-width:800px) {
+            .nav-links-wrapper {
+                display: none;
+                position: absolute;
+                top: 60px;
+                right: 2rem;
+                background: #fff;
+                flex-direction: column;
+                min-width: 170px;
+                border-radius: 10px;
+                border: 1px solid #bfdbfe;
+            }
+
+            .nav-links-wrapper.show { display: flex; }
+            .menu-toggle { display: block; }
+        }
+
+        /* HERO */
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 2rem;
+            background: linear-gradient(90deg, #dbeafe, #eff6ff);
+        }
+
+        .hero-content {
+            max-width: 500px;
+            margin-right: 3rem;
+        }
+
+        .hero-title {
+            font-size: 2.8rem;
+            font-weight: bold;
+            color: var(--primary-dark);
+        }
+
+        .hero-desc {
+            font-size: 1.15rem;
+            margin: 1.5rem 0 2.2rem;
+            color: #475569;
+            line-height: 1.6;
+        }
+
+        .cta-btn {
+            background: var(--primary);
+            color: #fff;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .cta-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .hero-image {
+            max-width: 360px;
+            width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: 0 8px 32px rgba(59,130,246,0.25);
+        }
+
+        /* FEATURES */
+        .features {
+            max-width: 1100px;
+            margin: auto;
+            padding: 3.5rem 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 2rem 1.5rem;
+            text-align: center;
+            box-shadow: var(--card-shadow);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .feature-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        .feature-desc {
+            font-size: 1rem;
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        .footer {
+            background: #1e293b;
+            color: #cbd5e1;
+            text-align: center;
+            padding: 2rem 1rem 1rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="https://www.famral.com/tasks" class="nav-logo">
+            <img src="https://www.famral.com/favicon.png" alt="Famral Tasks">
+            Famral Tasks
+        </a>
+
+        <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+
+        <div class="nav-links-wrapper">
+            <a href="/">Home</a>
+            <a href="https://www.famral.com/tasks/task-management-app">Task Management</a>
+            <a href="https://tasks.famral.com">Get Started</a>
+        </div>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1 class="hero-title">Get Things Done</h1>
+        <p class="hero-desc">
+            Famral Tasks is a free, fast, and secure online task manager.
+            Create to-dos, organize projects, and track your progress safely in your browser.
+        </p>
+
+        <a href="https://tasks.famral.com" class="cta-btn">Start Managing Tasks</a>
+    </div>
+
+    <img src="https://images.unsplash.com/photo-1623276527153-fa38c1616b05"
+         alt="Famral Tasks App"
+         class="hero-image"
+         loading="lazy">
+</section>
+
+<section class="features">
+    <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-check-double"></i></div>
+        <div class="feature-title">Quick Tasks</div>
+        <div class="feature-desc">Add to-dos instantly and stay focused.</div>
+    </div>
+
+    <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-layer-group"></i></div>
+        <div class="feature-title">Projects & Lists</div>
+        <div class="feature-desc">Organize tasks into projects and categories.</div>
+    </div>
+
+    <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-cloud"></i></div>
+        <div class="feature-title">Auto Save</div>
+        <div class="feature-desc">Tasks are saved automatically in your browser.</div>
+    </div>
+
+    <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-lock"></i></div>
+        <div class="feature-title">Private & Secure</div>
+        <div class="feature-desc">Your tasks stay private and safe.</div>
+    </div>
+
+    <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+        <div class="feature-title">Any Device</div>
+        <div class="feature-desc">Access tasks from mobile, tablet, or desktop.</div>
+    </div>
+
+    <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+        <div class="feature-title">Fast & Lightweight</div>
+        <div class="feature-desc">Loads instantly with zero clutter.</div>
+    </div>
+</section>
+
+<footer class="footer">
+    &copy; <span id="year"></span> Famral. All rights reserved.
+</footer>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links-wrapper');
+
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+    });
+</script>
+
+</body>
+</html>
