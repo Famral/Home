@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Office Productivity & Graphic Design Tools</title>
+  <title>Famral | Office Productivity Suite</title>
   <meta name="description"
     content="Access free online Office Suite apps, web development utilities, and productivity tools to simplify your workflow.">
   <meta name="keywords"
@@ -13,566 +14,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  
-  <style>
-    :root {
-      --primary: #2563eb;
-      /* Blue */
-      --primary-dark: #1d4ed8;
-      --primary-light: #2563eb;
-      --secondary: #6c757d;
-      /* Gray */
-      --success: #28a745;
-      /* Green */
-      --danger: #dc3545;
-      /* Red */
-      --warning: #ffc107;
-      /* Yellow */
-      --info: #17a2b8;
-      /* Teal */
-      --light: #f8f9fa;
-      /* Very Light Gray */
-      --dark: #343a40;
-      /* Dark Gray / Almost Black */
-      --card: #ffffff;
-      /* White */
-      --gray: #adb5bd;
-      --gray-dark: #495057;
-
-      --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-      --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-
-      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
-      --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-      --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
-      --border-light: 1px solid #dee2e6;
-    }
-
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: var(--font-family-sans-serif);
-      line-height: 1.6;
-      color: var(--dark);
-      background-color: var(--light);
-      font-size: 16px;
-      /* Base font size */
-    }
-
-    a {
-      color: var(--primary);
-      text-decoration: none;
-      transition: color 0.2s ease-in-out;
-    }
-
-    a:hover {
-      color: var(--primary-dark);
-      text-decoration: underline;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      /* Prevent bottom space */
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      margin-bottom: 0.75rem;
-      font-weight: 600;
-      line-height: 1.2;
-      color: var(--dark);
-    }
-
-    h1 {
-      font-size: 2.5rem;
-    }
-
-    h2 {
-      font-size: 2rem;
-    }
-
-    h3 {
-      font-size: 1.75rem;
-    }
-
-    h4 {
-      font-size: 1.5rem;
-    }
-
-    p {
-      margin-bottom: 1rem;
-      color: var(--gray-dark);
-    }
-
-    ul {
-      list-style: none;
-    }
-
-    /* --- Utility Classes --- */
-    .container,
-    .nav-container,
-    .footer-container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-      /* Add horizontal padding */
-    }
-
-    .section {
-      padding: 4rem 0;
-    }
-
-    .section h2 {
-      text-align: center;
-      margin-bottom: 3rem;
-      font-size: 2.25rem;
-      color: var(--dark);
-    }
-
-    .section h2 i {
-      margin-right: 0.5rem;
-      color: var(--primary);
-    }
-
-    /* --- Navbar --- */
-    .navbar {
-      background-color: #ffffff;
-      padding: 1rem 0;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: var(--shadow-sm);
-      border-bottom: var(--border-light);
-    }
-
-    .nav-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .nav-logo {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--dark);
-      text-decoration: none;
-      display: flex;
-      /* Added for logo alignment */
-      align-items: center;
-      /* Added for logo alignment */
-    }
-
-    .nav-logo:hover {
-      text-decoration: none;
-      color: var(--primary);
-    }
-
-    .nav-logo img {
-      height: 30px;
-      /* Control logo image height */
-      margin-right: 8px;
-      /* Space between image and text */
-    }
-
-
-    .nav-links-wrapper {
-      display: flex;
-      gap: 1.5rem;
-    }
-
-    .nav-links-wrapper a {
-      color: var(--dark);
-      font-weight: 500;
-      padding: 0.5rem 0;
-      position: relative;
-      text-decoration: none;
-    }
-
-    .nav-links-wrapper a::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background-color: var(--primary);
-      transition: width 0.3s ease;
-    }
-
-    .nav-links-wrapper a:hover,
-    .nav-links-wrapper a.active {
-      /* Style for active link if needed */
-      color: var(--primary);
-    }
-
-    .nav-links-wrapper a:hover::after {
-      width: 100%;
-    }
-
-    .nav-toggle {
-      display: none;
-      /* Hidden by default */
-      background: none;
-      border: none;
-      font-size: 1.5rem;
-      color: var(--dark);
-      cursor: pointer;
-    }
-
-    /* --- Hero Section --- */
-    .hero {
-      background: linear-gradient(45deg, var(--primary), var(--primary-light));
-      color: #ffffff;
-      padding: 5rem 1.5rem;
-      /* Use padding on the section itself */
-      text-align: center;
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      font-weight: 700;
-      color: #ffffff;
-    }
-
-    .hero p {
-      font-size: 1.15rem;
-      max-width: 700px;
-      margin: 0 auto 1rem auto;
-      color: rgba(255, 255, 255, 0.9);
-    }
-
-    /* --- Services / Features Section --- */
-    .services-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-    }
-
-    .service-box {
-      background-color: var(--card);
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: var(--shadow-md);
-      border: var(--border-light);
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .service-box:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-lg);
-    }
-
-    .service-icon {
-      display: inline-block;
-      font-size: 2.5rem;
-      color: var(--primary);
-      margin-bottom: 1rem;
-      background-color: rgba(0, 123, 255, 0.1);
-      /* Light primary background */
-      width: 70px;
-      height: 70px;
-      line-height: 70px;
-      /* Center icon vertically */
-      border-radius: 50%;
-      text-align: center;
-    }
-
-    .service-box h3 {
-      font-size: 1.5rem;
-      margin-bottom: 0.75rem;
-      color: var(--dark);
-    }
-
-    .service-box p {
-      color: var(--gray-dark);
-      font-size: 0.95rem;
-      margin-bottom: 1rem;
-      /* Ensure space before link */
-    }
-
-    /* Styling for the links inside service-box */
-    .service-box a {
-      display: inline-block;
-      /* Allows margin-top */
-      margin-top: 1rem;
-      color: var(--primary);
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .service-box a:hover {
-      color: var(--primary-dark);
-      text-decoration: underline;
-    }
-
-    .service-box a i {
-      margin-left: 0.3rem;
-      font-size: 0.8em;
-      /* Make chevron slightly smaller */
-    }
-
-
-    /* --- CTA Section (Optional) --- */
-    .cta {
-      background-color: var(--primary);
-      color: #ffffff;
-      text-align: center;
-      padding: 4rem 1.5rem;
-      margin-top: 4rem;
-      /* Add space above CTA if used */
-    }
-
-    .cta h2 {
-      color: #ffffff;
-      margin-bottom: 1rem;
-    }
-
-    .cta p {
-      color: rgba(255, 255, 255, 0.9);
-      margin-bottom: 2rem;
-      font-size: 1.1rem;
-    }
-
-    .cta a {
-      display: inline-block;
-      background-color: #ffffff;
-      color: var(--primary);
-      padding: 0.8rem 2rem;
-      border-radius: 5px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
-      box-shadow: var(--shadow-sm);
-    }
-
-    .cta a:hover {
-      background-color: var(--light);
-      color: var(--primary-dark);
-      transform: translateY(-2px);
-      text-decoration: none;
-    }
-
-    /* --- Footer --- */
-    .site-footer {
-      background-color: var(--dark);
-      color: rgba(255, 255, 255, 0.7);
-      padding: 3rem 0 1rem 0;
-      /* More padding top, less bottom */
-      margin-top: 4rem;
-      /* Space above footer */
-    }
-
-    /* Footer Links Grid */
-    .footer-links-grid {
-      /* Added class for styling */
-      margin-bottom: 2rem;
-      padding-bottom: 2rem;
-      border-bottom: 1px solid var(--gray-dark);
-      /* Darker border */
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 1.5rem;
-      text-align: left;
-      /* Align text left for better readability */
-    }
-
-    .footer-links-grid h4 {
-      color: rgb(235, 235, 235);
-      margin-bottom: 1rem;
-      font-weight: 600;
-      font-size: 1.1rem;
-    }
-
-    .footer-links-grid ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .footer-links-grid li {
-      margin-bottom: 0.5rem;
-    }
-
-    .footer-links-grid a {
-      color: rgb(172, 172, 172);
-      text-decoration: none;
-      font-size: 0.9rem;
-      transition: color 0.2s ease;
-    }
-
-    .footer-links-grid a:hover {
-      color: #dadada;
-      text-decoration: underline;
-    }
-
-    /* Footer Bottom Content */
-    .footer-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      /* Allow wrapping on small screens */
-      gap: 1rem;
-      padding-top: 1.5rem;
-      font-size: 0.9rem;
-      text-align: center;
-    }
-
-    .footer-content p {
-      color: rgb(164, 164, 164);
-      margin-bottom: 0;
-      /* Reset paragraph margin */
-      flex-basis: 100%;
-      /* Default to full width */
-    }
-
-    @media (min-width: 768px) {
-      .footer-content {
-        text-align: left;
-        /* Align left on larger screens */
-      }
-
-      .footer-content p {
-        flex-basis: auto;
-        /* Allow side-by-side layout */
-      }
-    }
-
-
-    .back-to-top {
-      color: rgba(255, 255, 255, 0.8);
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .back-to-top:hover {
-      color: #ffffff;
-      text-decoration: underline;
-    }
-
-    .back-to-top i {
-      margin-left: 0.3rem;
-    }
-
-    /* --- Responsive Design --- */
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 2rem;
-      }
-
-      h2 {
-        font-size: 1.75rem;
-      }
-
-      h3 {
-        font-size: 1.5rem;
-      }
-
-      .hero h1 {
-        font-size: 2.5rem;
-      }
-
-      .hero p {
-        font-size: 1rem;
-      }
-
-      .section {
-        padding: 3rem 0;
-      }
-
-      .section h2 {
-        font-size: 2rem;
-        margin-bottom: 2rem;
-      }
-
-      .nav-toggle {
-        display: block;
-        /* Show hamburger */
-      }
-
-      .nav-links-wrapper {
-        display: none;
-        /* Hide links by default */
-        position: absolute;
-        top: 100%;
-        /* Position below navbar */
-        left: 0;
-        width: 100%;
-        background-color: #ffffff;
-        flex-direction: column;
-        padding: 1rem 0;
-        box-shadow: var(--shadow-md);
-        border-top: var(--border-light);
-      }
-
-      .nav-links-wrapper.active {
-        display: flex;
-        /* Show when active */
-      }
-
-      .nav-links-wrapper a {
-        padding: 0.75rem 1.5rem;
-        /* Adjust padding for vertical layout */
-        text-align: center;
-        border-bottom: var(--border-light);
-      }
-
-      .nav-links-wrapper a:last-child {
-        border-bottom: none;
-      }
-
-      .nav-links-wrapper a::after {
-        display: none;
-        /* Hide underline effect on mobile */
-      }
-
-      .services-list {
-        grid-template-columns: 1fr;
-        /* Stack cards */
-        gap: 1.5rem;
-      }
-
-      .service-box {
-        padding: 1.5rem;
-      }
-
-      /* Adjust footer links grid for mobile */
-      .footer-links-grid {
-        text-align: center;
-        /* Center align footer links on mobile */
-        gap: 1rem;
-      }
-
-      .footer-links-grid h4 {
-        margin-bottom: 0.5rem;
-      }
-
-      .footer-content {
-        flex-direction: column;
-        /* Stack copyright and back-to-top */
-        padding-top: 1rem;
-      }
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -593,8 +38,31 @@
 
       <!-- Navigation Links -->
       <div class="nav-links-wrapper" id="navLinks">
-        <a href="https://www.famral.com/workspace">Office Productivity Apps</a>
-        <a href="https://www.famral.com/design">Graphic Design Apps</a>
+        <div class="nav-item dropdown">
+          <button class="nav-link dropdown-toggle">All Products <i class="fas fa-chevron-down fa-xs"></i></button>
+          <div class="dropdown-menu mega-menu">
+            <div class="mega-menu-content">
+              <div class="mega-column">
+                <h4>Apps</h4>
+                <a href="https://www.famral.com/writer"><i class="fas fa-file-lines"></i>Writer</a>
+                <a href="https://www.famral.com/sheets"><i class="fas fa-table"></i>Sheets</a>
+                <a href="https://www.famral.com/slides"><i class="fas fa-chart-pie"></i>Slides</a>
+              </div>
+              <div class="mega-column">
+                <h4>&nbsp;</h4>
+                <a href="https://www.famral.com/pdf-editor"><i class="fas fa-file-pdf"></i>PDF Editor</a>
+                <a href="https://www.famral.com/notes"><i class="fas fa-sticky-note"></i>Notes</a>
+                <a href="https://www.famral.com/tasks"><i class="fas fa-check"></i>Tasks</a>
+              </div>
+              <div class="mega-column">
+                <h4>Suits</h4>
+                <a href="https://www.famral.com/workspace"><i class="fas fa-briefcase"></i>Workspace</a>
+                <a href="https://www.famral.com/office"><i class="fas fa-file-lines"></i>Office Apps</a>
+                <a href="https://www.famral.com/design"><i class="fas fa-object-group"></i>Graphic Design</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </nav>
@@ -602,103 +70,147 @@
   <main>
     <!-- Hero Section -->
     <section class="hero">
-      <h1>Save time and get more done!</h1>
-      <p>Try our free online document editor, spreadsheet editor, presentation maker, PDF editor and productivity tools designed to make your digital life easier.</p>
+      <div class="container">
+        <h1>Achieve more with Famral</h1>
+        <p>Seamlessly create, edit, and manage documents and web projects with our all-in-one cloud platform. Designed for life today.</p>
+      </div>
     </section>
 
-    <!-- Container for main content -->
-    <div class="container">
-
-      <section class="section" id="features">
-        <h2>Our Products</h2>
+    <!-- Features Section -->
+    <section class="section" id="features">
+      <div class="container">
+        <h2>Productivity Apps</h2>
         <div class="services-list">
-
           <div class="service-box">
             <span class="service-icon" aria-hidden="true">
               <i class="fas fa-file-lines"></i>
             </span>
-            <h3>Office Suite</h3>
-            <p>
-              Free online workspace .
-            </p>
-            <a href="https://www.famral.com/office">Try Office Apps <i
-                class="fas fa-chevron-right fa-xs"></i></a>
+            <h3>Document Editor</h3>
+            <p>Create professional documents, resumes, and reports with ease.</p>
+            <a href="https://www.famral.com/writer/document-editor">Start Writing <i class="fas fa-chevron-right fa-xs"></i></a>
           </div>
-
           <div class="service-box">
             <span class="service-icon" aria-hidden="true">
-              <i class="fas fa-object-group"></i>
+              <i class="fas fa-table"></i>
             </span>
-            <h3>Graphic Design</h3>
-            <p>
-              Graphic design tools.
-            </p>
-            <a href="https://www.famral.com/design">Try Graphic Design Apps <i
-                class="fas fa-chevron-right fa-xs"></i></a>
+            <h3>Spreadsheet Editor</h3>
+            <p>Analyze data, create charts, and manage budgets efficiently.</p>
+            <a href="https://www.famral.com/sheets/spreadsheet-editor">Analyze Data <i class="fas fa-chevron-right fa-xs"></i></a>
           </div>
-
           <div class="service-box">
             <span class="service-icon" aria-hidden="true">
-              <i class="fas fa-tools"></i>
+              <i class="fas fa-chart-pie"></i>
             </span>
-            <h3>Web Utilities</h3>
-            <p>
-              Online web tools.
-            </p>
-            <a href="https://www.famral.com/tools">Try Web Utilities <i
-                class="fas fa-chevron-right fa-xs"></i></a>
+            <h3>Presentation Maker</h3>
+            <p>Design stunning slides and present your ideas with confidence.</p>
+            <a href="https://www.famral.com/slides/presentation-maker">Create Slides <i class="fas fa-chevron-right fa-xs"></i></a>
           </div>
-
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true">
+              <i class="fas fa-file-pdf"></i>
+            </span>
+            <h3>PDF Editor</h3>
+            <p>Edit, merge, convert, and sign PDF documents securely.</p>
+            <a href="https://www.famral.com/pdf-editor">Edit PDFs <i class="fas fa-chevron-right fa-xs"></i></a>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true">
+              <i class="fas fa-sticky-note"></i>
+            </span>
+            <h3>Digital Notes</h3>
+            <p>Capture ideas, make lists, and organize your thoughts instantly.</p>
+            <a href="https://www.famral.com/notes">Take Notes <i class="fas fa-chevron-right fa-xs"></i></a>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true">
+              <i class="fas fa-chalkboard"></i>
+            </span>
+            <h3>Whiteboard</h3>
+            <p>Brainstorm ideas visually on a digital canvas.</p>
+            <a href="https://www.famral.com/whiteboard">Start Drawing <i class="fas fa-chevron-right fa-xs"></i></a>
+          </div>
         </div> <!-- End services-list -->
-      </section> <!-- End features section -->
+      </div>
+    </section>
 
-
-      <!-- NEW: Testimonials Section -->
-      <section class="section" id="testimonials">
-        <h2><i class="fas fa-users"></i>What Our Users Say</h2>
+    <!-- Business Section -->
+    <section class="section bg-surface">
+      <div class="container">
+        <h2>Built for Business</h2>
         <div class="services-list">
           <div class="service-box">
-            <p>"Famral made it so easy to edit PDF documents for my business. Highly recommended!"</p>
-            <strong>- Priya S., Small Business Owner</strong>
+            <span class="service-icon" aria-hidden="true">
+              <i class="fas fa-shield-alt"></i>
+            </span>
+            <h3>Enterprise Security</h3>
+            <p>Keep your business data safe with enterprise-grade encryption and compliance.</p>
           </div>
           <div class="service-box">
-            <p>"I love the background remover and photo editor. It saves me so much time!"</p>
-            <strong>- Alex R., Social Media Manager</strong>
-          </div>
-          <div class="service-box">
-            <p>"The templates are modern and easy to customize. Perfect for non-designers like me."</p>
-            <strong>- Meena T., Blogger</strong>
+            <span class="service-icon" aria-hidden="true">
+              <i class="fas fa-building"></i>
+            </span>
+            <h3>Team Management</h3>
+            <p>Easily manage users, roles, and permissions for your entire organization.</p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- NEW: FAQ Section -->
-      <section class="section" id="faq">
-        <h2><i class="fas fa-question-circle"></i>Frequently Asked Questions</h2>
+    <!-- Business Solutions Section -->
+    <section class="section" id="solutions">
+      <div class="container">
+        <h2>Business Solutions</h2>
         <div class="services-list">
           <div class="service-box">
+            <span class="service-icon" aria-hidden="true">
+              <i class="fas fa-briefcase"></i>
+            </span>
+            <h3>Small Business</h3>
+            <p>Cost-effective tools to manage documents for growing teams.</p>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true">
+              <i class="fas fa-building"></i>
+            </span>
+            <h3>Enterprise</h3>
+            <p>Scalable solutions with advanced security, compliance, and dedicated support.</p>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true">
+              <i class="fas fa-graduation-cap"></i>
+            </span>
+            <h3>Education</h3>
+            <p>Empower students and teachers with free, easy-to-use productivity tools.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section bg-surface" id="faq">
+      <div class="container">
+        <h2>Frequently asked questions</h2>
+        <div class="services-list">
+          <div class="service-box faq-box">
             <h3>Is Famral free to use?</h3>
-            <p>Yes! Famral offers a free plan with access to many features. Premium features are also available.</p>
+            <p>Yes, Famral offers a free plan with access to essential features. Premium plans are available for advanced needs.</p>
           </div>
-          <div class="service-box">
-            <h3>Do I need to install anything?</h3>
-            <p>No installation required. Famral works entirely in your web browser on any device.</p>
-          </div>
-          <div class="service-box">
-            <h3>Can I use my own images?</h3>
-            <p>Absolutely! Upload your own images, logos, and graphics to personalize your designs.</p>
+          <div class="service-box faq-box">
+            <h3>Is my data secure?</h3>
+            <p>We use industry-standard encryption to protect your data. Your documents are private and secure.</p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- NEW: Call to Action Section -->
+    <!-- Call to Action Section -->
+    <div class="container">
       <section class="cta" id="get-started">
-        <h2>Your simplest way to edit  PDF</h2>
-        <p>Your all-in-one PDF Editor for quick editing, highlighting, merging, and organizing PDF documents.</p>
-        <a href="https://www.famral.com/pdf-editor">PDF Editor</a>
+        <h2>Get started with Famral Workspace</h2>
+        <p>Everything you need to be productive, all in one place. Create, manage, and get work done.</p>
+        <a href="https://www.famral.com/workspace">Go to Workspace</a>
       </section>
-
-    </div> <!-- End container -->
+    </div>
   </main>
 
   <!-- Footer -->
@@ -710,12 +222,12 @@
                 <div>
           <h4>Products</h4>
           <ul>
-            <li><a href="https://www.famral.com/writer/document-editor">Document Editor</a></li>
-            <li><a href="https://www.famral.com/sheets/spreadsheet-editor">Spreadsheet Editor</a></li>
-            <li><a href="https://www.famral.com/slides/presentation-maker">Presentation Editor</a></li>
+            <li><a href="https://www.famral.com/writer">Writer</a></li>
+            <li><a href="https://www.famral.com/sheets">Sheets</a></li>
+            <li><a href="https://www.famral.com/slides">Slides</a></li>
             <li><a href="https://www.famral.com/pdf-editor">PDF Editor</a></li>
-            <li><a href="https://www.famral.com/notes">Digital Notes</a></li>
-            <li><a href="https://www.famral.com/whiteboard">Whiteboard</a></li>
+            <li><a href="https://www.famral.com/notes">Notes</a></li>
+            <li><a href="https://www.famral.com/tasks">Tasks</a></li>
           </ul>
         </div>
                 <div>
@@ -724,17 +236,6 @@
             <li><a href="https://www.famral.com/workspace">Workspace</a></li>
             <li><a href="https://www.famral.com/office">Office Suite</a></li>
             <li><a href="https://www.famral.com/design">Graphic Design</a></li>
-            <li><a href="https://www.famral.com/tools">Web Utilities</a></li>
-            <li><a href="https://market.famral.com">Market</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Popular Tools</h4>
-          <ul>
-            <li><a href="https://www.famral.com/tools/photo-editor">Photo Editor</a></li>
-            <li><a href="https://www.famral.com/tools/remove-background">Background Remover</a></li>
-            <li><a href="https://www.famral.com/tools/poster-maker">Poster Maker</a></li>
-            <li><a href="/tools">More Tools</a></li>
           </ul>
         </div>
         <div>
@@ -785,6 +286,23 @@
         }
       });
     });
+
+    // Mega Menu Dropdown Toggle
+    const dropdownToggle = document.querySelector('.dropdown-toggle');
+    const dropdownMenu = document.querySelector('.mega-menu');
+
+    if (dropdownToggle && dropdownMenu) {
+      dropdownToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dropdownMenu.classList.toggle('show');
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!dropdownMenu.contains(e.target) && !dropdownToggle.contains(e.target)) {
+          dropdownMenu.classList.remove('show');
+        }
+      });
+    }
 
     // Update the copyright year automatically
     document.getElementById('current-year').textContent = new Date().getFullYear();
