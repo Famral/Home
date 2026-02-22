@@ -1,27 +1,164 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Famral | Office Productivity Suite</title>
+  <title>Famral | Online Productivity Suite</title>
   <meta name="description"
     content="Access free online Office Suite apps, web development utilities, and productivity tools to simplify your workflow.">
   <meta name="keywords"
     content="famral, document editor, pdf editor, spreadsheet editor, presentation maker, office apps, web tools">
   <link rel="icon" type="image/png" href="./favicon.png"> 
+  
+  <!-- SEO & Social Tags -->
+  <link rel="canonical" href="https://www.famral.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.famral.com/" />
+  <meta property="og:title" content="Famral | Office Productivity Suite" />
+  <meta property="og:description" content="Access free online Office Suite apps, web development utilities, and productivity tools to simplify your workflow." />
+  <meta property="og:image" content="https://www.famral.com/favicon.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="home-style.css">
+  
+  <!-- Enhanced Design Styles -->
+  <style>
+    /* Reset & Base Styles */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; color: var(--text-dark); line-height: 1.6; background-color: #fff; }
+    img { max-width: 100%; height: auto; }
+    ul { list-style: none; }
+    a { text-decoration: none; color: inherit; }
+
+    /* Variables */
+    :root { --primary-color: #2563eb; --text-dark: #1e293b; --text-light: #64748b; }
+
+    /* Layout Utilities */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+    .section { padding: 5rem 0; }
+    .bg-surface { background-color: #f8fafc; }
+
+    /* Navbar Main Styles */
+    .navbar { background: white; border-bottom: 1px solid #e2e8f0; padding: 0.75rem 0; position: sticky; top: 0; z-index: 1000; }
+    .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+    .nav-logo { display: flex; align-items: center; gap: 0.75rem; font-weight: 700; font-size: 1.25rem; color: var(--text-dark); }
+    .nav-links-wrapper { display: flex; gap: 2rem; align-items: center; }
+    .nav-toggle { display: none; background: none; border: none; font-size: 1.5rem; color: var(--text-dark); cursor: pointer; padding: 0.5rem; }
+
+    /* Hero Section */
+    .hero { text-align: center; padding: 6rem 1rem; background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%); }
+    .hero h1 { font-size: 3.5rem; line-height: 1.2; margin-bottom: 1.5rem; background: -webkit-linear-gradient(315deg, #2563eb 0%, #1e40af 74%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .hero p { font-size: 1.25rem; color: var(--text-light); max-width: 700px; margin: 0 auto 2.5rem; }
+    .hero-buttons { display: flex; gap: 1rem; justify-content: center; margin-top: 2rem; }
+
+    /* Typography */
+    h2 { font-size: 2.25rem; text-align: center; margin-bottom: 3rem; color: var(--text-dark); font-weight: 700; letter-spacing: -0.02em; }
+    h3 { font-size: 1.25rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--text-dark); }
+    p { color: var(--text-light); }
+
+    /* Buttons */
+    .btn { padding: 0.875rem 2rem; border-radius: 0.5rem; font-weight: 600; text-decoration: none; transition: all 0.2s; display: inline-block; }
+    .btn-primary { background-color: var(--primary-color); color: white; box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2); }
+    .btn-secondary { background-color: white; color: var(--text-dark); border: 1px solid #e2e8f0; }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
+
+    /* Services / Features Grid */
+    .services-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+    .service-box { background: white; padding: 2rem; border-radius: 1rem; display: flex; flex-direction: column; align-items: flex-start; transition: transform 0.3s ease, box-shadow 0.3s ease; border: 1px solid #f1f5f9; }
+    .service-box:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); border-color: transparent; }
+    .service-icon { width: 48px; height: 48px; background-color: #eff6ff; color: var(--primary-color); display: flex; align-items: center; justify-content: center; border-radius: 0.75rem; font-size: 1.25rem; margin-bottom: 1.5rem; }
+    .service-box a { color: var(--primary-color); font-weight: 600; margin-top: auto; display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.95rem; }
+    .service-box a:hover { text-decoration: underline; }
+
+    /* CTA Section */
+    .cta { text-align: center; background-color: var(--primary-color); color: white; padding: 5rem 2rem; border-radius: 1.5rem; margin: 2rem 0; }
+    .cta h2 { color: white; margin-bottom: 1rem; }
+    .cta p { color: rgba(255, 255, 255, 0.9); font-size: 1.25rem; margin-bottom: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+    .cta a { background: white; color: var(--primary-color); padding: 1rem 2.5rem; border-radius: 0.5rem; font-weight: 600; display: inline-block; transition: transform 0.2s; }
+    .cta a:hover { transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2); }
+
+    /* Footer */
+    .site-footer { background-color: #f8fafc; padding: 5rem 0 2rem; border-top: 1px solid #e2e8f0; margin-top: auto; }
+    .footer-links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; margin-bottom: 4rem; }
+    .footer-links-grid h4 { margin-bottom: 1.5rem; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-dark); }
+    .footer-links-grid ul li { margin-bottom: 0.75rem; }
+    .footer-links-grid a { color: var(--text-light); transition: color 0.2s; font-size: 0.95rem; }
+    .footer-links-grid a:hover { color: var(--primary-color); }
+    .footer-content { border-top: 1px solid #e2e8f0; padding-top: 2rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; color: var(--text-light); font-size: 0.875rem; }
+    .back-to-top { color: var(--text-dark); font-weight: 500; }
+
+    /* Navbar Dropdown & Mega Menu Styles */
+    .nav-item.dropdown { position: relative; }
+    .nav-link.dropdown-toggle { background: none; border: none; cursor: pointer; font-family: inherit; font-size: 1rem; color: var(--text-dark); display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; font-weight: 500; transition: all 0.2s; border-radius: 0.5rem; }
+    .nav-link.dropdown-toggle:hover { background-color: #f1f5f9; color: var(--primary-color); }
+    
+    .dropdown-menu { display: none; position: absolute; top: calc(100% + 0.5rem); right: 0; left: auto; background: white; border: 1px solid #e2e8f0; border-radius: 0.75rem; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); z-index: 100; min-width: 240px; animation: fadeIn 0.2s ease-out; }
+    .dropdown-menu.show { display: block; }
+    
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+    .mega-menu { width: 680px; max-width: 90vw; padding: 2rem; }
+    .mega-menu-content { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+    
+    .mega-column h4 { color: #94a3b8; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; margin-bottom: 1rem; letter-spacing: 0.05em; padding-left: 0.75rem; }
+    .mega-column a { display: flex; align-items: center; gap: 0.75rem; color: var(--text-dark); text-decoration: none; padding: 0.625rem 0.75rem; border-radius: 0.5rem; transition: all 0.2s; }
+    .mega-column a:hover { background-color: #f8fafc; color: var(--primary-color); transform: translateX(2px); }
+    .mega-column a i { width: 20px; text-align: center; color: var(--text-light); transition: color 0.2s; }
+    .mega-column a:hover i { color: var(--primary-color); }
+    
+    @media (max-width: 768px) {
+      .mega-menu { position: static; width: 100%; box-shadow: none; border: none; padding: 0 1rem; }
+      .mega-menu-content { grid-template-columns: 1fr; gap: 1rem; }
+      .dropdown-menu { position: static; animation: none; }
+      .mega-column h4 { margin-top: 1rem; }
+      
+      /* Mobile Nav Toggle Logic */
+      .nav-toggle { display: block; }
+      .nav-links-wrapper { display: none; position: absolute; top: 100%; left: 0; right: 0; background: white; flex-direction: column; padding: 1rem; border-bottom: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); align-items: flex-start; gap: 1rem; }
+      .nav-links-wrapper.active { display: flex; }
+      .nav-link.dropdown-toggle { width: 100%; justify-content: space-between; }
+      .hero h1 { font-size: 2.5rem; }
+    }
+  </style>
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7876432493491415"
      crossorigin="anonymous"></script>
 
+  <!-- Schema.org Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Famral",
+    "url": "https://www.famral.com/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.famral.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Famral",
+    "url": "https://www.famral.com",
+    "logo": "https://www.famral.com/favicon.png",
+    "sameAs": [
+      "https://www.facebook.com/famral",
+      "https://twitter.com/famral"
+    ]
+  }
+  </script>
   
 </head>
 
@@ -31,7 +168,7 @@
     <div class="nav-container">
       <!-- Logo -->
       <a href="https://www.famral.com/" class="nav-logo">
-        <img src="https://www.famral.com/favicon.png" alt="Famral Logo">
+        <img src="https://www.famral.com/favicon.png" alt="Famral Logo" width="32" height="32">
         Famral
       </a>
 
@@ -58,12 +195,11 @@
                 <a href="https://www.famral.com/notes"><i class="fas fa-sticky-note"></i>Notes</a>
                 <a href="https://www.famral.com/tasks"><i class="fas fa-check"></i>Tasks</a>
                 <a href="https://www.famral.com/designer"><i class="fas fa-object-group"></i>Designer</a>
-
               </div>
               <div class="mega-column">
-                <h4>Suites</h4>
-                <a href="https://www.famral.com/workspace"><i class="fas fa-briefcase"></i>Workspace</a>
-                <a href="https://www.famral.com/office"><i class="fas fa-file-lines"></i>Office Apps</a>
+                <h4>More</h4>
+                <a href="https://tools.famral.com/"><i class="fas fa-screwdriver-wrench"></i>Online Utilities</a>
+                <a href="https://workspace.famral.com/"><i class="fas fa-grip-vertical"></i>All Apps</a>
               </div>
             </div>
           </div>
@@ -78,6 +214,9 @@
       <div class="container">
         <h1>Achieve more with Famral</h1>
         <p>Seamlessly create, edit, and manage documents and web projects with our all-in-one cloud platform. Designed for life today.</p>
+        <div class="hero-buttons">
+          <a href="#features" class="btn btn-primary">Get Started Free</a>
+        </div>
       </div>
     </section>
 
@@ -220,11 +359,11 @@
 
   <!-- Footer -->
   <footer class="site-footer">
-    <div class="footer-container">
+    <div class="container">
 
       <!-- Footer Links Section -->
       <div class="footer-links-grid"> <!-- Added class, removed inline style -->
-                <div>
+        <div>
           <h4>Products</h4>
           <ul>
             <li><a href="https://www.famral.com/docs">Docs</a></li>
@@ -237,7 +376,7 @@
             <li><a href="https://www.famral.com/designer">Designer</a></li>
           </ul>
         </div>
-                <div>
+        <div>
           <h4>Explore</h4>
           <ul>
             <li><a href="https://www.famral.com/workspace">Workspace</a></li>
