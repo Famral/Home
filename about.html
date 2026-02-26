@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Famral</title>
+  <meta name="description" content="Learn more about Famral, our mission to simplify productivity, and the team behind the tools.">
+  <link rel="icon" type="image/png" href="https://www.famral.com/favicon.png"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Reusing styles from index.html */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; color: #1e293b; line-height: 1.6; background-color: #fff; }
+    :root { --primary-color: #2563eb; --text-dark: #1e293b; --text-light: #64748b; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+    .section { padding: 5rem 0; }
+    .navbar { background: white; border-bottom: 1px solid #e2e8f0; padding: 0.75rem 0; position: sticky; top: 0; z-index: 1000; }
+    .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+    .nav-logo { display: flex; align-items: center; gap: 0.75rem; font-weight: 700; font-size: 1.25rem; color: var(--text-dark); text-decoration: none; }
+    .nav-links-wrapper { display: flex; gap: 2rem; align-items: center; }
+    .nav-links-wrapper a { font-weight: 500; color: var(--text-dark); padding: 0.5rem 1rem; border-radius: 0.5rem; transition: all 0.2s; text-decoration: none; }
+    .nav-links-wrapper a:hover { color: var(--primary-color); background-color: #f1f5f9; }
+    .hero { text-align: center; padding: 6rem 1rem; background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%); }
+    .hero h1 { font-size: 3.5rem; line-height: 1.2; margin-bottom: 1.5rem; color: var(--text-dark); }
+    .hero p { font-size: 1.25rem; color: var(--text-light); max-width: 700px; margin: 0 auto 2.5rem; }
+    .content-block { max-width: 800px; margin: 0 auto; }
+    .content-block h2 { font-size: 2rem; margin-bottom: 1.5rem; color: var(--text-dark); margin-top: 3rem; }
+    .content-block p { margin-bottom: 1.5rem; font-size: 1.1rem; }
+    .site-footer { background-color: #fff; border-top: 1px solid #e2e8f0; padding: 3rem 0; margin-top: auto; }
+    .footer-simple-layout { display: flex; flex-direction: column; align-items: center; gap: 1.5rem; text-align: center; }
+    .footer-logo { display: flex; align-items: center; gap: 0.5rem; font-weight: 700; color: var(--text-dark); }
+    .footer-nav { display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; padding: 0; list-style: none; }
+    .footer-nav a { color: var(--text-light); font-weight: 500; transition: color 0.2s; }
+    .footer-nav a:hover { color: var(--primary-color); }
+    .footer-copyright { color: #94a3b8; font-size: 0.875rem; }
+    
+    @media (max-width: 768px) {
+      .nav-links-wrapper { display: none; } 
+      .hero h1 { font-size: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <img src="https://www.famral.com/favicon.png" alt="Famral Logo" width="32" height="32">
+        Famral
+      </a>
+      <div class="nav-links-wrapper">
+        <a href="productivity-tips">Productivity Tips</a>
+        <a href="workflow-optimization">Workflow Optimization</a>
+        <a href="teamwork-culture">Teamwork & Culture</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <section class="section">
+    <div class="container">
+      <div class="content-block">
+        <h2>Our Mission</h2>
+        <p>At Famral, we believe that productivity shouldn't be complicated. Our mission is to provide a suite of accessible, intuitive, and powerful online tools that help you create, edit, and manage your work without the hassle of complex software installations.</p>
+        
+        <h2>Who We Are</h2>
+        <p>We are a passionate team of developers, designers, and productivity enthusiasts dedicated to building the future of work. Whether you are a student, a freelancer, or part of a large enterprise, Famral is designed to adapt to your needs.</p>
+
+        <h2>Why Choose Us?</h2>
+        <p>We prioritize user experience and privacy above all else. Our tools are built to be fast, secure, and reliable, ensuring that you can focus on what matters most—your ideas.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-simple-layout">
+        <div class="footer-logo">
+          <img src="https://www.famral.com/favicon.png" alt="Famral Logo" width="24" height="24">
+          <span>Famral</span>
+        </div>
+        <ul class="footer-nav">
+          <li><a href="about">About</a></li>
+          <li><a href="privacy">Privacy</a></li>
+          <li><a href="terms">Terms</a></li>
+          <li><a href="contact">Contact</a></li>
+        </ul>
+        <div class="footer-copyright">
+          <p>&copy; <span id="current-year"></span> Famral. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
