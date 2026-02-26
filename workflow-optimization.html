@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Workflow Optimization | Famral</title>
+  <meta name="description" content="Streamline your processes and master your tools for maximum efficiency with our workflow optimization guides.">
+  <link rel="icon" type="image/png" href="https://www.famral.com/favicon.png"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Reusing styles from index.html */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; color: #1e293b; line-height: 1.6; background-color: #fff; }
+    :root { --primary-color: #2563eb; --text-dark: #1e293b; --text-light: #64748b; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+    .section { padding: 5rem 0; }
+    .navbar { background: white; border-bottom: 1px solid #e2e8f0; padding: 0.75rem 0; position: sticky; top: 0; z-index: 1000; }
+    .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+    .nav-logo { display: flex; align-items: center; gap: 0.75rem; font-weight: 700; font-size: 1.25rem; color: var(--text-dark); text-decoration: none; }
+    .nav-links-wrapper { display: flex; gap: 2rem; align-items: center; }
+    .nav-links-wrapper a { font-weight: 500; color: var(--text-dark); padding: 0.5rem 1rem; border-radius: 0.5rem; transition: all 0.2s; text-decoration: none; }
+    .nav-links-wrapper a:hover { color: var(--primary-color); background-color: #f1f5f9; }
+    .hero { text-align: center; padding: 6rem 1rem; background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%); }
+    .hero h1 { font-size: 3.5rem; line-height: 1.2; margin-bottom: 1.5rem; color: var(--text-dark); }
+    .hero p { font-size: 1.25rem; color: var(--text-light); max-width: 700px; margin: 0 auto 2.5rem; }
+    .services-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+    .service-box { background: white; padding: 2rem; border-radius: 1rem; display: flex; flex-direction: column; align-items: flex-start; border: 1px solid #f1f5f9; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .service-box:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
+    .service-icon { width: 48px; height: 48px; background-color: #eff6ff; color: var(--primary-color); display: flex; align-items: center; justify-content: center; border-radius: 0.75rem; font-size: 1.25rem; margin-bottom: 1.5rem; }
+    .service-box h3 { font-size: 1.25rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--text-dark); }
+    .service-box p { color: var(--text-light); margin-bottom: 1.5rem; }
+    .service-box a { color: var(--primary-color); font-weight: 600; margin-top: auto; display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; }
+    .site-footer { background-color: #fff; border-top: 1px solid #e2e8f0; padding: 3rem 0; margin-top: auto; }
+    .footer-simple-layout { display: flex; flex-direction: column; align-items: center; gap: 1.5rem; text-align: center; }
+    .footer-logo { display: flex; align-items: center; gap: 0.5rem; font-weight: 700; color: var(--text-dark); }
+    .footer-nav { display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; padding: 0; list-style: none; }
+    .footer-nav a { color: var(--text-light); font-weight: 500; transition: color 0.2s; }
+    .footer-nav a:hover { color: var(--primary-color); }
+    .footer-copyright { color: #94a3b8; font-size: 0.875rem; }
+    
+    @media (max-width: 768px) {
+      .nav-links-wrapper { display: none; } 
+      .hero h1 { font-size: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <img src="https://www.famral.com/favicon.png" alt="Famral Logo" width="32" height="32">
+        Famral
+      </a>
+      <div class="nav-links-wrapper">
+        <a href="productivity-tips">Productivity Tips</a>
+        <a href="workflow-optimization" style="color: var(--primary-color);">Workflow Optimization</a>
+        <a href="teamwork-culture">Teamwork & Culture</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Workflow Optimization</h1>
+      <p>Streamline your processes and master your tools for maximum efficiency.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="services-list">
+        <div class="service-box">
+          <span class="service-icon"><i class="fas fa-file-lines"></i></span>
+          <h3>10 Tips for Better Documentation</h3>
+          <p>Learn how to structure your documents for clarity and impact with these essential writing tips.</p>
+          <a href="10-tips-for-better-documentation">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+        </div>
+        <div class="service-box">
+          <span class="service-icon"><i class="fas fa-table"></i></span>
+          <h3>Mastering VLOOKUP in Sheets</h3>
+          <p>A step-by-step guide to one of the most powerful functions for data analysis.</p>
+          <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+        </div>
+        <div class="service-box">
+          <span class="service-icon"><i class="fas fa-chart-pie"></i></span>
+          <h3>Design Principles for Slides</h3>
+          <p>How to create visually stunning presentations that keep your audience engaged.</p>
+          <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+        </div>
+        <div class="service-box">
+          <span class="service-icon"><i class="fas fa-file-pdf"></i></span>
+          <h3>Going Paperless with PDFs</h3>
+          <p>Reduce clutter and improve efficiency by switching to a fully digital document workflow.</p>
+          <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+        </div>
+        <div class="service-box">
+          <span class="service-icon"><i class="fas fa-keyboard"></i></span>
+          <h3>Essential Keyboard Shortcuts</h3>
+          <p>Speed up your workflow with these must-know shortcuts for office apps.</p>
+          <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+        </div>
+        <div class="service-box">
+          <span class="service-icon"><i class="fas fa-table-columns"></i></span>
+          <h3>Spreadsheet Pivot Tables</h3>
+          <p>A beginner's guide to summarizing large datasets easily.</p>
+          <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+        </div>
+        <div class="service-box">
+          <span class="service-icon"><i class="fas fa-cloud-lock"></i></span>
+          <h3>Cloud Storage Security</h3>
+          <p>How to keep your files safe when storing them in the cloud.</p>
+          <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+        </div>
+        <div class="service-box">
+          <span class="service-icon"><i class="fas fa-file-pdf"></i></span>
+          <h3>PDF Merging Tricks</h3>
+          <p>Combine multiple documents into a single PDF file in seconds.</p>
+          <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+        </div>
+        <div class="service-box">
+          <span class="service-icon"><i class="fas fa-person-chalkboard"></i></span>
+          <h3>Presentation Storytelling</h3>
+          <p>Engage your audience by weaving a narrative into your slides.</p>
+          <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+        </div>
+        <div class="service-box">
+          <span class="service-icon"><i class="fas fa-chart-simple"></i></span>
+          <h3>Data Visualization Basics</h3>
+          <p>Turn complex numbers into easy-to-understand charts and graphs.</p>
+          <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+        </div>
+        <div class="service-box">
+          <span class="service-icon"><i class="fas fa-robot"></i></span>
+          <h3>Automating Repetitive Tasks</h3>
+          <p>Identify workflows you can automate to save hours every week.</p>
+          <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+        </div>
+        <div class="service-box">
+          <span class="service-icon"><i class="fas fa-sitemap"></i></span>
+          <h3>Brainstorming with Mind Maps</h3>
+          <p>Visualize connections between ideas to solve complex problems.</p>
+          <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+        </div>
+        <div class="service-box">
+          <span class="service-icon"><i class="fas fa-gauge-high"></i></span>
+          <h3>Optimizing Browser Performance</h3>
+          <p>Manage tabs and extensions to keep your browser running smoothly.</p>
+          <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+        </div>
+        <div class="service-box">
+          <span class="service-icon"><i class="fas fa-copy"></i></span>
+          <h3>Using Templates Effectively</h3>
+          <p>Stop reinventing the wheel by creating reusable document templates.</p>
+          <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+        </div>
+        <div class="service-box">
+          <span class="service-icon"><i class="fas fa-folder-tree"></i></span>
+          <h3>Organizing Digital Files</h3>
+          <p>A systematic approach to naming and storing files for easy retrieval.</p>
+          <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-simple-layout">
+        <div class="footer-logo">
+          <img src="https://www.famral.com/favicon.png" alt="Famral Logo" width="24" height="24">
+          <span>Famral</span>
+        </div>
+        <ul class="footer-nav">
+          <li><a href="about">About</a></li>
+          <li><a href="privacy">Privacy</a></li>
+          <li><a href="terms">Terms</a></li>
+          <li><a href="contact">Contact</a></li>
+        </ul>
+        <div class="footer-copyright">
+          <p>&copy; <span id="current-year"></span> Famral. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
