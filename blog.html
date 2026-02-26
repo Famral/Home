@@ -1,0 +1,513 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Famral | Productivity Tips, Tutorials & News</title>
+  <meta name="description"
+    content="Discover the latest productivity tips, tutorials, and updates from the Famral team. Learn how to work smarter with our online office suite.">
+  <meta name="keywords"
+    content="productivity blog, famral, office tips, remote work, document tutorials, spreadsheet guides">
+  <link rel="icon" type="image/png" href="https://www.famral.com/favicon.png"> 
+  
+  <!-- SEO & Social Tags -->
+  <link rel="canonical" href="https://www.famral.com/blog" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.famral.com/blog" />
+  <meta property="og:title" content="Famral | Productivity Insights" />
+  <meta property="og:description" content="Discover the latest productivity tips, tutorials, and updates from the Famral team." />
+  <meta property="og:image" content="https://www.famral.com/favicon.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Enhanced Design Styles -->
+  <style>
+    /* Reset & Base Styles */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; color: var(--text-dark); line-height: 1.6; background-color: #fff; }
+    img { max-width: 100%; height: auto; }
+    ul { list-style: none; }
+    a { text-decoration: none; color: inherit; }
+
+    /* Variables */
+    :root { --primary-color: #2563eb; --text-dark: #1e293b; --text-light: #64748b; }
+
+    /* Layout Utilities */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+    .section { padding: 5rem 0; }
+    .bg-surface { background-color: #f8fafc; }
+
+    /* Navbar Main Styles */
+    .navbar { background: white; border-bottom: 1px solid #e2e8f0; padding: 0.75rem 0; position: sticky; top: 0; z-index: 1000; }
+    .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+    .nav-logo { display: flex; align-items: center; gap: 0.75rem; font-weight: 700; font-size: 1.25rem; color: var(--text-dark); }
+    .nav-links-wrapper { display: flex; gap: 2rem; align-items: center; }
+    .nav-toggle { display: none; background: none; border: none; font-size: 1.5rem; color: var(--text-dark); cursor: pointer; padding: 0.5rem; }
+
+    /* Hero Section */
+    .hero { text-align: center; padding: 6rem 1rem; background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%); }
+    .hero h1 { font-size: 3.5rem; line-height: 1.2; margin-bottom: 1.5rem; background: -webkit-linear-gradient(315deg, #2563eb 0%, #1e40af 74%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .hero p { font-size: 1.25rem; color: var(--text-light); max-width: 700px; margin: 0 auto 2.5rem; }
+    .hero-buttons { display: flex; gap: 1rem; justify-content: center; margin-top: 2rem; }
+
+    /* Typography */
+    h2 { font-size: 2.25rem; text-align: center; margin-bottom: 3rem; color: var(--text-dark); font-weight: 700; letter-spacing: -0.02em; }
+    h3 { font-size: 1.25rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--text-dark); }
+    p { color: var(--text-light); }
+
+    /* Buttons */
+    .btn { padding: 0.875rem 2rem; border-radius: 0.5rem; font-weight: 600; text-decoration: none; transition: all 0.2s; display: inline-block; }
+    .btn-primary { background-color: var(--primary-color); color: white; box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2); }
+    .btn-secondary { background-color: white; color: var(--text-dark); border: 1px solid #e2e8f0; }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
+
+    /* Services / Features Grid */
+    .services-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+    .service-box { background: white; padding: 2rem; border-radius: 1rem; display: flex; flex-direction: column; align-items: flex-start; transition: transform 0.3s ease, box-shadow 0.3s ease; border: 2px solid #ebf5ff; }
+    .service-box:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); border-color: transparent; }
+    .service-icon { width: 48px; height: 48px; background-color: #eff6ff; color: var(--primary-color); display: flex; align-items: center; justify-content: center; border-radius: 0.75rem; font-size: 1.25rem; margin-bottom: 1.5rem; }
+    .service-box a { color: var(--primary-color); font-weight: 600; margin-top: auto; display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.95rem; }
+    .service-box a:hover { text-decoration: underline; }
+
+    /* CTA Section */
+    .cta { text-align: center; background-color: var(--primary-color); color: white; padding: 5rem 2rem; border-radius: 1.5rem; margin: 2rem 0; }
+    .cta h2 { color: white; margin-bottom: 1rem; }
+    .cta p { color: rgba(255, 255, 255, 0.9); font-size: 1.25rem; margin-bottom: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+    .cta a { background: white; color: var(--primary-color); padding: 1rem 2.5rem; border-radius: 0.5rem; font-weight: 600; display: inline-block; transition: transform 0.2s; }
+    .cta a:hover { transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2); }
+
+    /* Footer */
+    .site-footer { background-color: #fff; border-top: 1px solid #e2e8f0; padding: 3rem 0; margin-top: auto; }
+    .footer-simple-layout { display: flex; flex-direction: column; align-items: center; gap: 1.5rem; text-align: center; }
+    .footer-logo { display: flex; align-items: center; gap: 0.5rem; font-weight: 700; color: var(--text-dark); }
+    .footer-nav { display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; padding: 0; list-style: none; }
+    .footer-nav a { color: var(--text-light); font-weight: 500; transition: color 0.2s; }
+    .footer-nav a:hover { color: var(--primary-color); }
+    .footer-copyright { color: #94a3b8; font-size: 0.875rem; }
+
+    /* Nav Links */
+    .nav-links-wrapper a {
+      font-weight: 500;
+      color: var(--text-dark);
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      transition: all 0.2s;
+    }
+    .nav-links-wrapper a:hover {
+      color: var(--primary-color);
+      background-color: #f1f5f9;
+    }
+    
+    @media (max-width: 768px) {
+      /* Mobile Nav Toggle Logic */
+      .nav-toggle { display: block; }
+      .nav-links-wrapper { display: none; position: absolute; top: 100%; left: 0; right: 0; background: white; flex-direction: column; padding: 1rem; border-bottom: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); align-items: flex-start; gap: 1rem; }
+      .nav-links-wrapper.active { display: flex; }
+      .hero h1 { font-size: 2.5rem; }
+    }
+  </style>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7876432493491415"
+     crossorigin="anonymous"></script>
+
+  <!-- Schema.org Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Famral",
+    "url": "https://www.famral.com/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.famral.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Famral",
+    "url": "https://www.famral.com",
+    "logo": "https://www.famral.com/favicon.png",
+    "sameAs": [
+      "https://www.facebook.com/famral",
+      "https://twitter.com/famral"
+    ]
+  }
+  </script>
+  
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <!-- Logo -->
+      <a href="https://www.famral.com/" class="nav-logo">
+        <img src="https://www.famral.com/favicon.png" alt="Famral Logo" width="32" height="32">
+        Famral
+      </a>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- Navigation Links -->
+      <div class="nav-links-wrapper" id="navLinks">
+        <a href="productivity-tips">Productivity Tips</a>
+        <a href="workflow-optimization">Workflow Optimization</a>
+        <a href="teamwork-culture">Teamwork & Culture</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- Features Section -->
+    <section class="section" id="latest-posts">
+      <div class="container">
+        <h2>Latest Articles</h2>
+        <div class="services-list">
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true">
+              <i class="fas fa-file-lines"></i>
+            </span>
+            <h3>10 Tips for Better Documentation</h3>
+            <p>Learn how to structure your documents for clarity and impact with these essential writing tips.</p>
+            <a href="10-tips-for-better-documentation">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true">
+              <i class="fas fa-table"></i>
+            </span>
+            <h3>Mastering VLOOKUP in Sheets</h3>
+            <p>A step-by-step guide to one of the most powerful functions for data analysis.</p>
+            <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true">
+              <i class="fas fa-chart-pie"></i>
+            </span>
+            <h3>Design Principles for Slides</h3>
+            <p>How to create visually stunning presentations that keep your audience engaged.</p>
+            <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true">
+              <i class="fas fa-file-pdf"></i>
+            </span>
+            <h3>Going Paperless with PDFs</h3>
+            <p>Reduce clutter and improve efficiency by switching to a fully digital document workflow.</p>
+            <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true">
+              <i class="fas fa-sticky-note"></i>
+            </span>
+            <h3>The Art of Digital Note Taking</h3>
+            <p>Strategies to capture ideas instantly and organize your thoughts for better recall.</p>
+            <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true">
+              <i class="fas fa-chalkboard"></i>
+            </span>
+            <h3>Visual Brainstorming Techniques</h3>
+            <p>Unlock your team's creativity using digital whiteboards for remote collaboration.</p>
+            <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true"><i class="fas fa-envelope"></i></span>
+            <h3>Mastering Email Management</h3>
+            <p>Strategies to reach Inbox Zero and keep your communication efficient.</p>
+            <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true"><i class="fas fa-heart-pulse"></i></span>
+            <h3>Remote Work Wellness</h3>
+            <p>Tips for maintaining physical and mental health while working from home.</p>
+            <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true"><i class="fas fa-keyboard"></i></span>
+            <h3>Essential Keyboard Shortcuts</h3>
+            <p>Speed up your workflow with these must-know shortcuts for office apps.</p>
+            <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true"><i class="fas fa-users"></i></span>
+            <h3>Collaborative Editing 101</h3>
+            <p>Best practices for co-authoring documents in real-time without conflicts.</p>
+            <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true"><i class="fas fa-table-columns"></i></span>
+            <h3>Spreadsheet Pivot Tables</h3>
+            <p>A beginner's guide to summarizing large datasets easily.</p>
+            <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true"><i class="fas fa-calendar-check"></i></span>
+            <h3>Effective Meeting Agendas</h3>
+            <p>How to run meetings that actually result in decisions and action items.</p>
+            <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true"><i class="fas fa-trash-can"></i></span>
+            <h3>Digital Decluttering</h3>
+            <p>Clean up your digital workspace to reduce stress and find files faster.</p>
+            <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true"><i class="fas fa-clock"></i></span>
+            <h3>Time Blocking Techniques</h3>
+            <p>Manage your schedule effectively by dedicating blocks of time to specific tasks.</p>
+            <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true"><i class="fas fa-stopwatch"></i></span>
+            <h3>The Pomodoro Method</h3>
+            <p>Boost focus by working in short, intense bursts followed by breaks.</p>
+            <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true"><i class="fas fa-cloud-lock"></i></span>
+            <h3>Cloud Storage Security</h3>
+            <p>How to keep your files safe when storing them in the cloud.</p>
+            <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true"><i class="fas fa-file-pdf"></i></span>
+            <h3>PDF Merging Tricks</h3>
+            <p>Combine multiple documents into a single PDF file in seconds.</p>
+            <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true"><i class="fas fa-person-chalkboard"></i></span>
+            <h3>Presentation Storytelling</h3>
+            <p>Engage your audience by weaving a narrative into your slides.</p>
+            <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true"><i class="fas fa-list-check"></i></span>
+            <h3>Task Management Strategies</h3>
+            <p>Prioritize your to-do list and get the important things done first.</p>
+            <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true"><i class="fas fa-comments"></i></span>
+            <h3>Asynchronous Communication</h3>
+            <p>Why moving away from instant messaging can improve team productivity.</p>
+            <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true"><i class="fas fa-house-laptop"></i></span>
+            <h3>Home Office Setup</h3>
+            <p>Ergonomic tips to create a comfortable and productive workspace at home.</p>
+            <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true"><i class="fas fa-chart-simple"></i></span>
+            <h3>Data Visualization Basics</h3>
+            <p>Turn complex numbers into easy-to-understand charts and graphs.</p>
+            <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true"><i class="fas fa-robot"></i></span>
+            <h3>Automating Repetitive Tasks</h3>
+            <p>Identify workflows you can automate to save hours every week.</p>
+            <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true"><i class="fas fa-pen-nib"></i></span>
+            <h3>Writing Professional Emails</h3>
+            <p>Templates and tips for clear, concise, and polite business correspondence.</p>
+            <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true"><i class="fas fa-sitemap"></i></span>
+            <h3>Brainstorming with Mind Maps</h3>
+            <p>Visualize connections between ideas to solve complex problems.</p>
+            <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true"><i class="fas fa-diagram-project"></i></span>
+            <h3>Project Management Basics</h3>
+            <p>Key concepts for keeping projects on track, on time, and on budget.</p>
+            <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true"><i class="fas fa-globe"></i></span>
+            <h3>The Future of Work</h3>
+            <p>Trends shaping how we will work in the next decade.</p>
+            <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true"><i class="fas fa-scale-balanced"></i></span>
+            <h3>Balancing Work and Life</h3>
+            <p>Setting boundaries to prevent burnout in an always-on world.</p>
+            <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true"><i class="fas fa-user-shield"></i></span>
+            <h3>Cybersecurity for Remote Teams</h3>
+            <p>Essential practices to protect company data outside the office.</p>
+            <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true"><i class="fas fa-gauge-high"></i></span>
+            <h3>Optimizing Browser Performance</h3>
+            <p>Manage tabs and extensions to keep your browser running smoothly.</p>
+            <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true"><i class="fas fa-copy"></i></span>
+            <h3>Using Templates Effectively</h3>
+            <p>Stop reinventing the wheel by creating reusable document templates.</p>
+            <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true"><i class="fas fa-lightbulb"></i></span>
+            <h3>Collaborative Brainstorming</h3>
+            <p>Techniques to get the best ideas out of your team during sessions.</p>
+            <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true"><i class="fas fa-eye-slash"></i></span>
+            <h3>Reducing Screen Fatigue</h3>
+            <p>Adjust settings and habits to protect your eyes during long workdays.</p>
+            <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true"><i class="fas fa-folder-tree"></i></span>
+            <h3>Organizing Digital Files</h3>
+            <p>A systematic approach to naming and storing files for easy retrieval.</p>
+            <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true"><i class="fas fa-book-open"></i></span>
+            <h3>Effective Note-Taking Systems</h3>
+            <p>Comparing different methods like Cornell, Outline, and Mapping.</p>
+            <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true"><i class="fas fa-face-smile"></i></span>
+            <h3>Boosting Team Morale Remotely</h3>
+            <p>Fun activities and rituals to keep remote teams connected and happy.</p>
+            <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+          </div>
+        </div> <!-- End services-list -->
+      </div>
+    </section>
+
+    <!-- Business Section -->
+    <section class="section bg-surface" id="categories">
+      <div class="container">
+        <h2>Browse by Category</h2>
+        <div class="services-list">
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true">
+              <i class="fas fa-rocket"></i>
+            </span>
+            <h3>Workflow Optimization</h3>
+            <p>Streamline your processes and master your tools for maximum efficiency.</p>
+            <a href="workflow-optimization">View Category <i class="fas fa-chevron-right fa-xs"></i></a>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true">
+              <i class="fas fa-lightbulb"></i>
+            </span>
+            <h3>Productivity Tips</h3>
+            <p>Actionable advice and strategies to boost your efficiency and reclaim your time.</p>
+            <a href="productivity-tips">View Category <i class="fas fa-chevron-right fa-xs"></i></a>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true">
+              <i class="fas fa-users"></i>
+            </span>
+            <h3>Teamwork & Culture</h3>
+            <p>Insights on remote collaboration, team management, and building a positive work culture.</p>
+            <a href="teamwork-culture">View Category <i class="fas fa-chevron-right fa-xs"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-simple-layout">
+        <div class="footer-logo">
+          <img src="https://www.famral.com/favicon.png" alt="Famral Logo" width="24" height="24">
+          <span>Famral</span>
+        </div>
+        <ul class="footer-nav">
+          <li><a href="about">About</a></li>
+          <li><a href="privacy">Privacy</a></li>
+          <li><a href="terms">Terms</a></li>
+          <li><a href="contact">Contact</a></li>
+        </ul>
+        <div class="footer-copyright">
+          <p>&copy; <span id="current-year"></span> Famral. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Simple JS for Mobile Menu Toggle -->
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links-wrapper');
+    const toggleIcon = navToggle.querySelector('i'); // Get the icon element
+
+    navToggle.addEventListener('click', () => {
+      const isExpanded = navLinks.classList.toggle('active');
+      navToggle.setAttribute('aria-expanded', isExpanded);
+
+      // Change icon from bars to times (X) when open
+      if (isExpanded) {
+        toggleIcon.classList.remove('fa-bars');
+        toggleIcon.classList.add('fa-times');
+      } else {
+        toggleIcon.classList.remove('fa-times');
+        toggleIcon.classList.add('fa-bars');
+      }
+    });
+
+    // Close menu when a link is clicked
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (navLinks.classList.contains('active')) {
+          navLinks.classList.remove('active');
+          navToggle.setAttribute('aria-expanded', 'false');
+          toggleIcon.classList.remove('fa-times');
+          toggleIcon.classList.add('fa-bars');
+        }
+      });
+    });
+
+    // Update the copyright year automatically
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+
+
+  
+
+</body>
+
+</html>
