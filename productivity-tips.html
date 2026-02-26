@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Productivity Tips | Famral</title>
+  <meta name="description" content="Actionable advice and strategies to boost your efficiency and reclaim your time.">
+  <link rel="icon" type="image/png" href="https://www.famral.com/favicon.png"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Reusing styles from index.html */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; color: #1e293b; line-height: 1.6; background-color: #fff; }
+    :root { --primary-color: #2563eb; --text-dark: #1e293b; --text-light: #64748b; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+    .section { padding: 5rem 0; }
+    .navbar { background: white; border-bottom: 1px solid #e2e8f0; padding: 0.75rem 0; position: sticky; top: 0; z-index: 1000; }
+    .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+    .nav-logo { display: flex; align-items: center; gap: 0.75rem; font-weight: 700; font-size: 1.25rem; color: var(--text-dark); text-decoration: none; }
+    .nav-links-wrapper { display: flex; gap: 2rem; align-items: center; }
+    .nav-links-wrapper a { font-weight: 500; color: var(--text-dark); padding: 0.5rem 1rem; border-radius: 0.5rem; transition: all 0.2s; text-decoration: none; }
+    .nav-links-wrapper a:hover { color: var(--primary-color); background-color: #f1f5f9; }
+    .hero { text-align: center; padding: 6rem 1rem; background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%); }
+    .hero h1 { font-size: 3.5rem; line-height: 1.2; margin-bottom: 1.5rem; color: var(--text-dark); }
+    .hero p { font-size: 1.25rem; color: var(--text-light); max-width: 700px; margin: 0 auto 2.5rem; }
+    .services-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+    .service-box { background: white; padding: 2rem; border-radius: 1rem; display: flex; flex-direction: column; align-items: flex-start; border: 1px solid #f1f5f9; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .service-box:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
+    .service-icon { width: 48px; height: 48px; background-color: #eff6ff; color: var(--primary-color); display: flex; align-items: center; justify-content: center; border-radius: 0.75rem; font-size: 1.25rem; margin-bottom: 1.5rem; }
+    .service-box h3 { font-size: 1.25rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--text-dark); }
+    .service-box p { color: var(--text-light); margin-bottom: 1.5rem; }
+    .service-box a { color: var(--primary-color); font-weight: 600; margin-top: auto; display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; }
+    .site-footer { background-color: #fff; border-top: 1px solid #e2e8f0; padding: 3rem 0; margin-top: auto; }
+    .footer-simple-layout { display: flex; flex-direction: column; align-items: center; gap: 1.5rem; text-align: center; }
+    .footer-logo { display: flex; align-items: center; gap: 0.5rem; font-weight: 700; color: var(--text-dark); }
+    .footer-nav { display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; padding: 0; list-style: none; }
+    .footer-nav a { color: var(--text-light); font-weight: 500; transition: color 0.2s; }
+    .footer-nav a:hover { color: var(--primary-color); }
+    .footer-copyright { color: #94a3b8; font-size: 0.875rem; }
+    
+    @media (max-width: 768px) {
+      .nav-links-wrapper { display: none; } 
+      .hero h1 { font-size: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <img src="https://www.famral.com/favicon.png" alt="Famral Logo" width="32" height="32">
+        Famral
+      </a>
+      <div class="nav-links-wrapper">
+        <a href="productivity-tips" style="color: var(--primary-color);">Productivity Tips</a>
+        <a href="workflow-optimization">Workflow Optimization</a>
+        <a href="teamwork-culture">Teamwork & Culture</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Productivity Tips</h1>
+      <p>Actionable advice and strategies to boost your efficiency and reclaim your time.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="services-list">
+        <div class="service-box">
+          <span class="service-icon"><i class="fas fa-sticky-note"></i></span>
+          <h3>The Art of Digital Note Taking</h3>
+          <p>Strategies to capture ideas instantly and organize your thoughts for better recall.</p>
+          <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+        </div>
+        <div class="service-box">
+          <span class="service-icon"><i class="fas fa-envelope"></i></span>
+          <h3>Mastering Email Management</h3>
+          <p>Strategies to reach Inbox Zero and keep your communication efficient.</p>
+          <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+        </div>
+        <div class="service-box">
+          <span class="service-icon"><i class="fas fa-heart-pulse"></i></span>
+          <h3>Remote Work Wellness</h3>
+          <p>Tips for maintaining physical and mental health while working from home.</p>
+          <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+        </div>
+        <div class="service-box">
+          <span class="service-icon"><i class="fas fa-trash-can"></i></span>
+          <h3>Digital Decluttering</h3>
+          <p>Clean up your digital workspace to reduce stress and find files faster.</p>
+          <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+        </div>
+        <div class="service-box">
+          <span class="service-icon"><i class="fas fa-clock"></i></span>
+          <h3>Time Blocking Techniques</h3>
+          <p>Manage your schedule effectively by dedicating blocks of time to specific tasks.</p>
+          <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+        </div>
+        <div class="service-box">
+          <span class="service-icon"><i class="fas fa-stopwatch"></i></span>
+          <h3>The Pomodoro Method</h3>
+          <p>Boost focus by working in short, intense bursts followed by breaks.</p>
+          <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+        </div>
+        <div class="service-box">
+          <span class="service-icon"><i class="fas fa-list-check"></i></span>
+          <h3>Task Management Strategies</h3>
+          <p>Prioritize your to-do list and get the important things done first.</p>
+          <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+        </div>
+        <div class="service-box">
+          <span class="service-icon"><i class="fas fa-house-laptop"></i></span>
+          <h3>Home Office Setup</h3>
+          <p>Ergonomic tips to create a comfortable and productive workspace at home.</p>
+          <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+        </div>
+        <div class="service-box">
+          <span class="service-icon"><i class="fas fa-scale-balanced"></i></span>
+          <h3>Balancing Work and Life</h3>
+          <p>Setting boundaries to prevent burnout in an always-on world.</p>
+          <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+        </div>
+        <div class="service-box">
+          <span class="service-icon"><i class="fas fa-eye-slash"></i></span>
+          <h3>Reducing Screen Fatigue</h3>
+          <p>Adjust settings and habits to protect your eyes during long workdays.</p>
+          <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+        </div>
+        <div class="service-box">
+          <span class="service-icon"><i class="fas fa-book-open"></i></span>
+          <h3>Effective Note-Taking Systems</h3>
+          <p>Comparing different methods like Cornell, Outline, and Mapping.</p>
+          <a href="#">Read Article <i class="fas fa-chevron-right fa-xs"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-simple-layout">
+        <div class="footer-logo">
+          <img src="https://www.famral.com/favicon.png" alt="Famral Logo" width="24" height="24">
+          <span>Famral</span>
+        </div>
+        <ul class="footer-nav">
+          <li><a href="about">About</a></li>
+          <li><a href="privacy">Privacy</a></li>
+          <li><a href="terms">Terms</a></li>
+          <li><a href="contact">Contact</a></li>
+        </ul>
+        <div class="footer-copyright">
+          <p>&copy; <span id="current-year"></span> Famral. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
