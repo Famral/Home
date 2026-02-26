@@ -2,384 +2,130 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact - Famral</title>
-  <meta name="keywords" content="contact, contact famral, Famral">
-  <link rel="icon" type="image/png" href="https://www.famral.com/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Famral</title>
+  <meta name="description" content="Get in touch with the Famral team. We are here to help with your questions and feedback.">
+  <link rel="icon" type="image/png" href="https://www.famral.com/favicon.png"> 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-H57NCR0QYN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-H57NCR0QYN');
-</script>
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <style>
-    :root {
-      --primary: #0f6bff; /* Brighter blue */
-      --primary-dark: #2563eb; /* Previous primary */
-      --primary-light: #dbeafe; /* Light blue for accents/backgrounds */
+    /* Reusing styles from index.html */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; color: #1e293b; line-height: 1.6; background-color: #fff; }
+    :root { --primary-color: #2563eb; --text-dark: #1e293b; --text-light: #64748b; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+    .section { padding: 5rem 0; }
+    .navbar { background: white; border-bottom: 1px solid #e2e8f0; padding: 0.75rem 0; position: sticky; top: 0; z-index: 1000; }
+    .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+    .nav-logo { display: flex; align-items: center; gap: 0.75rem; font-weight: 700; font-size: 1.25rem; color: var(--text-dark); text-decoration: none; }
+    .nav-links-wrapper { display: flex; gap: 2rem; align-items: center; }
+    .nav-links-wrapper a { font-weight: 500; color: var(--text-dark); padding: 0.5rem 1rem; border-radius: 0.5rem; transition: all 0.2s; text-decoration: none; }
+    .nav-links-wrapper a:hover { color: var(--primary-color); background-color: #f1f5f9; }
+    .hero { text-align: center; padding: 6rem 1rem; background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%); }
+    .hero h1 { font-size: 3.5rem; line-height: 1.2; margin-bottom: 1.5rem; color: var(--text-dark); }
+    .hero p { font-size: 1.25rem; color: var(--text-light); max-width: 700px; margin: 0 auto 2.5rem; }
+    
+    /* Contact Form Styles */
+    .contact-wrapper { max-width: 600px; margin: 0 auto; background: white; padding: 2rem; border-radius: 1rem; border: 1px solid #e2e8f0; }
+    .form-group { margin-bottom: 1.5rem; }
+    .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 500; color: var(--text-dark); }
+    .form-group input, .form-group textarea { width: 100%; padding: 0.75rem; border: 1px solid #cbd5e1; border-radius: 0.5rem; font-family: inherit; font-size: 1rem; }
+    .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--primary-color); ring: 2px solid rgba(37, 99, 235, 0.2); }
+    .btn-submit { background-color: var(--primary-color); color: white; padding: 0.875rem 2rem; border: none; border-radius: 0.5rem; font-weight: 600; cursor: pointer; width: 100%; font-size: 1rem; transition: background-color 0.2s; }
+    .btn-submit:hover { background-color: #1d4ed8; }
+    .contact-info { text-align: center; margin-top: 3rem; }
+    .contact-info p { margin-bottom: 0.5rem; }
+    .contact-info a { color: var(--primary-color); text-decoration: none; font-weight: 500; }
 
-      --text-primary: #1f2937; /* For main text, headings */
-      --text-secondary: #4b5563; /* For body copy, subheadings */
-      --text-muted: #6b7280; /* For less important text */
-
-      --bg-body: #f9fafb; /* Light gray background */
-      --bg-card: #ffffff;
-      --bg-hero: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); /* Updated gradient */
-      --bg-cta: var(--primary-light);
-
-      --border-color: #e5e7eb;
-      --border-radius-sm: 4px;
-      --border-radius-md: 8px;
-      --border-radius-lg: 12px;
-
-      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-      --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-      --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-
-      --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      --transition-fast: all 0.2s ease-in-out;
-      --transition-std: all 0.3s ease-in-out;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; scroll-padding-top: 80px; /* Adjusted for potentially taller sticky nav */ }
-    body {
-      font-family: var(--font-sans);
-      background: var(--bg-body);
-      color: var(--text-secondary);
-      line-height: 1.6;
-    }
-    .navbar {
-      background: var(--bg-card);
-      box-shadow: var(--shadow-sm); /* Softer shadow for navbar */
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      border-bottom: 1px solid var(--border-color);
-    }
-    .nav-container {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1rem 1.5rem; /* Increased padding */
-      min-height: 70px; /* Increased height */
-      position: relative;
-    }
-    .nav-logo {
-      font-weight: 700;
-      color: var(--primary);
-      font-size: 1.5rem;
-      text-decoration: none;
-      letter-spacing: -0.5px; /* Tighter spacing for some logos */
-    }
-    .nav-links-wrapper {
-      display: flex;
-      gap: 2rem; /* Increased gap */
-    }
-    .nav-links-wrapper a {
-      color: var(--text-muted);
-      text-decoration: none;
-      font-weight: 500;
-      transition: var(--transition-fast);
-      padding: 0.5rem 0;
-      position: relative;
-    }
-    .nav-links-wrapper a:hover { color: var(--primary); }
-    .nav-links-wrapper a.active {
-      color: var(--primary);
-      font-weight: 600; /* Bolder active link */
-    }
-    .nav-toggle {
-      display: none;
-      background: none;
-      border: none;
-      color: var(--text-primary);
-      font-size: 1.8rem;
-      cursor: pointer;
-      padding: 0.5rem;
-      line-height: 1;
-    }
-    .hero {
-      background: var(--bg-hero);
-      color: #ffffff; /* White text on gradient */
-      padding: 5rem 1.5rem; /* Increased padding */
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      min-height: 250px; /* Increased min-height */
-    }
-    .hero h1 {
-      font-size: 2.8rem; /* Larger heading */
-      margin-bottom: 1rem;
-      font-weight: 700;
-      max-width: 700px;
-      line-height: 1.2;
-    }
-    .hero p {
-      font-size: 1.15rem; /* Slightly larger paragraph */
-      color: rgba(255, 255, 255, 0.9);
-      max-width: 650px;
-      margin: 0 auto;
-      line-height: 1.7;
-    }
-    .container {
-      max-width: 700px; /* Slightly wider container for content */
-      margin: 0 auto;
-      padding: 3rem 1.5rem;
-    }
-    .contact-section {
-      background: var(--bg-card);
-      border-radius: var(--border-radius-lg); /* Larger border radius */
-      box-shadow: var(--shadow-lg); /* More prominent shadow */
-      padding: 2.5rem;
-      margin-bottom: 3rem;
-    }
-    .contact-section h2 {
-      color: var(--text-primary);
-      font-size: 1.8rem; /* Adjusted size */
-      margin-bottom: 1.5rem;
-      font-weight: 600;
-      text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.75rem;
-    }
-    .contact-section h2 .fas { /* Style for icon within h2 */
-      color: var(--primary);
-      font-size: 1.5rem;
-    }
-    .contact-methods { /* New wrapper for contact items */
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem; /* Space between contact methods */
-    }
-    .contact-method { /* New class for individual contact item */
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      padding: 1rem;
-      border: 1px solid var(--border-color);
-      border-radius: var(--border-radius-md);
-      background-color: #fdfdff; /* Slightly off-white for depth */
-      transition: var(--transition-fast);
-    }
-    .contact-method:hover {
-      border-color: var(--primary-light);
-      box-shadow: var(--shadow-md);
-      transform: translateY(-2px);
-    }
-    .contact-icon {
-      font-size: 1.5rem;
-      color: var(--primary);
-      width: 30px; /* Fixed width for icon alignment */
-      text-align: center;
-    }
-    .contact-info .contact-label { /* Optional label for context */
-      display: block;
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      margin-bottom: 0.1rem;
-    }
-    .contact-info .contact-link {
-      color: var(--primary-dark); /* Use primary-dark for links */
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 1.05rem;
-      transition: var(--transition-fast);
-    }
-    .contact-info .contact-link:hover { color: var(--primary); }
-
-    .cta { /* Redesigned CTA section */
-      text-align: center;
-      padding: 3rem 2rem; /* Increased padding */
-      background-color: var(--bg-card); /* Use card background for consistency */
-      border-radius: var(--border-radius-lg);
-      margin-top: 3rem; /* Increased margin */
-      box-shadow: var(--shadow-lg); /* More prominent shadow */
-      border: 1px solid var(--border-color);
-    }
-    .cta h2 {
-      color: var(--text-primary);
-      margin-bottom: 0.75rem;
-      font-size: 1.6rem; /* Larger CTA heading */
-    }
-    .cta p {
-      color: var(--text-secondary);
-      margin-bottom: 1.5rem;
-      font-size: 1.05rem;
-      max-width: 550px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .cta a {
-      display: inline-block;
-      padding: 0.9rem 2.5rem; /* Larger button padding */
-      background: var(--primary);
-      color: #fff;
-      border-radius: var(--border-radius-md);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1.05rem; /* Slightly larger font */
-      transition: var(--transition-std);
-      box-shadow: var(--shadow-sm);
-    }
-    .cta a:hover {
-      background: var(--primary-dark);
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-md);
-    }
-    .site-footer {
-      background-color: var(--text-primary); /* Darker footer for contrast */
-      color: #e5e7eb; /* Lighter text for footer */
-      padding: 2.5rem 1.5rem;
-      margin-top: 4rem;
-      border-top: 3px solid var(--primary);
-    }
-    .footer-container { max-width: 1100px; margin: 0 auto; }
-    .footer-content { text-align: center; }
-    .footer-content p {
-      margin-bottom: 1rem;
-      font-size: 0.9rem;
-      color: #a1a1aa; /* Muted footer text */
-    }
-    .footer-content p:last-child { margin-bottom: 0; }
-    .back-to-top {
-      color: var(--primary-light); /* Use light primary for link */
-      text-decoration: none;
-      font-weight: 500;
-      transition: var(--transition-fast);
-    }
-    .back-to-top:hover { color: #ffffff; text-decoration: underline; }
-    .back-to-top i { margin-left: 0.3rem; font-size: 0.8em; }
-
+    .site-footer { background-color: #fff; border-top: 1px solid #e2e8f0; padding: 3rem 0; margin-top: auto; }
+    .footer-simple-layout { display: flex; flex-direction: column; align-items: center; gap: 1.5rem; text-align: center; }
+    .footer-logo { display: flex; align-items: center; gap: 0.5rem; font-weight: 700; color: var(--text-dark); }
+    .footer-nav { display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; padding: 0; list-style: none; }
+    .footer-nav a { color: var(--text-light); font-weight: 500; transition: color 0.2s; }
+    .footer-nav a:hover { color: var(--primary-color); }
+    .footer-copyright { color: #94a3b8; font-size: 0.875rem; }
+    
     @media (max-width: 768px) {
-      .nav-toggle { display: block; z-index: 101; }
-      .nav-links-wrapper {
-        position: absolute;
-        top: 100%;
-        left: 0; right: 0;
-        background-color: var(--bg-card);
-        flex-direction: column;
-        align-items: stretch; /* Changed from center to stretch */
-        box-shadow: var(--shadow-lg); /* Stronger shadow for mobile menu */
-        border-top: 1px solid var(--border-color);
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
-        gap: 0;
-      }
-      .nav-links-wrapper.active { max-height: 500px; }
-      .nav-links-wrapper a {
-        padding: 0.8rem 1.5rem;
-        width: 100%; /* Ensure full width for tap targets */
-        text-align: left; /* Changed from center to left */
-        border-bottom: 1px solid var(--border-color);
-      }
-      .nav-links-wrapper a:last-child { border-bottom: none; }
-      .hero { padding: 3rem 1rem; min-height: auto; } /* Adjusted hero padding for mobile */
-      .hero h1 { font-size: 2rem; } /* Adjusted hero heading for mobile */
-      .hero p { font-size: 1rem; }
-      .container { padding: 2rem 1rem; }
-      .contact-section { padding: 2rem 1.5rem; }
-      .contact-section h2 { font-size: 1.5rem; }
-      .contact-method { flex-direction: column; align-items: flex-start; text-align: left; } /* Stack contact methods on mobile */
-      .contact-icon { margin-bottom: 0.5rem; }
-      .cta { padding: 2rem 1.5rem; }
-      .cta h2 { font-size: 1.3rem; }
-      .site-footer { padding: 2rem 1rem; margin-top: 3rem; }
+      .nav-links-wrapper { display: none; } 
+      .hero h1 { font-size: 2.5rem; }
     }
   </style>
 </head>
-<body id="page-top">
+<body>
+
   <nav class="navbar">
     <div class="nav-container">
-      <a href="https://www.famral.com/" class="nav-logo">Famral</a>
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="nav-links-wrapper" id="navLinks">
-        <a href="/">Home</a>
-        <a href="/contact" class="active">Contact</a>
+      <a href="/" class="nav-logo">
+        <img src="https://www.famral.com/favicon.png" alt="Famral Logo" width="32" height="32">
+        Famral
+      </a>
+      <div class="nav-links-wrapper">
+        <a href="productivity-tips">Productivity Tips</a>
+        <a href="workflow-optimization">Workflow Optimization</a>
+        <a href="teamwork-culture">Teamwork & Culture</a>
       </div>
     </div>
   </nav>
 
-  <main>
-    <section class="hero">
-      <h1>Contact Us</h1>
-      <p>We're excited to hear from you. Let's discuss how Famral can help.</p>
-    </section>
-
+  <section class="hero">
     <div class="container">
-      <section class="contact-section" id="contact">
-        <h2><i class="fas fa-envelope-open-text" aria-hidden="true"></i> Get in Touch</h2>
-        <div class="contact-methods">
-          <div class="contact-method">
-            <i class="fas fa-envelope contact-icon"></i>
-            <div class="contact-info">
-              <span class="contact-label">Email Us Directly</span>
-              <a href="mailto:contact@famral.com" class="contact-link">contact@famral.com</a>
-            </div>
-          </div>
-          <div class="contact-method">
-            <i class="fab fa-whatsapp contact-icon"></i>
-            <div class="contact-info">
-              <span class="contact-label">Chat With Us</span>
-              <a href="https://wa.me/917878358707" target="_blank" class="contact-link">Open WhatsApp Chat</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
+      <h1>Contact Us</h1>
+      <p>Have questions or feedback? We'd love to hear from you.</p>
     </div>
-  </main>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-wrapper">
+        <form action="#" method="POST">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required placeholder="Your Name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="you@example.com">
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required placeholder="How can we help?">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Your message here..."></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Send Message</button>
+        </form>
+      </div>
+
+      <div class="contact-info">
+        <p>Or email us directly at:</p>
+        <a href="mailto:contact@famral.com">contact@famral.com</a>
+      </div>
+    </div>
+  </section>
 
   <footer class="site-footer">
-    <div class="footer-container">
-      <div class="footer-content">
-        <p>&copy; <span id="current-year"></span> Famral. All Rights Reserved.</p>
-        <p><a href="#page-top" class="back-to-top">Back to Top <i class="fas fa-arrow-up"></i></a></p>
+    <div class="container">
+      <div class="footer-simple-layout">
+        <div class="footer-logo">
+          <img src="https://www.famral.com/favicon.png" alt="Famral Logo" width="24" height="24">
+          <span>Famral</span>
+        </div>
+        <ul class="footer-nav">
+          <li><a href="about">About</a></li>
+          <li><a href="privacy">Privacy</a></li>
+          <li><a href="terms">Terms</a></li>
+          <li><a href="contact">Contact</a></li>
+        </ul>
+        <div class="footer-copyright">
+          <p>&copy; <span id="current-year"></span> Famral. All Rights Reserved.</p>
+        </div>
       </div>
     </div>
   </footer>
 
-  <script>
-    const navToggle = document.querySelector('.nav-toggle');
-    const navLinks = document.querySelector('.nav-links-wrapper');
-    const toggleIcon = navToggle.querySelector('i');
-    navToggle.addEventListener('click', () => {
-      const isExpanded = navLinks.classList.toggle('active');
-      navToggle.setAttribute('aria-expanded', isExpanded);
-      // Optimized icon toggle
-      toggleIcon.classList.toggle('fa-bars', !isExpanded);
-      toggleIcon.classList.toggle('fa-times', isExpanded);
-    });
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        if (navLinks.classList.contains('active')) {
-          navLinks.classList.remove('active');
-          navToggle.setAttribute('aria-expanded', 'false');
-          // Consistent icon update
-          toggleIcon.classList.add('fa-bars');    // Ensure bars icon is shown
-          toggleIcon.classList.remove('fa-times'); // Ensure times icon is hidden
-        }
-      });
-    });
-    document.getElementById('current-year').textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
