@@ -1,99 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="favicon.png" />
-    <title>Famral – Terms & Conditions</title>
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css'>
-    <link rel="stylesheet" href="./style.css">
-    <style>
-        nav ul li {
-            margin: 0 1rem;
-        }
-        nav ul li a {
-            color: rgb(0, 0, 0);
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav ul li a:hover {
-            text-decoration: underline;
-        }
-        main {
-            padding: 2rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        h1, h2 {
-            color: #393939;
-        }
-        section {
-            margin-bottom: 2rem;
-        }
-        footer {
-            background: #f4f4f4;
-            color: #333;
-            text-align: center;
-            padding: 1rem;
-            border-top: 1px solid #ddd;
-        }
-        a {
-            color: #0078D7;
-            text-decoration: none;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms & Conditions | Famral</title>
+  <meta name="description" content="Read the Terms and Conditions for using Famral's services and website.">
+  <link rel="icon" type="image/png" href="https://www.famral.com/favicon.png"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Reusing styles from index.html */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; color: #1e293b; line-height: 1.6; background-color: #fff; }
+    :root { --primary-color: #2563eb; --text-dark: #1e293b; --text-light: #64748b; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+    .section { padding: 5rem 0; }
+    .navbar { background: white; border-bottom: 1px solid #e2e8f0; padding: 0.75rem 0; position: sticky; top: 0; z-index: 1000; }
+    .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+    .nav-logo { display: flex; align-items: center; gap: 0.75rem; font-weight: 700; font-size: 1.25rem; color: var(--text-dark); text-decoration: none; }
+    .nav-links-wrapper { display: flex; gap: 2rem; align-items: center; }
+    .nav-links-wrapper a { font-weight: 500; color: var(--text-dark); padding: 0.5rem 1rem; border-radius: 0.5rem; transition: all 0.2s; text-decoration: none; }
+    .nav-links-wrapper a:hover { color: var(--primary-color); background-color: #f1f5f9; }
+    .hero { text-align: center; padding: 6rem 1rem; background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%); }
+    .hero h1 { font-size: 3.5rem; line-height: 1.2; margin-bottom: 1.5rem; color: var(--text-dark); }
+    .hero p { font-size: 1.25rem; color: var(--text-light); max-width: 700px; margin: 0 auto 2.5rem; }
+    .content-block { max-width: 800px; margin: 0 auto; }
+    .content-block h2 { font-size: 1.75rem; margin-bottom: 1rem; color: var(--text-dark); margin-top: 2.5rem; }
+    .content-block p { margin-bottom: 1rem; color: var(--text-light); }
+    .content-block ul { margin-bottom: 1.5rem; padding-left: 1.5rem; list-style-type: disc; color: var(--text-light); }
+    .content-block li { margin-bottom: 0.5rem; }
+    .site-footer { background-color: #fff; border-top: 1px solid #e2e8f0; padding: 3rem 0; margin-top: auto; }
+    .footer-simple-layout { display: flex; flex-direction: column; align-items: center; gap: 1.5rem; text-align: center; }
+    .footer-logo { display: flex; align-items: center; gap: 0.5rem; font-weight: 700; color: var(--text-dark); }
+    .footer-nav { display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; padding: 0; list-style: none; }
+    .footer-nav a { color: var(--text-light); font-weight: 500; transition: color 0.2s; }
+    .footer-nav a:hover { color: var(--primary-color); }
+    .footer-copyright { color: #94a3b8; font-size: 0.875rem; }
+    
+    @media (max-width: 768px) {
+      .nav-links-wrapper { display: none; } 
+      .hero h1 { font-size: 2.5rem; }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- partial:index.partial.html -->
-  <div class="menu-btn">
-    <i class="fas fa-bars fa-1.5x"></i>
-  </div>
-
-  <div class="container">
-    <!-- Nav -->
-    <nav class="main-nav">
-      <img src="./logo.png" alt="Famral" class="logo">
-
-      <ul class="main-menu">
-        <li><a href="https://www.famral.com/">Home</a></li>
-        <li><a href="/workspace">Productivity Apps</a></li>
-                  <li><a href="https://tools.famral.com/">Web Tools</a></li>
-      </ul>
-
-
-    </nav>
-
-<main>
-    <div class="terms-container">
-        <h1>Terms and Conditions</h1><br>
-        <p>Welcome to our website. If you continue to browse and use this website, you are agreeing to comply with and be bound by the following terms and conditions of use, which together with our privacy policy govern Famral's relationship with you in relation to this website.</p>
-        <br>
-        <h2>Use of the Website</h2>
-        <p>The content of the pages of this website is for your general information and use only. It is subject to change without notice.</p>
-        <br>
-        <h2>Intellectual Property</h2>
-        <p>This website contains material which is owned by or licensed to us. This material includes, but is not limited to, the design, layout, look, appearance, and graphics. Reproduction is prohibited other than in accordance with the copyright notice, which forms part of these terms and conditions.</p>
-        <br>
-        <h2>Limitation of Liability</h2>
-        <p>Your use of any information or materials on this website is entirely at your own risk, for which we shall not be liable. It shall be your own responsibility to ensure that any products, services, or information available through this website meet your specific requirements.</p>
-        <br>
-        <h2>Governing Law</h2>
-        <p>Your use of this website and any dispute arising out of such use of the website is subject to the laws of Government of INDIA.</p>
-        <br>
-        <h2>Contact Information</h2>
-        <p>If you have any questions about these Terms and Conditions, please contact us <a href="https://www.famral.com/contact">here</a>.</p>
-        <br>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <img src="https://www.famral.com/favicon.png" alt="Famral Logo" width="32" height="32">
+        Famral
+      </a>
+      <div class="nav-links-wrapper">
+        <a href="productivity-tips">Productivity Tips</a>
+        <a href="workflow-optimization">Workflow Optimization</a>
+        <a href="teamwork-culture">Teamwork & Culture</a>
+      </div>
     </div>
+  </nav>
 
-</main>
+  <section class="hero">
+    <div class="container">
+      <h1>Terms & Conditions</h1>
+      <p>Last updated: October 17, 2025</p>
+    </div>
+  </section>
 
-<footer>
-    <p>&copy; Famral. All Rights Reserved.</p>
-</footer>
+  <section class="section">
+    <div class="container">
+      <div class="content-block">
+        <p>Welcome to Famral! These terms and conditions outline the rules and regulations for the use of Famral's Website, located at www.famral.com.</p>
 
+        <h2>1. Acceptance of Terms</h2>
+        <p>By accessing this website we assume you accept these terms and conditions. Do not continue to use Famral if you do not agree to take all of the terms and conditions stated on this page.</p>
 
- <!-- partial -->
- <script>document.querySelector('.menu-btn').addEventListener('click', () => document.querySelector('.main-menu').classList.toggle('show'));</script>
+        <h2>2. License</h2>
+        <p>Unless otherwise stated, Famral and/or its licensors own the intellectual property rights for all material on Famral. All intellectual property rights are reserved. You may access this from Famral for your own personal use subjected to restrictions set in these terms and conditions.</p>
+        <p>You must not:</p>
+        <ul>
+          <li>Republish material from Famral</li>
+          <li>Sell, rent or sub-license material from Famral</li>
+          <li>Reproduce, duplicate or copy material from Famral</li>
+          <li>Redistribute content from Famral</li>
+        </ul>
+
+        <h2>3. User Content</h2>
+        <p>In these Website Standard Terms and Conditions, "Your Content" shall mean any audio, video text, images or other material you choose to display on this Website. By displaying Your Content, you grant Famral a non-exclusive, worldwide irrevocable, sub licensable license to use, reproduce, adapt, publish, translate and distribute it in any and all media.</p>
+
+        <h2>4. Limitation of Liability</h2>
+        <p>In no event shall Famral, nor any of its officers, directors and employees, be held liable for anything arising out of or in any way connected with your use of this Website whether such liability is under contract. Famral, including its officers, directors and employees shall not be held liable for any indirect, consequential or special liability arising out of or in any way related to your use of this Website.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-simple-layout">
+        <div class="footer-logo">
+          <img src="https://www.famral.com/favicon.png" alt="Famral Logo" width="24" height="24">
+          <span>Famral</span>
+        </div>
+        <ul class="footer-nav">
+          <li><a href="about">About</a></li>
+          <li><a href="privacy">Privacy</a></li>
+          <li><a href="terms">Terms</a></li>
+          <li><a href="contact">Contact</a></li>
+        </ul>
+        <div class="footer-copyright">
+          <p>&copy; <span id="current-year"></span> Famral. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
