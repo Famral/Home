@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>10 Tips for Better Documentation | Famral</title>
+  <meta name="description" content="Learn how to structure your documents for clarity and impact with these essential writing tips.">
+  <link rel="icon" type="image/png" href="https://www.famral.com/favicon.png"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Reusing styles from index.html */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; color: #1e293b; line-height: 1.6; background-color: #fff; }
+    :root { --primary-color: #2563eb; --text-dark: #1e293b; --text-light: #64748b; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+    .section { padding: 5rem 0; }
+    .navbar { background: white; border-bottom: 1px solid #e2e8f0; padding: 0.75rem 0; position: sticky; top: 0; z-index: 1000; }
+    .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+    .nav-logo { display: flex; align-items: center; gap: 0.75rem; font-weight: 700; font-size: 1.25rem; color: var(--text-dark); text-decoration: none; }
+    .nav-links-wrapper { display: flex; gap: 2rem; align-items: center; }
+    .nav-links-wrapper a { font-weight: 500; color: var(--text-dark); padding: 0.5rem 1rem; border-radius: 0.5rem; transition: all 0.2s; text-decoration: none; }
+    .nav-links-wrapper a:hover { color: var(--primary-color); background-color: #f1f5f9; }
+    
+    /* Hero Section */
+    .hero { text-align: center; padding: 6rem 1rem; background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%); }
+    .hero h1 { font-size: 3rem; line-height: 1.2; margin-bottom: 1.5rem; color: var(--text-dark); max-width: 900px; margin-left: auto; margin-right: auto; }
+    .hero p { font-size: 1.25rem; color: var(--text-light); max-width: 700px; margin: 0 auto 2.5rem; }
+    .article-meta { font-size: 0.9rem; color: var(--text-light); margin-top: 1rem; }
+    
+    /* Content Styles */
+    .content-block { max-width: 800px; margin: 0 auto; }
+    .content-block h2 { font-size: 1.75rem; margin-bottom: 1rem; color: var(--text-dark); margin-top: 2.5rem; }
+    .content-block p { margin-bottom: 1.5rem; color: var(--text-light); font-size: 1.1rem; }
+    .content-block ul, .content-block ol { margin-bottom: 1.5rem; padding-left: 1.5rem; color: var(--text-light); font-size: 1.1rem; }
+    .content-block li { margin-bottom: 0.75rem; }
+    .content-block strong { color: var(--text-dark); font-weight: 600; }
+
+    /* Share Section */
+    .share-section {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid #e2e8f0;
+      text-align: center;
+    }
+    .share-section h3 {
+      margin-bottom: 1.5rem;
+      font-size: 1.25rem;
+      color: var(--text-dark);
+    }
+    .share-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .share-btn { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; color: white; font-size: 1.1rem; text-decoration: none; transition: transform 0.2s; }
+    .share-btn:hover { transform: scale(1.1); }
+    .share-btn.twitter { background-color: #1DA1F2; }
+    .share-btn.facebook { background-color: #1877F2; }
+    .share-btn.linkedin { background-color: #0A66C2; }
+    .share-btn.email { background-color: #7f8c8d; }
+
+    /* Footer */
+    .site-footer { background-color: #fff; border-top: 1px solid #e2e8f0; padding: 3rem 0; margin-top: auto; }
+    .footer-simple-layout { display: flex; flex-direction: column; align-items: center; gap: 1.5rem; text-align: center; }
+    .footer-logo { display: flex; align-items: center; gap: 0.5rem; font-weight: 700; color: var(--text-dark); }
+    .footer-nav { display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; padding: 0; list-style: none; }
+    .footer-nav a { color: var(--text-light); font-weight: 500; transition: color 0.2s; }
+    .footer-nav a:hover { color: var(--primary-color); }
+    .footer-copyright { color: #94a3b8; font-size: 0.875rem; }
+    
+    @media (max-width: 768px) {
+      .nav-links-wrapper { display: none; } 
+      .hero h1 { font-size: 2.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <img src="https://www.famral.com/favicon.png" alt="Famral Logo" width="32" height="32">
+        Famral
+      </a>
+      <div class="nav-links-wrapper">
+        <a href="productivity-tips">Productivity Tips</a>
+        <a href="workflow-optimization">Workflow Optimization</a>
+        <a href="teamwork-culture">Teamwork & Culture</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="container">
+      <h1>10 Tips for Better Documentation</h1>
+      <p>Learn how to structure your documents for clarity and impact with these essential writing tips.</p>
+      <div class="article-meta">
+        <span><i class="far fa-calendar"></i> October 27, 2025</span> &bull; <span><i class="far fa-clock"></i> 5 min read</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="content-block">
+        <p>Good documentation is the backbone of any successful project or team. Whether you are writing technical specs, user manuals, or internal memos, clarity is key. Here are 10 tips to help you write better documentation today.</p>
+
+        <h2>1. Know Your Audience</h2>
+        <p>Before you type a single word, ask yourself: who is reading this? A document for a new user should avoid technical jargon and focus on step-by-step instructions. A document for a senior developer can be more concise and assume a higher level of background knowledge. Consider creating simple user personas to keep your audience top-of-mind. Tailoring your content ensures that it resonates and provides value to the specific people who need it most.</p>
+
+        <h2>2. Start with a Clear Goal</h2>
+        <p>Every document should have a clear purpose. State it clearly in an introduction or summary at the beginning. For example: "This document provides a step-by-step tutorial for setting up your new account." Setting expectations early helps readers know if they are in the right place and how to navigate your content. Define the "What," "Why," and "How" upfront to frame the rest of the document effectively.</p>
+
+        <h2>3. Use Headings and Subheadings</h2>
+        <p>Nobody likes a wall of text. Break your content into digestible chunks using descriptive headings (H2) and subheadings (H3, H4). This creates a logical hierarchy, makes your document scannable, and helps users find the specific information they need quickly without reading everything. A well-structured document acts like a map, guiding the reader to their destination with ease.</p>
+
+        <h2>4. Keep it Concise</h2>
+        <p>Less is often more. Avoid fluff, jargon, and unnecessary words. Use short sentences and active voice (e.g., "Click the button" instead of "The button should be clicked"). If you can say it in five words, don't use ten. Your readers will appreciate the clarity and brevity. Tools like Hemingway Editor can help you identify complex sentences and simplify your writing.</p>
+
+        <h2>5. Use Visuals</h2>
+        <p>A picture is worth a thousand words, especially in documentation. Use annotated screenshots, simple diagrams, or flowcharts to explain complex concepts. Visual aids break up long blocks of text, make abstract ideas more concrete, and can often communicate a process more effectively than words alone. Ensure every image has a caption and alt text for accessibility.</p>
+
+        <h2>6. Be Consistent</h2>
+        <p>Consistency in terminology, formatting, and tone builds trust and reduces confusion. If you call a feature the "Dashboard" in one place, don't call it the "Home Screen" in another. Creating and adhering to a simple style guide can ensure consistency across all your documentation. This includes consistent use of bolding for UI elements, code block formatting, and capitalization rules.</p>
+
+        <h2>7. Provide Examples</h2>
+        <p>Abstract concepts are hard to grasp. Concrete examples make them real. If you are documenting code, provide ready-to-use snippets that users can copy and paste. If you are explaining a process, walk through a realistic use case from start to finish. Examples are one of the most powerful tools for effective teaching because they bridge the gap between theory and practice.</p>
+
+        <h2>8. Update Regularly</h2>
+        <p>Outdated documentation is worse than no documentation at all because it misleads users and erodes trust. Make documentation updates part of your development workflow. Whenever a feature changes or a process evolves, the corresponding docs should be updated at the same time. Treat your documentation as a living product that requires maintenance and care.</p>
+
+        <h2>9. Use Bullet Points</h2>
+        <p>Lists are your friend for scannability. Use bullet points for items that don't have a specific order. Use numbered lists for step-by-step instructions where the sequence is important. They are far easier for the human eye to scan and process than long, dense paragraphs. Ensure your list items follow a parallel structure (e.g., all starting with a verb) for better readability.</p>
+
+        <h2>10. Ask for Feedback</h2>
+        <p>You are not writing for yourself. The only way to know if your documentation is effective is to get feedback from its intended audience. Ask a colleague or a new user to follow your instructions. Where did they get stuck? What was unclear? Use their feedback to iterate and improve. Adding a simple "Was this helpful?" button at the bottom of your docs can provide invaluable insights.</p>
+
+        <p>By following these tips, you can transform your documentation from a necessary chore into a valuable asset that empowers your users and saves your team time. Clear, concise, and helpful documentation is a hallmark of a great product and a well-functioning team. Start small, iterate often, and always keep your user in mind.</p>
+
+        <div class="share-section">
+          <h3>Share this article</h3>
+          <div class="share-buttons">
+            <a href="#" class="share-btn twitter" aria-label="Share on Twitter" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="share-btn facebook" aria-label="Share on Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="share-btn linkedin" aria-label="Share on LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="share-btn email" aria-label="Share via Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-simple-layout">
+        <div class="footer-logo">
+          <img src="https://www.famral.com/favicon.png" alt="Famral Logo" width="24" height="24">
+          <span>Famral</span>
+        </div>
+        <ul class="footer-nav">
+          <li><a href="about">About</a></li>
+          <li><a href="privacy">Privacy</a></li>
+          <li><a href="terms">Terms</a></li>
+          <li><a href="contact">Contact</a></li>
+        </ul>
+        <div class="footer-copyright">
+          <p>&copy; <span id="current-year"></span> Famral. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
+  <script>
+    // Share functionality
+    const pageUrl = window.location.href;
+    const pageTitle = document.title;
+    const encodedPageUrl = encodeURIComponent(pageUrl);
+    const encodedPageTitle = encodeURIComponent(pageTitle);
+
+    const twitterShare = document.querySelector('.share-btn.twitter');
+    const facebookShare = document.querySelector('.share-btn.facebook');
+    const linkedinShare = document.querySelector('.share-btn.linkedin');
+    const emailShare = document.querySelector('.share-btn.email');
+
+    if (twitterShare) {
+      twitterShare.href = `https://twitter.com/intent/tweet?url=${encodedPageUrl}&text=${encodedPageTitle}`;
+    }
+    if (facebookShare) {
+      facebookShare.href = `https://www.facebook.com/sharer/sharer.php?u=${encodedPageUrl}`;
+    }
+    if (linkedinShare) {
+      linkedinShare.href = `https://www.linkedin.com/shareArticle?mini=true&url=${encodedPageUrl}&title=${encodedPageTitle}`;
+    }
+    if (emailShare) {
+      emailShare.href = `mailto:?subject=${encodedPageTitle}&body=Check out this article: ${pageUrl}`;
+    }
+  </script>
+</body>
+</html>
