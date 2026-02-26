@@ -1,130 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="favicon.png" />
-    <title>Famral – Privacy Policy</title>
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css'>
-    <link rel="stylesheet" href="./style.css">
-    <style>
-        nav ul li {
-            margin: 0 1rem;
-        }
-        nav ul li a {
-            color: rgb(0, 0, 0);
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav ul li a:hover {
-            text-decoration: underline;
-        }
-        main {
-            padding: 2rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        h1, h2 {
-            color: #393939;
-        }
-        section {
-            margin-bottom: 2rem;
-        }
-        footer {
-            background: #f4f4f4;
-            color: #333;
-            text-align: center;
-            padding: 1rem;
-            border-top: 1px solid #ddd;
-        }
-        a {
-            color: #0078D7;
-            text-decoration: none;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | Famral</title>
+  <meta name="description" content="Read the Famral Privacy Policy to understand how we collect, use, and protect your data.">
+  <link rel="icon" type="image/png" href="https://www.famral.com/favicon.png"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Reusing styles from index.html */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; color: #1e293b; line-height: 1.6; background-color: #fff; }
+    :root { --primary-color: #2563eb; --text-dark: #1e293b; --text-light: #64748b; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+    .section { padding: 5rem 0; }
+    .navbar { background: white; border-bottom: 1px solid #e2e8f0; padding: 0.75rem 0; position: sticky; top: 0; z-index: 1000; }
+    .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+    .nav-logo { display: flex; align-items: center; gap: 0.75rem; font-weight: 700; font-size: 1.25rem; color: var(--text-dark); text-decoration: none; }
+    .nav-links-wrapper { display: flex; gap: 2rem; align-items: center; }
+    .nav-links-wrapper a { font-weight: 500; color: var(--text-dark); padding: 0.5rem 1rem; border-radius: 0.5rem; transition: all 0.2s; text-decoration: none; }
+    .nav-links-wrapper a:hover { color: var(--primary-color); background-color: #f1f5f9; }
+    .hero { text-align: center; padding: 6rem 1rem; background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%); }
+    .hero h1 { font-size: 3.5rem; line-height: 1.2; margin-bottom: 1.5rem; color: var(--text-dark); }
+    .hero p { font-size: 1.25rem; color: var(--text-light); max-width: 700px; margin: 0 auto 2.5rem; }
+    .content-block { max-width: 800px; margin: 0 auto; }
+    .content-block h2 { font-size: 1.75rem; margin-bottom: 1rem; color: var(--text-dark); margin-top: 2.5rem; }
+    .content-block p { margin-bottom: 1rem; color: var(--text-light); }
+    .content-block ul { margin-bottom: 1.5rem; padding-left: 1.5rem; list-style-type: disc; color: var(--text-light); }
+    .content-block li { margin-bottom: 0.5rem; }
+    .site-footer { background-color: #fff; border-top: 1px solid #e2e8f0; padding: 3rem 0; margin-top: auto; }
+    .footer-simple-layout { display: flex; flex-direction: column; align-items: center; gap: 1.5rem; text-align: center; }
+    .footer-logo { display: flex; align-items: center; gap: 0.5rem; font-weight: 700; color: var(--text-dark); }
+    .footer-nav { display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; padding: 0; list-style: none; }
+    .footer-nav a { color: var(--text-light); font-weight: 500; transition: color 0.2s; }
+    .footer-nav a:hover { color: var(--primary-color); }
+    .footer-copyright { color: #94a3b8; font-size: 0.875rem; }
+    
+    @media (max-width: 768px) {
+      .nav-links-wrapper { display: none; } 
+      .hero h1 { font-size: 2.5rem; }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- partial:index.partial.html -->
-  <div class="menu-btn">
-    <i class="fas fa-bars fa-1.5x"></i>
-  </div>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <img src="https://www.famral.com/favicon.png" alt="Famral Logo" width="32" height="32">
+        Famral
+      </a>
+      <div class="nav-links-wrapper">
+        <a href="productivity-tips">Productivity Tips</a>
+        <a href="workflow-optimization">Workflow Optimization</a>
+        <a href="teamwork-culture">Teamwork & Culture</a>
+      </div>
+    </div>
+  </nav>
 
-  <div class="container">
-    <!-- Nav -->
-    <nav class="main-nav">
-      <img src="./logo.png" alt="Famral" class="logo">
+  <section class="hero">
+    <div class="container">
+      <h1>Privacy Policy</h1>
+      <p>Last updated: October 26, 2025</p>
+    </div>
+  </section>
 
-      <ul class="main-menu">
-        <li><a href="https://www.famral.com/">Home</a></li>
-                  <li><a href="/workspace">Productivity Apps</a></li>
-        <li><a href="https://tools.famral.com/">Online Tools</a></li>
+  <section class="section">
+    <div class="container">
+      <div class="content-block">
+        <p>At Famral, accessible from www.famral.com, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Famral and how we use it.</p>
 
-      </ul>
-
-    </nav>
-
-<main>
-    <section id="introduction">
-        <h2>Introduction</h2>
-        <p>Welcome to Famral. Your privacy is important to us, and this privacy policy explains how we collect, use, and protect your information when you use our website and app.</p>
-    </section>
-
-    <section id="information-we-collect">
         <h2>Information We Collect</h2>
-        <p>We may collect the following types of information:
+        <p>We collect information to provide better services to all our users. The types of information we collect include:</p>
         <ul>
-            <li>Personal Information (e.g., name, email address, phone number)</li>
-            <li>Usage Data (e.g., device information, IP address, browser type)</li>
-            <li>Cookies and similar technologies</li>
+          <li><strong>Personal Information:</strong> Name, email address, and other contact details when you register or contact us.</li>
+          <li><strong>Usage Data:</strong> Information on how you use our website, such as pages visited and time spent.</li>
+          <li><strong>Cookies:</strong> We use cookies to store information about visitors' preferences and to optimize the user experience.</li>
         </ul>
-        </p>
-    </section>
 
-    <section id="how-we-use">
         <h2>How We Use Your Information</h2>
-        <p>Your information is used to:
+        <p>We use the information we collect in various ways, including to:</p>
         <ul>
-            <li>Provide and improve our services</li>
-            <li>Respond to customer support requests</li>
-            <li>Analyze usage trends to enhance user experience</li>
+          <li>Provide, operate, and maintain our website</li>
+          <li>Improve, personalize, and expand our website</li>
+          <li>Understand and analyze how you use our website</li>
+          <li>Develop new products, services, features, and functionality</li>
+          <li>Communicate with you, either directly or through one of our partners</li>
         </ul>
-        </p>
-    </section>
 
-    <section id="how-we-protect">
-        <h2>How We Protect Your Information</h2>
-        <p>We implement industry-standard security measures to safeguard your data. However, no system is completely secure, and we cannot guarantee the security of your information.</p>
-    </section>
+        <h2>Data Security</h2>
+        <p>We value your trust in providing us your Personal Information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and we cannot guarantee its absolute security.</p>
 
-    <section id="your-rights">
-        <h2>Your Rights</h2>
-        <p>You have the right to:
-        <ul>
-            <li>Access, update, or delete your personal information</li>
-            <li>Opt-out of data collection or marketing communications</li>
-            <li>Contact us with any privacy-related questions</li>
-        </ul>
-        </p>
-    </section>
-
-    <section id="changes">
-        <h2>Changes to This Policy</h2>
-        <p>We may update this privacy policy periodically. We encourage you to review this page regularly for any changes.</p>
-    </section>
-
-    <section id="contact">
         <h2>Contact Us</h2>
-        <p>If you have any questions about this privacy policy, please contact us <a href="https://www.famral.com/contact">here</a>.</p>
-    </section>
-</main>
+        <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us.</p>
+      </div>
+    </div>
+  </section>
 
-<footer>
-    <p>&copy; Famral. All Rights Reserved.</p>
-</footer>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-simple-layout">
+        <div class="footer-logo">
+          <img src="https://www.famral.com/favicon.png" alt="Famral Logo" width="24" height="24">
+          <span>Famral</span>
+        </div>
+        <ul class="footer-nav">
+          <li><a href="about">About</a></li>
+          <li><a href="privacy">Privacy</a></li>
+          <li><a href="terms">Terms</a></li>
+          <li><a href="contact">Contact</a></li>
+        </ul>
+        <div class="footer-copyright">
+          <p>&copy; <span id="current-year"></span> Famral. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-
- <!-- partial -->
- <script>document.querySelector('.menu-btn').addEventListener('click', () => document.querySelector('.main-menu').classList.toggle('show'));</script>
+  <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
