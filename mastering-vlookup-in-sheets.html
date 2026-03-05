@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mastering VLOOKUP in Google Sheets | Famral</title>
+  <meta name="description" content="Unlock the power of VLOOKUP in Google Sheets. Learn syntax, best practices, and how to merge data effectively with this step-by-step guide.">
+  <link rel="icon" type="image/png" href="https://www.famral.com/favicon.png"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7876432493491415"
+     crossorigin="anonymous"></script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H57NCR0QYN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H57NCR0QYN');
+</script>
+  
+  <style>
+    /* Reusing styles from index.html */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; color: #1e293b; line-height: 1.6; background-color: #fff; }
+    :root { --primary-color: #2563eb; --text-dark: #1e293b; --text-light: #64748b; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+    .section { padding: 5rem 0; }
+    .navbar { background: white; border-bottom: 1px solid #e2e8f0; padding: 0.75rem 0; position: sticky; top: 0; z-index: 1000; }
+    .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+    .nav-logo { display: flex; align-items: center; gap: 0.75rem; font-weight: 700; font-size: 1.25rem; color: var(--text-dark); text-decoration: none; }
+    .nav-links-wrapper { display: flex; gap: 2rem; align-items: center; }
+    .nav-links-wrapper a { font-weight: 500; color: var(--text-dark); padding: 0.5rem 1rem; border-radius: 0.5rem; transition: all 0.2s; text-decoration: none; }
+    .nav-links-wrapper a:hover { color: var(--primary-color); background-color: #f1f5f9; }
+    
+    /* Hero Section */
+    .hero { text-align: center; padding: 6rem 1rem; background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%); }
+    .hero h1 { font-size: 3rem; line-height: 1.2; margin-bottom: 1.5rem; color: var(--text-dark); max-width: 900px; margin-left: auto; margin-right: auto; }
+    .hero p { font-size: 1.25rem; color: var(--text-light); max-width: 700px; margin: 0 auto 2.5rem; }
+    .article-meta { font-size: 0.9rem; color: var(--text-light); margin-top: 1rem; }
+    
+    /* Content Styles */
+    .content-block { max-width: 800px; margin: 0 auto; }
+    .content-block h2 { font-size: 1.75rem; margin-bottom: 1rem; color: var(--text-dark); margin-top: 2.5rem; }
+    .content-block p { margin-bottom: 1.5rem; color: var(--text-light); font-size: 1.1rem; }
+    .content-block ul, .content-block ol { margin-bottom: 1.5rem; padding-left: 1.5rem; color: var(--text-light); font-size: 1.1rem; }
+    .content-block li { margin-bottom: 0.75rem; }
+    .content-block strong { color: var(--text-dark); font-weight: 600; }
+    .content-block code { background-color: #f1f5f9; padding: 0.2rem 0.4rem; border-radius: 0.25rem; font-family: monospace; color: var(--primary-color); font-size: 0.9em; }
+
+    /* Share Section */
+    .share-section {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid #e2e8f0;
+      text-align: center;
+    }
+    .share-section h3 {
+      margin-bottom: 1.5rem;
+      font-size: 1.25rem;
+      color: var(--text-dark);
+    }
+    .share-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .share-btn { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; color: white; font-size: 1.1rem; text-decoration: none; transition: transform 0.2s; }
+    .share-btn:hover { transform: scale(1.1); }
+    .share-btn.twitter { background-color: #1DA1F2; }
+    .share-btn.facebook { background-color: #1877F2; }
+    .share-btn.linkedin { background-color: #0A66C2; }
+    .share-btn.email { background-color: #7f8c8d; }
+
+    /* Footer */
+    .site-footer { background-color: #fff; border-top: 1px solid #e2e8f0; padding: 3rem 0; margin-top: auto; }
+    .footer-simple-layout { display: flex; flex-direction: column; align-items: center; gap: 1.5rem; text-align: center; }
+    .footer-logo { display: flex; align-items: center; gap: 0.5rem; font-weight: 700; color: var(--text-dark); }
+    .footer-nav { display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; padding: 0; list-style: none; }
+    .footer-nav a { color: var(--text-light); font-weight: 500; transition: color 0.2s; }
+    .footer-nav a:hover { color: var(--primary-color); }
+    .footer-copyright { color: #94a3b8; font-size: 0.875rem; }
+    
+    @media (max-width: 768px) {
+      .nav-links-wrapper { display: none; } 
+      .hero h1 { font-size: 2.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <img src="https://www.famral.com/favicon.png" alt="Famral Logo" width="32" height="32">
+        Famral
+      </a>
+      <div class="nav-links-wrapper">
+        <a href="productivity-tips">Productivity Tips</a>
+        <a href="workflow-optimization">Workflow Optimization</a>
+        <a href="teamwork-culture">Teamwork & Culture</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Mastering VLOOKUP in Google Sheets</h1>
+      <p>Stop scrolling and start searching. Learn how to find data instantly and merge tables using the VLOOKUP function.</p>
+      <div class="article-meta">
+        <span><i class="far fa-calendar"></i> October 27, 2025</span> &bull; <span><i class="far fa-clock"></i> 5 min read</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="content-block">
+        <p>If there is one function that separates beginners from intermediate spreadsheet users, it is <strong>VLOOKUP</strong>. Whether you are managing inventory, analyzing sales data, or merging mailing lists, VLOOKUP (Vertical Lookup) is your best friend. This guide will walk you through how to master it.</p>
+
+        <h2>1. The Syntax Breakdown</h2>
+        <p>The function might look intimidating at first, but it follows a simple logic. The syntax is:</p>
+        <p><code>=VLOOKUP(search_key, range, index, [is_sorted])</code></p>
+        <ul>
+          <li><strong>search_key</strong>: What are you looking for? (e.g., a Product ID).</li>
+          <li><strong>range</strong>: Where should we look? (The table containing the data).</li>
+          <li><strong>index</strong>: Which column has the answer? (1 for the first column, 2 for the second, etc.).</li>
+          <li><strong>is_sorted</strong>: Usually <code>FALSE</code> (or 0) for an exact match.</li>
+        </ul>
+
+        <h2>2. A Real-World Example</h2>
+        <p>Imagine you have a list of Order IDs in Column A and you want to pull the Customer Name from a separate "Customers" table (Columns D to E). The Customer Name is in the second column of that table.</p>
+        <p>Your formula would look like this:</p>
+        <p><code>=VLOOKUP(A2, D:E, 2, FALSE)</code></p>
+        <p>This tells Sheets: "Look for the value in A2 inside the range D:E. When you find it, give me the value from the 2nd column. Only accept an exact match."</p>
+
+        <h2>3. Always Use Absolute References</h2>
+        <p>One of the most common mistakes is forgetting to lock the range. If you copy your formula down, the range <code>D2:E100</code> will shift to <code>D3:E101</code>, potentially missing data.</p>
+        <p><strong>Fix:</strong> Use dollar signs to lock the range: <code>$D$2:$E$100</code>. Or, simply reference the entire columns like <code>D:E</code>.</p>
+
+        <h2>4. Handling "Not Found" Errors</h2>
+        <p>If VLOOKUP cannot find your search key, it returns the dreaded <code>#N/A</code> error. This can make your dashboard look broken.</p>
+        <p>Wrap your function in <code>IFERROR</code> to display a friendly message instead:</p>
+        <p><code>=IFERROR(VLOOKUP(A2, D:E, 2, FALSE), "Not Found")</code></p>
+
+        <h2>5. The "Left-to-Right" Rule</h2>
+        <p>VLOOKUP has a strict rule: it can only look to the right. Your <strong>search_key</strong> must be located in the <strong>first column</strong> of the range you select.</p>
+        <p>If your search key is in Column E and the data you want is in Column D, VLOOKUP won't work directly. In that case, you might need to rearrange your columns or use the more flexible <code>INDEX</code> and <code>MATCH</code> combination.</p>
+
+        <h2>6. Watch Out for Data Types</h2>
+        <p>A common frustration occurs when VLOOKUP returns #N/A even though the value clearly exists. This often happens because of data type mismatches.</p>
+        <p>For example, the number <code>1001</code> is not the same as the text string <code>"1001"</code>. Ensure both your search key column and your source column are formatted the same way.</p>
+
+        <h2>7. Using Wildcards</h2>
+        <p>Did you know VLOOKUP supports wildcards? This is useful for partial matches.</p>
+        <ul>
+          <li><strong>?</strong> (Question mark): Matches any single character.</li>
+          <li><strong>*</strong> (Asterisk): Matches any sequence of characters.</li>
+        </ul>
+        <p>Example: <code>=VLOOKUP("Sm*", A:B, 1, FALSE)</code> will find the first name starting with "Sm" (like Smith or Small).</p>
+
+        <p>Mastering VLOOKUP opens the door to powerful data analysis. Once you are comfortable with these basics, you'll find yourself navigating spreadsheets with much greater speed and confidence.</p>
+
+        <div class="share-section">
+          <h3>Share this article</h3>
+          <div class="share-buttons">
+            <a href="#" class="share-btn twitter" aria-label="Share on Twitter" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="share-btn facebook" aria-label="Share on Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="share-btn linkedin" aria-label="Share on LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="share-btn email" aria-label="Share via Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-simple-layout">
+        <div class="footer-logo">
+          <img src="https://www.famral.com/favicon.png" alt="Famral Logo" width="24" height="24">
+          <span>Famral</span>
+        </div>
+        <ul class="footer-nav">
+          <li><a href="about">About</a></li>
+          <li><a href="privacy">Privacy</a></li>
+          <li><a href="terms">Terms</a></li>
+          <li><a href="contact">Contact</a></li>
+        </ul>
+        <div class="footer-copyright">
+          <p>&copy; <span id="current-year"></span> Famral. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
+  <script>
+    // Share functionality
+    const pageUrl = window.location.href;
+    const pageTitle = document.title;
+    const encodedPageUrl = encodeURIComponent(pageUrl);
+    const encodedPageTitle = encodeURIComponent(pageTitle);
+
+    const twitterShare = document.querySelector('.share-btn.twitter');
+    const facebookShare = document.querySelector('.share-btn.facebook');
+    const linkedinShare = document.querySelector('.share-btn.linkedin');
+    const emailShare = document.querySelector('.share-btn.email');
+
+    if (twitterShare) {
+      twitterShare.href = `https://twitter.com/intent/tweet?url=${encodedPageUrl}&text=${encodedPageTitle}`;
+    }
+    if (facebookShare) {
+      facebookShare.href = `https://www.facebook.com/sharer/sharer.php?u=${encodedPageUrl}`;
+    }
+    if (linkedinShare) {
+      linkedinShare.href = `https://www.linkedin.com/shareArticle?mini=true&url=${encodedPageUrl}&title=${encodedPageTitle}`;
+    }
+    if (emailShare) {
+      emailShare.href = `mailto:?subject=${encodedPageTitle}&body=Check out this article: ${pageUrl}`;
+    }
+  </script>
+</body>
+</html>
