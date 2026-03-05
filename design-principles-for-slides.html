@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Design Principles for Effective Slides | Famral</title>
+  <meta name="description" content="Create stunning presentations with these essential design principles. Learn about contrast, simplicity, typography, and visual hierarchy.">
+  <link rel="icon" type="image/png" href="https://www.famral.com/favicon.png"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7876432493491415"
+     crossorigin="anonymous"></script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H57NCR0QYN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H57NCR0QYN');
+</script>
+  
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Design Principles for Effective Slides",
+      "description": "Create stunning presentations with these essential design principles. Learn about contrast, simplicity, typography, and visual hierarchy.",
+      "image": "https://www.famral.com/favicon.png",
+      "author": {
+        "@type": "Organization",
+        "name": "Famral"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Famral",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.famral.com/favicon.png"
+        }
+      },
+      "datePublished": "2025-10-27"
+    }
+  </script>
+
+  <style>
+    /* Reusing styles from index.html */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; color: #1e293b; line-height: 1.6; background-color: #fff; }
+    :root { --primary-color: #2563eb; --text-dark: #1e293b; --text-light: #64748b; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+    .section { padding: 5rem 0; }
+    .navbar { background: white; border-bottom: 1px solid #e2e8f0; padding: 0.75rem 0; position: sticky; top: 0; z-index: 1000; }
+    .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+    .nav-logo { display: flex; align-items: center; gap: 0.75rem; font-weight: 700; font-size: 1.25rem; color: var(--text-dark); text-decoration: none; }
+    .nav-links-wrapper { display: flex; gap: 2rem; align-items: center; }
+    .nav-links-wrapper a { font-weight: 500; color: var(--text-dark); padding: 0.5rem 1rem; border-radius: 0.5rem; transition: all 0.2s; text-decoration: none; }
+    .nav-links-wrapper a:hover { color: var(--primary-color); background-color: #f1f5f9; }
+    
+    /* Hero Section */
+    .hero { text-align: center; padding: 6rem 1rem; background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%); }
+    .hero h1 { font-size: 3rem; line-height: 1.2; margin-bottom: 1.5rem; color: var(--text-dark); max-width: 900px; margin-left: auto; margin-right: auto; }
+    .hero p { font-size: 1.25rem; color: var(--text-light); max-width: 700px; margin: 0 auto 2.5rem; }
+    .article-meta { font-size: 0.9rem; color: var(--text-light); margin-top: 1rem; }
+    
+    /* Content Styles */
+    .content-block { max-width: 800px; margin: 0 auto; }
+    .content-block h2 { font-size: 1.75rem; margin-bottom: 1rem; color: var(--text-dark); margin-top: 2.5rem; }
+    .content-block p { margin-bottom: 1.5rem; color: var(--text-light); font-size: 1.1rem; }
+    .content-block ul, .content-block ol { margin-bottom: 1.5rem; padding-left: 1.5rem; color: var(--text-light); font-size: 1.1rem; }
+    .content-block li { margin-bottom: 0.75rem; }
+    .content-block strong { color: var(--text-dark); font-weight: 600; }
+    .content-block code { background-color: #f1f5f9; padding: 0.2rem 0.4rem; border-radius: 0.25rem; font-family: monospace; color: var(--primary-color); font-size: 0.9em; }
+
+    /* Share Section */
+    .share-section {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid #e2e8f0;
+      text-align: center;
+    }
+    .share-section h3 {
+      margin-bottom: 1.5rem;
+      font-size: 1.25rem;
+      color: var(--text-dark);
+    }
+    .share-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .share-btn { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; color: white; font-size: 1.1rem; text-decoration: none; transition: transform 0.2s; }
+    .share-btn:hover { transform: scale(1.1); }
+    .share-btn.twitter { background-color: #1DA1F2; }
+    .share-btn.facebook { background-color: #1877F2; }
+    .share-btn.linkedin { background-color: #0A66C2; }
+    .share-btn.email { background-color: #7f8c8d; }
+
+    /* Footer */
+    .site-footer { background-color: #fff; border-top: 1px solid #e2e8f0; padding: 3rem 0; margin-top: auto; }
+    .footer-simple-layout { display: flex; flex-direction: column; align-items: center; gap: 1.5rem; text-align: center; }
+    .footer-logo { display: flex; align-items: center; gap: 0.5rem; font-weight: 700; color: var(--text-dark); }
+    .footer-nav { display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; padding: 0; list-style: none; }
+    .footer-nav a { color: var(--text-light); font-weight: 500; transition: color 0.2s; }
+    .footer-nav a:hover { color: var(--primary-color); }
+    .footer-copyright { color: #94a3b8; font-size: 0.875rem; }
+    
+    @media (max-width: 768px) {
+      .nav-links-wrapper { display: none; } 
+      .hero h1 { font-size: 2.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <img src="https://www.famral.com/favicon.png" alt="Famral Logo" width="32" height="32">
+        Famral
+      </a>
+      <div class="nav-links-wrapper">
+        <a href="productivity-tips">Productivity Tips</a>
+        <a href="workflow-optimization">Workflow Optimization</a>
+        <a href="teamwork-culture">Teamwork & Culture</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Design Principles for Effective Slides</h1>
+      <p>Don't let bad design ruin a good speech. Learn how to create slides that engage, inform, and persuade your audience.</p>
+      <div class="article-meta">
+        <span><i class="far fa-calendar"></i> October 27, 2025</span> &bull; <span><i class="far fa-clock"></i> 5 min read</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="content-block">
+        <p>Great presentations are a blend of compelling storytelling and strong visual aids. Unfortunately, many presenters rely on cluttered, text-heavy slides that confuse rather than clarify. Here are the core design principles to help you build decks that look professional and keep your audience engaged.</p>
+
+        <h2>1. Keep It Simple (KISS)</h2>
+        <p>The most common mistake is overcrowding. Your slides are not your teleprompter. They should support your points, not repeat them word-for-word. Aim for <strong>one idea per slide</strong>. If you have complex data, break it down across multiple slides rather than squeezing it all onto one.</p>
+
+        <h2>2. The 6x6 Rule</h2>
+        <p>To prevent text overload, try to stick to the 6x6 rule: no more than <strong>6 bullet points</strong> per slide, and no more than <strong>6 words</strong> per bullet point. This forces you to be concise and ensures the audience listens to you instead of reading the screen.</p>
+
+        <h2>3. High-Quality Visuals</h2>
+        <p>Humans are visual creatures. A single powerful image is often more memorable than a list of facts. Avoid low-resolution images or cheesy clip art. Use high-quality stock photography, clean icons, or professional diagrams. Ensure images are large enough to be seen from the back of the room.</p>
+
+        <h2>4. Contrast and Readability</h2>
+        <p>If your audience can't read it, it doesn't exist. Use high contrast between your text and background. Dark text on a light background (or vice versa) is the safest bet. Avoid clashing colors like red text on a blue background.</p>
+        <p><em>Tip:</em> Stick to sans-serif fonts like Arial, Helvetica, or Open Sans for better legibility on screens.</p>
+
+        <h2>5. Consistent Theme</h2>
+        <p>Inconsistency looks unprofessional. Choose a color palette (3-4 colors max) and a font pairing (one for headers, one for body) and stick to them throughout the entire deck. Use master slides to ensure logos and headers are in the exact same spot on every page.</p>
+
+        <h2>6. Limit Animations</h2>
+        <p>Animations can be effective if used sparingly to reveal information step-by-step. However, excessive "flying in" text or spinning transitions are distracting and can make your presentation feel dated. Stick to simple "Fade" or "Appear" transitions.</p>
+
+        <h2>7. Visual Hierarchy</h2>
+        <p>Guide the viewer's eye. The most important element on the slide should be the biggest or the boldest. Use size, color, and position to indicate importance. If everything is bold, nothing is bold.</p>
+
+        <p>By applying these design principles, you transform your slides from a distraction into a powerful tool that amplifies your message.</p>
+
+        <div class="share-section">
+          <h3>Share this article</h3>
+          <div class="share-buttons">
+            <a href="#" class="share-btn twitter" aria-label="Share on Twitter" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="share-btn facebook" aria-label="Share on Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="share-btn linkedin" aria-label="Share on LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="share-btn email" aria-label="Share via Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-simple-layout">
+        <div class="footer-logo">
+          <img src="https://www.famral.com/favicon.png" alt="Famral Logo" width="24" height="24">
+          <span>Famral</span>
+        </div>
+        <ul class="footer-nav">
+          <li><a href="about">About</a></li>
+          <li><a href="privacy">Privacy</a></li>
+          <li><a href="terms">Terms</a></li>
+          <li><a href="contact">Contact</a></li>
+        </ul>
+        <div class="footer-copyright">
+          <p>&copy; <span id="current-year"></span> Famral. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
+  <script>
+    // Share functionality
+    const pageUrl = window.location.href;
+    const pageTitle = document.title;
+    const encodedPageUrl = encodeURIComponent(pageUrl);
+    const encodedPageTitle = encodeURIComponent(pageTitle);
+
+    const twitterShare = document.querySelector('.share-btn.twitter');
+    const facebookShare = document.querySelector('.share-btn.facebook');
+    const linkedinShare = document.querySelector('.share-btn.linkedin');
+    const emailShare = document.querySelector('.share-btn.email');
+
+    if (twitterShare) {
+      twitterShare.href = `https://twitter.com/intent/tweet?url=${encodedPageUrl}&text=${encodedPageTitle}`;
+    }
+    if (facebookShare) {
+      facebookShare.href = `https://www.facebook.com/sharer/sharer.php?u=${encodedPageUrl}`;
+    }
+    if (linkedinShare) {
+      linkedinShare.href = `https://www.linkedin.com/shareArticle?mini=true&url=${encodedPageUrl}&title=${encodedPageTitle}`;
+    }
+    if (emailShare) {
+      emailShare.href = `mailto:?subject=${encodedPageTitle}&body=Check out this article: ${pageUrl}`;
+    }
+  </script>
+</body>
+</html>
