@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,13 +42,10 @@
     .hero p { font-size: 1.25rem; color: var(--text-light); max-width: 700px; margin: 0 auto 2.5rem; }
     
     /* Contact Form Styles */
-    .contact-wrapper { max-width: 600px; margin: 0 auto; background: white; padding: 2rem; border-radius: 1rem; border: 1px solid #e2e8f0; }
-    .form-group { margin-bottom: 1.5rem; }
-    .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 500; color: var(--text-dark); }
-    .form-group input, .form-group textarea { width: 100%; padding: 0.75rem; border: 1px solid #cbd5e1; border-radius: 0.5rem; font-family: inherit; font-size: 1rem; }
-    .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--primary-color); ring: 2px solid rgba(37, 99, 235, 0.2); }
-    .btn-submit { background-color: var(--primary-color); color: white; padding: 0.875rem 2rem; border: none; border-radius: 0.5rem; font-weight: 600; cursor: pointer; width: 100%; font-size: 1rem; transition: background-color 0.2s; }
-    .btn-submit:hover { background-color: #1d4ed8; }
+    .contact-wrapper { max-width: 600px; margin: 0 auto; background: white; padding: 3rem 2rem; border-radius: 1rem; border: 1px solid #e2e8f0; text-align: center; }
+    .contact-wrapper p { margin-bottom: 1.5rem; font-size: 1.125rem; color: var(--text-dark); }
+    .btn-whatsapp { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; background-color: #25d366; color: white; padding: 1rem 2rem; border-radius: 0.5rem; font-weight: 600; cursor: pointer; font-size: 1.125rem; transition: background-color 0.2s; text-decoration: none; }
+    .btn-whatsapp:hover { background-color: #128c7e; }
     .contact-info { text-align: center; margin-top: 3rem; }
     .contact-info p { margin-bottom: 0.5rem; }
     .contact-info a { color: var(--primary-color); text-decoration: none; font-weight: 500; }
@@ -92,25 +90,10 @@
   <section class="section">
     <div class="container">
       <div class="contact-wrapper">
-        <form action="#" method="POST">
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required placeholder="Your Name">
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required placeholder="you@example.com">
-          </div>
-          <div class="form-group">
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" required placeholder="How can we help?">
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required placeholder="Your message here..."></textarea>
-          </div>
-          <button type="submit" class="btn-submit">Send Message</button>
-        </form>
+        <p>Click the button below to message us directly on WhatsApp.</p>
+        <a href="https://api.whatsapp.com/send?phone=7878358707&text=Hello" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
+          <i class="fab fa-whatsapp"></i> Message on WhatsApp
+        </a>
       </div>
 
       <div class="contact-info">
