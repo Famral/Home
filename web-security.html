@@ -1,0 +1,470 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Famral | Advanced Web Security Solutions</title>
+  <meta name="description"
+    content="Protect your digital assets with Famral's comprehensive web security solutions. We offer SSL certificates, malware protection, WAF, and DDoS mitigation.">
+  <meta name="keywords"
+    content="web security, website protection, SSL certificates, malware removal, DDoS protection, web application firewall, cyber security">
+  <link rel="icon" type="image/png" href="./favicon.png"> 
+  
+  <!-- SEO & Social Tags -->
+  <link rel="canonical" href="https://www.famral.com/web-security" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.famral.com/web-security" />
+  <meta property="og:title" content="Famral | Advanced Web Security Solutions" />
+  <meta property="og:description" content="Protect your digital assets with Famral's comprehensive web security solutions. We offer SSL certificates, malware protection, WAF, and DDoS mitigation." />
+  <meta property="og:image" content="https://www.famral.com/favicon.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Enhanced Design Styles -->
+  <style>
+    /* Reset & Base Styles */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; color: var(--text-dark); line-height: 1.6; background-color: #fff; }
+    img { max-width: 100%; height: auto; }
+    ul { list-style: none; }
+    a { text-decoration: none; color: inherit; }
+
+    /* Variables */
+    :root { --primary-color: #0067b8; --text-dark: #000000; --text-light: #505050; --border-color: #e6e6e6; --surface-color: #f2f2f2; }
+
+    /* Layout Utilities */
+    .container { max-width: 1260px; margin: 0 auto; padding: 0 5%; }
+    .section { padding: 4rem 0; }
+    .bg-surface { background-color: var(--surface-color); }
+
+    /* Navbar Main Styles */
+    .navbar { background: white; border-bottom: 1px solid var(--border-color); padding: 0.75rem 0; position: sticky; top: 0; z-index: 1000; }
+    .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+    .nav-logo { display: flex; align-items: center; gap: 0.75rem; font-weight: 700; font-size: 1.25rem; color: var(--text-dark); }
+    .nav-links-wrapper { display: flex; gap: 2rem; align-items: center; }
+    .nav-toggle { display: none; background: none; border: none; font-size: 1.5rem; color: var(--text-dark); cursor: pointer; padding: 0.5rem; }
+
+    /* Hero Section */
+    .hero { text-align: left; padding: 5rem 1rem; background: var(--surface-color); }
+    .hero h1 { font-size: 3rem; line-height: 1.2; margin-bottom: 1rem; color: var(--text-dark); font-weight: 600; }
+    .hero p { font-size: 1.125rem; color: var(--text-light); max-width: 700px; margin: 0 0 2rem; }
+    .hero-buttons { display: flex; gap: 1rem; justify-content: flex-start; margin-top: 1.5rem; }
+
+    /* Typography */
+    h2 { font-size: 2rem; text-align: left; margin-bottom: 2rem; color: var(--text-dark); font-weight: 600; }
+    h3 { font-size: 1.25rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--text-dark); }
+    p { color: var(--text-light); }
+
+    /* Buttons */
+    .btn { padding: 0.625rem 1.5rem; border-radius: 2px; font-weight: 600; text-decoration: none; transition: background-color 0.2s; display: inline-block; font-size: 0.95rem; }
+    .btn-primary { background-color: var(--primary-color); color: white; border: 2px solid transparent; }
+    .btn-secondary { background-color: transparent; color: var(--text-dark); border: 2px solid var(--border-color); }
+    .btn:hover { transform: none; box-shadow: none; }
+    .btn-primary:hover { background-color: #005da6; }
+    .btn-secondary:hover { background-color: rgba(0,0,0,0.05); }
+
+    /* Services / Features Grid */
+    .services-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+    .service-box { background: white; padding: 2rem; border-radius: 2px; display: flex; flex-direction: column; align-items: flex-start; transition: box-shadow 0.2s ease; border: 1px solid var(--border-color); }
+    .service-box:hover { transform: none; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); border-color: var(--border-color); }
+    .service-icon { color: var(--primary-color); display: flex; align-items: center; justify-content: flex-start; font-size: 2rem; margin-bottom: 1rem; }
+    .service-box a { color: var(--primary-color); font-weight: 600; margin-top: auto; display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.95rem; text-decoration: none; }
+    .service-box a:hover { text-decoration: underline; gap: 0.75rem; transition: gap 0.2s; }
+
+    /* CTA Section */
+    .cta { text-align: left; background-color: var(--surface-color); color: var(--text-dark); padding: 4rem 2rem; border-radius: 2px; margin: 2rem 0; border: 1px solid var(--border-color); }
+    .cta h2 { color: var(--text-dark); margin-bottom: 1rem; }
+    .cta p { color: var(--text-light); font-size: 1.125rem; margin-bottom: 2rem; max-width: 600px; }
+    .cta a { background: var(--primary-color); color: white; padding: 0.625rem 1.5rem; border-radius: 2px; font-weight: 600; display: inline-block; transition: background-color 0.2s; }
+    .cta a:hover { background-color: #005da6; transform: none; box-shadow: none; }
+
+    /* Footer */
+    .site-footer { background-color: var(--surface-color); padding: 4rem 0 2rem; border-top: none; margin-top: auto; }
+    .footer-links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; margin-bottom: 3rem; }
+    .footer-links-grid h4 { margin-bottom: 1rem; font-size: 1rem; color: var(--text-dark); font-weight: 600; text-transform: none; letter-spacing: normal; }
+    .footer-links-grid ul li { margin-bottom: 0.75rem; }
+    .footer-links-grid a { color: var(--text-light); transition: color 0.2s; font-size: 0.875rem; }
+    .footer-links-grid a:hover { color: var(--text-dark); text-decoration: underline; }
+    .footer-content { border-top: 1px solid var(--border-color); padding-top: 2rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; color: var(--text-light); font-size: 0.875rem; }
+    .back-to-top { color: var(--text-dark); font-weight: 600; }
+
+    /* Navbar Dropdown & Mega Menu Styles */
+    .nav-item.dropdown { position: relative; }
+    .nav-link.dropdown-toggle { background: none; border: none; cursor: pointer; font-family: inherit; font-size: 0.95rem; color: var(--text-dark); display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; font-weight: 500; transition: background-color 0.2s; border-radius: 2px; }
+    .nav-link.dropdown-toggle:hover { background-color: var(--surface-color); color: var(--text-dark); }
+    
+    .dropdown-menu { display: none; position: absolute; top: calc(100% + 0.5rem); right: 0; left: auto; background: white; border: 1px solid var(--border-color); border-radius: 2px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); z-index: 100; min-width: 240px; animation: fadeIn 0.1s ease-out; }
+    .dropdown-menu.show { display: block; }
+    
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+
+    .mega-menu { width: 680px; max-width: 90vw; padding: 1.5rem; }
+    .mega-menu-content { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    
+    .mega-column h4 { color: var(--text-dark); font-size: 0.875rem; font-weight: 600; margin-bottom: 0.75rem; padding-left: 0.75rem; }
+    .mega-column a { display: flex; align-items: center; gap: 0.75rem; color: var(--text-light); text-decoration: none; padding: 0.5rem 0.75rem; border-radius: 2px; transition: all 0.1s; font-size: 0.9rem; }
+    .mega-column a:hover { background-color: var(--surface-color); color: var(--text-dark); transform: none; text-decoration: underline; }
+    .mega-column a i { width: 20px; text-align: center; color: var(--primary-color); transition: none; }
+    .mega-column a:hover i { color: var(--primary-color); }
+    
+    @media (max-width: 768px) {
+      .mega-menu { position: static; width: 100%; box-shadow: none; border: none; padding: 0 1rem; }
+      .mega-menu-content { grid-template-columns: 1fr; gap: 1rem; }
+      .dropdown-menu { position: static; animation: none; }
+      .mega-column h4 { margin-top: 1rem; }
+      
+      /* Mobile Nav Toggle Logic */
+      .nav-toggle { display: block; }
+      .nav-links-wrapper { display: none; position: absolute; top: 100%; left: 0; right: 0; background: white; flex-direction: column; padding: 1rem; border-bottom: 1px solid var(--border-color); box-shadow: 0 4px 8px rgba(0,0,0,0.05); align-items: flex-start; gap: 0.5rem; }
+      .nav-links-wrapper.active { display: flex; }
+      .nav-link.dropdown-toggle { width: 100%; justify-content: space-between; }
+      .hero h1 { font-size: 2rem; }
+    }
+  </style>
+
+  
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7876432493491415"
+     crossorigin="anonymous"></script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H57NCR0QYN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H57NCR0QYN');
+</script>
+
+  
+  <!-- Schema.org Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Famral",
+    "url": "https://www.famral.com/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.famral.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Famral",
+    "url": "https://www.famral.com",
+    "logo": "https://www.famral.com/favicon.png",
+    "sameAs": [
+      "https://www.facebook.com/famral",
+      "https://twitter.com/famral"
+    ]
+  }
+  </script>
+  
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <!-- Logo -->
+      <a href="https://www.famral.com/" class="nav-logo">
+        <img src="https://www.famral.com/favicon.png" alt="Famral Logo" width="32" height="32">
+        Famral
+      </a>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- Navigation Links -->
+      <div class="nav-links-wrapper" id="navLinks">
+        <div class="nav-item dropdown">
+          <button class="nav-link dropdown-toggle">Our Services <i class="fas fa-chevron-down fa-xs"></i></button>
+          <div class="dropdown-menu mega-menu">
+            <div class="mega-menu-content">
+              <div class="mega-column">
+                <h4>Core Services</h4>
+                <a href="#services-overview"><i class="fas fa-laptop-code"></i>Web Development</a>
+                <a href="/domain-name"><i class="fas fa-globe"></i>Domains</a>
+                <a href="#services-overview"><i class="fas fa-users"></i>Email & Collab</a>
+              </div>
+              <div class="mega-column">
+                <h4>Security & IT</h4>
+                <a href="/web-security"><i class="fas fa-shield-halved"></i>Web Security</a>
+                <a href="#services-overview"><i class="fas fa-network-wired"></i>IT Services</a>
+              </div>
+              <div class="mega-column">
+                <h4>More</h4>
+                <a href="#solutions"><i class="fas fa-briefcase"></i>Business Solutions</a>
+                <a href="/contact"><i class="fas fa-envelope"></i>Contact Us</a>
+                <a href="/blog"><i class="fas fa-book-open"></i>Blog</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7876432493491415"
+     crossorigin="anonymous"></script>
+<!-- FamralHomeDisplayResponsive -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7876432493491415"
+     data-ad-slot="9152005519"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h1>Advanced Web Security Solutions</h1>
+        <p>Protect your website, your customers, and your reputation. Our comprehensive security suite defends against malware, DDoS attacks, and emerging cyber threats 24/7.</p>
+        <div class="hero-buttons">
+          <a href="/contact" class="btn btn-primary">Secure Your Website</a>
+        </div>
+      </div>
+    </section>
+
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7876432493491415"
+     crossorigin="anonymous"></script>
+<!-- FamralHomeDisplayResponsive -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7876432493491415"
+     data-ad-slot="9152005519"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+    
+    <!-- Web Security Features Section -->
+    <section class="section" id="domain-features">
+      <div class="container">
+        <h2>Comprehensive Security Features</h2>
+        <div class="services-list">
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true">
+              <i class="fas fa-certificate"></i>
+            </span>
+            <h3>SSL Certificates</h3>
+            <p>Encrypt sensitive data and boost customer trust with our easy-to-install, enterprise-grade SSL certificates.</p>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true">
+              <i class="fas fa-shield-virus"></i>
+            </span>
+            <h3>Malware Scanning & Removal</h3>
+            <p>Automatically detect and eliminate malicious code before it can compromise your website or visitor data.</p>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true">
+              <i class="fas fa-shield-halved"></i>
+            </span>
+            <h3>Web Application Firewall (WAF)</h3>
+            <p>Block malicious traffic, SQL injections, and cross-site scripting (XSS) with our intelligent edge firewall.</p>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true">
+              <i class="fas fa-server"></i>
+            </span>
+            <h3>DDoS Mitigation</h3>
+            <p>Ensure maximum uptime with advanced network routing that absorbs and deflects distributed denial-of-service attacks.</p>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true">
+              <i class="fas fa-cloud-arrow-up"></i>
+            </span>
+            <h3>Automated Backups</h3>
+            <p>Rest easy knowing your critical website data is automatically backed up daily and can be restored in a single click.</p>
+          </div>
+        </div> <!-- End services-list -->
+      </div>
+    </section>
+
+
+    
+    <!-- Business Section -->
+    <section class="section bg-surface">
+      <div class="container">
+        <h2>Why Choose Famral for Web Security?</h2>
+        <div class="services-list">
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true">
+              <i class="fas fa-satellite-dish"></i>
+            </span>
+            <h3>Real-Time Threat Monitoring</h3>
+            <p>Our global security network actively monitors traffic patterns to block zero-day exploits before they reach your site.</p>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true">
+              <i class="fas fa-user-shield"></i>
+            </span>
+            <h3>Security Experts on Call</h3>
+            <p>Our dedicated cybersecurity team is available 24/7 to assist with incident response, malware cleanup, and configuration.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Advanced Security Services Section -->
+    <section class="section" id="solutions">
+      <div class="container">
+        <h2>Advanced Security Services</h2>
+        <div class="services-list">
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true">
+              <i class="fas fa-magnifying-glass"></i>
+            </span>
+            <h3>Vulnerability Assessments</h3>
+            <p>Proactively scan your websites and applications for outdated plugins, core vulnerabilities, and weak points.</p>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true">
+              <i class="fas fa-credit-card"></i>
+            </span>
+            <h3>PCI Compliance</h3>
+            <p>Ensure your eCommerce store meets strict payment card industry standards with our automated compliance scanning.</p>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true">
+              <i class="fas fa-ban"></i>
+            </span>
+            <h3>Blacklist Monitoring</h3>
+            <p>We continuously monitor search engine blacklists to ensure your site's reputation and SEO rankings remain pristine.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+
+      <!-- Footer Links Section -->
+      <div class="footer-links-grid">
+        <div>
+          <h4>Security Services</h4>
+          <ul>
+            <li><a href="#domain-features">SSL Certificates</a></li>
+            <li><a href="#domain-features">Malware Scanning</a></li>
+            <li><a href="#domain-features">Web Application Firewall</a></li>
+            <li><a href="#domain-features">DDoS Mitigation</a></li>
+            <li><a href="#domain-features">Website Backups</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="/">Our Portfolio</a></li>
+            <li><a href="/">Case Studies</a></li>
+            <li><a href="/blog">Tech Blog</a></li>
+            <li><a href="/">Client Portal</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>About Us</h4>
+          <ul>
+            <li><a href="/about">About Us</a></li> 
+            <li><a href="/privacy">Privacy Policy</a></li> 
+            <li><a href="/terms">Terms & Conditions</a></li> 
+            <li><a href="/contact">Contact Us</a></li> 
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-content">
+        <p>&copy; <span id="current-year"></span> Famral. All Rights Reserved.</p>
+        <p><a href="#" class="back-to-top">Back to Top <i class="fas fa-arrow-up"></i></a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Simple JS for Mobile Menu Toggle -->
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links-wrapper');
+    const toggleIcon = navToggle.querySelector('i'); // Get the icon element
+
+    navToggle.addEventListener('click', () => {
+      const isExpanded = navLinks.classList.toggle('active');
+      navToggle.setAttribute('aria-expanded', isExpanded);
+
+      // Change icon from bars to times (X) when open
+      if (isExpanded) {
+        toggleIcon.classList.remove('fa-bars');
+        toggleIcon.classList.add('fa-times');
+      } else {
+        toggleIcon.classList.remove('fa-times');
+        toggleIcon.classList.add('fa-bars');
+      }
+    });
+
+    // Close menu when a link is clicked
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (navLinks.classList.contains('active')) {
+          navLinks.classList.remove('active');
+          navToggle.setAttribute('aria-expanded', 'false');
+          toggleIcon.classList.remove('fa-times');
+          toggleIcon.classList.add('fa-bars');
+        }
+      });
+    });
+
+    // Mega Menu Dropdown Toggle
+    const dropdownToggle = document.querySelector('.dropdown-toggle');
+    const dropdownMenu = document.querySelector('.mega-menu');
+
+    if (dropdownToggle && dropdownMenu) {
+      dropdownToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dropdownMenu.classList.toggle('show');
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!dropdownMenu.contains(e.target) && !dropdownToggle.contains(e.target)) {
+          dropdownMenu.classList.remove('show');
+        }
+      });
+    }
+
+    // Update the copyright year automatically
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+
+
+  
+
+</body>
+
+</html>
