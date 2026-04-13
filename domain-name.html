@@ -1,0 +1,475 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Famral | Domain Name Registration & Management</title>
+  <meta name="description"
+    content="Register, transfer, and manage your domain names with Famral. Secure your digital identity with our reliable DNS management and privacy protection.">
+  <meta name="keywords"
+    content="domain registration, domain management, buy domain, transfer domain, DNS management, domain privacy">
+  <link rel="icon" type="image/png" href="./favicon.png"> 
+  
+  <!-- SEO & Social Tags -->
+  <link rel="canonical" href="https://www.famral.com/domain-name" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.famral.com/domain-name" />
+  <meta property="og:title" content="Famral | Domain Registration & Management" />
+  <meta property="og:description" content="Register, transfer, and manage your domain names with Famral. Secure your digital identity with our reliable DNS management and privacy protection." />
+  <meta property="og:image" content="https://www.famral.com/favicon.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Enhanced Design Styles -->
+  <style>
+    /* Reset & Base Styles */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; color: var(--text-dark); line-height: 1.6; background-color: #fff; }
+    img { max-width: 100%; height: auto; }
+    ul { list-style: none; }
+    a { text-decoration: none; color: inherit; }
+
+    /* Variables */
+    :root { --primary-color: #0067b8; --text-dark: #000000; --text-light: #505050; --border-color: #e6e6e6; --surface-color: #f2f2f2; }
+
+    /* Layout Utilities */
+    .container { max-width: 1260px; margin: 0 auto; padding: 0 5%; }
+    .section { padding: 4rem 0; }
+    .bg-surface { background-color: var(--surface-color); }
+
+    /* Navbar Main Styles */
+    .navbar { background: white; border-bottom: 1px solid var(--border-color); padding: 0.75rem 0; position: sticky; top: 0; z-index: 1000; }
+    .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+    .nav-logo { display: flex; align-items: center; gap: 0.75rem; font-weight: 700; font-size: 1.25rem; color: var(--text-dark); }
+    .nav-links-wrapper { display: flex; gap: 2rem; align-items: center; }
+    .nav-toggle { display: none; background: none; border: none; font-size: 1.5rem; color: var(--text-dark); cursor: pointer; padding: 0.5rem; }
+
+    /* Hero Section */
+    .hero { text-align: left; padding: 5rem 1rem; background: var(--surface-color); }
+    .hero h1 { font-size: 3rem; line-height: 1.2; margin-bottom: 1rem; color: var(--text-dark); font-weight: 600; }
+    .hero p { font-size: 1.125rem; color: var(--text-light); max-width: 700px; margin: 0 0 2rem; }
+    .hero-buttons { display: flex; gap: 1rem; justify-content: flex-start; margin-top: 1.5rem; }
+
+    /* Typography */
+    h2 { font-size: 2rem; text-align: left; margin-bottom: 2rem; color: var(--text-dark); font-weight: 600; }
+    h3 { font-size: 1.25rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--text-dark); }
+    p { color: var(--text-light); }
+
+    /* Buttons */
+    .btn { padding: 0.625rem 1.5rem; border-radius: 2px; font-weight: 600; text-decoration: none; transition: background-color 0.2s; display: inline-block; font-size: 0.95rem; }
+    .btn-primary { background-color: var(--primary-color); color: white; border: 2px solid transparent; }
+    .btn-secondary { background-color: transparent; color: var(--text-dark); border: 2px solid var(--border-color); }
+    .btn:hover { transform: none; box-shadow: none; }
+    .btn-primary:hover { background-color: #005da6; }
+    .btn-secondary:hover { background-color: rgba(0,0,0,0.05); }
+
+    /* Services / Features Grid */
+    .services-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+    .service-box { background: white; padding: 2rem; border-radius: 2px; display: flex; flex-direction: column; align-items: flex-start; transition: box-shadow 0.2s ease; border: 1px solid var(--border-color); }
+    .service-box:hover { transform: none; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); border-color: var(--border-color); }
+    .service-icon { color: var(--primary-color); display: flex; align-items: center; justify-content: flex-start; font-size: 2rem; margin-bottom: 1rem; }
+    .service-box a { color: var(--primary-color); font-weight: 600; margin-top: auto; display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.95rem; text-decoration: none; }
+    .service-box a:hover { text-decoration: underline; gap: 0.75rem; transition: gap 0.2s; }
+
+    /* CTA Section */
+    .cta { text-align: left; background-color: var(--surface-color); color: var(--text-dark); padding: 4rem 2rem; border-radius: 2px; margin: 2rem 0; border: 1px solid var(--border-color); }
+    .cta h2 { color: var(--text-dark); margin-bottom: 1rem; }
+    .cta p { color: var(--text-light); font-size: 1.125rem; margin-bottom: 2rem; max-width: 600px; }
+    .cta a { background: var(--primary-color); color: white; padding: 0.625rem 1.5rem; border-radius: 2px; font-weight: 600; display: inline-block; transition: background-color 0.2s; }
+    .cta a:hover { background-color: #005da6; transform: none; box-shadow: none; }
+
+    /* Footer */
+    .site-footer { background-color: var(--surface-color); padding: 4rem 0 2rem; border-top: none; margin-top: auto; }
+    .footer-links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; margin-bottom: 3rem; }
+    .footer-links-grid h4 { margin-bottom: 1rem; font-size: 1rem; color: var(--text-dark); font-weight: 600; text-transform: none; letter-spacing: normal; }
+    .footer-links-grid ul li { margin-bottom: 0.75rem; }
+    .footer-links-grid a { color: var(--text-light); transition: color 0.2s; font-size: 0.875rem; }
+    .footer-links-grid a:hover { color: var(--text-dark); text-decoration: underline; }
+    .footer-content { border-top: 1px solid var(--border-color); padding-top: 2rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; color: var(--text-light); font-size: 0.875rem; }
+    .back-to-top { color: var(--text-dark); font-weight: 600; }
+
+    /* Navbar Dropdown & Mega Menu Styles */
+    .nav-item.dropdown { position: relative; }
+    .nav-link.dropdown-toggle { background: none; border: none; cursor: pointer; font-family: inherit; font-size: 0.95rem; color: var(--text-dark); display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; font-weight: 500; transition: background-color 0.2s; border-radius: 2px; }
+    .nav-link.dropdown-toggle:hover { background-color: var(--surface-color); color: var(--text-dark); }
+    
+    .dropdown-menu { display: none; position: absolute; top: calc(100% + 0.5rem); right: 0; left: auto; background: white; border: 1px solid var(--border-color); border-radius: 2px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); z-index: 100; min-width: 240px; animation: fadeIn 0.1s ease-out; }
+    .dropdown-menu.show { display: block; }
+    
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+
+    .mega-menu { width: 680px; max-width: 90vw; padding: 1.5rem; }
+    .mega-menu-content { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    
+    .mega-column h4 { color: var(--text-dark); font-size: 0.875rem; font-weight: 600; margin-bottom: 0.75rem; padding-left: 0.75rem; }
+    .mega-column a { display: flex; align-items: center; gap: 0.75rem; color: var(--text-light); text-decoration: none; padding: 0.5rem 0.75rem; border-radius: 2px; transition: all 0.1s; font-size: 0.9rem; }
+    .mega-column a:hover { background-color: var(--surface-color); color: var(--text-dark); transform: none; text-decoration: underline; }
+    .mega-column a i { width: 20px; text-align: center; color: var(--primary-color); transition: none; }
+    .mega-column a:hover i { color: var(--primary-color); }
+    
+    @media (max-width: 768px) {
+      .mega-menu { position: static; width: 100%; box-shadow: none; border: none; padding: 0 1rem; }
+      .mega-menu-content { grid-template-columns: 1fr; gap: 1rem; }
+      .dropdown-menu { position: static; animation: none; }
+      .mega-column h4 { margin-top: 1rem; }
+      
+      /* Mobile Nav Toggle Logic */
+      .nav-toggle { display: block; }
+      .nav-links-wrapper { display: none; position: absolute; top: 100%; left: 0; right: 0; background: white; flex-direction: column; padding: 1rem; border-bottom: 1px solid var(--border-color); box-shadow: 0 4px 8px rgba(0,0,0,0.05); align-items: flex-start; gap: 0.5rem; }
+      .nav-links-wrapper.active { display: flex; }
+      .nav-link.dropdown-toggle { width: 100%; justify-content: space-between; }
+      .hero h1 { font-size: 2rem; }
+    }
+  </style>
+
+  
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7876432493491415"
+     crossorigin="anonymous"></script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H57NCR0QYN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H57NCR0QYN');
+</script>
+
+  
+  <!-- Schema.org Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Famral",
+    "url": "https://www.famral.com/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.famral.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Famral",
+    "url": "https://www.famral.com",
+    "logo": "https://www.famral.com/favicon.png",
+    "sameAs": [
+      "https://www.facebook.com/famral",
+      "https://twitter.com/famral"
+    ]
+  }
+  </script>
+  
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <!-- Logo -->
+      <a href="https://www.famral.com/" class="nav-logo">
+        <img src="https://www.famral.com/favicon.png" alt="Famral Logo" width="32" height="32">
+        Famral
+      </a>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- Navigation Links -->
+      <div class="nav-links-wrapper" id="navLinks">
+        <div class="nav-item dropdown">
+          <button class="nav-link dropdown-toggle">Our Services <i class="fas fa-chevron-down fa-xs"></i></button>
+          <div class="dropdown-menu mega-menu">
+            <div class="mega-menu-content">
+              <div class="mega-column">
+                <h4>Core Services</h4>
+                <a href="#services-overview"><i class="fas fa-laptop-code"></i>Web Development</a>
+                <a href="/domain-name"><i class="fas fa-globe"></i>Domains</a>
+                <a href="#services-overview"><i class="fas fa-users"></i>Email & Collab</a>
+              </div>
+              <div class="mega-column">
+                <h4>Security & IT</h4>
+                <a href="/web-security"><i class="fas fa-shield-halved"></i>Web Security</a>
+                <a href="#services-overview"><i class="fas fa-network-wired"></i>IT Services</a>
+              </div>
+              <div class="mega-column">
+                <h4>More</h4>
+                <a href="#solutions"><i class="fas fa-briefcase"></i>Business Solutions</a>
+                <a href="/contact"><i class="fas fa-envelope"></i>Contact Us</a>
+                <a href="/blog"><i class="fas fa-book-open"></i>Blog</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7876432493491415"
+     crossorigin="anonymous"></script>
+<!-- FamralHomeDisplayResponsive -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7876432493491415"
+     data-ad-slot="9152005519"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h1>Domain Name Registration & Management</h1>
+        <p>Secure your perfect digital identity today. Fast, reliable domain registration with robust management tools, advanced DNS control, and top-tier security.</p>
+        <div class="hero-buttons">
+          <a href="/contact" class="btn btn-primary">Find Your Domain</a>
+        </div>
+      </div>
+    </section>
+
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7876432493491415"
+     crossorigin="anonymous"></script>
+<!-- FamralHomeDisplayResponsive -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7876432493491415"
+     data-ad-slot="9152005519"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+    
+    <!-- Domain Features Section -->
+    <section class="section" id="domain-features">
+      <div class="container">
+        <h2>Comprehensive Domain Management</h2>
+        <div class="services-list">
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true">
+              <i class="fas fa-magnifying-glass"></i>
+            </span>
+            <h3>Domain Search & Registration</h3>
+            <p>Easily find and register the perfect domain name from hundreds of popular and niche extensions.</p>
+            <a href="#">Search Domains <i class="fas fa-chevron-right fa-xs"></i></a>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true">
+              <i class="fas fa-arrow-right-arrow-left"></i>
+            </span>
+            <h3>Seamless Transfers</h3>
+            <p>Move your existing domains to Famral without downtime, and manage everything in one central dashboard.</p>
+            <a href="#">Transfer Now <i class="fas fa-chevron-right fa-xs"></i></a>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true">
+              <i class="fas fa-network-wired"></i>
+            </span>
+            <h3>Advanced DNS Control</h3>
+            <p>Take full control of your domain with our robust DNS management tools. Easily manage A, CNAME, MX, and TXT records.</p>
+            <a href="#">Explore DNS <i class="fas fa-chevron-right fa-xs"></i></a>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true">
+              <i class="fas fa-user-shield"></i>
+            </span>
+            <h3>WHOIS Privacy Protection</h3>
+            <p>Keep your personal contact information hidden from public databases to prevent spam and identity theft.</p>
+            <a href="#">Add Privacy <i class="fas fa-chevron-right fa-xs"></i></a>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true">
+              <i class="fas fa-lock"></i>
+            </span>
+            <h3>Domain Lock & Auto-Renewal</h3>
+            <p>Prevent unauthorized transfers with Domain Lock, and never lose your domain with hassle-free auto-renewal.</p>
+            <a href="#">Secure Domains <i class="fas fa-chevron-right fa-xs"></i></a>
+          </div>
+        </div> <!-- End services-list -->
+      </div>
+    </section>
+
+
+    
+    <!-- Business Section -->
+    <section class="section bg-surface">
+      <div class="container">
+        <h2>Why Choose Famral for Domains?</h2>
+        <div class="services-list">
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true">
+              <i class="fas fa-sliders-h"></i>
+            </span>
+            <h3>Intuitive Control Panel</h3>
+            <p>Manage all your domains, DNS settings, and renewals from a single, easy-to-use centralized dashboard.</p>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true">
+              <i class="fas fa-headset"></i>
+            </span>
+            <h3>Dedicated Support</h3>
+            <p>Our expert support team is available 24/7 to help you with domain setups, transfers, and technical troubleshooting.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Popular Extensions Section -->
+    <section class="section" id="solutions">
+      <div class="container">
+        <h2>Popular Domain Extensions</h2>
+        <div class="services-list">
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true">
+              <i class="fas fa-globe-americas"></i>
+            </span>
+            <h3>.COM</h3>
+            <p>The world's most popular and recognized domain extension. Perfect for building a globally trusted brand.</p>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true">
+              <i class="fas fa-network-wired"></i>
+            </span>
+            <h3>.NET</h3>
+            <p>A great alternative to .com, highly trusted and ideal for tech, networking, and innovative businesses.</p>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true">
+              <i class="fas fa-users"></i>
+            </span>
+            <h3>.ORG</h3>
+            <p>The standard extension for non-profits, open-source projects, and community-driven organizations.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+
+      <!-- Footer Links Section -->
+      <div class="footer-links-grid">
+        <div>
+          <h4>Domain Services</h4>
+          <ul>
+            <li><a href="#domain-features">Domain Search</a></li>
+            <li><a href="#domain-features">Domain Transfer</a></li>
+            <li><a href="#domain-features">WHOIS Privacy</a></li>
+            <li><a href="#domain-features">DNS Management</a></li>
+            <li><a href="#domain-features">Premium Domains</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="/">Our Portfolio</a></li>
+            <li><a href="/">Case Studies</a></li>
+            <li><a href="/blog">Tech Blog</a></li>
+            <li><a href="/">Client Portal</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>About Us</h4>
+          <ul>
+            <li><a href="/about">About Us</a></li> 
+            <li><a href="/privacy">Privacy Policy</a></li> 
+            <li><a href="/terms">Terms & Conditions</a></li> 
+            <li><a href="/contact">Contact Us</a></li> 
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-content">
+        <p>&copy; <span id="current-year"></span> Famral. All Rights Reserved.</p>
+        <p><a href="#" class="back-to-top">Back to Top <i class="fas fa-arrow-up"></i></a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Simple JS for Mobile Menu Toggle -->
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links-wrapper');
+    const toggleIcon = navToggle.querySelector('i'); // Get the icon element
+
+    navToggle.addEventListener('click', () => {
+      const isExpanded = navLinks.classList.toggle('active');
+      navToggle.setAttribute('aria-expanded', isExpanded);
+
+      // Change icon from bars to times (X) when open
+      if (isExpanded) {
+        toggleIcon.classList.remove('fa-bars');
+        toggleIcon.classList.add('fa-times');
+      } else {
+        toggleIcon.classList.remove('fa-times');
+        toggleIcon.classList.add('fa-bars');
+      }
+    });
+
+    // Close menu when a link is clicked
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (navLinks.classList.contains('active')) {
+          navLinks.classList.remove('active');
+          navToggle.setAttribute('aria-expanded', 'false');
+          toggleIcon.classList.remove('fa-times');
+          toggleIcon.classList.add('fa-bars');
+        }
+      });
+    });
+
+    // Mega Menu Dropdown Toggle
+    const dropdownToggle = document.querySelector('.dropdown-toggle');
+    const dropdownMenu = document.querySelector('.mega-menu');
+
+    if (dropdownToggle && dropdownMenu) {
+      dropdownToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dropdownMenu.classList.toggle('show');
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!dropdownMenu.contains(e.target) && !dropdownToggle.contains(e.target)) {
+          dropdownMenu.classList.remove('show');
+        }
+      });
+    }
+
+    // Update the copyright year automatically
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+
+
+  
+
+</body>
+
+</html>
