@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,14 +9,15 @@
     content="Elevate your online presence with Famral's custom web development services. We build fast, responsive, and scalable websites and web applications tailored to your business.">
   <meta name="keywords"
     content="web development, custom website, ecommerce development, web applications, responsive design, frontend, backend, CMS">
-  <link rel="icon" type="image/png" href="./favicon.png"> 
-  
+  <link rel="icon" type="image/png" href="./favicon.png">
+
   <!-- SEO & Social Tags -->
   <link rel="canonical" href="https://www.famral.com/web-development" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.famral.com/web-development" />
   <meta property="og:title" content="Famral | Professional Web Development Services" />
-  <meta property="og:description" content="Elevate your online presence with Famral's custom web development services. We build fast, responsive, and scalable websites and web applications tailored to your business." />
+  <meta property="og:description"
+    content="Elevate your online presence with Famral's custom web development services. We build fast, responsive, and scalable websites and web applications tailored to your business." />
   <meta property="og:image" content="https://www.famral.com/favicon.png" />
   <meta name="twitter:card" content="summary_large_image" />
 
@@ -29,124 +27,515 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
+
   <!-- Enhanced Design Styles -->
   <style>
     /* Reset & Base Styles */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Inter', sans-serif; color: var(--text-dark); line-height: 1.6; background-color: #fff; }
-    img { max-width: 100%; height: auto; }
-    ul { list-style: none; }
-    a { text-decoration: none; color: inherit; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-dark);
+      line-height: 1.6;
+      background-color: #fff;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
     /* Variables */
-    :root { --primary-color: #0067b8; --text-dark: #000000; --text-light: #505050; --border-color: #e6e6e6; --surface-color: #f2f2f2; }
+    :root {
+      --primary-color: #0067b8;
+      --text-dark: #000000;
+      --text-light: #505050;
+      --border-color: #e6e6e6;
+      --surface-color: #f2f2f2;
+    }
 
     /* Layout Utilities */
-    .container { max-width: 1260px; margin: 0 auto; padding: 0 5%; }
-    .section { padding: 4rem 0; }
-    .bg-surface { background-color: var(--surface-color); }
+    .container {
+      max-width: 1260px;
+      margin: 0 auto;
+      padding: 0 5%;
+    }
+
+    .section {
+      padding: 4rem 0;
+    }
+
+    .bg-surface {
+      background-color: var(--surface-color);
+    }
 
     /* Navbar Main Styles */
-    .navbar { background: white; border-bottom: 1px solid var(--border-color); padding: 0.75rem 0; position: sticky; top: 0; z-index: 1000; }
-    .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
-    .nav-logo { display: flex; align-items: center; gap: 0.75rem; font-weight: 700; font-size: 1.25rem; color: var(--text-dark); }
-    .nav-links-wrapper { display: flex; gap: 2rem; align-items: center; }
-    .nav-toggle { display: none; background: none; border: none; font-size: 1.5rem; color: var(--text-dark); cursor: pointer; padding: 0.5rem; }
+    .navbar {
+      background: white;
+      border-bottom: 1px solid var(--border-color);
+      padding: 0.75rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--text-dark);
+    }
+
+    .nav-links-wrapper {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--text-dark);
+      cursor: pointer;
+      padding: 0.5rem;
+    }
 
     /* Hero Section */
-    .hero { text-align: left; padding: 5rem 1rem; background: var(--surface-color); }
-    .hero h1 { font-size: 3rem; line-height: 1.2; margin-bottom: 1rem; color: var(--text-dark); font-weight: 600; }
-    .hero p { font-size: 1.125rem; color: var(--text-light); max-width: 700px; margin: 0 0 2rem; }
-    .hero-buttons { display: flex; gap: 1rem; justify-content: flex-start; margin-top: 1.5rem; }
+    .hero {
+      text-align: left;
+      padding: 5rem 1rem;
+      background: var(--surface-color);
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      color: var(--text-dark);
+      font-weight: 600;
+    }
+
+    .hero p {
+      font-size: 1.125rem;
+      color: var(--text-light);
+      max-width: 700px;
+      margin: 0 0 2rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: flex-start;
+      margin-top: 1.5rem;
+    }
 
     /* Typography */
-    h2 { font-size: 2rem; text-align: left; margin-bottom: 2rem; color: var(--text-dark); font-weight: 600; }
-    h3 { font-size: 1.25rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--text-dark); }
-    p { color: var(--text-light); }
+    h2 {
+      font-size: 2rem;
+      text-align: left;
+      margin-bottom: 2rem;
+      color: var(--text-dark);
+      font-weight: 600;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+
+    p {
+      color: var(--text-light);
+    }
 
     /* Buttons */
-    .btn { padding: 0.625rem 1.5rem; border-radius: 2px; font-weight: 600; text-decoration: none; transition: background-color 0.2s; display: inline-block; font-size: 0.95rem; }
-    .btn-primary { background-color: var(--primary-color); color: white; border: 2px solid transparent; }
-    .btn-secondary { background-color: transparent; color: var(--text-dark); border: 2px solid var(--border-color); }
-    .btn:hover { transform: none; box-shadow: none; }
-    .btn-primary:hover { background-color: #005da6; }
-    .btn-secondary:hover { background-color: rgba(0,0,0,0.05); }
+    .btn {
+      padding: 0.625rem 1.5rem;
+      border-radius: 2px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background-color 0.2s;
+      display: inline-block;
+      font-size: 0.95rem;
+    }
+
+    .btn-primary {
+      background-color: var(--primary-color);
+      color: white;
+      border: 2px solid transparent;
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--text-dark);
+      border: 2px solid var(--border-color);
+    }
+
+    .btn:hover {
+      transform: none;
+      box-shadow: none;
+    }
+
+    .btn-primary:hover {
+      background-color: #005da6;
+    }
+
+    .btn-secondary:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
 
     /* Services / Features Grid */
-    .services-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
-    .service-box { background: white; padding: 2rem; border-radius: 2px; display: flex; flex-direction: column; align-items: flex-start; transition: box-shadow 0.2s ease; border: 1px solid var(--border-color); }
-    .service-box:hover { transform: none; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); border-color: var(--border-color); }
-    .service-icon { color: var(--primary-color); display: flex; align-items: center; justify-content: flex-start; font-size: 2rem; margin-bottom: 1rem; }
-    .service-box a { color: var(--primary-color); font-weight: 600; margin-top: auto; display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.95rem; text-decoration: none; }
-    .service-box a:hover { text-decoration: underline; gap: 0.75rem; transition: gap 0.2s; }
+    .services-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .service-box {
+      background: white;
+      padding: 2rem;
+      border-radius: 2px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      transition: box-shadow 0.2s ease;
+      border: 1px solid var(--border-color);
+    }
+
+    .service-box:hover {
+      transform: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      border-color: var(--border-color);
+    }
+
+    .service-icon {
+      color: var(--primary-color);
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .service-box a {
+      color: var(--primary-color);
+      font-weight: 600;
+      margin-top: auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.95rem;
+      text-decoration: none;
+    }
+
+    .service-box a:hover {
+      text-decoration: underline;
+      gap: 0.75rem;
+      transition: gap 0.2s;
+    }
 
     /* CTA Section */
-    .cta { text-align: left; background-color: var(--surface-color); color: var(--text-dark); padding: 4rem 2rem; border-radius: 2px; margin: 2rem 0; border: 1px solid var(--border-color); }
-    .cta h2 { color: var(--text-dark); margin-bottom: 1rem; }
-    .cta p { color: var(--text-light); font-size: 1.125rem; margin-bottom: 2rem; max-width: 600px; }
-    .cta a { background: var(--primary-color); color: white; padding: 0.625rem 1.5rem; border-radius: 2px; font-weight: 600; display: inline-block; transition: background-color 0.2s; }
-    .cta a:hover { background-color: #005da6; transform: none; box-shadow: none; }
+    .cta {
+      text-align: left;
+      background-color: var(--surface-color);
+      color: var(--text-dark);
+      padding: 4rem 2rem;
+      border-radius: 2px;
+      margin: 2rem 0;
+      border: 1px solid var(--border-color);
+    }
+
+    .cta h2 {
+      color: var(--text-dark);
+      margin-bottom: 1rem;
+    }
+
+    .cta p {
+      color: var(--text-light);
+      font-size: 1.125rem;
+      margin-bottom: 2rem;
+      max-width: 600px;
+    }
+
+    .cta a {
+      background: var(--primary-color);
+      color: white;
+      padding: 0.625rem 1.5rem;
+      border-radius: 2px;
+      font-weight: 600;
+      display: inline-block;
+      transition: background-color 0.2s;
+    }
+
+    .cta a:hover {
+      background-color: #005da6;
+      transform: none;
+      box-shadow: none;
+    }
 
     /* Footer */
-    .site-footer { background-color: var(--surface-color); padding: 4rem 0 2rem; border-top: none; margin-top: auto; }
-    .footer-links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; margin-bottom: 3rem; }
-    .footer-links-grid h4 { margin-bottom: 1rem; font-size: 1rem; color: var(--text-dark); font-weight: 600; text-transform: none; letter-spacing: normal; }
-    .footer-links-grid ul li { margin-bottom: 0.75rem; }
-    .footer-links-grid a { color: var(--text-light); transition: color 0.2s; font-size: 0.875rem; }
-    .footer-links-grid a:hover { color: var(--text-dark); text-decoration: underline; }
-    .footer-content { border-top: 1px solid var(--border-color); padding-top: 2rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; color: var(--text-light); font-size: 0.875rem; }
-    .back-to-top { color: var(--text-dark); font-weight: 600; }
+    .site-footer {
+      background-color: var(--surface-color);
+      padding: 4rem 0 2rem;
+      border-top: none;
+      margin-top: auto;
+    }
+
+    .footer-links-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-links-grid h4 {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      color: var(--text-dark);
+      font-weight: 600;
+      text-transform: none;
+      letter-spacing: normal;
+    }
+
+    .footer-links-grid ul li {
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-links-grid a {
+      color: var(--text-light);
+      transition: color 0.2s;
+      font-size: 0.875rem;
+    }
+
+    .footer-links-grid a:hover {
+      color: var(--text-dark);
+      text-decoration: underline;
+    }
+
+    .footer-content {
+      border-top: 1px solid var(--border-color);
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      color: var(--text-light);
+      font-size: 0.875rem;
+    }
+
+    .back-to-top {
+      color: var(--text-dark);
+      font-weight: 600;
+    }
 
     /* Navbar Dropdown & Mega Menu Styles */
-    .nav-item.dropdown { position: relative; }
-    .nav-link.dropdown-toggle { background: none; border: none; cursor: pointer; font-family: inherit; font-size: 0.95rem; color: var(--text-dark); display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; font-weight: 500; transition: background-color 0.2s; border-radius: 2px; }
-    .nav-link.dropdown-toggle:hover { background-color: var(--surface-color); color: var(--text-dark); }
-    
-    .dropdown-menu { display: none; position: absolute; top: calc(100% + 0.5rem); right: 0; left: auto; background: white; border: 1px solid var(--border-color); border-radius: 2px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); z-index: 100; min-width: 240px; animation: fadeIn 0.1s ease-out; }
-    .dropdown-menu.show { display: block; }
-    
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+    .nav-item.dropdown {
+      position: relative;
+    }
 
-    .mega-menu { width: 680px; max-width: 90vw; padding: 1.5rem; }
-    .mega-menu-content { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-    
-    .mega-column h4 { color: var(--text-dark); font-size: 0.875rem; font-weight: 600; margin-bottom: 0.75rem; padding-left: 0.75rem; }
-    .mega-column a { display: flex; align-items: center; gap: 0.75rem; color: var(--text-light); text-decoration: none; padding: 0.5rem 0.75rem; border-radius: 2px; transition: all 0.1s; font-size: 0.9rem; }
-    .mega-column a:hover { background-color: var(--surface-color); color: var(--text-dark); transform: none; text-decoration: underline; }
-    .mega-column a i { width: 20px; text-align: center; color: var(--primary-color); transition: none; }
-    .mega-column a:hover i { color: var(--primary-color); }
-    
+    .nav-link {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 0.95rem;
+      color: var(--text-dark);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      font-weight: 500;
+      transition: background-color 0.2s;
+      border-radius: 2px;
+      text-decoration: none;
+    }
+
+    .nav-link:hover {
+      background-color: var(--surface-color);
+      color: var(--text-dark);
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 0.5rem);
+      right: 0;
+      left: auto;
+      background: white;
+      border: 1px solid var(--border-color);
+      border-radius: 2px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      z-index: 100;
+      min-width: 240px;
+      animation: fadeIn 0.1s ease-out;
+    }
+
+    .dropdown-menu.show {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(5px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .mega-menu {
+      width: 680px;
+      max-width: 90vw;
+      padding: 1.5rem;
+    }
+
+    .mega-menu-content {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .mega-column h4 {
+      color: var(--text-dark);
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      padding-left: 0.75rem;
+    }
+
+    .mega-column a {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: var(--text-light);
+      text-decoration: none;
+      padding: 0.5rem 0.75rem;
+      border-radius: 2px;
+      transition: all 0.1s;
+      font-size: 0.9rem;
+    }
+
+    .mega-column a:hover {
+      background-color: var(--surface-color);
+      color: var(--text-dark);
+      transform: none;
+      text-decoration: underline;
+    }
+
+    .mega-column a i {
+      width: 20px;
+      text-align: center;
+      color: var(--primary-color);
+      transition: none;
+    }
+
+    .mega-column a:hover i {
+      color: var(--primary-color);
+    }
+
     @media (max-width: 768px) {
-      .mega-menu { position: static; width: 100%; box-shadow: none; border: none; padding: 0 1rem; }
-      .mega-menu-content { grid-template-columns: 1fr; gap: 1rem; }
-      .dropdown-menu { position: static; animation: none; }
-      .mega-column h4 { margin-top: 1rem; }
-      
+      .mega-menu {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        border: none;
+        padding: 0 1rem;
+      }
+
+      .mega-menu-content {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .dropdown-menu {
+        position: static;
+        animation: none;
+      }
+
+      .mega-column h4 {
+        margin-top: 1rem;
+      }
+
       /* Mobile Nav Toggle Logic */
-      .nav-toggle { display: block; }
-      .nav-links-wrapper { display: none; position: absolute; top: 100%; left: 0; right: 0; background: white; flex-direction: column; padding: 1rem; border-bottom: 1px solid var(--border-color); box-shadow: 0 4px 8px rgba(0,0,0,0.05); align-items: flex-start; gap: 0.5rem; }
-      .nav-links-wrapper.active { display: flex; }
-      .nav-link.dropdown-toggle { width: 100%; justify-content: space-between; }
-      .hero h1 { font-size: 2rem; }
+      .nav-toggle {
+        display: block;
+      }
+
+      .nav-links-wrapper {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 1rem;
+        border-bottom: 1px solid var(--border-color);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+
+      .nav-links-wrapper.active {
+        display: flex;
+      }
+
+      .nav-link {
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
     }
   </style>
 
-  
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7876432493491415"
-     crossorigin="anonymous"></script>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-H57NCR0QYN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7876432493491415"
+    crossorigin="anonymous"></script>
 
-  gtag('config', 'G-H57NCR0QYN');
-</script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H57NCR0QYN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  
+    gtag('config', 'G-H57NCR0QYN');
+  </script>
+
+
   <!-- Schema.org Markup -->
   <script type="application/ld+json">
   {
@@ -174,7 +563,7 @@
     ]
   }
   </script>
-  
+
 </head>
 
 <body>
@@ -194,27 +583,15 @@
 
       <!-- Navigation Links -->
       <div class="nav-links-wrapper" id="navLinks">
+        <a href="/" class="nav-link">Home</a>
         <div class="nav-item dropdown">
-          <button class="nav-link dropdown-toggle">Our Services <i class="fas fa-chevron-down fa-xs"></i></button>
-          <div class="dropdown-menu mega-menu">
-            <div class="mega-menu-content">
-              <div class="mega-column">
-                <h4>Core Services</h4>
-                <a href="/web-development"><i class="fas fa-laptop-code"></i>Web Development</a>
-                <a href="/domain-name"><i class="fas fa-globe"></i>Domains</a>
-                <a href="#services-overview"><i class="fas fa-users"></i>Email & Collab</a>
-              </div>
-              <div class="mega-column">
-                <h4>Security & IT</h4>
-                <a href="/web-security"><i class="fas fa-shield-halved"></i>Web Security</a>
-                <a href="#services-overview"><i class="fas fa-network-wired"></i>IT Services</a>
-              </div>
-              <div class="mega-column">
-                <h4>More</h4>
-                <a href="#solutions"><i class="fas fa-briefcase"></i>Business Solutions</a>
-                <a href="/contact"><i class="fas fa-envelope"></i>Contact Us</a>
-                <a href="/blog"><i class="fas fa-book-open"></i>Blog</a>
-              </div>
+          <button class="nav-link dropdown-toggle">Services <i class="fas fa-chevron-down fa-xs"></i></button>
+          <div class="dropdown-menu">
+            <div class="mega-column" style="padding: 0.5rem;">
+              <a href="/web-development"><i class="fas fa-laptop-code"></i>Web Development</a>
+              <a href="/domain-name"><i class="fas fa-globe"></i>Domain Name</a>
+              <a href="/web-security"><i class="fas fa-shield-halved"></i>Web Security</a>
+              <a href="/services"><i class="fas fa-briefcase"></i> More Services</a>
             </div>
           </div>
         </div>
@@ -224,25 +601,22 @@
 
 
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7876432493491415"
-     crossorigin="anonymous"></script>
-<!-- FamralHomeDisplayResponsive -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7876432493491415"
-     data-ad-slot="9152005519"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+    crossorigin="anonymous"></script>
+  <!-- FamralHomeDisplayResponsive -->
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7876432493491415" data-ad-slot="9152005519"
+    data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
 
-  
+
   <main>
     <!-- Hero Section -->
     <section class="hero">
       <div class="container">
         <h1>Professional Web Development Services</h1>
-        <p>Transform your ideas into powerful digital experiences. We build high-performance, responsive websites and web applications that drive growth and engage your audience.</p>
+        <p>Transform your ideas into powerful digital experiences. We build high-performance, responsive websites and
+          web applications that drive growth and engage your audience.</p>
         <div class="hero-buttons">
           <a href="/contact" class="btn btn-primary">Start Your Project</a>
         </div>
@@ -251,20 +625,16 @@
 
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7876432493491415"
-     crossorigin="anonymous"></script>
-<!-- FamralHomeDisplayResponsive -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7876432493491415"
-     data-ad-slot="9152005519"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+      crossorigin="anonymous"></script>
+    <!-- FamralHomeDisplayResponsive -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7876432493491415" data-ad-slot="9152005519"
+      data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
 
 
-    
+
     <!-- Web Development Features Section -->
     <section class="section" id="development-features">
       <div class="container">
@@ -275,28 +645,32 @@
               <i class="fas fa-laptop-code"></i>
             </span>
             <h3>Custom Web Design</h3>
-            <p>Tailor-made designs that reflect your brand identity and provide an intuitive user experience across all devices.</p>
+            <p>Tailor-made designs that reflect your brand identity and provide an intuitive user experience across all
+              devices.</p>
           </div>
           <div class="service-box">
             <span class="service-icon" aria-hidden="true">
               <i class="fas fa-cart-shopping"></i>
             </span>
             <h3>E-Commerce Solutions</h3>
-            <p>Build robust, secure, and scalable online stores that maximize conversions and streamline your sales process.</p>
+            <p>Build robust, secure, and scalable online stores that maximize conversions and streamline your sales
+              process.</p>
           </div>
           <div class="service-box">
             <span class="service-icon" aria-hidden="true">
               <i class="fas fa-window-maximize"></i>
             </span>
             <h3>Web Applications</h3>
-            <p>Develop complex, data-driven web applications with powerful functionality to solve your unique business challenges.</p>
+            <p>Develop complex, data-driven web applications with powerful functionality to solve your unique business
+              challenges.</p>
           </div>
           <div class="service-box">
             <span class="service-icon" aria-hidden="true">
               <i class="fas fa-pen-to-square"></i>
             </span>
             <h3>CMS Development</h3>
-            <p>Easy-to-manage content management systems like WordPress, customized to give you full control over your content.</p>
+            <p>Easy-to-manage content management systems like WordPress, customized to give you full control over your
+              content.</p>
           </div>
           <div class="service-box">
             <span class="service-icon" aria-hidden="true">
@@ -310,7 +684,7 @@
     </section>
 
 
-    
+
     <!-- Business Section -->
     <section class="section bg-surface">
       <div class="container">
@@ -321,14 +695,16 @@
               <i class="fas fa-arrows-rotate"></i>
             </span>
             <h3>Agile Methodology</h3>
-            <p>We use iterative development processes to ensure flexibility, transparency, and timely delivery of your project.</p>
+            <p>We use iterative development processes to ensure flexibility, transparency, and timely delivery of your
+              project.</p>
           </div>
           <div class="service-box">
             <span class="service-icon" aria-hidden="true">
               <i class="fas fa-users-gear"></i>
             </span>
             <h3>Expert Developer Team</h3>
-            <p>Our skilled engineers are proficient in the latest modern frameworks, languages, and coding best practices.</p>
+            <p>Our skilled engineers are proficient in the latest modern frameworks, languages, and coding best
+              practices.</p>
           </div>
         </div>
       </div>
@@ -351,7 +727,8 @@
               <i class="fas fa-gauge-high"></i>
             </span>
             <h3>Performance Optimization</h3>
-            <p>Speed up your site with advanced caching, asset minification, and optimized server configurations for better SEO.</p>
+            <p>Speed up your site with advanced caching, asset minification, and optimized server configurations for
+              better SEO.</p>
           </div>
           <div class="service-box">
             <span class="service-icon" aria-hidden="true">
@@ -366,104 +743,112 @@
 
 
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container">
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
 
-      <!-- Footer Links Section -->
-      <div class="footer-links-grid">
-        <div>
-          <h4>Development Services</h4>
-          <ul>
-            <li><a href="#development-features">Custom Web Design</a></li>
-            <li><a href="#development-features">E-Commerce Solutions</a></li>
-            <li><a href="#development-features">Web Applications</a></li>
-            <li><a href="#development-features">CMS Development</a></li>
-            <li><a href="#solutions">API Integration</a></li>
-          </ul>
+        <!-- Footer Links Section -->
+        <div class="footer-links-grid">
+          <div>
+            <h4>Development Services</h4>
+            <ul>
+              <li><a href="#development-features">Custom Web Design</a></li>
+              <li><a href="#development-features">E-Commerce Solutions</a></li>
+              <li><a href="#development-features">Web Applications</a></li>
+              <li><a href="#development-features">CMS Development</a></li>
+              <li><a href="#solutions">API Integration</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="/">Our Portfolio</a></li>
+              <li><a href="/">Case Studies</a></li>
+              <li><a href="/blog">Tech Blog</a></li>
+              <li><a href="/">Client Portal</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>About Us</h4>
+            <ul>
+              <li><a href="/about">About Us</a></li>
+              <li><a href="/privacy">Privacy Policy</a></li>
+              <li><a href="/terms">Terms & Conditions</a></li>
+              <li><a href="/contact">Contact Us</a></li>
+            </ul>
+          </div>
         </div>
-        <div>
-          <h4>Explore</h4>
-          <ul>
-            <li><a href="/">Our Portfolio</a></li>
-            <li><a href="/">Case Studies</a></li>
-            <li><a href="/blog">Tech Blog</a></li>
-            <li><a href="/">Client Portal</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>About Us</h4>
-          <ul>
-            <li><a href="/about">About Us</a></li> 
-            <li><a href="/privacy">Privacy Policy</a></li> 
-            <li><a href="/terms">Terms & Conditions</a></li> 
-            <li><a href="/contact">Contact Us</a></li> 
-          </ul>
+
+        <div class="footer-content">
+          <p>&copy; <span id="current-year"></span> Famral. All Rights Reserved.</p>
+          <p><a href="#" class="back-to-top">Back to Top <i class="fas fa-arrow-up"></i></a></p>
         </div>
       </div>
+    </footer>
 
-      <div class="footer-content">
-        <p>&copy; <span id="current-year"></span> Famral. All Rights Reserved.</p>
-        <p><a href="#" class="back-to-top">Back to Top <i class="fas fa-arrow-up"></i></a></p>
-      </div>
-    </div>
-  </footer>
+    <!-- Simple JS for Mobile Menu Toggle -->
+    <script>
+      const navToggle = document.querySelector('.nav-toggle');
+      const navLinks = document.querySelector('.nav-links-wrapper');
+      const toggleIcon = navToggle.querySelector('i'); // Get the icon element
 
-  <!-- Simple JS for Mobile Menu Toggle -->
-  <script>
-    const navToggle = document.querySelector('.nav-toggle');
-    const navLinks = document.querySelector('.nav-links-wrapper');
-    const toggleIcon = navToggle.querySelector('i'); // Get the icon element
+      navToggle.addEventListener('click', () => {
+        const isExpanded = navLinks.classList.toggle('active');
+        navToggle.setAttribute('aria-expanded', isExpanded);
 
-    navToggle.addEventListener('click', () => {
-      const isExpanded = navLinks.classList.toggle('active');
-      navToggle.setAttribute('aria-expanded', isExpanded);
-
-      // Change icon from bars to times (X) when open
-      if (isExpanded) {
-        toggleIcon.classList.remove('fa-bars');
-        toggleIcon.classList.add('fa-times');
-      } else {
-        toggleIcon.classList.remove('fa-times');
-        toggleIcon.classList.add('fa-bars');
-      }
-    });
-
-    // Close menu when a link is clicked
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        if (navLinks.classList.contains('active')) {
-          navLinks.classList.remove('active');
-          navToggle.setAttribute('aria-expanded', 'false');
+        // Change icon from bars to times (X) when open
+        if (isExpanded) {
+          toggleIcon.classList.remove('fa-bars');
+          toggleIcon.classList.add('fa-times');
+        } else {
           toggleIcon.classList.remove('fa-times');
           toggleIcon.classList.add('fa-bars');
         }
       });
-    });
 
-    // Mega Menu Dropdown Toggle
-    const dropdownToggle = document.querySelector('.dropdown-toggle');
-    const dropdownMenu = document.querySelector('.mega-menu');
+      // Close menu when a link is clicked
+      navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (navLinks.classList.contains('active')) {
+            navLinks.classList.remove('active');
+            navToggle.setAttribute('aria-expanded', 'false');
+            toggleIcon.classList.remove('fa-times');
+            toggleIcon.classList.add('fa-bars');
+          }
+        });
+      });
 
-    if (dropdownToggle && dropdownMenu) {
-      dropdownToggle.addEventListener('click', (e) => {
-        e.stopPropagation();
-        dropdownMenu.classList.toggle('show');
+      // Multiple Dropdown Menus Toggle
+      const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
+      dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const menu = toggle.nextElementSibling;
+
+          // Close other open menus
+          document.querySelectorAll('.dropdown-menu.show').forEach(openMenu => {
+            if (openMenu !== menu) openMenu.classList.remove('show');
+          });
+
+          if (menu) menu.classList.toggle('show');
+        });
       });
 
       document.addEventListener('click', (e) => {
-        if (!dropdownMenu.contains(e.target) && !dropdownToggle.contains(e.target)) {
-          dropdownMenu.classList.remove('show');
+        if (!e.target.closest('.nav-item.dropdown')) {
+          document.querySelectorAll('.dropdown-menu.show').forEach(menu => {
+            menu.classList.remove('show');
+          });
         }
       });
-    }
 
-    // Update the copyright year automatically
-    document.getElementById('current-year').textContent = new Date().getFullYear();
-  </script>
+      // Update the copyright year automatically
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 
 
-  
+
 
 </body>
 
