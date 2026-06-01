@@ -1,172 +1,598 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>404 Not Found | Famral</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 Page Not Found | Famral</title>
+  <meta name="description"
+    content="Oops! The page you are looking for does not exist. Return to Famral's homepage to explore our web development services.">
+  <meta name="keywords"
+    content="web development, custom website, ecommerce development, web applications, responsive design, frontend, backend, CMS">
+  <link rel="icon" type="image/png" href="./favicon.png">
 
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7876432493491415"
-     crossorigin="anonymous"></script>
+  <!-- SEO & Social Tags -->
+  <meta name="robots" content="noindex, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.famral.com/404" />
+  <meta property="og:title" content="404 Page Not Found | Famral" />
+  <meta property="og:description"
+    content="Oops! The page you are looking for does not exist. Return to Famral's homepage to explore our web development services." />
+  <meta property="og:image" content="https://www.famral.com/favicon.png" />
+  <meta name="twitter:card" content="summary_large_image" />
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-H57NCR0QYN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  gtag('config', 'G-H57NCR0QYN');
-</script>
-
-  
+  <!-- Enhanced Design Styles -->
   <style>
+    /* Reset & Base Styles */
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
+      font-family: 'Inter', sans-serif;
+      color: var(--text-dark);
+      line-height: 1.6;
+      background-color: #fff;
     }
 
-    nav {
-      background-color: #ffffff;
-      padding: 1rem 2rem;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Variables */
+    :root {
+      --primary-color: #0067b8;
+      --text-dark: #000000;
+      --text-light: #505050;
+      --border-color: #e6e6e6;
+      --surface-color: #f2f2f2;
+    }
+
+    /* Layout Utilities */
+    .container {
+      max-width: 1260px;
+      margin: 0 auto;
+      padding: 0 5%;
+    }
+
+    /* Navbar Main Styles */
+    .navbar {
+      background: white;
+      border-bottom: 1px solid var(--border-color);
+      padding: 0.75rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
     }
 
-    nav .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #333;
-    }
-
-    nav ul {
-      list-style: none;
+    .nav-logo {
       display: flex;
-      gap: 20px;
-    }
-
-    nav ul li a {
-      color: #333;
-      text-decoration: none;
-      font-size: 1rem;
-      transition: color 0.3s ease;
-    }
-
-    nav ul li a:hover {
-      color: #3498db;
-    }
-
-    .main {
-      flex: 1;
-      display: flex;
-      justify-content: center;
       align-items: center;
-      padding: 40px 20px;
+      gap: 0.75rem;
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--text-dark);
     }
 
-    .container {
-      text-align: center;
-      padding: 40px;
-      background-color: #fff;
-      border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    .nav-links-wrapper {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
     }
 
-    .error-code {
-      font-size: 96px;
-      font-weight: bold;
-      color: #e74c3c;
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--text-dark);
+      cursor: pointer;
+      padding: 0.5rem;
     }
 
-    .message {
-      font-size: 24px;
-      margin: 20px 0;
+    /* Hero Section */
+    .hero {
+      text-align: left;
+      padding: 5rem 1rem;
+      background: var(--surface-color);
     }
 
-    .description {
-      font-size: 16px;
-      color: #777;
-      margin-bottom: 30px;
+    .hero h1 {
+      font-size: 3rem;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      color: var(--text-dark);
+      font-weight: 600;
     }
 
-    .home-button {
-      display: inline-block;
-      padding: 12px 24px;
-      background-color: #3498db;
-      color: white;
+    .hero p {
+      font-size: 1.125rem;
+      color: var(--text-light);
+      max-width: 700px;
+      margin: 0 0 2rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: flex-start;
+      margin-top: 1.5rem;
+    }
+
+    /* Typography */
+    h2 {
+      font-size: 2rem;
+      text-align: left;
+      margin-bottom: 2rem;
+      color: var(--text-dark);
+      font-weight: 600;
+    }
+
+    p {
+      color: var(--text-light);
+    }
+
+    /* Buttons */
+    .btn {
+      padding: 0.625rem 1.5rem;
+      border-radius: 2px;
+      font-weight: 600;
       text-decoration: none;
-      border-radius: 6px;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.2s;
+      display: inline-block;
+      font-size: 0.95rem;
     }
 
-    .home-button:hover {
-      background-color: #2980b9;
+    .btn-primary {
+      background-color: var(--primary-color);
+      color: white;
+      border: 2px solid transparent;
     }
 
-    @media (max-width: 600px) {
-      nav ul {
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--text-dark);
+      border: 2px solid var(--border-color);
+    }
+
+    .btn:hover {
+      transform: none;
+      box-shadow: none;
+    }
+
+    .btn-primary:hover {
+      background-color: #005da6;
+    }
+
+    .btn-secondary:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    /* Footer */
+    .site-footer {
+      background-color: var(--surface-color);
+      padding: 4rem 0 2rem;
+      border-top: none;
+      margin-top: auto;
+    }
+
+    .footer-links-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-links-grid h4 {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      color: var(--text-dark);
+      font-weight: 600;
+      text-transform: none;
+      letter-spacing: normal;
+    }
+
+    .footer-links-grid ul li {
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-links-grid a {
+      color: var(--text-light);
+      transition: color 0.2s;
+      font-size: 0.875rem;
+    }
+
+    .footer-links-grid a:hover {
+      color: var(--text-dark);
+      text-decoration: underline;
+    }
+
+    .footer-content {
+      border-top: 1px solid var(--border-color);
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      color: var(--text-light);
+      font-size: 0.875rem;
+    }
+
+    .back-to-top {
+      color: var(--text-dark);
+      font-weight: 600;
+    }
+
+    /* Navbar Dropdown & Mega Menu Styles */
+    .nav-item.dropdown {
+      position: relative;
+    }
+
+    .nav-link {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 0.95rem;
+      color: var(--text-dark);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      font-weight: 500;
+      transition: background-color 0.2s;
+      border-radius: 2px;
+      text-decoration: none;
+    }
+
+    .nav-link:hover {
+      background-color: var(--surface-color);
+      color: var(--text-dark);
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 0.5rem);
+      right: 0;
+      left: auto;
+      background: white;
+      border: 1px solid var(--border-color);
+      border-radius: 2px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      z-index: 100;
+      min-width: 240px;
+      animation: fadeIn 0.1s ease-out;
+    }
+
+    .dropdown-menu.show {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(5px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .mega-column h4 {
+      color: var(--text-dark);
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      padding-left: 0.75rem;
+    }
+
+    .mega-column a {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: var(--text-light);
+      text-decoration: none;
+      padding: 0.5rem 0.75rem;
+      border-radius: 2px;
+      transition: all 0.1s;
+      font-size: 0.9rem;
+    }
+
+    .mega-column a:hover {
+      background-color: var(--surface-color);
+      color: var(--text-dark);
+      transform: none;
+      text-decoration: underline;
+    }
+
+    .mega-column a i {
+      width: 20px;
+      text-align: center;
+      color: var(--primary-color);
+      transition: none;
+    }
+
+    .mega-column a:hover i {
+      color: var(--primary-color);
+    }
+
+    @media (max-width: 768px) {
+      .dropdown-menu {
+        position: static;
+        animation: none;
+      }
+
+      .mega-column h4 {
+        margin-top: 1rem;
+      }
+
+      /* Mobile Nav Toggle Logic */
+      .nav-toggle {
+        display: block;
+      }
+
+      .nav-links-wrapper {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
         flex-direction: column;
-        gap: 10px;
+        padding: 1rem;
+        border-bottom: 1px solid var(--border-color);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+
+      .nav-links-wrapper.active {
+        display: flex;
+      }
+
+      .nav-link {
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
       }
     }
   </style>
+
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7876432493491415"
+    crossorigin="anonymous"></script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H57NCR0QYN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-H57NCR0QYN');
+  </script>
+
+
+  <!-- Schema.org Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Famral",
+    "url": "https://www.famral.com/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.famral.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Famral",
+    "url": "https://www.famral.com",
+    "logo": "https://www.famral.com/favicon.png",
+    "sameAs": [
+      "https://www.facebook.com/famral",
+      "https://twitter.com/famral"
+    ]
+  }
+  </script>
+
 </head>
+
 <body>
-  <nav>
-    <div class="logo">Famral</div>
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/workspace">Workspace</a></li>
-      <li><a href="/contact">Contact</a></li>
-    </ul>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <!-- Logo -->
+      <a href="https://www.famral.com/" class="nav-logo">
+        <img src="https://www.famral.com/favicon.png" alt="Famral Logo" width="32" height="32">
+        Famral
+      </a>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- Navigation Links -->
+      <div class="nav-links-wrapper" id="navLinks">
+        <a href="/" class="nav-link">Home</a>
+        <div class="nav-item dropdown">
+          <button class="nav-link dropdown-toggle">Services <i class="fas fa-chevron-down fa-xs"></i></button>
+          <div class="dropdown-menu">
+            <div class="mega-column" style="padding: 0.5rem;">
+              <a href="/web-development"><i class="fas fa-laptop-code"></i>Web Development</a>
+              <a href="/domain-name"><i class="fas fa-globe"></i>Domain Name</a>
+              <a href="/web-security"><i class="fas fa-shield-halved"></i>Web Security</a>
+              <a href="/services"><i class="fas fa-briefcase"></i> More Services</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </nav>
 
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7876432493491415"
-     crossorigin="anonymous"></script>
-<!-- FamralHomeDisplayResponsive -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7876432493491415"
-     data-ad-slot="9152005519"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-  
-  <div class="main">
-    <div class="container">
-      <div class="error-code">404</div>
-      <div class="message">Page Not Found</div>
-      <div class="description">Sorry, the page you're looking for doesn't exist or has been moved.</div>
-      <a href="/" class="home-button">Go to Homepage</a>
-    </div>
-  </div>
 
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7876432493491415"
-     crossorigin="anonymous"></script>
-<!-- FamralHomeDisplayResponsive -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7876432493491415"
-     data-ad-slot="9152005519"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-  
+
+  <main>
+    <!-- 404 Error Section -->
+    <section class="hero" style="text-align: center; padding: 10rem 1rem;">
+      <div class="container">
+        <h1 style="font-size: 8rem; color: var(--primary-color); margin-bottom: 0;">404</h1>
+        <h2 style="text-align: center; margin-bottom: 1rem;">Page Not Found</h2>
+        <p style="margin: 0 auto 2rem; max-width: 600px; font-size: 1.125rem;">Oops! The page you are looking for might
+          have been removed, had its name changed, or is temporarily unavailable.</p>
+        <div class="hero-buttons" style="justify-content: center;">
+          <a href="/" class="btn btn-primary">Return to Homepage</a>
+          <a href="/contact" class="btn btn-secondary">Contact Support</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+
+      <!-- Footer Links Section -->
+      <div class="footer-links-grid">
+        <div>
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="/web-development">Web Development</a></li>
+            <li><a href="/domain-name">Domain Name</a></li>
+            <li><a href="/web-security">Web Security</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="https://tools.famral.com/">Online Tools</a></li>
+            <li><a href="/pdf-editor">Free PDF Editor</a></li>
+
+          </ul>
+        </div>
+        <div>
+          <h4>About Us</h4>
+          <ul>
+            <li><a href="/privacy">Privacy Policy</a></li>
+            <li><a href="/terms">Terms & Conditions</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-content">
+        <p>&copy; <span id="current-year"></span> Famral. All Rights Reserved.</p>
+        <p><a href="#" class="back-to-top">Back to Top <i class="fas fa-arrow-up"></i></a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Simple JS for Mobile Menu Toggle -->
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links-wrapper');
+    const toggleIcon = navToggle.querySelector('i'); // Get the icon element
+
+    navToggle.addEventListener('click', () => {
+      const isExpanded = navLinks.classList.toggle('active');
+      navToggle.setAttribute('aria-expanded', isExpanded);
+
+      // Change icon from bars to times (X) when open
+      if (isExpanded) {
+        toggleIcon.classList.remove('fa-bars');
+        toggleIcon.classList.add('fa-times');
+      } else {
+        toggleIcon.classList.remove('fa-times');
+        toggleIcon.classList.add('fa-bars');
+      }
+    });
+
+    // Close menu when a link is clicked
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (navLinks.classList.contains('active')) {
+          navLinks.classList.remove('active');
+          navToggle.setAttribute('aria-expanded', 'false');
+          toggleIcon.classList.remove('fa-times');
+          toggleIcon.classList.add('fa-bars');
+        }
+      });
+    });
+
+    // Multiple Dropdown Menus Toggle
+    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
+    dropdownToggles.forEach(toggle => {
+      toggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const menu = toggle.nextElementSibling;
+
+        // Close other open menus
+        document.querySelectorAll('.dropdown-menu.show').forEach(openMenu => {
+          if (openMenu !== menu) openMenu.classList.remove('show');
+        });
+
+        if (menu) menu.classList.toggle('show');
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.nav-item.dropdown')) {
+        document.querySelectorAll('.dropdown-menu.show').forEach(menu => {
+          menu.classList.remove('show');
+        });
+      }
+    });
+
+    // Update the copyright year automatically
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+
+
+
+
 </body>
+
 </html>
