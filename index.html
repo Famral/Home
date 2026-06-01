@@ -1,24 +1,23 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Famral | Online Productivity Platform</title>
+  <title>Famral | Professional Web Development, Domain & IT Services</title>
   <meta name="description"
-    content="Access free online Office Suite apps, web development utilities, and productivity tools to simplify your workflow.">
+    content="Welcome to Famral. We provide top-tier web development, domain registration, website security, online tools, and comprehensive IT services for businesses of all sizes.">
   <meta name="keywords"
-    content="famral, document editor, pdf editor, spreadsheet editor, presentation maker, office apps, web tools">
-  <link rel="icon" type="image/png" href="./favicon.png"> 
-  
+    content="website development, domain registration, website security, IT services, web development, domain management">
+  <link rel="icon" type="image/png" href="./favicon.png">
+
   <!-- SEO & Social Tags -->
   <link rel="canonical" href="https://www.famral.com/" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.famral.com/" />
-  <meta property="og:title" content="Famral | Office Productivity Suite" />
-  <meta property="og:description" content="Access free online Office Suite apps, web development utilities, and productivity tools to simplify your workflow." />
+  <meta property="og:title" content="Famral | Professional Web Development, Domain & IT Services" />
+  <meta property="og:description"
+    content="Welcome to Famral. We provide top-tier web development, domain registration, website security, online tools, and comprehensive IT services for businesses of all sizes." />
   <meta property="og:image" content="https://www.famral.com/favicon.png" />
   <meta name="twitter:card" content="summary_large_image" />
 
@@ -28,122 +27,563 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
+
   <!-- Enhanced Design Styles -->
   <style>
     /* Reset & Base Styles */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Inter', sans-serif; color: var(--text-dark); line-height: 1.6; background-color: #fff; }
-    img { max-width: 100%; height: auto; }
-    ul { list-style: none; }
-    a { text-decoration: none; color: inherit; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-dark);
+      line-height: 1.6;
+      background-color: #fff;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
     /* Variables */
-    :root { --primary-color: #2563eb; --text-dark: #1e293b; --text-light: #64748b; }
+    :root {
+      --primary-color: #0067b8;
+      --text-dark: #000000;
+      --text-light: #505050;
+      --border-color: #e6e6e6;
+      --surface-color: #f2f2f2;
+    }
 
     /* Layout Utilities */
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
-    .section { padding: 5rem 0; }
-    .bg-surface { background-color: #f8fafc; }
+    .container {
+      max-width: 1260px;
+      margin: 0 auto;
+      padding: 0 5%;
+    }
+
+    .section {
+      padding: 4rem 0;
+    }
+
+    .bg-surface {
+      background-color: var(--surface-color);
+    }
 
     /* Navbar Main Styles */
-    .navbar { background: white; border-bottom: 1px solid #e2e8f0; padding: 0.75rem 0; position: sticky; top: 0; z-index: 1000; }
-    .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
-    .nav-logo { display: flex; align-items: center; gap: 0.75rem; font-weight: 700; font-size: 1.25rem; color: var(--text-dark); }
-    .nav-links-wrapper { display: flex; gap: 2rem; align-items: center; }
-    .nav-toggle { display: none; background: none; border: none; font-size: 1.5rem; color: var(--text-dark); cursor: pointer; padding: 0.5rem; }
+    .navbar {
+      background: white;
+      border-bottom: 1px solid var(--border-color);
+      padding: 0.75rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--text-dark);
+    }
+
+    .nav-links-wrapper {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--text-dark);
+      cursor: pointer;
+      padding: 0.5rem;
+    }
 
     /* Hero Section */
-    .hero { text-align: center; padding: 6rem 1rem; background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%); }
-    .hero h1 { font-size: 3.5rem; line-height: 1.2; margin-bottom: 1.5rem; background: -webkit-linear-gradient(315deg, #2563eb 0%, #1e40af 74%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    .hero p { font-size: 1.25rem; color: var(--text-light); max-width: 700px; margin: 0 auto 2.5rem; }
-    .hero-buttons { display: flex; gap: 1rem; justify-content: center; margin-top: 2rem; }
+    .hero {
+      text-align: left;
+      padding: 5rem 1rem;
+      background: var(--surface-color);
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      color: var(--text-dark);
+      font-weight: 600;
+    }
+
+    .hero p {
+      font-size: 1.125rem;
+      color: var(--text-light);
+      max-width: 700px;
+      margin: 0 0 2rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: flex-start;
+      margin-top: 1.5rem;
+    }
 
     /* Typography */
-    h2 { font-size: 2.25rem; text-align: center; margin-bottom: 3rem; color: var(--text-dark); font-weight: 700; letter-spacing: -0.02em; }
-    h3 { font-size: 1.25rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--text-dark); }
-    p { color: var(--text-light); }
+    h2 {
+      font-size: 2rem;
+      text-align: left;
+      margin-bottom: 2rem;
+      color: var(--text-dark);
+      font-weight: 600;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+
+    p {
+      color: var(--text-light);
+    }
 
     /* Buttons */
-    .btn { padding: 0.875rem 2rem; border-radius: 0.5rem; font-weight: 600; text-decoration: none; transition: all 0.2s; display: inline-block; }
-    .btn-primary { background-color: var(--primary-color); color: white; box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2); }
-    .btn-secondary { background-color: white; color: var(--text-dark); border: 1px solid #e2e8f0; }
-    .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
+    .btn {
+      padding: 0.625rem 1.5rem;
+      border-radius: 2px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background-color 0.2s;
+      display: inline-block;
+      font-size: 0.95rem;
+    }
+
+    .btn-primary {
+      background-color: var(--primary-color);
+      color: white;
+      border: 2px solid transparent;
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--text-dark);
+      border: 2px solid var(--border-color);
+    }
+
+    .btn:hover {
+      transform: none;
+      box-shadow: none;
+    }
+
+    .btn-primary:hover {
+      background-color: #005da6;
+    }
+
+    .btn-secondary:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
 
     /* Services / Features Grid */
-    .services-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-    .service-box { background: white; padding: 2rem; border-radius: 1rem; display: flex; flex-direction: column; align-items: flex-start; transition: transform 0.3s ease, box-shadow 0.3s ease; border: 1px solid #f1f5f9; }
-    .service-box:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); border-color: transparent; }
-    .service-icon { width: 48px; height: 48px; background-color: #eff6ff; color: var(--primary-color); display: flex; align-items: center; justify-content: center; border-radius: 0.75rem; font-size: 1.25rem; margin-bottom: 1.5rem; }
-    .service-box a { color: var(--primary-color); font-weight: 600; margin-top: auto; display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.95rem; }
-    .service-box a:hover { text-decoration: underline; }
+    .services-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .service-box {
+      background: white;
+      padding: 2rem;
+      border-radius: 2px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      transition: box-shadow 0.2s ease;
+      border: 1px solid var(--border-color);
+    }
+
+    .service-box:hover {
+      transform: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      border-color: var(--border-color);
+    }
+
+    .service-icon {
+      color: var(--primary-color);
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .service-box a {
+      color: var(--primary-color);
+      font-weight: 600;
+      margin-top: auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.95rem;
+      text-decoration: none;
+    }
+
+    .service-box a:hover {
+      text-decoration: underline;
+      gap: 0.75rem;
+      transition: gap 0.2s;
+    }
 
     /* CTA Section */
-    .cta { text-align: center; background-color: var(--primary-color); color: white; padding: 5rem 2rem; border-radius: 1.5rem; margin: 2rem 0; }
-    .cta h2 { color: white; margin-bottom: 1rem; }
-    .cta p { color: rgba(255, 255, 255, 0.9); font-size: 1.25rem; margin-bottom: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto; }
-    .cta a { background: white; color: var(--primary-color); padding: 1rem 2.5rem; border-radius: 0.5rem; font-weight: 600; display: inline-block; transition: transform 0.2s; }
-    .cta a:hover { transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2); }
+    .cta {
+      text-align: left;
+      background-color: var(--surface-color);
+      color: var(--text-dark);
+      padding: 4rem 2rem;
+      border-radius: 2px;
+      margin: 2rem 0;
+      border: 1px solid var(--border-color);
+    }
+
+    .cta h2 {
+      color: var(--text-dark);
+      margin-bottom: 1rem;
+    }
+
+    .cta p {
+      color: var(--text-light);
+      font-size: 1.125rem;
+      margin-bottom: 2rem;
+      max-width: 600px;
+    }
+
+    .cta a {
+      background: var(--primary-color);
+      color: white;
+      padding: 0.625rem 1.5rem;
+      border-radius: 2px;
+      font-weight: 600;
+      display: inline-block;
+      transition: background-color 0.2s;
+    }
+
+    .cta a:hover {
+      background-color: #005da6;
+      transform: none;
+      box-shadow: none;
+    }
+
+    /* FAQ Section */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 800px;
+    }
+
+    .faq-item {
+      background: white;
+      padding: 1.5rem;
+      border: 1px solid var(--border-color);
+      border-radius: 2px;
+      transition: box-shadow 0.2s;
+    }
+
+    .faq-item:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .faq-item h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: var(--text-dark);
+    }
+
+    .faq-item p {
+      margin-bottom: 0;
+    }
 
     /* Footer */
-    .site-footer { background-color: #f8fafc; padding: 5rem 0 2rem; border-top: 1px solid #e2e8f0; margin-top: auto; }
-    .footer-links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; margin-bottom: 4rem; }
-    .footer-links-grid h4 { margin-bottom: 1.5rem; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-dark); }
-    .footer-links-grid ul li { margin-bottom: 0.75rem; }
-    .footer-links-grid a { color: var(--text-light); transition: color 0.2s; font-size: 0.95rem; }
-    .footer-links-grid a:hover { color: var(--primary-color); }
-    .footer-content { border-top: 1px solid #e2e8f0; padding-top: 2rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; color: var(--text-light); font-size: 0.875rem; }
-    .back-to-top { color: var(--text-dark); font-weight: 500; }
+    .site-footer {
+      background-color: var(--surface-color);
+      padding: 4rem 0 2rem;
+      border-top: none;
+      margin-top: auto;
+    }
+
+    .footer-links-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-links-grid h4 {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      color: var(--text-dark);
+      font-weight: 600;
+      text-transform: none;
+      letter-spacing: normal;
+    }
+
+    .footer-links-grid ul li {
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-links-grid a {
+      color: var(--text-light);
+      transition: color 0.2s;
+      font-size: 0.875rem;
+    }
+
+    .footer-links-grid a:hover {
+      color: var(--text-dark);
+      text-decoration: underline;
+    }
+
+    .footer-content {
+      border-top: 1px solid var(--border-color);
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      color: var(--text-light);
+      font-size: 0.875rem;
+    }
+
+    .back-to-top {
+      color: var(--text-dark);
+      font-weight: 600;
+    }
 
     /* Navbar Dropdown & Mega Menu Styles */
-    .nav-item.dropdown { position: relative; }
-    .nav-link.dropdown-toggle { background: none; border: none; cursor: pointer; font-family: inherit; font-size: 1rem; color: var(--text-dark); display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; font-weight: 500; transition: all 0.2s; border-radius: 0.5rem; }
-    .nav-link.dropdown-toggle:hover { background-color: #f1f5f9; color: var(--primary-color); }
-    
-    .dropdown-menu { display: none; position: absolute; top: calc(100% + 0.5rem); right: 0; left: auto; background: white; border: 1px solid #e2e8f0; border-radius: 0.75rem; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); z-index: 100; min-width: 240px; animation: fadeIn 0.2s ease-out; }
-    .dropdown-menu.show { display: block; }
-    
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    .nav-item.dropdown {
+      position: relative;
+    }
 
-    .mega-menu { width: 680px; max-width: 90vw; padding: 2rem; }
-    .mega-menu-content { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
-    
-    .mega-column h4 { color: #94a3b8; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; margin-bottom: 1rem; letter-spacing: 0.05em; padding-left: 0.75rem; }
-    .mega-column a { display: flex; align-items: center; gap: 0.75rem; color: var(--text-dark); text-decoration: none; padding: 0.625rem 0.75rem; border-radius: 0.5rem; transition: all 0.2s; }
-    .mega-column a:hover { background-color: #f8fafc; color: var(--primary-color); transform: translateX(2px); }
-    .mega-column a i { width: 20px; text-align: center; color: var(--text-light); transition: color 0.2s; }
-    .mega-column a:hover i { color: var(--primary-color); }
-    
+    .nav-link-standard {
+      text-decoration: none;
+      color: var(--text-dark);
+      font-weight: 500;
+      font-size: 0.95rem;
+      padding: 0.5rem 1rem;
+      border-radius: 2px;
+      transition: background-color 0.2s;
+      display: inline-block;
+    }
+
+    .nav-link-standard:hover {
+      background-color: var(--surface-color);
+    }
+
+    .nav-link.dropdown-toggle {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 0.95rem;
+      color: var(--text-dark);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      font-weight: 500;
+      transition: background-color 0.2s;
+      border-radius: 2px;
+    }
+
+    .nav-link.dropdown-toggle:hover {
+      background-color: var(--surface-color);
+      color: var(--text-dark);
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 0.5rem);
+      right: 0;
+      left: auto;
+      background: white;
+      border: 1px solid var(--border-color);
+      border-radius: 2px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      z-index: 100;
+      min-width: 240px;
+      animation: fadeIn 0.1s ease-out;
+    }
+
+    .dropdown-menu.show {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(5px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .mega-menu {
+      width: 680px;
+      max-width: 90vw;
+      padding: 1.5rem;
+    }
+
+    .mega-menu-content {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .mega-column h4 {
+      color: var(--text-dark);
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      padding-left: 0.75rem;
+    }
+
+    .mega-column a {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: var(--text-light);
+      text-decoration: none;
+      padding: 0.5rem 0.75rem;
+      border-radius: 2px;
+      transition: all 0.1s;
+      font-size: 0.9rem;
+    }
+
+    .mega-column a:hover {
+      background-color: var(--surface-color);
+      color: var(--text-dark);
+      transform: none;
+      text-decoration: underline;
+    }
+
+    .mega-column a i {
+      width: 20px;
+      text-align: center;
+      color: var(--primary-color);
+      transition: none;
+    }
+
+    .mega-column a:hover i {
+      color: var(--primary-color);
+    }
+
     @media (max-width: 768px) {
-      .mega-menu { position: static; width: 100%; box-shadow: none; border: none; padding: 0 1rem; }
-      .mega-menu-content { grid-template-columns: 1fr; gap: 1rem; }
-      .dropdown-menu { position: static; animation: none; }
-      .mega-column h4 { margin-top: 1rem; }
-      
+      .mega-menu {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        border: none;
+        padding: 0 1rem;
+      }
+
+      .mega-menu-content {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .dropdown-menu {
+        position: static;
+        animation: none;
+      }
+
+      .mega-column h4 {
+        margin-top: 1rem;
+      }
+
       /* Mobile Nav Toggle Logic */
-      .nav-toggle { display: block; }
-      .nav-links-wrapper { display: none; position: absolute; top: 100%; left: 0; right: 0; background: white; flex-direction: column; padding: 1rem; border-bottom: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); align-items: flex-start; gap: 1rem; }
-      .nav-links-wrapper.active { display: flex; }
-      .nav-link.dropdown-toggle { width: 100%; justify-content: space-between; }
-      .hero h1 { font-size: 2.5rem; }
+      .nav-toggle {
+        display: block;
+      }
+
+      .nav-links-wrapper {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 1rem;
+        border-bottom: 1px solid var(--border-color);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+
+      .nav-links-wrapper.active {
+        display: flex;
+      }
+
+      .nav-link.dropdown-toggle {
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .nav-link-standard {
+        width: 100%;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
     }
   </style>
 
-  
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7876432493491415"
-     crossorigin="anonymous"></script>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-H57NCR0QYN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7876432493491415"
+    crossorigin="anonymous"></script>
 
-  gtag('config', 'G-H57NCR0QYN');
-</script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H57NCR0QYN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  
+    gtag('config', 'G-H57NCR0QYN');
+  </script>
+
+
   <!-- Schema.org Markup -->
   <script type="application/ld+json">
   {
@@ -171,7 +611,35 @@
     ]
   }
   </script>
-  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{
+      "@type": "Question",
+      "name": "What kind of web development services do you offer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We build everything from simple landing pages to complex e-commerce platforms and custom web applications, optimized for both speed and search engines."
+      }
+    }, {
+      "@type": "Question",
+      "name": "Are your online tools and PDF editor free to use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, our suite of online productivity tools and PDF editor are completely free to use and designed with privacy and security in mind."
+      }
+    }, {
+      "@type": "Question",
+      "name": "Do you provide ongoing IT support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. We offer comprehensive maintenance, troubleshooting, and 24/7 IT management packages tailored to your business needs."
+      }
+    }]
+  }
+  </script>
+
 </head>
 
 <body>
@@ -191,29 +659,27 @@
 
       <!-- Navigation Links -->
       <div class="nav-links-wrapper" id="navLinks">
+        <a href="/" class="nav-link-standard">Home</a>
         <div class="nav-item dropdown">
-          <button class="nav-link dropdown-toggle">All Products <i class="fas fa-chevron-down fa-xs"></i></button>
+          <button class="nav-link dropdown-toggle">Our Services <i class="fas fa-chevron-down fa-xs"></i></button>
           <div class="dropdown-menu mega-menu">
             <div class="mega-menu-content">
               <div class="mega-column">
-                <h4>Apps</h4>
-                <a href="https://www.famral.com/docs"><i class="fas fa-file-lines"></i>Docs</a>
-                <a href="https://www.famral.com/sheets"><i class="fas fa-table"></i>Sheets</a>
-                <a href="https://www.famral.com/slides"><i class="fas fa-chart-pie"></i>Slides</a>
-                <a href="https://www.famral.com/pdf/pdf-editor"><i class="fas fa-file-pdf"></i>PDF Editor</a>
+                <h4>Core Services</h4>
+                <a href="/web-development"><i class="fas fa-laptop-code"></i>Web Development</a>
+                <a href="/domain-name"><i class="fas fa-globe"></i>Domains</a>
+                <a href="#services-overview"><i class="fas fa-users"></i>Email & Collab</a>
               </div>
               <div class="mega-column">
-                <h4>&nbsp;</h4>
-                <a href="https://www.famral.com/notes"><i class="fas fa-sticky-note"></i>Notes</a>
-                <a href="https://www.famral.com/tasks"><i class="fas fa-check"></i>Tasks</a>
-                <a href="https://www.famral.com/designer"><i class="fas fa-object-group"></i>Designer</a>
+                <h4>Security & IT</h4>
+                <a href="/web-security"><i class="fas fa-shield-halved"></i>Web Security</a>
+                <a href="/services"><i class="fas fa-network-wired"></i>IT Services</a>
               </div>
               <div class="mega-column">
                 <h4>More</h4>
-                <a href="https://www.famral.com/services"><i class="fas fa-briefcase"></i>Services</a>
-                <a href="https://tools.famral.com/"><i class="fas fa-screwdriver-wrench"></i>Online Utilities</a>
-                <a href="https://workspace.famral.com/"><i class="fas fa-grip-vertical"></i>All Apps</a>
-                <a href="https://www.famral.com/blog"><i class="fas fa-book-open"></i>Resources</a>
+                <a href="/pdf-editor"><i class="fas fa-file"></i>PDF Editor</a>
+                <a href="https://tools.famral.com"><i class="fas fa-globe"></i>Online Tools</a>
+                <a href="/contact"><i class="fas fa-envelope"></i>Contact Us</a>
               </div>
             </div>
           </div>
@@ -223,121 +689,77 @@
   </nav>
 
 
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7876432493491415"
-     crossorigin="anonymous"></script>
-<!-- FamralHomeDisplayResponsive -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7876432493491415"
-     data-ad-slot="9152005519"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-  
   <main>
     <!-- Hero Section -->
     <section class="hero">
       <div class="container">
-        <h1>Achieve more with Famral</h1>
-        <p>Seamlessly create, edit, and manage documents and web projects with our all-in-one cloud platform. Designed for life today.</p>
+        <h1>Welcome to Famral</h1>
+        <p>Your trusted partner for professional IT solutions, specializing in website development, domain management,
+          and comprehensive security services tailored to empower your business.</p>
         <div class="hero-buttons">
-          <a href="#features" class="btn btn-primary">Get Started Free</a>
+          <a href="#services-overview" class="btn btn-primary">Explore Our Services</a>
+          <a href="/contact" class="btn btn-secondary">Get in Touch</a>
         </div>
       </div>
     </section>
 
 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7876432493491415"
-     crossorigin="anonymous"></script>
-<!-- FamralHomeDisplayResponsive -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7876432493491415"
-     data-ad-slot="9152005519"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 
-
-    
-    <!-- Features Section -->
-    <section class="section" id="features">
+    <!-- Services Overview Section -->
+    <section class="section" id="services-overview">
       <div class="container">
-        <h2>Productivity Apps</h2>
+        <h2>Our Core Services</h2>
         <div class="services-list">
           <div class="service-box">
             <span class="service-icon" aria-hidden="true">
-              <i class="fas fa-file-lines"></i>
+              <i class="fas fa-laptop-code"></i>
             </span>
-            <h3>Document Editor</h3>
-            <p>Create professional documents, resumes, and reports with ease.</p>
-            <a href="https://www.famral.com/docs/document-editor">Start Writing <i class="fas fa-chevron-right fa-xs"></i></a>
+            <h3>Website Development</h3>
+            <p>Custom, responsive, and high-performance websites built to elevate your brand's online presence.</p>
+            <a href="/web-development">Learn More <i class="fas fa-chevron-right fa-xs"></i></a>
           </div>
           <div class="service-box">
             <span class="service-icon" aria-hidden="true">
-              <i class="fas fa-table"></i>
+              <i class="fas fa-globe"></i>
             </span>
-            <h3>Spreadsheet Editor</h3>
-            <p>Analyze data, create charts, and manage budgets efficiently.</p>
-            <a href="https://www.famral.com/sheets/spreadsheet-editor">Analyze Data <i class="fas fa-chevron-right fa-xs"></i></a>
+            <h3>Domain Name Registration & Management</h3>
+            <p>Secure your digital identity with our hassle-free domain registration and complete management services.
+            </p>
+            <a href="/domain-name">Learn More <i class="fas fa-chevron-right fa-xs"></i></a>
           </div>
           <div class="service-box">
             <span class="service-icon" aria-hidden="true">
-              <i class="fas fa-chart-pie"></i>
+              <i class="fas fa-shield-halved"></i>
             </span>
-            <h3>Presentation Maker</h3>
-            <p>Design stunning slides and present your ideas with confidence.</p>
-            <a href="https://www.famral.com/slides/presentation-maker">Create Slides <i class="fas fa-chevron-right fa-xs"></i></a>
+            <h3>Website Security</h3>
+            <p>Protect your digital assets with advanced security solutions, SSL certificates, and malware protection.
+            </p>
+            <a href="/web-security">Learn More <i class="fas fa-chevron-right fa-xs"></i></a>
           </div>
           <div class="service-box">
             <span class="service-icon" aria-hidden="true">
-              <i class="fas fa-file-pdf"></i>
+              <i class="fas fa-envelope-open-text"></i>
             </span>
-            <h3>PDF Editor</h3>
-            <p>Edit, merge, convert, and sign PDF documents securely.</p>
-            <a href="https://www.famral.com/pdf/pdf-editor">Edit PDFs <i class="fas fa-chevron-right fa-xs"></i></a>
+            <h3>Email & Team Collaboration</h3>
+            <p>Empower your team with professional business email, shared calendars, and seamless communication tools.
+            </p>
+            <a href="#">Learn More <i class="fas fa-chevron-right fa-xs"></i></a>
           </div>
           <div class="service-box">
             <span class="service-icon" aria-hidden="true">
-              <i class="fas fa-sticky-note"></i>
+              <i class="fas fa-network-wired"></i>
             </span>
-            <h3>Digital Notes</h3>
-            <p>Capture ideas, make lists, and organize your thoughts instantly.</p>
-            <a href="https://www.famral.com/notes">Take Notes <i class="fas fa-chevron-right fa-xs"></i></a>
-          </div>
-          <div class="service-box">
-            <span class="service-icon" aria-hidden="true">
-              <i class="fas fa-chalkboard"></i>
-            </span>
-            <h3>Whiteboard</h3>
-            <p>Brainstorm ideas visually on a digital canvas.</p>
-            <a href="https://www.famral.com/whiteboard">Start Drawing <i class="fas fa-chevron-right fa-xs"></i></a>
+            <h3>Other IT Services</h3>
+            <p>Comprehensive IT support, cloud hosting, and technical consulting to keep your business running smoothly.
+            </p>
+            <a href="/services">Learn More <i class="fas fa-chevron-right fa-xs"></i></a>
           </div>
         </div> <!-- End services-list -->
       </div>
     </section>
 
 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7876432493491415"
-     crossorigin="anonymous"></script>
-<!-- FamralHomeDisplayResponsive -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7876432493491415"
-     data-ad-slot="9152005519"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 
-
-    
     <!-- Business Section -->
     <section class="section bg-surface">
       <div class="container">
@@ -345,81 +767,94 @@
         <div class="services-list">
           <div class="service-box">
             <span class="service-icon" aria-hidden="true">
-              <i class="fas fa-shield-alt"></i>
+              <i class="fas fa-server"></i>
             </span>
-            <h3>Enterprise Security</h3>
-            <p>Keep your business data safe with enterprise-grade encryption and compliance.</p>
+            <h3>Scalable Infrastructure</h3>
+            <p>Grow your digital presence on reliable, high-performance hosting platforms built for speed.</p>
           </div>
           <div class="service-box">
             <span class="service-icon" aria-hidden="true">
-              <i class="fas fa-building"></i>
+              <i class="fas fa-headset"></i>
             </span>
-            <h3>Team Management</h3>
-            <p>Easily manage users, roles, and permissions for your entire organization.</p>
+            <h3>Dedicated Support</h3>
+            <p>Our expert IT team is available to maintain, troubleshoot, and optimize your systems 24/7.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Business Solutions Section -->
-    <section class="section" id="solutions">
+    <!-- Tools & Resources Section -->
+    <section class="section" id="tools-resources">
       <div class="container">
-        <h2>Business Solutions</h2>
+        <h2>Tools & Resources</h2>
         <div class="services-list">
           <div class="service-box">
             <span class="service-icon" aria-hidden="true">
-              <i class="fas fa-briefcase"></i>
+              <i class="fas fa-wrench"></i>
             </span>
-            <h3>Small Business</h3>
-            <p>Cost-effective tools to manage documents for growing teams.</p>
+            <h3>Online Tools</h3>
+            <p>Access a powerful suite of free online web tools designed to boost your productivity and simplify
+              everyday tasks.</p>
+            <a href="https://tools.famral.com">Explore Tools <i class="fas fa-chevron-right fa-xs"></i></a>
           </div>
           <div class="service-box">
             <span class="service-icon" aria-hidden="true">
-              <i class="fas fa-building"></i>
+              <i class="fas fa-file-pdf"></i>
             </span>
-            <h3>Enterprise</h3>
-            <p>Scalable solutions with advanced security, compliance, and dedicated support.</p>
-          </div>
-          <div class="service-box">
-            <span class="service-icon" aria-hidden="true">
-              <i class="fas fa-graduation-cap"></i>
-            </span>
-            <h3>Education</h3>
-            <p>Empower students and teachers with free, easy-to-use productivity tools.</p>
+            <h3>PDF Editor</h3>
+            <p>Easily edit, merge, split, and convert your PDF documents securely with our comprehensive online PDF
+              editor.</p>
+            <a href="https://www.famral.com/pdf-editor">Use PDF Editor <i class="fas fa-chevron-right fa-xs"></i></a>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Why Choose Us Section -->
+    <section class="section" id="why-choose-us">
+      <div class="container">
+        <h2>Why Choose Famral?</h2>
+        <div class="services-list">
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true"><i class="fas fa-award"></i></span>
+            <h3>Proven Expertise</h3>
+            <p>Years of experience delivering top-notch IT and web solutions to businesses globally, ensuring
+              high-quality results.</p>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true"><i class="fas fa-clock"></i></span>
+            <h3>24/7 Reliability</h3>
+            <p>Our infrastructure and support teams are always online to guarantee maximum uptime and peace of mind.</p>
+          </div>
+          <div class="service-box">
+            <span class="service-icon" aria-hidden="true"><i class="fas fa-hand-holding-dollar"></i></span>
+            <h3>Cost-Effective Solutions</h3>
+            <p>Premium technology services scaled to fit your budget, whether you're a startup or a large enterprise.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7876432493491415"
-     crossorigin="anonymous"></script>
-<!-- FamralHomeDisplayResponsive -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7876432493491415"
-     data-ad-slot="9152005519"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-
-    
     <!-- FAQ Section -->
     <section class="section bg-surface" id="faq">
       <div class="container">
-        <h2>Frequently asked questions</h2>
-        <div class="services-list">
-          <div class="service-box faq-box">
-            <h3>Is Famral free to use?</h3>
-            <p>Yes, Famral offers a free plan with access to essential features. Premium plans are available for advanced needs.</p>
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <h3>What kind of web development services do you offer?</h3>
+            <p>We build everything from simple landing pages to complex e-commerce platforms and custom web
+              applications, optimized for both speed and search engines.</p>
           </div>
-          <div class="service-box faq-box">
-            <h3>Is my data secure?</h3>
-            <p>We use industry-standard encryption to protect your data. Your documents are private and secure.</p>
+          <div class="faq-item">
+            <h3>Are your online tools and PDF editor free to use?</h3>
+            <p>Yes, our suite of online productivity tools and PDF editor are completely free to use and designed with
+              privacy and security in mind.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Do you provide ongoing IT support?</h3>
+            <p>Absolutely. We offer comprehensive maintenance, troubleshooting, and 24/7 IT management packages tailored
+              to your business needs.</p>
           </div>
         </div>
       </div>
@@ -427,132 +862,110 @@
 
     <!-- Call to Action Section -->
     <div class="container">
-      <section class="cta" id="get-started">
-        <h2>Get started with Famral Workspace</h2>
-        <p>Everything you need to be productive, all in one place. Create, manage, and get work done.</p>
-        <a href="https://www.famral.com/workspace">Go to Workspace</a>
+      <section class="cta">
+        <h2>Ready to Transform Your Digital Presence?</h2>
+        <p>Join thousands of satisfied businesses that trust Famral for their web development, security, and IT needs.
+        </p>
+        <a href="/contact">Get a Free Consultation</a>
       </section>
     </div>
-  </main>
 
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7876432493491415"
-     crossorigin="anonymous"></script>
-<!-- FamralAllHomeDisplayResponsive -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7876432493491415"
-     data-ad-slot="9152005519"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-  
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container">
 
-      <!-- Footer Links Section -->
-      <div class="footer-links-grid"> <!-- Added class, removed inline style -->
-        <div>
-          <h4>Products</h4>
-          <ul>
-            <li><a href="https://www.famral.com/docs">Docs</a></li>
-            <li><a href="https://www.famral.com/sheets">Sheets</a></li>
-            <li><a href="https://www.famral.com/slides">Slides</a></li>
-            <li><a href="https://www.famral.com/pdf">PDF</a></li>
-            <li><a href="https://www.famral.com/notes">Notes</a></li>
-            <li><a href="https://www.famral.com/tasks">Tasks</a></li>
-            <li><a href="https://www.famral.com/whiteboard">Whiteboard</a></li>
-            <li><a href="https://www.famral.com/designer">Designer</a></li>
-          </ul>
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+
+        <!-- Footer Links Section -->
+        <div class="footer-links-grid">
+          <div>
+            <h4>Services</h4>
+            <ul>
+              <li><a href="/web-development">Website Development</a></li>
+              <li><a href="/domain-name">Domain Registration</a></li>
+              <li><a href="/web-security">Website Security</a></li>
+              <li><a href="/services">IT Support & Consulting</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="https://tools.famral.com">Online Tools</a></li>
+              <li><a href="/pdf-editor">PDF Editing Tools</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>About Us</h4>
+            <ul>
+              <li><a href="/about">About Us</a></li>
+              <li><a href="/privacy">Privacy Policy</a></li>
+              <li><a href="/terms">Terms & Conditions</a></li>
+              <li><a href="/contact">Contact Us</a></li>
+            </ul>
+          </div>
         </div>
-        <div>
-          <h4>Explore</h4>
-          <ul>
-            <li><a href="/services">Our Services</a></li>
-            <li><a href="/blog">Blogs</a></li>
-            <li><a href="https://www.famral.com/workspace">Workspace</a></li>
-            <li><a href="https://www.famral.com/office">Office Suite</a></li>
-            <li><a href="https://tools.famral.com/">Online Utilities</a></li>
-            <li><a href="https://www.useoftools.com/">Online Tools</a></li>
-            <li><a href="https://www.famral.com/reap-2026">REAP 2026</a></li>
-            <li><a href="https://www.sciencebaba.com/">REAP Counselling</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>About Us</h4>
-          <ul>
-            <li><a href="/about">About Us</a></li> 
-            <li><a href="/privacy">Privacy Policy</a></li> 
-            <li><a href="/terms">Terms & Conditions</a></li> 
-            <li><a href="/contact">Contact Us</a></li> 
-          </ul>
+
+        <div class="footer-content">
+          <p>&copy; <span id="current-year"></span> Famral. All Rights Reserved.</p>
+          <p><a href="#" class="back-to-top">Back to Top <i class="fas fa-arrow-up"></i></a></p>
         </div>
       </div>
+    </footer>
 
-      <div class="footer-content">
-        <p>&copy; <span id="current-year"></span> Famral. All Rights Reserved.</p>
-        <p><a href="#" class="back-to-top">Back to Top <i class="fas fa-arrow-up"></i></a></p>
-      </div>
-    </div>
-  </footer>
+    <!-- Simple JS for Mobile Menu Toggle -->
+    <script>
+      const navToggle = document.querySelector('.nav-toggle');
+      const navLinks = document.querySelector('.nav-links-wrapper');
+      const toggleIcon = navToggle.querySelector('i'); // Get the icon element
 
-  <!-- Simple JS for Mobile Menu Toggle -->
-  <script>
-    const navToggle = document.querySelector('.nav-toggle');
-    const navLinks = document.querySelector('.nav-links-wrapper');
-    const toggleIcon = navToggle.querySelector('i'); // Get the icon element
+      navToggle.addEventListener('click', () => {
+        const isExpanded = navLinks.classList.toggle('active');
+        navToggle.setAttribute('aria-expanded', isExpanded);
 
-    navToggle.addEventListener('click', () => {
-      const isExpanded = navLinks.classList.toggle('active');
-      navToggle.setAttribute('aria-expanded', isExpanded);
-
-      // Change icon from bars to times (X) when open
-      if (isExpanded) {
-        toggleIcon.classList.remove('fa-bars');
-        toggleIcon.classList.add('fa-times');
-      } else {
-        toggleIcon.classList.remove('fa-times');
-        toggleIcon.classList.add('fa-bars');
-      }
-    });
-
-    // Close menu when a link is clicked
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        if (navLinks.classList.contains('active')) {
-          navLinks.classList.remove('active');
-          navToggle.setAttribute('aria-expanded', 'false');
+        // Change icon from bars to times (X) when open
+        if (isExpanded) {
+          toggleIcon.classList.remove('fa-bars');
+          toggleIcon.classList.add('fa-times');
+        } else {
           toggleIcon.classList.remove('fa-times');
           toggleIcon.classList.add('fa-bars');
         }
       });
-    });
 
-    // Mega Menu Dropdown Toggle
-    const dropdownToggle = document.querySelector('.dropdown-toggle');
-    const dropdownMenu = document.querySelector('.mega-menu');
-
-    if (dropdownToggle && dropdownMenu) {
-      dropdownToggle.addEventListener('click', (e) => {
-        e.stopPropagation();
-        dropdownMenu.classList.toggle('show');
+      // Close menu when a link is clicked
+      navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (navLinks.classList.contains('active')) {
+            navLinks.classList.remove('active');
+            navToggle.setAttribute('aria-expanded', 'false');
+            toggleIcon.classList.remove('fa-times');
+            toggleIcon.classList.add('fa-bars');
+          }
+        });
       });
 
-      document.addEventListener('click', (e) => {
-        if (!dropdownMenu.contains(e.target) && !dropdownToggle.contains(e.target)) {
-          dropdownMenu.classList.remove('show');
-        }
-      });
-    }
+      // Mega Menu Dropdown Toggle
+      const dropdownToggle = document.querySelector('.dropdown-toggle');
+      const dropdownMenu = document.querySelector('.mega-menu');
 
-    // Update the copyright year automatically
-    document.getElementById('current-year').textContent = new Date().getFullYear();
-  </script>
+      if (dropdownToggle && dropdownMenu) {
+        dropdownToggle.addEventListener('click', (e) => {
+          e.stopPropagation();
+          dropdownMenu.classList.toggle('show');
+        });
+
+        document.addEventListener('click', (e) => {
+          if (!dropdownMenu.contains(e.target) && !dropdownToggle.contains(e.target)) {
+            dropdownMenu.classList.remove('show');
+          }
+        });
+      }
+
+      // Update the copyright year automatically
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 
 
-  
+
 
 </body>
 
