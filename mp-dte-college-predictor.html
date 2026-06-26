@@ -885,6 +885,21 @@
             display: block;
         }
 
+        .loader-spinner {
+            width: 48px;
+            height: 48px;
+            border: 4px solid var(--border-color);
+            border-top: 4px solid var(--primary-color);
+            border-radius: 50%;
+            display: inline-block;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
         .empty-state h3 {
             margin-bottom: 0.5rem;
         }
@@ -1478,8 +1493,8 @@
                                     </label>
                                 </div>
 
-                                <button type="submit" class="btn btn-primary"
-                                    style="border: none; cursor: pointer; padding-top: calc(0.625rem + 1px); padding-bottom: calc(0.625rem + 1px);">
+                                <button type="submit" id="predict-btn" class="btn btn-primary"
+                                    style="border: none; cursor: pointer; padding-top: calc(0.625rem + 1px); padding-bottom: calc(0.625rem + 1px); transition: all 0.2s ease;">
                                     Predict Colleges
                                 </button>
                             </div>
@@ -1492,6 +1507,13 @@
                         <h3>Your Predictions Await</h3>
                         <p>Enter your JEE Main CRL Rank and select options above to see your customized college
                             allotment probabilities.</p>
+                    </div>
+
+                    <!-- Loading State -->
+                    <div id="results-loading" class="predictor-card empty-state" style="display: none; padding: 3rem 1rem;">
+                        <div class="loader-spinner"></div>
+                        <h3 style="margin-top: 1.5rem; color: var(--text-dark);">Running Admission Simulation...</h3>
+                        <p style="color: var(--text-light); margin-top: 0.5rem; font-size: 0.95rem;">Analyzing DTE cutoff trends and calculating seat allotment probabilities...</p>
                     </div>
 
                     <!-- Results Section -->
@@ -2408,124 +2430,148 @@
                 return;
             }
 
-            // Dynamic Cutoff Multiplier based on Round
-            let roundMultiplier = 1.0;
-            let roundName = "Round 1";
-            if (round === 'R1U') {
-                roundMultiplier = 1.08;
-                roundName = "Round 1 Upgrade";
-            } else if (round === 'R2') {
-                roundMultiplier = 1.15;
-                roundName = "Round 2";
-            } else if (round === 'CLC') {
-                roundMultiplier = 1.25;
-                roundName = "CLC Round";
-            }
-
-            // Determine cutoff key
-            let targetKey = "";
-            let seatTypeName = "";
-
-            if (domicile === 'AI') {
-                targetKey = 'AI_UR';
-                seatTypeName = 'All India Open';
-            } else {
-                if (isTfw) {
-                    targetKey = 'MP_TFW';
-                    seatTypeName = 'MP TFW';
-                } else {
-                    targetKey = 'MP_' + category;
-                    let categoryText = category === 'UR' ? 'General' : category;
-
-                    if (gender === 'Female') {
-                        targetKey += '_F';
-                        seatTypeName = 'MP ' + categoryText + ' (Female)';
-                    } else {
-                        seatTypeName = 'MP ' + categoryText + ' (Open)';
-                    }
-                }
-            }
-
-            const predictions = [];
-
-            collegesData.forEach((college, index) => {
-                // Check if branch matches preferences
-                if (!filterAllBranches && college.branchCode !== selectedBranch) {
-                    return;
-                }
-
-                // Look up base cutoff rank for the seat type
-                let baseCutoff = college.cutoffs[targetKey];
-                if (baseCutoff === undefined) {
-                    if (domicile === 'AI') {
-                        baseCutoff = college.cutoffs['AI_UR'] || college.cutoffs['MP_UR'] * 0.8;
-                    } else if (isTfw) {
-                        baseCutoff = college.cutoffs['MP_TFW'] || college.cutoffs['MP_UR'] * 0.85;
-                    } else {
-                        const fallbackKey = 'MP_' + category;
-                        baseCutoff = college.cutoffs[fallbackKey] || college.cutoffs['MP_UR'];
-                    }
-                }
-
-                // Apply dynamic round multiplier
-                const cutoff = Math.round(baseCutoff * roundMultiplier);
-
-                // Admission chance calculation
-                let chance = "";
-                let chanceClass = "";
-                let chanceScore = 0;
-
-                if (rank <= cutoff * 0.85) {
-                    chance = "High Chance";
-                    chanceClass = "badge-high";
-                    chanceScore = 3;
-                } else if (rank <= cutoff) {
-                    chance = "Medium Chance";
-                    chanceClass = "badge-medium";
-                    chanceScore = 2;
-                } else if (rank <= cutoff * 1.15) {
-                    chance = "Low / Borderline";
-                    chanceClass = "badge-low";
-                    chanceScore = 1;
-                } else {
-                    return;
-                }
-
-                // Enrich stats
-                const stats = collegeStats[college.shortName] || { fees: 50000, avgPlacement: 5.0, maxPlacement: 10.0, rating: 4.0, established: 2000, location: "MP" };
-
-                predictions.push({
-                    dbIndex: index,
-                    collegeName: college.name,
-                    shortName: college.shortName,
-                    type: college.type,
-                    branch: college.branch,
-                    branchCode: college.branchCode,
-                    seatType: seatTypeName + ` (${roundName})`,
-                    cutoff: cutoff,
-                    fees: stats.fees,
-                    avgPlacement: stats.avgPlacement,
-                    maxPlacement: stats.maxPlacement,
-                    rating: stats.rating,
-                    location: stats.location,
-                    established: stats.established,
-                    chance: chance,
-                    chanceClass: chanceClass,
-                    chanceScore: chanceScore
-                });
-            });
-
-            predictions.sort((a, b) => a.cutoff - b.cutoff);
-            currentPredictions = predictions;
+            // Show Loader and Disable Button
+            const btn = document.getElementById('predict-btn');
+            btn.disabled = true;
+            btn.textContent = "Predicting...";
+            btn.style.opacity = "0.7";
+            btn.style.cursor = "not-allowed";
 
             document.getElementById('results-placeholder').style.display = 'none';
-            document.getElementById('results-section').style.display = 'block';
+            document.getElementById('results-section').style.display = 'none';
+            
+            const loader = document.getElementById('results-loading');
+            loader.style.display = 'block';
+            loader.scrollIntoView({ behavior: 'smooth' });
 
-            document.getElementById('search-input').value = '';
-            document.getElementById('chance-filter').value = 'ALL';
+            setTimeout(() => {
+                // Restore button state
+                btn.disabled = false;
+                btn.textContent = "Predict Colleges";
+                btn.style.opacity = "1";
+                btn.style.cursor = "pointer";
 
-            renderResults(predictions);
-            document.getElementById('results-section').scrollIntoView({ behavior: 'smooth' });
+                // Hide loader
+                loader.style.display = 'none';
+
+                // Dynamic Cutoff Multiplier based on Round
+                let roundMultiplier = 1.0;
+                let roundName = "Round 1";
+                if (round === 'R1U') {
+                    roundMultiplier = 1.08;
+                    roundName = "Round 1 Upgrade";
+                } else if (round === 'R2') {
+                    roundMultiplier = 1.15;
+                    roundName = "Round 2";
+                } else if (round === 'CLC') {
+                    roundMultiplier = 1.25;
+                    roundName = "CLC Round";
+                }
+
+                // Determine cutoff key
+                let targetKey = "";
+                let seatTypeName = "";
+
+                if (domicile === 'AI') {
+                    targetKey = 'AI_UR';
+                    seatTypeName = 'All India Open';
+                } else {
+                    if (isTfw) {
+                        targetKey = 'MP_TFW';
+                        seatTypeName = 'MP TFW';
+                    } else {
+                        targetKey = 'MP_' + category;
+                        let categoryText = category === 'UR' ? 'General' : category;
+
+                        if (gender === 'Female') {
+                            targetKey += '_F';
+                            seatTypeName = 'MP ' + categoryText + ' (Female)';
+                        } else {
+                            seatTypeName = 'MP ' + categoryText + ' (Open)';
+                        }
+                    }
+                }
+
+                const predictions = [];
+
+                collegesData.forEach((college, index) => {
+                    // Check if branch matches preferences
+                    if (!filterAllBranches && college.branchCode !== selectedBranch) {
+                        return;
+                    }
+
+                    // Look up base cutoff rank for the seat type
+                    let baseCutoff = college.cutoffs[targetKey];
+                    if (baseCutoff === undefined) {
+                        if (domicile === 'AI') {
+                            baseCutoff = college.cutoffs['AI_UR'] || college.cutoffs['MP_UR'] * 0.8;
+                        } else if (isTfw) {
+                            baseCutoff = college.cutoffs['MP_TFW'] || college.cutoffs['MP_UR'] * 0.85;
+                        } else {
+                            const fallbackKey = 'MP_' + category;
+                            baseCutoff = college.cutoffs[fallbackKey] || college.cutoffs['MP_UR'];
+                        }
+                    }
+
+                    // Apply dynamic round multiplier
+                    const cutoff = Math.round(baseCutoff * roundMultiplier);
+
+                    // Admission chance calculation
+                    let chance = "";
+                    let chanceClass = "";
+                    let chanceScore = 0;
+
+                    if (rank <= cutoff * 0.85) {
+                        chance = "High Chance";
+                        chanceClass = "badge-high";
+                        chanceScore = 3;
+                    } else if (rank <= cutoff) {
+                        chance = "Medium Chance";
+                        chanceClass = "badge-medium";
+                        chanceScore = 2;
+                    } else if (rank <= cutoff * 1.15) {
+                        chance = "Low / Borderline";
+                        chanceClass = "badge-low";
+                        chanceScore = 1;
+                    } else {
+                        return;
+                    }
+
+                    // Enrich stats
+                    const stats = collegeStats[college.shortName] || { fees: 50000, avgPlacement: 5.0, maxPlacement: 10.0, rating: 4.0, established: 2000, location: "MP" };
+
+                    predictions.push({
+                        dbIndex: index,
+                        collegeName: college.name,
+                        shortName: college.shortName,
+                        type: college.type,
+                        branch: college.branch,
+                        branchCode: college.branchCode,
+                        seatType: seatTypeName + ` (${roundName})`,
+                        cutoff: cutoff,
+                        fees: stats.fees,
+                        avgPlacement: stats.avgPlacement,
+                        maxPlacement: stats.maxPlacement,
+                        rating: stats.rating,
+                        location: stats.location,
+                        established: stats.established,
+                        chance: chance,
+                        chanceClass: chanceClass,
+                        chanceScore: chanceScore
+                    });
+                });
+
+                predictions.sort((a, b) => a.cutoff - b.cutoff);
+                currentPredictions = predictions;
+
+                document.getElementById('results-section').style.display = 'block';
+
+                document.getElementById('search-input').value = '';
+                document.getElementById('chance-filter').value = 'ALL';
+
+                renderResults(predictions);
+                document.getElementById('results-section').scrollIntoView({ behavior: 'smooth' });
+            }, 2000);
         }
 
         // Render predictions on both desktop and mobile layouts
