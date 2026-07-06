@@ -48,8 +48,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- html2pdf.js Library for client-side PDF export -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <!-- jsPDF Library for client-side PDF export -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7876432493491415"
         crossorigin="anonymous"></script>
@@ -2889,7 +2889,7 @@
                                 <button onclick="toggleDetails('${uniqueId}', event)" class="action-btn" title="View Details, Cutoffs & Pros/Cons">
                                     <i class="fas fa-chevron-down toggle-icon" id="toggle-icon-${uniqueId}"></i>
                                 </button>
-                                <button onclick="toggleChoiceInBasket(${item.dbIndex}, '${item.branchCode}', '${item.seatType}', ${item.cutoffRank}, '${item.feesText}')" class="action-btn ${basketBtnClass}" title="${basketBtnText}">
+                                <button onclick="toggleChoiceInBasket(${item.dbIndex}, '${item.branchCode}', '${item.seatType}', ${item.cutoffRank}, '${item.feesText}', '${item.chance}')" class="action-btn ${basketBtnClass}" title="${basketBtnText}">
                                     <i class="fas ${basketBtnIcon}"></i>
                                 </button>
                                 <button onclick="toggleCollegeInComparison(${item.dbIndex}, '${item.branchCode}', ${item.cutoffRank}, '${item.seatType}', '${item.feesText}')" class="action-btn ${compareBtnClass}" title="${compareBtnText}">
@@ -3068,7 +3068,7 @@
                         </div>
 
                         <div class="mobile-card-actions" style="margin-top: 0.5rem; border-top: 1px solid var(--border-color); padding-top: 0.75rem;">
-                            <button onclick="toggleChoiceInBasket(${item.dbIndex}, '${item.branchCode}', '${item.seatType}', ${item.cutoffRank}, '${item.feesText}')" class="mobile-action-btn ${isAdded ? 'mobile-action-btn-primary' : ''}">
+                            <button onclick="toggleChoiceInBasket(${item.dbIndex}, '${item.branchCode}', '${item.seatType}', ${item.cutoffRank}, '${item.feesText}', '${item.chance}')" class="mobile-action-btn ${isAdded ? 'mobile-action-btn-primary' : ''}">
                                 <i class="fas ${basketBtnIcon}"></i> ${basketBtnText}
                             </button>
                             <button onclick="toggleCollegeInComparison(${item.dbIndex}, '${item.branchCode}', ${item.cutoffRank}, '${item.seatType}', '${item.feesText}')" class="mobile-action-btn ${isInCompare ? 'mobile-action-btn-primary' : ''}">
@@ -3143,7 +3143,7 @@
         }
 
         // Toggle Preference Basket selection
-        function toggleChoiceInBasket(dbIndex, branchCode, seatType, cutoffRank, feesText) {
+        function toggleChoiceInBasket(dbIndex, branchCode, seatType, cutoffRank, feesText, chance) {
             const college = collegesDb[dbIndex];
             const branchObj = college.branches.find(b => b.code === branchCode);
             const existingIndex = selectedChoices.findIndex(choice => choice.collegeName === college.name && choice.branch === branchObj.name);
@@ -3160,6 +3160,7 @@
                     seatType: seatType,
                     cutoffRank: cutoffRank,
                     feesText: feesText,
+                    chance: chance || '',
                     type: college.type === 'government' ? 'Govt' : 'Private'
                 });
             }
@@ -3295,91 +3296,196 @@
         }
 
         function exportChoiceList() {
-            if (selectedChoices.length === 0) return;
+            if (selectedChoices.length === 0) {
+                alert('Your preference list is empty. Add colleges before exporting.');
+                return;
+            }
 
-            // Create temporary container for PDF rendering
-            const element = document.createElement('div');
-            element.style.padding = '20px';
-            element.style.backgroundColor = '#ffffff';
-            element.style.position = 'absolute';
-            element.style.left = '-9999px';
-            element.style.top = '0';
-            element.style.width = '790px';
-            document.body.appendChild(element);
+            // Use jsPDF direct drawing API - no DOM/canvas capture needed
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF({ unit: 'mm', format: 'a4', orientation: 'portrait' });
 
-            element.innerHTML = `
-                <div style="font-family: 'Inter', sans-serif; padding: 10px; color: #333;">
-                    <div style="border-bottom: 2px solid #0067b8; padding-bottom: 15px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center;">
-                        <div>
-                            <h1 style="color: #0067b8; font-size: 24px; font-weight: 700; margin: 0; font-family: 'Inter', sans-serif;">Famral</h1>
-                            <p style="font-size: 11px; color: #666; margin: 2px 0 0 0; font-family: 'Inter', sans-serif;">TG EAPCET College Predictor 2026</p>
-                        </div>
-                        <div style="text-align: right; font-family: 'Inter', sans-serif;">
-                            <p style="font-size: 11px; color: #555; margin: 0;">Generated on: ${new Date().toLocaleDateString()}</p>
-                            <p style="font-size: 11px; color: #555; margin: 2px 0 0 0;">Preferences Built: ${selectedChoices.length}</p>
-                        </div>
-                    </div>
-                    
-                    <h2 style="text-align: center; color: #111; font-size: 18px; margin-bottom: 20px; font-weight: 600; font-family: 'Inter', sans-serif;">My Counseling Preference List</h2>
-                    
-                    <table style="width: 100%; border-collapse: collapse; margin-bottom: 30px; font-size: 12px; font-family: 'Inter', sans-serif;">
-                        <thead>
-                            <tr style="background-color: #f7f7f7; border-bottom: 2px solid #e6e6e6;">
-                                <th style="padding: 10px; text-align: center; width: 8%; font-weight: 600; color: #000; border: 1px solid #e6e6e6;">Pref #</th>
-                                <th style="padding: 10px; text-align: left; width: 42%; font-weight: 600; color: #000; border: 1px solid #e6e6e6;">College Name</th>
-                                <th style="padding: 10px; text-align: center; width: 18%; font-weight: 600; color: #000; border: 1px solid #e6e6e6;">Branch</th>
-                                <th style="padding: 10px; text-align: left; width: 16%; font-weight: 600; color: #000; border: 1px solid #e6e6e6;">Allotment Quota</th>
-                                <th style="padding: 10px; text-align: left; width: 16%; font-weight: 600; color: #000; border: 1px solid #e6e6e6;">Fees</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            ${selectedChoices.map((choice, index) => `
-                                <tr style="border-bottom: 1px solid #e6e6e6; background-color: ${index % 2 === 0 ? '#ffffff' : '#fafafa'};">
-                                    <td style="padding: 12px 10px; text-align: center; font-weight: 700; border: 1px solid #e6e6e6; color: #0067b8;">${index + 1}</td>
-                                    <td style="padding: 12px 10px; text-align: left; font-weight: 600; border: 1px solid #e6e6e6; color: #222;">
-                                        ${choice.collegeName}
-                                        <div style="font-size: 9px; color: #666; font-weight: normal; margin-top: 3px;">Type: ${choice.type} | City: ${choice.shortName !== choice.collegeName ? choice.collegeName.split(',').pop().trim() : ''}</div>
-                                    </td>
-                                    <td style="padding: 12px 10px; text-align: center; border: 1px solid #e6e6e6; color: #333;">
-                                        <span style="background-color: #f0f0f0; padding: 2px 6px; border-radius: 2px; font-weight: 700; font-size: 11px;">${choice.branchCode}</span>
-                                    </td>
-                                    <td style="padding: 12px 10px; text-align: left; border: 1px solid #e6e6e6; font-size: 11px; color: #333;">${choice.seatType}</td>
-                                    <td style="padding: 12px 10px; text-align: left; border: 1px solid #e6e6e6; font-size: 11px; color: #555; font-weight: 500;">${choice.feesText}</td>
-                                </tr>
-                            `).join('')}
-                        </tbody>
-                    </table>
-                    
-                    <div style="margin-top: 30px; border-top: 1px solid #e6e6e6; padding-top: 15px; font-size: 10px; color: #666; line-height: 1.5; font-family: 'Inter', sans-serif;">
-                        <strong style="color: #333; display: block; margin-bottom: 4px;">Important Instructions for Counseling Choice-Locking:</strong>
-                        1. Lock choices on the official TG EAPCET web counseling registration portal exactly in this preference order.<br>
-                        2. Keep checking college fee revisions, as final fees are subject to TGCHE/AFRC regulations.<br>
-                        3. This document is a strategic reference guide only. No seat is legally guaranteed by this preference order alone.<br>
-                        <div style="text-align: center; margin-top: 25px; color: #999; font-size: 9px;">
-                            Generated via Famral TG EAPCET College Predictor
-                        </div>
-                    </div>
-                </div>
-            `;
+            const pageW = doc.internal.pageSize.getWidth();
+            const pageH = doc.internal.pageSize.getHeight();
+            const margin = 14;
+            const contentW = pageW - margin * 2;
 
-            // Configure html2pdf options
-            const opt = {
-                margin: 10,
-                filename: 'TG_EAPCET_Preference_List.pdf',
-                image: { type: 'jpeg', quality: 0.98 },
-                html2canvas: { scale: 2, useCORS: true, logging: false },
-                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-            };
+            // ── Helper: truncate text to fit a column width ──────────────────
+            function fitText(text, maxW, fontSize) {
+                doc.setFontSize(fontSize);
+                let t = String(text || '');
+                while (doc.getTextWidth(t) > maxW && t.length > 1) t = t.slice(0, -1);
+                return t.length < String(text || '').length ? t + '…' : t;
+            }
 
-            // Trigger export using html2pdf
-            html2pdf().from(element).set(opt).save().then(() => {
-                document.body.removeChild(element);
-                alert("Your custom preference list has been downloaded as a PDF!");
-            }).catch(err => {
-                document.body.removeChild(element);
-                console.error("PDF generation failed:", err);
-                alert("Failed to export PDF. Please copy the list manually.");
+            // ── HEADER BAND ──────────────────────────────────────────────────
+            doc.setFillColor(0, 103, 184);
+            doc.rect(0, 0, pageW, 22, 'F');
+
+            doc.setFont('helvetica', 'bold');
+            doc.setFontSize(16);
+            doc.setTextColor(255, 255, 255);
+            doc.text('Famral', margin, 10);
+
+            doc.setFont('helvetica', 'normal');
+            doc.setFontSize(8);
+            doc.text('TG EAPCET College Predictor', margin, 16);
+
+            const dateStr = new Date().toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' });
+            doc.setFontSize(8);
+            doc.text('Generated: ' + dateStr, pageW - margin, 10, { align: 'right' });
+            doc.text('Preferences: ' + selectedChoices.length, pageW - margin, 16, { align: 'right' });
+
+            // ── TITLE ────────────────────────────────────────────────────────
+            doc.setTextColor(17, 17, 17);
+            doc.setFont('helvetica', 'bold');
+            doc.setFontSize(13);
+            doc.text('My TG EAPCET Counseling Preference List', pageW / 2, 32, { align: 'center' });
+
+            // ── TABLE SETUP ──────────────────────────────────────────────────
+            // Column widths (mm) — must sum to contentW (≈182)
+            const cols = [
+                { label: '#', w: 10, align: 'center' },
+                { label: 'College Name', w: 74, align: 'left' },
+                { label: 'Branch', w: 28, align: 'center' },
+                { label: 'Quota', w: 38, align: 'left' },
+                { label: 'Admission Chance', w: 32, align: 'center' }
+            ];
+            const rowH = 12;   // row height mm
+            const headH = 9;    // header row height
+            const cellPad = 2.5;  // horizontal padding inside each cell
+
+            let y = 38; // starting Y
+
+            // Draw table header
+            doc.setFillColor(240, 243, 248);
+            doc.rect(margin, y, contentW, headH, 'F');
+            doc.setDrawColor(200, 210, 225);
+            doc.rect(margin, y, contentW, headH, 'S');
+
+            doc.setFont('helvetica', 'bold');
+            doc.setFontSize(8);
+            doc.setTextColor(30, 30, 30);
+
+            let cx = margin;
+            cols.forEach(col => {
+                const textX = col.align === 'center' ? cx + col.w / 2 : cx + cellPad;
+                doc.text(col.label, textX, y + headH - 2.5, { align: col.align === 'center' ? 'center' : 'left' });
+                doc.setDrawColor(200, 210, 225);
+                doc.line(cx + col.w, y, cx + col.w, y + headH);
+                cx += col.w;
             });
+
+            y += headH;
+
+            // ── TABLE ROWS ───────────────────────────────────────────────────
+            selectedChoices.forEach((choice, index) => {
+                // Page break check
+                if (y + rowH > pageH - 25) {
+                    doc.addPage();
+                    y = 15;
+                }
+
+                // Alternating row fill
+                if (index % 2 === 1) {
+                    doc.setFillColor(248, 250, 252);
+                    doc.rect(margin, y, contentW, rowH, 'F');
+                }
+
+                // Row border
+                doc.setDrawColor(218, 225, 235);
+                doc.rect(margin, y, contentW, rowH, 'S');
+
+                const midY = y + rowH / 2 + 1.5; // vertical centre of row text
+
+                cx = margin;
+
+                // Col 0: Pref #
+                doc.setFont('helvetica', 'bold');
+                doc.setFontSize(9);
+                doc.setTextColor(0, 103, 184);
+                doc.text(String(index + 1), cx + cols[0].w / 2, midY, { align: 'center' });
+                doc.line(cx + cols[0].w, y, cx + cols[0].w, y + rowH);
+                cx += cols[0].w;
+
+                // Col 1: College Name
+                doc.setFont('helvetica', 'bold');
+                doc.setFontSize(7.5);
+                doc.setTextColor(20, 20, 20);
+                const name = fitText(choice.collegeName, cols[1].w - cellPad * 2, 7.5);
+                doc.text(name, cx + cellPad, midY - 1.5);
+                doc.setFont('helvetica', 'normal');
+                doc.setFontSize(6);
+                doc.setTextColor(120, 120, 120);
+                doc.text(fitText((choice.type || '') + ' | ' + (choice.shortName || ''), cols[1].w - cellPad * 2, 6), cx + cellPad, midY + 2.5);
+                doc.setDrawColor(218, 225, 235);
+                doc.line(cx + cols[1].w, y, cx + cols[1].w, y + rowH);
+                cx += cols[1].w;
+
+                // Col 2: Branch
+                doc.setFont('helvetica', 'bold');
+                doc.setFontSize(7.5);
+                doc.setTextColor(40, 40, 40);
+                doc.text(fitText(choice.branchCode || '', cols[2].w - cellPad * 2, 7.5), cx + cols[2].w / 2, midY, { align: 'center' });
+                doc.setDrawColor(218, 225, 235);
+                doc.line(cx + cols[2].w, y, cx + cols[2].w, y + rowH);
+                cx += cols[2].w;
+
+                // Col 3: Quota / Seat Type
+                doc.setFont('helvetica', 'normal');
+                doc.setFontSize(7);
+                doc.setTextColor(50, 50, 50);
+                doc.text(fitText(choice.seatType || '', cols[3].w - cellPad * 2, 7), cx + cellPad, midY);
+                doc.setDrawColor(218, 225, 235);
+                doc.line(cx + cols[3].w, y, cx + cols[3].w, y + rowH);
+                cx += cols[3].w;
+
+                // Col 4: Admission Chance
+                const chanceVal = choice.chance || '';
+                let chanceR = 50, chanceG = 50, chanceB = 50;
+                if (chanceVal === 'High') { chanceR = 21; chanceG = 128; chanceB = 61; }
+                else if (chanceVal === 'Medium') { chanceR = 161; chanceG = 100; chanceB = 0; }
+                else if (chanceVal === 'Low') { chanceR = 185; chanceG = 28; chanceB = 28; }
+                doc.setFont('helvetica', 'bold');
+                doc.setFontSize(7.5);
+                doc.setTextColor(chanceR, chanceG, chanceB);
+                doc.text(chanceVal || '—', cx + cols[4].w / 2, midY, { align: 'center' });
+
+                y += rowH;
+            });
+
+            // ── FOOTER NOTE ──────────────────────────────────────────────────
+            if (y + 28 > pageH - 10) { doc.addPage(); y = 15; }
+            y += 6;
+            doc.setDrawColor(200, 210, 225);
+            doc.line(margin, y, pageW - margin, y);
+            y += 5;
+
+            doc.setFont('helvetica', 'bold');
+            doc.setFontSize(7);
+            doc.setTextColor(50, 50, 50);
+            doc.text('Important Instructions for Counseling Choice-Locking:', margin, y);
+            y += 4.5;
+
+            const notes = [
+                '1. Lock choices on the official TG EAPCET web counselling portal exactly in this preference order.',
+                '2. This document is a strategic reference guide only. No seat is legally guaranteed by this preference order alone.'
+            ];
+            doc.setFont('helvetica', 'normal');
+            doc.setFontSize(6.5);
+            doc.setTextColor(100, 100, 100);
+            notes.forEach(note => {
+                doc.text(note, margin, y);
+                y += 4;
+            });
+
+            // Page footer branding
+            doc.setFontSize(6);
+            doc.setTextColor(170, 170, 170);
+            doc.text('Generated via Famral TG EAPCET College Predictor — famral.com', pageW / 2, pageH - 6, { align: 'center' });
+
+            doc.save('TG_EAPCET_Preference_List.pdf');
+            alert('Your preference list has been downloaded as a PDF!');
         }
 
         // Toggle college options side-by-side comparison
