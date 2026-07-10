@@ -933,15 +933,13 @@
 
         /* Sub-navigation Navbar styling */
         .sub-navbar {
-            background: white;
+            background: #ffffff;
             border-bottom: 2px solid var(--border-color);
             position: -webkit-sticky;
             position: sticky;
             top: 58px;
             /* sits right below sticky main navbar */
             z-index: 999;
-            backdrop-filter: blur(10px);
-            background: rgba(255, 255, 255, 0.95);
             transition: top 0.3s ease;
         }
 
@@ -1096,7 +1094,8 @@
                 <img src="https://www.famral.com/image/rtu-kota.webp" alt="RTU Kota Logo" class="college-logo"
                     style="width: 100px; height: 100px; object-fit: contain; margin-bottom: 1.5rem; filter: drop-shadow(0 4px 12px rgba(0,0,0,0.4)); background: rgba(255,255,255,0.05); padding: 0.5rem; border-radius: 20%; border: 1px solid rgba(255,255,255,0.1);">
                 <h1>Rajasthan Technical University (RTU), Kota</h1>
-                <p>Rajasthan Technical University (RTU Kota) college profile, offered B.Tech branches, seat matrix, fees,
+                <p>Rajasthan Technical University (RTU Kota) college profile, offered B.Tech branches, seat matrix,
+                    fees,
                     expected cutoffs, and placements. Explore comprehensive admission criteria and closing thresholds.
                 </p>
             </div>
@@ -2260,6 +2259,7 @@
         // Sub-navigation active state highlighting on scroll
         const subNavLinks = document.querySelectorAll('.sub-nav-link');
         const sections = Array.from(subNavLinks).map(link => document.querySelector(link.getAttribute('href')));
+        const subNavScroll = document.querySelector('.sub-nav-scroll');
 
         const observerOptions = {
             root: null,
@@ -2267,19 +2267,36 @@
             threshold: 0
         };
 
+        let activeLinkId = '';
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const activeId = entry.target.getAttribute('id');
-                    subNavLinks.forEach(link => {
-                        if (link.getAttribute('href') === `#${activeId}`) {
-                            link.classList.add('active');
-                            // Smoothly scroll the sub-navbar row to keep active item visible
-                            link.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-                        } else {
-                            link.classList.remove('active');
-                        }
-                    });
+                    if (activeId !== activeLinkId) {
+                        activeLinkId = activeId;
+                        
+                        subNavLinks.forEach(link => {
+                            if (link.getAttribute('href') === `#${activeId}`) {
+                                link.classList.add('active');
+                                
+                                // Scroll the horizontal sub-navbar container only
+                                if (subNavScroll) {
+                                    const containerWidth = subNavScroll.clientWidth;
+                                    const linkLeft = link.offsetLeft;
+                                    const linkWidth = link.clientWidth;
+                                    const targetScrollLeft = linkLeft - (containerWidth / 2) + (linkWidth / 2);
+                                    
+                                    subNavScroll.scrollTo({
+                                        left: targetScrollLeft,
+                                        behavior: 'smooth'
+                                    });
+                                }
+                            } else {
+                                link.classList.remove('active');
+                            }
+                        });
+                    }
                 }
             });
         }, observerOptions);
