@@ -1,124 +1,123 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url>
-	<loc>https://www.famral.com/</loc>
-	<lastmod>2026-07-10T14:40:00+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://www.famral.com/college-predictor</loc>
-	<lastmod>2026-07-10T14:40:00+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://www.famral.com/cuet-college-predictor</loc>
-	<lastmod>2026-07-10T14:40:00+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://www.famral.com/reap-college-predictor</loc>
-	<lastmod>2026-07-10T14:40:00+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://www.famral.com/tg-eapcet-college-predictor</loc>
-	<lastmod>2026-07-10T14:40:00+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://www.famral.com/du-college-predictor</loc>
-	<lastmod>2026-07-10T14:40:00+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://www.famral.com/mp-dte-college-predictor</loc>
-	<lastmod>2026-07-10T14:40:00+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://www.famral.com/uptac-college-predictor</loc>
-	<lastmod>2026-07-10T14:40:00+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://www.famral.com/wbjee-college-predictor</loc>
-	<lastmod>2026-07-10T14:40:00+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://www.famral.com/hstes-college-predictor</loc>
-	<lastmod>2026-07-10T14:40:00+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://www.famral.com/acpc-college-predictor</loc>
-	<lastmod>2026-07-10T14:40:00+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://www.famral.com/aktu-college-predictor</loc>
-	<lastmod>2026-07-10T14:40:00+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://www.famral.com/dap-rajasthan-college-predictor</loc>
-	<lastmod>2026-07-10T14:40:00+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://www.famral.com/jeecup-college-predictor</loc>
-	<lastmod>2026-07-10T14:40:00+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://www.famral.com/college/rtu-kota</loc>
-	<lastmod>2026-07-10T14:40:00+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://www.famral.com/college/skit-jaipur</loc>
-	<lastmod>2026-07-10T14:40:00+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://www.famral.com/about</loc>
-	<lastmod>2026-07-10T14:40:00+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://www.famral.com/privacy</loc>
-	<lastmod>2026-07-10T14:40:00+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://www.famral.com/terms</loc>
-	<lastmod>2026-07-10T14:40:00+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://www.famral.com/contact</loc>
-	<lastmod>2026-07-10T14:40:00+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://www.famral.com/tnea-college-predictor</loc>
-	<lastmod>2026-07-10T14:40:01+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://www.famral.com/ap-eapcet-college-predictor</loc>
-	<lastmod>2026-07-10T14:40:01+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://www.famral.com/ojee-college-predictor</loc>
-	<lastmod>2026-07-10T14:40:01+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://www.famral.com/jac-chandigarh-college-predictor</loc>
-	<lastmod>2026-07-10T14:40:01+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
+  <url>
+    <loc>https://www.famral.com/</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.famral.com/college-predictor</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.famral.com/cuet-college-predictor</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.famral.com/reap-college-predictor</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.famral.com/tg-eapcet-college-predictor</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.famral.com/du-college-predictor</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.famral.com/mp-dte-college-predictor</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.famral.com/uptac-college-predictor</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.famral.com/wbjee-college-predictor</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.famral.com/hstes-college-predictor</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.famral.com/acpc-college-predictor</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.famral.com/aktu-college-predictor</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.famral.com/dap-rajasthan-college-predictor</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.famral.com/jeecup-college-predictor</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.famral.com/college/rtu-kota</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.famral.com/college/skit-jaipur</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.famral.com/about</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.famral.com/privacy</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.famral.com/terms</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.famral.com/contact</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.famral.com/tnea-college-predictor</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.famral.com/ap-eapcet-college-predictor</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.famral.com/ojee-college-predictor</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.famral.com/jac-chandigarh-college-predictor</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.9</priority>
+  </url>
 </urlset>
