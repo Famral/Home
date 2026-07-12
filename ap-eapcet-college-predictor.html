@@ -48,7 +48,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7876432493491415"
         crossorigin="anonymous"></script>
 
@@ -62,6 +61,16 @@
         gtag('config', 'G-H57NCR0QYN');
     </script>
 
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+    <script>
+        window.OneSignalDeferred = window.OneSignalDeferred || [];
+        OneSignalDeferred.push(async function (OneSignal) {
+            await OneSignal.init({
+                appId: "72462423-a0fd-4ef3-9cf5-a279f6e03553",
+            });
+        });
+    </script>
+    
     <!-- Schema.org Markup -->
     <script type="application/ld+json">
     {
