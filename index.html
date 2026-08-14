@@ -1,3 +1,4 @@
+
 <!-- Coping code from this website is illegal and punishable by law. Do not copy or reproduce any code from this website without permission.  -->
 
 <!DOCTYPE html>
@@ -481,6 +482,30 @@
       font-size: 0.875rem;
     }
 
+    .footer-bottom-links {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      flex-wrap: wrap;
+      color: var(--text-light);
+      font-size: 0.875rem;
+    }
+
+    .footer-bottom-links a {
+      color: var(--text-light);
+      text-decoration: none;
+    }
+
+    .footer-bottom-links a:hover {
+      color: var(--text-dark);
+      text-decoration: underline;
+    }
+
+    .footer-bottom-links .sep {
+      margin: 0 0.5rem;
+      color: var(--text-light);
+    }
+
     .back-to-top {
       color: var(--text-dark);
       font-weight: 600;
@@ -666,6 +691,79 @@
 
       .hero h1 {
         font-size: 2rem;
+      }
+    }
+
+    /* Extra small screens (phones) */
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 4%;
+      }
+
+      .hero {
+        padding: 2.25rem 1rem;
+      }
+
+      .hero h1 {
+        font-size: 1.5rem;
+        line-height: 1.3;
+      }
+
+      .hero p {
+        font-size: 0.95rem;
+      }
+
+      .nav-logo {
+        font-size: 1rem;
+        gap: 0.5rem;
+      }
+
+      .nav-logo img {
+        width: 24px;
+        height: 24px;
+      }
+
+      .services-list {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .service-box {
+        padding: 1rem;
+      }
+
+      h2 {
+        font-size: 1.25rem;
+      }
+
+      .footer-links-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0.5rem;
+      }
+
+      .footer-bottom-links {
+        justify-content: center;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      .btn {
+        width: 100%;
+        padding: 0.625rem 0.75rem;
+      }
+
+      .nav-links-wrapper {
+        padding: 0.75rem 1rem;
       }
     }
   </style>
@@ -1000,6 +1098,18 @@
             </ul>
           </div>
           <div>
+            <h4>Rank Predictor</h4>
+            <ul>
+                <li><a href="/mht-cet-rank-predictor">MHT-CET Rank Predictor</a></li>
+                <li><a href="/keam-rank-predictor">KEAM Rank Predictor</a></li>
+                <li><a href="/tnea-rank-predictor">TNEA Rank Predictor</a></li>
+                <li><a href="/wbjee-rank-predictor">WBJEE Rank Predictor</a></li>
+                <li><a href="/reap-rank-predictor">REAP Rank Predictor</a></li>
+                <li><a href="/comedk-rank-predictor">COMEDK Rank Predictor</a></li>
+                <li><a href="/ap-eapcet-rank-predictor">AP EAPCET Rank Predictor</a></li>
+            </ul>
+          </div>
+          <div>
             <h4>Colleges</h4>
             <ul>
               <li><a href="/college/rtu-kota">RTU Kota</a></li>
@@ -1014,26 +1124,27 @@
             <ul>
               <li><a href="https://jeecounselling.com/jee-main">JEE Main 2027</a></li>
               <li><a href="https://jeecounselling.com/jee-advanced">JEE Advanced 2027</a></li>
-              <li><a href="https://jeerankpredictor.com/">JEE Predictor 2027</a></li>
+              <li><a href="https://jeerankpredictor.com/">JEE Rank Predictor</a></li>
               <li><a href="https://mpdtecounselling.in/">MP DTE Counselling</a></li>
-              <li><a href="https://jacchandigarh.in/">JAC Chandigarh</a></li>
               <li><a href="https://acpccounselling.com/">ACPC Counselling</a></li>
+              <li><a href="https://jacchandigarh.in/">JAC Chandigarh</a></li>
               <li><a href="https://rtuonline.in/">RTU Online</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4>About Us</h4>
-            <ul>
-              <li><a href="/about">About Us</a></li>
-              <li><a href="/privacy">Privacy Policy</a></li>
-              <li><a href="/terms">Terms & Conditions</a></li>
-              <li><a href="/contact">Contact Us</a></li>
+              <li><a href="https://tools.famral.com/">Online Utilities</a></li>
             </ul>
           </div>
         </div>
 
         <div class="footer-content">
           <p>&copy; <span id="current-year"></span> Famral. All Rights Reserved.</p>
+          <div class="footer-bottom-links">
+            <a href="/about">About Us</a>
+            <span class="sep">|</span>
+            <a href="/privacy">Privacy Policy</a>
+            <span class="sep">|</span>
+            <a href="/terms">Terms &amp; Conditions</a>
+            <span class="sep">|</span>
+            <a href="/contact">Contact Us</a>
+          </div>
           <p><a href="#" class="back-to-top">Back to Top <i class="fas fa-arrow-up"></i></a></p>
         </div>
       </div>
@@ -1091,9 +1202,6 @@
       // Update the copyright year automatically
       document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
-
-
-
 
 </body>
 
