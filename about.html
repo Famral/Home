@@ -2,30 +2,30 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us | Famral</title>
-  <meta name="description"
-    content="Famral is an education technology platform dedicated to helping students make informed college admission decisions through accurate prediction tools and reliable counselling resources.">
-  <meta name="keywords"
-    content="college predictor, college counselling, college admission, jee college predictor, famral college predictor">
-  <link rel="icon" type="image/png" href="./favicon.png">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | Famral – India's Free College Admission Platform</title>
+    <meta name="description"
+        content="Learn about Famral – India's trusted education technology platform helping students make informed college admission decisions with accurate college predictors, rank predictors, and free counselling tools.">
+    <meta name="keywords"
+        content="about famral, college predictor, college counselling, college admission, jee college predictor, famral college predictor, education technology india">
+    <link rel="icon" type="image/png" href="./favicon.png">
 
-  <!-- SEO & Social Tags -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.famral.com/about" />
-  <meta property="og:title" content="About Us | Famral" />
-  <meta property="og:description"
-    content="Famral is an education technology platform dedicated to helping students make informed college admission decisions through accurate prediction tools and reliable counselling resources." />
-  <meta property="og:image" content="https://www.famral.com/favicon.png" />
-  <meta name="twitter:card" content="summary_large_image" />
+    <!-- SEO & Social Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.famral.com/about" />
+    <meta property="og:title" content="About Us | Famral – India's Free College Admission Platform" />
+    <meta property="og:description"
+        content="Learn about Famral – India's trusted education technology platform helping students make informed college admission decisions with accurate college predictors, rank predictors, and free counselling tools." />
+    <meta property="og:image" content="https://www.famral.com/favicon.png" />
+    <meta name="twitter:card" content="summary_large_image" />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
     <script>
         window.OneSignalDeferred = window.OneSignalDeferred || [];
@@ -35,387 +35,1144 @@
             });
         });
     </script>
-  <!-- Enhanced Design Styles -->
-  <style>
-    /* Reset & Base Styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    <!-- Schema.org Markup -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About Famral",
+    "url": "https://www.famral.com/about",
+    "description": "Famral is an education technology platform dedicated to helping students make informed college admission decisions through accurate prediction tools and reliable counselling resources.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Famral",
+      "url": "https://www.famral.com/",
+      "logo": "https://www.famral.com/favicon.png"
     }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      color: var(--text-dark);
-      line-height: 1.6;
-      background-color: #fff;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    ul {
-      list-style: none;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    /* Variables */
-    :root {
-      --primary-color: #0067b8;
-      --text-dark: #000000;
-      --text-light: #505050;
-      --border-color: #e6e6e6;
-      --surface-color: #f2f2f2;
-    }
-
-    /* Layout Utilities */
-    .container {
-      max-width: 1260px;
-      margin: 0 auto;
-      padding: 0 5%;
-    }
-
-    /* Navbar Main Styles */
-    .navbar {
-      background: white;
-      border-bottom: 1px solid var(--border-color);
-      padding: 0.75rem 0;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .nav-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
-
-    .nav-logo {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      font-weight: 700;
-      font-size: 1.25rem;
-      color: var(--text-dark);
-    }
-
-    .nav-links-wrapper {
-      display: flex;
-      gap: 2rem;
-      align-items: center;
-    }
-
-    .nav-toggle {
-      display: none;
-      background: none;
-      border: none;
-      font-size: 1.5rem;
-      color: var(--text-dark);
-      cursor: pointer;
-      padding: 0.5rem;
-    }
-
-    /* Hero Section */
-    .hero {
-      text-align: left;
-      padding: 5rem 1rem;
-      background: var(--surface-color);
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      line-height: 1.2;
-      margin-bottom: 1rem;
-      color: var(--text-dark);
-      font-weight: 600;
-    }
-
-    .hero p {
-      font-size: 1.125rem;
-      color: var(--text-light);
-      max-width: 700px;
-      margin: 0 0 2rem;
-    }
-
-    .hero-buttons {
-      display: flex;
-      gap: 1rem;
-      justify-content: flex-start;
-      margin-top: 1.5rem;
-    }
-
-    /* Typography */
-    h2 {
-      font-size: 2rem;
-      text-align: left;
-      margin-bottom: 2rem;
-      color: var(--text-dark);
-      font-weight: 600;
-    }
-
-    p {
-      color: var(--text-light);
-    }
-
-    /* Buttons */
-    .btn {
-      padding: 0.625rem 1.5rem;
-      border-radius: 2px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: background-color 0.2s;
-      display: inline-block;
-      font-size: 0.95rem;
-    }
-
-    .btn-primary {
-      background-color: var(--primary-color);
-      color: white;
-      border: 2px solid transparent;
-    }
-
-    .btn-secondary {
-      background-color: transparent;
-      color: var(--text-dark);
-      border: 2px solid var(--border-color);
-    }
-
-    .btn:hover {
-      transform: none;
-      box-shadow: none;
-    }
-
-    .btn-primary:hover {
-      background-color: #005da6;
-    }
-
-    .btn-secondary:hover {
-      background-color: rgba(0, 0, 0, 0.05);
-    }
-
-    /* Footer */
-    .site-footer {
-      background-color: var(--surface-color);
-      padding: 4rem 0 2rem;
-      border-top: none;
-      margin-top: auto;
-    }
-
-    .footer-links-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 3rem;
-      margin-bottom: 3rem;
-    }
-
-    .footer-links-grid h4 {
-      margin-bottom: 1rem;
-      font-size: 1rem;
-      color: var(--text-dark);
-      font-weight: 600;
-      text-transform: none;
-      letter-spacing: normal;
-    }
-
-    .footer-links-grid ul li {
-      margin-bottom: 0.75rem;
-    }
-
-    .footer-links-grid a {
-      color: var(--text-light);
-      transition: color 0.2s;
-      font-size: 0.875rem;
-    }
-
-    .footer-links-grid a:hover {
-      color: var(--text-dark);
-      text-decoration: underline;
-    }
-
-    .footer-content {
-      border-top: 1px solid var(--border-color);
-      padding-top: 2rem;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1rem;
-      color: var(--text-light);
-      font-size: 0.875rem;
-    }
-
-    .back-to-top {
-      color: var(--text-dark);
-      font-weight: 600;
-    }
-
-    /* Navbar Dropdown & Mega Menu Styles */
-    .nav-item.dropdown {
-      position: relative;
-    }
-
-    .nav-link {
-      background: none;
-      border: none;
-      cursor: pointer;
-      font-family: inherit;
-      font-size: 0.95rem;
-      color: var(--text-dark);
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.5rem 1rem;
-      font-weight: 500;
-      transition: background-color 0.2s;
-      border-radius: 2px;
-      text-decoration: none;
-    }
-
-    .nav-link:hover {
-      background-color: var(--surface-color);
-      color: var(--text-dark);
-    }
-
-    .dropdown-menu {
-      display: none;
-      position: absolute;
-      top: calc(100% + 0.5rem);
-      right: 0;
-      left: auto;
-      background: white;
-      border: 1px solid var(--border-color);
-      border-radius: 2px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      z-index: 100;
-      min-width: 240px;
-      animation: fadeIn 0.1s ease-out;
-    }
-
-    .dropdown-menu.show {
-      display: block;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(5px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .mega-column h4 {
-      color: var(--text-dark);
-      font-size: 0.875rem;
-      font-weight: 600;
-      margin-bottom: 0.75rem;
-      padding-left: 0.75rem;
-    }
-
-    .mega-column a {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      color: var(--text-light);
-      text-decoration: none;
-      padding: 0.5rem 0.75rem;
-      border-radius: 2px;
-      transition: all 0.1s;
-      font-size: 0.9rem;
-    }
-
-    .mega-column a:hover {
-      background-color: var(--surface-color);
-      color: var(--text-dark);
-      transform: none;
-      text-decoration: underline;
-    }
-
-    .mega-column a i {
-      width: 20px;
-      text-align: center;
-      color: var(--primary-color);
-      transition: none;
-    }
-
-    .mega-column a:hover i {
-      color: var(--primary-color);
-    }
-
-    @media (max-width: 768px) {
-      .dropdown-menu {
-        position: static;
-        animation: none;
-      }
-
-      .mega-column h4 {
-        margin-top: 1rem;
-      }
-
-      /* Mobile Nav Toggle Logic */
-      .nav-toggle {
-        display: block;
-      }
-
-      .nav-links-wrapper {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: white;
-        flex-direction: column;
-        padding: 1rem;
-        border-bottom: 1px solid var(--border-color);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-        align-items: flex-start;
-        gap: 0.5rem;
-      }
-
-      .nav-links-wrapper.active {
-        display: flex;
-      }
-
-      .nav-link {
-        width: 100%;
-        justify-content: space-between;
-      }
-
-      .hero h1 {
-        font-size: 2rem;
-      }
-    }
-  </style>
-
-
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7876432493491415"
-    crossorigin="anonymous"></script>
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H57NCR0QYN"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-H57NCR0QYN');
+  }
   </script>
 
+    <style>
+        /* ── Reset & Base ── */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  <!-- Schema.org Markup -->
-  <script type="application/ld+json">
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #111;
+            line-height: 1.6;
+            background: #fff;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* ── Variables ── */
+        :root {
+            --blue: #0067b8;
+            --blue-dark: #005296;
+            --blue-light: #e8f1fb;
+            --text: #111111;
+            --muted: #505050;
+            --border: #e6e6e6;
+            --surface: #f2f2f2;
+            /* legacy aliases kept for any other pages referencing them */
+            --primary-color: #0067b8;
+            --text-dark: #111111;
+            --text-light: #505050;
+            --border-color: #e6e6e6;
+            --surface-color: #f2f2f2;
+        }
+
+        /* ── Layout ── */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+
+        /* ── Navbar ── */
+        .navbar {
+            background: #fff;
+            border-bottom: 1px solid var(--border);
+            padding: 0.75rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--text);
+        }
+
+        .nav-links-wrapper {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text);
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .nav-link {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 0.95rem;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            font-weight: 500;
+            border-radius: 2px;
+            text-decoration: none;
+            transition: background 0.15s;
+        }
+
+        .nav-link:hover {
+            background: var(--surface);
+        }
+
+        .nav-link.active {
+            color: var(--blue);
+        }
+
+        /* ── Breadcrumb ── */
+        .breadcrumb {
+            padding: 0.65rem 0;
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+            font-size: 0.84rem;
+            color: var(--muted);
+        }
+
+        .breadcrumb a {
+            color: var(--blue);
+        }
+
+        .breadcrumb span {
+            margin: 0 0.4rem;
+        }
+
+        /* ── Hero ── */
+        .hero {
+            background: var(--surface);
+            padding: 4.5rem 1rem 4rem;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--blue-light);
+            color: var(--blue);
+            border: 1px solid #c5dcf5;
+            border-radius: 99px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            padding: 0.35rem 1rem;
+            margin-bottom: 1.25rem;
+            letter-spacing: 0.02em;
+        }
+
+        .hero h1 {
+            font-size: clamp(1.9rem, 5vw, 3rem);
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero h1 span {
+            color: var(--blue);
+        }
+
+        .hero p {
+            font-size: 1.08rem;
+            color: var(--muted);
+            max-width: 720px;
+            margin: 0 auto 2rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* ── Buttons ── */
+        .btn {
+            padding: 0.65rem 1.6rem;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: background 0.2s;
+            cursor: pointer;
+            border: 2px solid transparent;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: var(--blue);
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background: var(--blue-dark);
+        }
+
+        .btn-secondary {
+            background: #fff;
+            color: var(--text);
+            border-color: var(--border);
+        }
+
+        .btn-secondary:hover {
+            background: var(--surface);
+        }
+
+        .btn-white {
+            background: #fff;
+            color: var(--blue);
+            font-weight: 700;
+        }
+
+        .btn-white:hover {
+            background: #f0f0f0;
+        }
+
+        .btn-outline-white {
+            background: transparent;
+            color: #fff;
+            border: 2px solid rgba(255, 255, 255, 0.6);
+        }
+
+        .btn-outline-white:hover {
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        /* ── Stats Bar ── */
+        .stats-bar {
+            background: #fff;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 2rem 1rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 0.5rem;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 1rem;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--blue);
+            display: block;
+            line-height: 1.1;
+        }
+
+        .stat-label {
+            font-size: 0.82rem;
+            color: var(--muted);
+            margin-top: 0.3rem;
+            display: block;
+        }
+
+        /* ── Sections ── */
+        section {
+            padding: 4rem 1rem;
+        }
+
+        .section-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--blue);
+            margin-bottom: 0.4rem;
+            display: block;
+        }
+
+        h2 {
+            font-size: clamp(1.4rem, 3vw, 1.9rem);
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 0.75rem;
+            line-height: 1.25;
+        }
+
+        .section-desc {
+            font-size: 0.97rem;
+            color: var(--muted);
+            max-width: 600px;
+            margin-bottom: 2.5rem;
+        }
+
+        p {
+            color: var(--muted);
+        }
+
+        /* ── Mission / Vision ── */
+        .mv-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .mv-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 2.25rem 2rem;
+        }
+
+        .mv-card .icon-wrap {
+            width: 48px;
+            height: 48px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            margin-bottom: 1.1rem;
+        }
+
+        .mv-card.mission .icon-wrap {
+            background: var(--blue-light);
+            color: var(--blue);
+        }
+
+        .mv-card.vision .icon-wrap {
+            background: #edf7ee;
+            color: #1d8a37;
+        }
+
+        .mv-card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            color: var(--text);
+        }
+
+        .mv-card p {
+            font-size: 0.93rem;
+            color: var(--muted);
+            line-height: 1.7;
+        }
+
+        /* ── Features Grid ── */
+        .features-section {
+            background: var(--surface);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 1.1rem;
+        }
+
+        .feature-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.6rem;
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+
+        .feature-card:hover {
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            transform: translateY(-2px);
+        }
+
+        .feature-card .f-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 8px;
+            background: var(--blue-light);
+            color: var(--blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.05rem;
+            margin-bottom: 0.9rem;
+        }
+
+        .feature-card h3 {
+            font-size: 0.97rem;
+            font-weight: 700;
+            margin-bottom: 0.45rem;
+            color: var(--text);
+        }
+
+        .feature-card p {
+            font-size: 0.86rem;
+            color: var(--muted);
+            line-height: 1.65;
+        }
+
+        /* ── How It Works ── */
+        .hiw-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+            gap: 1.25rem;
+            counter-reset: step-counter;
+        }
+
+        .hiw-step {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: #fff;
+        }
+
+        .hiw-step::before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
+            display: block;
+            width: 38px;
+            height: 38px;
+            line-height: 38px;
+            border-radius: 50%;
+            background: var(--blue);
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin: 0 auto 0.9rem;
+        }
+
+        .hiw-step h3 {
+            font-size: 0.93rem;
+            font-weight: 700;
+            margin-bottom: 0.4rem;
+            color: var(--text);
+        }
+
+        .hiw-step p {
+            font-size: 0.83rem;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        /* ── Coverage Strip ── */
+        .coverage-strip {
+            background: var(--blue);
+            color: #fff;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        .coverage-strip h2 {
+            color: #fff;
+            margin-bottom: 0.75rem;
+        }
+
+        .coverage-strip p {
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 580px;
+            margin: 0 auto 1.5rem;
+        }
+
+        .exam-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.55rem;
+            justify-content: center;
+            margin-top: 1.5rem;
+        }
+
+        .exam-tag {
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #fff;
+            padding: 0.28rem 0.8rem;
+            border-radius: 99px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        /* ── Values ── */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 1.4rem;
+        }
+
+        .value-card {
+            padding: 1.6rem;
+            border-left: 3px solid var(--blue);
+            background: var(--surface);
+            border-radius: 0 8px 8px 0;
+        }
+
+        .value-card h3 {
+            font-size: 0.97rem;
+            font-weight: 700;
+            margin-bottom: 0.45rem;
+            color: var(--text);
+        }
+
+        .value-card p {
+            font-size: 0.85rem;
+            color: var(--muted);
+            line-height: 1.65;
+        }
+
+        /* ── Testimonials ── */
+        .testimonials-section {
+            background: var(--surface);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.1rem;
+        }
+
+        .testimonial-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.6rem;
+        }
+
+        .stars {
+            color: #f59e0b;
+            font-size: 0.88rem;
+            margin-bottom: 0.7rem;
+            letter-spacing: 1px;
+        }
+
+        .testimonial-card blockquote {
+            font-size: 0.88rem;
+            color: var(--muted);
+            line-height: 1.7;
+            margin-bottom: 1.1rem;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+        }
+
+        .author-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: var(--blue-light);
+            color: var(--blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.88rem;
+            flex-shrink: 0;
+        }
+
+        .author-name {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .author-info {
+            font-size: 0.76rem;
+            color: var(--muted);
+        }
+
+        /* ── FAQ ── */
+        .faq-list {
+            max-width: 780px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            margin-bottom: 0.65rem;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            background: #fff;
+            border: none;
+            padding: 1rem 1.3rem;
+            text-align: left;
+            font-family: inherit;
+            font-size: 0.93rem;
+            font-weight: 600;
+            color: var(--text);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            transition: background 0.15s;
+        }
+
+        .faq-question:hover {
+            background: var(--surface);
+        }
+
+        .faq-question .faq-icon {
+            font-size: 0.82rem;
+            color: var(--blue);
+            transition: transform 0.25s;
+            flex-shrink: 0;
+        }
+
+        .faq-question[aria-expanded="true"] .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 0 1.3rem 1.1rem;
+            font-size: 0.88rem;
+            color: var(--muted);
+            line-height: 1.7;
+            background: #fff;
+        }
+
+        .faq-answer.open {
+            display: block;
+        }
+
+        /* ── CTA Banner ── */
+        .cta-banner {
+            background: linear-gradient(135deg, #0067b8 0%, #0050a0 100%);
+            padding: 3.5rem 1rem;
+            text-align: center;
+            color: #fff;
+        }
+
+        .cta-banner h2 {
+            color: #fff;
+            font-size: clamp(1.35rem, 3vw, 1.85rem);
+            margin-bottom: 0.75rem;
+        }
+
+        .cta-banner p {
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 540px;
+            margin: 0 auto 2rem;
+            font-size: 0.97rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* ── Footer ── */
+        .site-footer {
+            background: var(--surface);
+            padding: 4rem 0 2rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-links-grid h4 {
+            margin-bottom: 1rem;
+            font-size: 0.93rem;
+            color: var(--text);
+            font-weight: 700;
+        }
+
+        .footer-links-grid ul li {
+            margin-bottom: 0.6rem;
+        }
+
+        .footer-links-grid a {
+            color: var(--muted);
+            font-size: 0.875rem;
+            transition: color 0.2s;
+        }
+
+        .footer-links-grid a:hover {
+            color: var(--text);
+            text-decoration: underline;
+        }
+
+        .footer-content {
+            border-top: 1px solid var(--border);
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            color: var(--muted);
+            font-size: 0.875rem;
+        }
+
+        .back-to-top {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        /* ── Dropdown ── */
+        .nav-item.dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: calc(100% + 0.5rem);
+            right: 0;
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            z-index: 100;
+            min-width: 220px;
+            animation: fadeIn 0.1s ease-out;
+        }
+
+        .dropdown-menu.show {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(5px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .mega-column a {
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+            color: var(--muted);
+            padding: 0.55rem 1rem;
+            font-size: 0.9rem;
+            transition: all 0.1s;
+        }
+
+        .mega-column a:hover {
+            background: var(--surface);
+            color: var(--text);
+        }
+
+        .mega-column a i {
+            width: 18px;
+            text-align: center;
+            color: var(--blue);
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 768px) {
+            section {
+                padding: 2.75rem 1rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            .nav-toggle {
+                display: block;
+            }
+
+            .nav-links-wrapper {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #fff;
+                flex-direction: column;
+                padding: 1rem;
+                border-bottom: 1px solid var(--border);
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+                align-items: stretch;
+                gap: 0.5rem;
+                z-index: 1001;
+            }
+
+            .nav-links-wrapper.active {
+                display: flex;
+            }
+
+            .nav-link {
+                width: 100%;
+                justify-content: flex-start;
+                padding: 0.65rem 0.9rem;
+            }
+
+            .dropdown-menu {
+                position: static;
+                animation: none;
+                min-width: 100%;
+                box-shadow: none;
+                border: 1px solid var(--border);
+                background: var(--surface);
+            }
+
+            .hero {
+                padding: 3rem 1rem 2.5rem;
+            }
+
+            .hero h1 {
+                font-size: 1.85rem;
+            }
+
+            .hero p {
+                font-size: 0.96rem;
+                margin-bottom: 1.6rem;
+            }
+
+            .hero-buttons {
+                gap: 0.75rem;
+            }
+
+            .stats-bar {
+                padding: 1.5rem 0.5rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+                gap: 0.75rem;
+            }
+
+            .stat-number {
+                font-size: 1.75rem;
+            }
+
+            .stat-item {
+                padding: 0.75rem 0.25rem;
+            }
+
+            .mv-grid {
+                grid-template-columns: 1fr;
+                gap: 1.25rem;
+            }
+
+            .mv-card {
+                padding: 1.6rem 1.35rem;
+            }
+
+            .features-grid {
+                grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+                gap: 1rem;
+            }
+
+            .feature-card {
+                padding: 1.35rem 1.2rem;
+            }
+
+            .hiw-steps {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .hiw-step {
+                padding: 1.5rem 1.1rem;
+            }
+
+            .coverage-strip {
+                padding: 2.5rem 1rem;
+            }
+
+            .exam-tags {
+                gap: 0.45rem;
+            }
+
+            .exam-tag {
+                font-size: 0.76rem;
+                padding: 0.25rem 0.65rem;
+            }
+
+            .values-grid {
+                grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+                gap: 1rem;
+            }
+
+            .value-card {
+                padding: 1.35rem 1.2rem;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .testimonial-card {
+                padding: 1.35rem 1.2rem;
+            }
+
+            .faq-question {
+                padding: 0.9rem 1.1rem;
+                font-size: 0.9rem;
+            }
+
+            .faq-answer {
+                padding: 0 1.1rem 1rem;
+                font-size: 0.86rem;
+            }
+
+            .cta-banner {
+                padding: 2.75rem 1rem;
+            }
+
+            .cta-buttons {
+                gap: 0.75rem;
+            }
+
+            .site-footer {
+                padding: 3rem 0 1.75rem;
+            }
+
+            .footer-links-grid {
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+                gap: 2rem;
+                margin-bottom: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            html,
+            body {
+                font-size: 15px;
+            }
+
+            section {
+                padding: 2.25rem 0.75rem;
+            }
+
+            .container {
+                padding: 0 0.85rem;
+            }
+
+            .nav-container {
+                padding: 0 1rem;
+            }
+
+            .nav-logo {
+                font-size: 1.15rem;
+            }
+
+            .hero {
+                padding: 2.25rem 0.75rem 2rem;
+            }
+
+            .hero-badge {
+                font-size: 0.75rem;
+                padding: 0.3rem 0.75rem;
+            }
+
+            .hero h1 {
+                font-size: 1.55rem;
+                line-height: 1.25;
+            }
+
+            .hero p {
+                font-size: 0.9rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                width: 100%;
+                max-width: 320px;
+                margin: 0 auto;
+            }
+
+            .hero-buttons .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .stats-bar {
+                padding: 1.25rem 0.5rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.5rem;
+            }
+
+            .stats-grid .stat-item:last-child {
+                grid-column: span 2;
+            }
+
+            .stat-number {
+                font-size: 1.6rem;
+            }
+
+            .stat-label {
+                font-size: 0.78rem;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+
+            .section-desc {
+                font-size: 0.88rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .mv-card {
+                padding: 1.35rem 1.1rem;
+            }
+
+            .mv-card h3 {
+                font-size: 1.1rem;
+            }
+
+            .mv-card p {
+                font-size: 0.88rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hiw-steps {
+                grid-template-columns: 1fr;
+                gap: 0.85rem;
+            }
+
+            .hiw-step {
+                padding: 1.35rem 1rem;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .value-card {
+                padding: 1.2rem 1rem;
+            }
+
+            .testimonial-card {
+                padding: 1.2rem 1rem;
+            }
+
+            .testimonial-card blockquote {
+                font-size: 0.84rem;
+            }
+
+            .cta-banner {
+                padding: 2.25rem 0.75rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                width: 100%;
+                max-width: 320px;
+                margin: 0 auto;
+            }
+
+            .cta-buttons .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .footer-links-grid {
+                grid-template-columns: 1fr;
+                gap: 1.75rem;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+                gap: 0.75rem;
+            }
+        }
+    </style>
+
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7876432493491415"
+        crossorigin="anonymous"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H57NCR0QYN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-H57NCR0QYN');
+    </script>
+
+
+    <!-- Schema.org Markup -->
+    <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -434,159 +1191,605 @@
 
 <body>
 
-  <nav class="navbar">
-    <div class="nav-container">
-      <!-- Logo -->
-      <a href="https://www.famral.com/" class="nav-logo">
-        <img src="https://www.famral.com/favicon.png" alt="Famral Logo" width="32" height="32">
-        Famral
-      </a>
-
-      <!-- Mobile Menu Toggle Button -->
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
-        <i class="fas fa-bars"></i>
-      </button>
-
-      <!-- Navigation Links -->
-      <div class="nav-links-wrapper" id="navLinks">
-        <a href="/" class="nav-link">Home</a>
-        <a href="/college-predictor" class="nav-link">College Predictor</a>
-        <a href="/rank-predictor" class="nav-link">Rank Predictor</a>
-        <a href="/percentile-predictor" class="nav-link">Percentile Predictor</a>
-      </div>
-    </div>
-  </nav>
-
-
-
-  <main>
-    <!-- About Us Hero Section -->
-    <section class="hero" style="text-align: center; padding: 6rem 1rem;">
-      <div class="container">
-        <h1 style="font-size: 3rem; color: var(--text-dark); margin-bottom: 1rem;">About Us</h1>
-        <p style="margin: 0 auto 2rem; max-width: 800px; font-size: 1.125rem;">Famral is an education technology platform dedicated to helping students make informed college admission decisions through accurate prediction tools and reliable counselling resources. We specialize in college predictors, rank predictors, cutoff analysis, counselling updates, and admission guidance for engineering, university, and professional courses across India. Our platform combines historical admission data with intelligent algorithms to provide personalized insights that help students choose the right college with confidence.</p>
-      </div>
-    </section>
-
-    <!-- Mission & Vision Section -->
-    <section style="padding: 4rem 1rem; background-color: white;">
-      <div class="container" style="max-width: 800px; margin: 0 auto;">
-        <h2 style="text-align: center; margin-bottom: 2rem;">Our Mission</h2>
-        <p style="margin-bottom: 1.5rem; text-align: center;">Our mission is to make college admissions simple, transparent, and accessible for every student. We aim to eliminate uncertainty during the counselling process by providing highly accurate college prediction tools, up-to-date admission information, and practical guidance that empowers students to make the best academic decisions.</p>
-        <p style="margin-bottom: 1.5rem; text-align: center;">At Famral, we are constantly expanding our platform with new prediction tools, advanced analytics, and comprehensive counselling resources to support students across India. By combining technology, data, and a student-first approach, we strive to become the most trusted destination for college counselling, admission insights, and educational decision-making.</p>
-      </div>
-    </section>
-  </main>
-
-
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container">
-
-      <!-- Footer Links Section -->
-      <div class="footer-links-grid">
-        <div>
-          <h4>Popular College Predictor</h4>
-            <ul>
-              <li><a href="/cuet-college-predictor">CUET College Predictor</a></li>
-              <li><a href="/reap-college-predictor">REAP College Predictor</a></li>
-              <li><a href="/mp-dte-college-predictor">MP DTE College Predictor</a></li>
-              <li><a href="/uptac-college-predictor">UPTAC College Predictor</a></li>
-              <li><a href="/wbjee-college-predictor">WBJEE College Predictor</a></li>
-            </ul>
+    <!-- ══ NAVBAR ══ -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="https://www.famral.com/" class="nav-logo">
+                <img src="https://www.famral.com/favicon.png" alt="Famral Logo" width="32" height="32">
+                Famral
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-links-wrapper" id="navLinks">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/college-predictor" class="nav-link">College Predictor</a>
+                <a href="/rank-predictor" class="nav-link">Rank Predictor</a>
+                <a href="/percentile-predictor" class="nav-link">Percentile Predictor</a>
+            </div>
         </div>
-        <div>
-          <h4>Explore</h4>
-            <ul>
-              <li><a href="https://tools.famral.com">Online Tools</a></li>
-              <li><a href="https://mpdtecounselling.in/">MP DTE Counselling</a></li>
-              <li><a href="https://jacchandigarh.in/">JAC Chandigarh</a></li>
-              <li><a href="https://acpccounselling.com/">ACPC Counselling</a></li>
-              <li><a href="https://reap2027.in/">REAP Counselling</a></li>
-            </ul>
+    </nav>
+
+
+    <main>
+
+        <!-- ══ HERO ══ -->
+        <section class="hero" aria-labelledby="hero-heading">
+            <div class="container">
+                <div class="hero-badge">
+                    <i class="fas fa-graduation-cap"></i>
+                    India's Trusted Admission Platform
+                </div>
+                <h1 id="hero-heading">
+                    Helping Every Student Find<br>
+                    <span>Their Right College</span>
+                </h1>
+                <p>Famral is an education technology platform dedicated to helping students make informed college
+                    admission decisions through accurate prediction tools, cutoff analysis, and reliable counselling
+                    resources &mdash; completely free.</p>
+                <div class="hero-buttons">
+                    <a href="https://www.famral.com/college-predictor" class="btn btn-primary"
+                        id="hero-college-predictor">
+                        <i class="fas fa-search"></i> Try College Predictor
+                    </a>
+                    <a href="https://www.famral.com/rank-predictor" class="btn btn-secondary" id="hero-rank-predictor">
+                        <i class="fas fa-chart-line"></i> Rank Predictor
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ STATS BAR ══ -->
+        <section class="stats-bar" aria-label="Platform statistics">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Admission Predictors</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">40+</span>
+                        <span class="stat-label">State Counselling Systems</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">500K+</span>
+                        <span class="stat-label">Predictions Calculated</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Free &amp; Cutoff-Backed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">2026</span>
+                        <span class="stat-label">Latest Cycle Covered</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ MISSION & VISION ══ -->
+        <section aria-labelledby="mission-heading">
+            <div class="container">
+                <span class="section-label">Our Purpose</span>
+                <h2 id="mission-heading">Mission &amp; Vision</h2>
+                <p class="section-desc">We built Famral on the belief that every student deserves equal access to the
+                    information they need to choose the right college.</p>
+                <div class="mv-grid">
+                    <div class="mv-card mission">
+                        <div class="icon-wrap"><i class="fas fa-bullseye"></i></div>
+                        <h3>Our Mission</h3>
+                        <p>To make college admissions simple, transparent, and accessible for every student in India. We
+                            eliminate uncertainty during the counselling process by providing highly accurate college
+                            prediction tools, up-to-date admission information, and practical guidance that empowers
+                            students to make confident academic decisions.</p>
+                        <br>
+                        <p>At Famral, we are constantly expanding our platform with new prediction tools, advanced
+                            analytics, and comprehensive counselling resources so that no student has to navigate
+                            admissions blindly.</p>
+                    </div>
+                    <div class="mv-card vision">
+                        <div class="icon-wrap"><i class="fas fa-eye"></i></div>
+                        <h3>Our Vision</h3>
+                        <p>To become India's most trusted and comprehensive platform for college counselling, admission
+                            insights, and educational decision-making &mdash; one where every student, regardless of
+                            their background or location, can access the same quality of guidance that was previously
+                            available only to a privileged few.</p>
+                        <br>
+                        <p>We envision a future where data-driven tools democratise higher education access across all
+                            28 states and 8 union territories of India.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ WHAT WE OFFER ══ -->
+        <section class="features-section" aria-labelledby="features-heading">
+            <div class="container">
+                <span class="section-label">What We Offer</span>
+                <h2 id="features-heading">Everything You Need for Admissions</h2>
+                <p class="section-desc">From predicting your rank to choosing the best college, our suite of free tools
+                    covers every step of the Indian counselling journey.</p>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="f-icon"><i class="fas fa-university"></i></div>
+                        <h3>College Predictor</h3>
+                        <p>Enter your rank or score and instantly see which colleges you're likely to get admission into
+                            &mdash; backed by historical cutoff data from JEE, CUET, MHT CET, REAP, and 40+ more exams.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="f-icon"><i class="fas fa-chart-bar"></i></div>
+                        <h3>Rank Predictor</h3>
+                        <p>Convert your exam score into an estimated rank using normalisation formulas aligned with the
+                            official methodology of each exam &mdash; JEE Main, JEE Advanced, CUET, GATE, and more.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="f-icon"><i class="fas fa-percent"></i></div>
+                        <h3>Percentile Predictor</h3>
+                        <p>Instantly calculate your expected percentile from raw marks for JEE Main, MHT CET, CAT, and
+                            NMAT, helping you benchmark your performance before official results.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="f-icon"><i class="fas fa-cut"></i></div>
+                        <h3>Cutoff Trends &amp; Analysis</h3>
+                        <p>Browse year-wise opening and closing ranks for thousands of college-branch combinations.
+                            Understand how cutoffs move and plan your choices accordingly.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="f-icon"><i class="fas fa-balance-scale"></i></div>
+                        <h3>College Comparison</h3>
+                        <p>Compare colleges side by side &mdash; fees, placements, NIRF rank, accreditation, and
+                            facilities &mdash; so you can make an informed decision beyond just the cutoff.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="f-icon"><i class="fas fa-list-check"></i></div>
+                        <h3>Choice Filling Guidance</h3>
+                        <p>Step-by-step strategies for filling your college preference list during counselling to
+                            maximise your chances of getting your target college and branch.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="f-icon"><i class="fas fa-shield-alt"></i></div>
+                        <h3>Reservation &amp; Category Filters</h3>
+                        <p>Filter predictions by category &mdash; General, OBC, SC, ST, EWS, PwD &mdash; so you see
+                            cutoffs and predictions accurate to your specific situation.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="f-icon"><i class="fas fa-book-open"></i></div>
+                        <h3>Counselling Guides &amp; Resources</h3>
+                        <p>In-depth articles on document checklists, seat allotment processes, score normalisation, and
+                            admission timelines to keep you informed at every step.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ HOW IT WORKS ══ -->
+        <section aria-labelledby="hiw-heading">
+            <div class="container">
+                <span class="section-label">Simple Process</span>
+                <h2 id="hiw-heading">How Famral Works</h2>
+                <p class="section-desc">Get personalised college predictions in four easy steps &mdash; no login
+                    required, no hidden fees.</p>
+                <div class="hiw-steps">
+                    <div class="hiw-step">
+                        <h3>Select Your Exam</h3>
+                        <p>Choose the entrance exam you appeared for &mdash; JEE Main, MHT CET, REAP, CUET, COMEDK, or
+                            any of 50+ supported exams.</p>
+                    </div>
+                    <div class="hiw-step">
+                        <h3>Enter Your Score or Rank</h3>
+                        <p>Input your raw marks, percentile, or rank. Our algorithm converts and normalises your score
+                            if needed.</p>
+                    </div>
+                    <div class="hiw-step">
+                        <h3>Apply Your Preferences</h3>
+                        <p>Set your home state, category (General / OBC / SC / ST / EWS), and preferred branches to
+                            personalise results.</p>
+                    </div>
+                    <div class="hiw-step">
+                        <h3>Explore Your Colleges</h3>
+                        <p>Instantly view a ranked list of colleges you're likely to get, along with cutoff trends,
+                            fees, and comparison tools.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ EXAM COVERAGE ══ -->
+        <section class="coverage-strip" aria-labelledby="coverage-heading">
+            <div class="container">
+                <h2 id="coverage-heading">Comprehensive Exam Coverage</h2>
+                <p>Famral supports 50+ national and state-level entrance exams across engineering, management, design,
+                    and university admissions.</p>
+                <a href="https://www.famral.com/college-predictor" class="btn btn-white" id="coverage-cta">
+                    <i class="fas fa-arrow-right"></i> Browse All Predictors
+                </a>
+                <div class="exam-tags">
+                    <span class="exam-tag">JEE Main</span>
+                    <span class="exam-tag">JEE Advanced</span>
+                    <span class="exam-tag">CUET UG/PG</span>
+                    <span class="exam-tag">MHT CET</span>
+                    <span class="exam-tag">REAP</span>
+                    <span class="exam-tag">COMEDK</span>
+                    <span class="exam-tag">KEAM</span>
+                    <span class="exam-tag">TNEA</span>
+                    <span class="exam-tag">WBJEE</span>
+                    <span class="exam-tag">AP EAPCET</span>
+                    <span class="exam-tag">KCET</span>
+                    <span class="exam-tag">GUJCET</span>
+                    <span class="exam-tag">GATE</span>
+                    <span class="exam-tag">CAT</span>
+                    <span class="exam-tag">BITSAT</span>
+                    <span class="exam-tag">NIFT</span>
+                    <span class="exam-tag">NATA</span>
+                    <span class="exam-tag">VITEEE</span>
+                    <span class="exam-tag">MP DTE</span>
+                    <span class="exam-tag">UPTAC</span>
+                    <span class="exam-tag">JAC Delhi</span>
+                    <span class="exam-tag">IPU CET</span>
+                    <span class="exam-tag">+ many more</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ VALUES ══ -->
+        <section aria-labelledby="values-heading">
+            <div class="container">
+                <span class="section-label">What We Stand For</span>
+                <h2 id="values-heading">Our Core Values</h2>
+                <p class="section-desc">These principles guide every feature we build and every decision we make at
+                    Famral.</p>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <h3><i class="fas fa-database" style="color:var(--blue);margin-right:0.45rem;"></i>Data Accuracy
+                        </h3>
+                        <p>Every prediction is backed by verified historical cutoff data sourced directly from official
+                            counselling authorities. We never guess &mdash; we compute.</p>
+                    </div>
+                    <div class="value-card">
+                        <h3><i class="fas fa-lock-open" style="color:var(--blue);margin-right:0.45rem;"></i>Free Forever
+                        </h3>
+                        <p>Access to quality admission guidance should not be a luxury. All our tools are and will
+                            remain 100% free for every student in India.</p>
+                    </div>
+                    <div class="value-card">
+                        <h3><i class="fas fa-users" style="color:var(--blue);margin-right:0.45rem;"></i>Student-First
+                        </h3>
+                        <p>Every feature is designed with the student's perspective in mind &mdash; simple, fast, and
+                            focused on delivering real value during a stressful period.</p>
+                    </div>
+                    <div class="value-card">
+                        <h3><i class="fas fa-map-marked-alt"
+                                style="color:var(--blue);margin-right:0.45rem;"></i>Pan-India Reach</h3>
+                        <p>From Rajasthan to Kerala, from Gujarat to West Bengal &mdash; our platform covers counselling
+                            systems across all major states and UTs.</p>
+                    </div>
+                    <div class="value-card">
+                        <h3><i class="fas fa-sync-alt" style="color:var(--blue);margin-right:0.45rem;"></i>Continuously
+                            Updated</h3>
+                        <p>We update our cutoff data and tools with every new counselling cycle so your predictions
+                            always reflect the most current admission trends.</p>
+                    </div>
+                    <div class="value-card">
+                        <h3><i class="fas fa-shield-alt" style="color:var(--blue);margin-right:0.45rem;"></i>Privacy
+                            Respected</h3>
+                        <p>We don't require sign-ups to use our tools, and we never sell your data. Your information
+                            stays private.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ TESTIMONIALS ══ -->
+        <section class="testimonials-section" aria-labelledby="testimonials-heading">
+            <div class="container">
+                <span class="section-label">Student Stories</span>
+                <h2 id="testimonials-heading">What Students Say About Us</h2>
+                <p class="section-desc">Thousands of students rely on Famral every year to navigate India's complex
+                    counselling process.</p>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <blockquote>&ldquo;Famral's JEE Main College Predictor was spot on. I used it to shortlist
+                            colleges and the predictor showed me NIT Trichy as a likely option &mdash; I got exactly
+                            that in round 1 of JoSAA counselling!&rdquo;</blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">A</div>
+                            <div>
+                                <div class="author-name">Aryan Sharma</div>
+                                <div class="author-info">JEE Main 2025 &middot; NIT Trichy, CSE</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <blockquote>&ldquo;The MHT CET college predictor saved me so much time. Instead of manually
+                            checking hundreds of closing ranks, I got a personalised list in seconds. Highly
+                            recommended!&rdquo;</blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">P</div>
+                            <div>
+                                <div class="author-name">Pooja Desai</div>
+                                <div class="author-info">MHT CET 2025 &middot; COEP Pune, Mechanical</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <blockquote>&ldquo;The REAP College Predictor helped me understand which colleges were safe
+                            choices and which were a stretch. The cutoff trends section is really useful for
+                            planning.&rdquo;</blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">R</div>
+                            <div>
+                                <div class="author-name">Rahul Meena</div>
+                                <div class="author-info">REAP 2025 &middot; GEC Ajmer</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <blockquote>&ldquo;The percentile predictor for JEE Main was accurate to within 0.2 percentile
+                            of my actual score. That helped me plan for counselling early. Great platform!&rdquo;
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">S</div>
+                            <div>
+                                <div class="author-name">Sneha Kulkarni</div>
+                                <div class="author-info">JEE Main 2026 &middot; Preparing for B.Tech</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <blockquote>&ldquo;What I love most about Famral is that it's completely free. I was worried
+                            about paying for career counselling services, but Famral gave me everything I needed at no
+                            cost.&rdquo;</blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">K</div>
+                            <div>
+                                <div class="author-name">Karan Patel</div>
+                                <div class="author-info">GUJCET 2025 &middot; LD Engineering College, Ahmedabad</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <blockquote>&ldquo;The choice filling strategy guide on Famral is gold. It explained how to
+                            balance safe, moderate, and ambitious choices during COMEDK counselling perfectly.&rdquo;
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">N</div>
+                            <div>
+                                <div class="author-name">Nidhi Reddy</div>
+                                <div class="author-info">COMEDK 2025 &middot; RV College of Engineering, Bangalore</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ FAQ ══ -->
+        <section aria-labelledby="faq-heading">
+            <div class="container">
+                <span class="section-label" style="display:block;text-align:center;">Common Questions</span>
+                <h2 id="faq-heading" style="text-align:center;">Frequently Asked Questions</h2>
+                <p class="section-desc" style="margin:0 auto 2.5rem;text-align:center;">Got a question about Famral?
+                    We've answered the most common ones below.</p>
+                <div class="faq-list">
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-1" id="faq-btn-1">
+                            What is Famral and how does it help students?
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer" id="faq-1" role="region" aria-labelledby="faq-btn-1">
+                            Famral is a free education technology platform that provides college predictors, rank
+                            predictors, percentile predictors, and counselling guides for 50+ Indian entrance exams. Our
+                            tools use verified historical cutoff data to give you realistic predictions about which
+                            colleges you are likely to get admission to based on your score or rank.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-2" id="faq-btn-2">
+                            Are all Famral tools completely free?
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer" id="faq-2" role="region" aria-labelledby="faq-btn-2">
+                            Yes, absolutely. Every tool on Famral &mdash; college predictors, rank predictors,
+                            percentile predictors, cutoff archives, and counselling guides &mdash; is 100% free to use.
+                            We don't require registration, payment, or any personal information to access our tools.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-3" id="faq-btn-3">
+                            How accurate are the college predictions?
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer" id="faq-3" role="region" aria-labelledby="faq-btn-3">
+                            Our predictions are based on 3&ndash;5 years of official cutoff data (opening and closing
+                            ranks) sourced from authorised counselling bodies. While no predictor can guarantee exact
+                            results due to year-to-year variations in seat availability, competition, and preferences,
+                            our tools provide a reliable indication of your admission probability. We always recommend
+                            using our predictions as a planning aid alongside your own research.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-4" id="faq-btn-4">
+                            Which exams and states does Famral cover?
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer" id="faq-4" role="region" aria-labelledby="faq-btn-4">
+                            Famral currently covers 50+ national and state-level entrance exams including JEE Main, JEE
+                            Advanced, CUET, MHT CET, REAP, COMEDK, KEAM, TNEA, WBJEE, AP EAPCET, TG EAPCET, KCET,
+                            GUJCET, MP DTE, UPTAC, JAC Delhi, IPU CET, GATE, CAT, BITSAT, NIFT, NATA, VITEEE, and many
+                            more. We also cover 40+ state counselling systems across India.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-5" id="faq-btn-5">
+                            Does Famral support category-wise predictions (OBC, SC, ST, EWS)?
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer" id="faq-5" role="region" aria-labelledby="faq-btn-5">
+                            Yes. Our college predictors support category-wise filtering including General (Open),
+                            OBC-NCL, SC, ST, EWS, PwD, and state-specific quota categories. Simply select your category
+                            when using any predictor to get predictions tailored to your reservation status.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-6" id="faq-btn-6">
+                            Do I need to create an account to use Famral?
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer" id="faq-6" role="region" aria-labelledby="faq-btn-6">
+                            No account is needed. All our tools are accessible instantly without any sign-up, login, or
+                            personal information. We believe friction-free access is essential for students who need
+                            quick, reliable information during the high-stress counselling period.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-7" id="faq-btn-7">
+                            How is Famral different from other college counselling platforms?
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer" id="faq-7" role="region" aria-labelledby="faq-btn-7">
+                            Famral stands apart in three key ways: (1) Everything is 100% free with no paywalls or
+                            premium tiers; (2) Our predictions are backed by verified, multi-year official cutoff data
+                            &mdash; not estimates; (3) We cover a uniquely wide range of 50+ exams and 40+ state
+                            counselling systems, making us one of the most comprehensive free admission tools in India.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ CTA BANNER ══ -->
+        <section class="cta-banner" aria-labelledby="cta-heading">
+            <div class="container">
+                <h2 id="cta-heading">Start Your College Search Today</h2>
+                <p>Use our free tools to predict your colleges, understand cutoffs, and plan your counselling strategy
+                    &mdash; all in one place.</p>
+                <div class="cta-buttons">
+                    <a href="https://www.famral.com/college-predictor" class="btn btn-white" id="cta-college-predictor">
+                        <i class="fas fa-university"></i> College Predictor
+                    </a>
+                    <a href="https://www.famral.com/rank-predictor" class="btn btn-outline-white"
+                        id="cta-rank-predictor">
+                        <i class="fas fa-chart-line"></i> Rank Predictor
+                    </a>
+                    <a href="https://whatsapp.com/channel/0029Va6ZYsIHVvTFqmqFDK2S" target="_blank" rel="noopener"
+                        class="btn btn-outline-white" id="cta-whatsapp">
+                        <i class="fab fa-whatsapp"></i> Join WhatsApp Channel
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ══ FOOTER ══ -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-links-grid">
+                <div>
+                    <h4>Popular College Predictors</h4>
+                    <ul>
+                        <li><a href="/cuet-college-predictor">CUET College Predictor</a></li>
+                        <li><a href="/reap-college-predictor">REAP College Predictor</a></li>
+                        <li><a href="/mp-dte-college-predictor">MP DTE College Predictor</a></li>
+                        <li><a href="/uptac-college-predictor">UPTAC College Predictor</a></li>
+                        <li><a href="/wbjee-college-predictor">WBJEE College Predictor</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="https://tools.famral.com">Online Tools</a></li>
+                        <li><a href="https://mpdtecounselling.in/">MP DTE Counselling</a></li>
+                        <li><a href="https://jacchandigarh.in/">JAC Chandigarh</a></li>
+                        <li><a href="https://acpccounselling.com/">ACPC Counselling</a></li>
+                        <li><a href="https://reap2027.in/">REAP Counselling</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>About Us</h4>
+                    <ul>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms &amp; Conditions</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-content">
+                <p>&copy; <span id="current-year"></span> Famral. All Rights Reserved.</p>
+                <p><a href="#" class="back-to-top">Back to Top <i class="fas fa-arrow-up"></i></a></p>
+            </div>
         </div>
-        <div>
-          <h4>About Us</h4>
-            <ul>
-              <li><a href="/about">About Us</a></li>
-              <li><a href="/privacy">Privacy Policy</a></li>
-              <li><a href="/terms">Terms & Conditions</a></li>
-              <li><a href="/contact">Contact Us</a></li>
-            </ul>
-        </div>
-      </div>
+    </footer>
 
-      <div class="footer-content">
-        <p>&copy; <span id="current-year"></span> Famral. All Rights Reserved.</p>
-        <p><a href="#" class="back-to-top">Back to Top <i class="fas fa-arrow-up"></i></a></p>
-      </div>
-    </div>
-  </footer>
+    <script>
+        // ── Mobile Nav Toggle ──
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links-wrapper');
+        const toggleIcon = navToggle.querySelector('i');
 
-  <!-- Simple JS for Mobile Menu Toggle -->
-  <script>
-    const navToggle = document.querySelector('.nav-toggle');
-    const navLinks = document.querySelector('.nav-links-wrapper');
-    const toggleIcon = navToggle.querySelector('i'); // Get the icon element
-
-    navToggle.addEventListener('click', () => {
-      const isExpanded = navLinks.classList.toggle('active');
-      navToggle.setAttribute('aria-expanded', isExpanded);
-
-      // Change icon from bars to times (X) when open
-      if (isExpanded) {
-        toggleIcon.classList.remove('fa-bars');
-        toggleIcon.classList.add('fa-times');
-      } else {
-        toggleIcon.classList.remove('fa-times');
-        toggleIcon.classList.add('fa-bars');
-      }
-    });
-
-    // Close menu when a link is clicked
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        if (navLinks.classList.contains('active')) {
-          navLinks.classList.remove('active');
-          navToggle.setAttribute('aria-expanded', 'false');
-          toggleIcon.classList.remove('fa-times');
-          toggleIcon.classList.add('fa-bars');
-        }
-      });
-    });
-
-    // Multiple Dropdown Menus Toggle
-    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
-
-    dropdownToggles.forEach(toggle => {
-      toggle.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const menu = toggle.nextElementSibling;
-
-        // Close other open menus
-        document.querySelectorAll('.dropdown-menu.show').forEach(openMenu => {
-          if (openMenu !== menu) openMenu.classList.remove('show');
+        navToggle.addEventListener('click', () => {
+            const isExpanded = navLinks.classList.toggle('active');
+            navToggle.setAttribute('aria-expanded', isExpanded);
+            toggleIcon.classList.toggle('fa-bars', !isExpanded);
+            toggleIcon.classList.toggle('fa-times', isExpanded);
         });
 
-        if (menu) menu.classList.toggle('show');
-      });
-    });
-
-    document.addEventListener('click', (e) => {
-      if (!e.target.closest('.nav-item.dropdown')) {
-        document.querySelectorAll('.dropdown-menu.show').forEach(menu => {
-          menu.classList.remove('show');
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                navToggle.setAttribute('aria-expanded', 'false');
+                toggleIcon.classList.replace('fa-times', 'fa-bars');
+            });
         });
-      }
-    });
 
-    // Update the copyright year automatically
-    document.getElementById('current-year').textContent = new Date().getFullYear();
-  </script>
+        // ── Dropdown Menus ──
+        document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+            toggle.addEventListener('click', e => {
+                e.stopPropagation();
+                const menu = toggle.nextElementSibling;
+                document.querySelectorAll('.dropdown-menu.show').forEach(m => { if (m !== menu) m.classList.remove('show'); });
+                if (menu) menu.classList.toggle('show');
+            });
+        });
+        document.addEventListener('click', e => {
+            if (!e.target.closest('.nav-item.dropdown'))
+                document.querySelectorAll('.dropdown-menu.show').forEach(m => m.classList.remove('show'));
+        });
 
+        // ── FAQ Accordion ──
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const expanded = btn.getAttribute('aria-expanded') === 'true';
+                document.querySelectorAll('.faq-question').forEach(b => {
+                    b.setAttribute('aria-expanded', 'false');
+                    b.nextElementSibling.classList.remove('open');
+                });
+                if (!expanded) {
+                    btn.setAttribute('aria-expanded', 'true');
+                    btn.nextElementSibling.classList.add('open');
+                }
+            });
+        });
 
-
+        // ── Copyright Year ──
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 
 </body>
 
