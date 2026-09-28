@@ -544,7 +544,7 @@
                         <li><a href="https://mpdtecounselling.in/">MP DTE Counselling</a></li>
                         <li><a href="https://acpccounselling.com/">ACPC Counselling</a></li>
                         <li><a href="/reap">REAP Counselling</a></li>
-                        <li><a href="https://kcetcounselling.in/">KCET Counselling</a></li>
+                        <li><a href="/kcet">KCET Counselling</a></li>
                     </ul>
                 </div>
             </div>
