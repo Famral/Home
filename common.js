@@ -538,11 +538,11 @@
                         <li><a href="https://jeerankpredictor.com/">JEE Rank Predictor</a></li>
                         <li><a href="https://mpdtecounselling.in/">MP DTE Counselling</a></li>
                         <li><a href="https://acpccounselling.com/">ACPC Counselling</a></li>
-                        <li><a href="/reap">REAP Counselling</a></li>
-                        <li><a href="/comedk">COMEDK Counselling</a></li>
-                        <li><a href="/kcet">KCET 2027</a></li>
-                        <li><a href="/keam">KEAM 2027</a></li>
-                        <li><a href="/tnea">TNEA 2027</a></li>
+                        <li><a href="/exam/reap">REAP 207</a></li>
+                        <li><a href="/exam/comedk">COMEDK 2027</a></li>
+                        <li><a href="/exam/kcet">KCET 2027</a></li>
+                        <li><a href="/exam/keam">KEAM 2027</a></li>
+                        <li><a href="/exam/tnea">TNEA 2027</a></li>
 
                     </ul>
                 </div>
