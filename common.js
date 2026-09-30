@@ -546,6 +546,7 @@
                         <li><a href="/comedk">COMEDK Counselling</a></li>
                         <li><a href="/kcet">KCET 2027</a></li>
                         <li><a href="/keam">KEAM 2027</a></li>
+                        <li><a href="/tnea">TNEA 2027</a></li>
 
                     </ul>
                 </div>
