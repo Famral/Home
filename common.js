@@ -404,7 +404,6 @@
                         </svg>
                     </button>
                     <div class="dropdown-menu">
-                        <a href="/tg-eapcet-rank-predictor">TG EAPCET Rank Predictor</a>
                         <a href="/ap-eapcet-rank-predictor">AP EAPCET Rank Predictor</a>
                         <a href="/kcet-rank-predictor">KCET Rank Predictor</a>
                         <a href="/comedk-rank-predictor">COMEDK Rank Predictor</a>
@@ -546,6 +545,8 @@
                         <li><a href="/reap">REAP Counselling</a></li>
                         <li><a href="/comedk">COMEDK Counselling</a></li>
                         <li><a href="/kcet">KCET 2027</a></li>
+                        <li><a href="/keam">KEAM 2027</a></li>
+
                     </ul>
                 </div>
             </div>
