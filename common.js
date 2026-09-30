@@ -534,10 +534,6 @@
                 <div>
                     <h4>About Famral</h4>
                     <ul>
-                        <li><a href="/about">About Us</a></li>
-                        <li><a href="/privacy">Privacy Policy</a></li>
-                        <li><a href="/terms">Terms &amp; Conditions</a></li>
-                        <li><a href="/contact">Contact Us</a></li>
                         <li><a href="https://jeecounselling.com/jee-main">JEE Main 2027</a></li>
                         <li><a href="https://jeerankpredictor.com/">JEE Rank Predictor</a></li>
                         <li><a href="https://mpdtecounselling.in/">MP DTE Counselling</a></li>
