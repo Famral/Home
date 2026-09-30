@@ -530,7 +530,7 @@
                     </ul>
                 </div>
 
-                <!-- Col 5: About Famral -->
+                <!-- Col 5: Exams & Counselling -->
                 <div>
                     <h4>About Famral</h4>
                     <ul>
