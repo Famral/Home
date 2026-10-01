@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Us | Famral – India's Free College Admission Platform</title>
     <meta name="description"
-        content="Learn about Famral – India's trusted education technology platform helping students make informed college admission decisions with accurate college predictors, rank predictors, and free counselling tools.">
+        content="Famral – India's trusted education technology platform helping students make informed college admission decisions with accurate college predictors, rank predictors, and free counselling tools.">
     <meta name="keywords"
         content="about famral, college predictor, college counselling, college admission, jee college predictor, famral college predictor, education technology india">
     <link rel="icon" type="image/png" href="./favicon.png">
@@ -1192,23 +1192,8 @@
 <body>
 
     <!-- ══ NAVBAR ══ -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="https://www.famral.com/" class="nav-logo">
-                <img src="https://www.famral.com/favicon.png" alt="Famral Logo" width="32" height="32">
-                Famral
-            </a>
-            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
-                <i class="fas fa-bars"></i>
-            </button>
-            <div class="nav-links-wrapper" id="navLinks">
-                <a href="/" class="nav-link">Home</a>
-                <a href="/college-predictor" class="nav-link">College Predictor</a>
-                <a href="/rank-predictor" class="nav-link">Rank Predictor</a>
-                <a href="/percentile-predictor" class="nav-link">Percentile Predictor</a>
-            </div>
-        </div>
-    </nav>
+    <!-- Shared Global Navbar injected by common.js -->
+    <div id="navbar-placeholder"></div>
 
 
     <main>
@@ -1697,98 +1682,15 @@
     </main>
 
     <!-- ══ FOOTER ══ -->
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-links-grid">
-                <div>
-                    <h4>Popular College Predictors</h4>
-                    <ul>
-                        <li><a href="/cuet-college-predictor">CUET College Predictor</a></li>
-                        <li><a href="/reap-college-predictor">REAP College Predictor</a></li>
-                        <li><a href="/mp-dte-college-predictor">MP DTE College Predictor</a></li>
-                        <li><a href="/uptac-college-predictor">UPTAC College Predictor</a></li>
-                        <li><a href="/wbjee-college-predictor">WBJEE College Predictor</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Explore</h4>
-                    <ul>
-                        <li><a href="https://tools.famral.com">Online Tools</a></li>
-                        <li><a href="https://mpdtecounselling.in/">MP DTE Counselling</a></li>
-                        <li><a href="https://jacchandigarh.in/">JAC Chandigarh</a></li>
-                        <li><a href="https://acpccounselling.com/">ACPC Counselling</a></li>
-                        <li><a href="https://reap2027.in/">REAP Counselling</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>About Us</h4>
-                    <ul>
-                        <li><a href="/about">About Us</a></li>
-                        <li><a href="/privacy">Privacy Policy</a></li>
-                        <li><a href="/terms">Terms &amp; Conditions</a></li>
-                        <li><a href="/contact">Contact Us</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-content">
-                <p>&copy; <span id="current-year"></span> Famral. All Rights Reserved.</p>
-                <p><a href="#" class="back-to-top">Back to Top <i class="fas fa-arrow-up"></i></a></p>
-            </div>
-        </div>
-    </footer>
+    <!-- Shared Global Footer injected by common.js -->
+    <div id="footer-placeholder"></div>
+
+    <script src="/common.js"></script>
 
     <script>
         // ── Mobile Nav Toggle ──
-        const navToggle = document.querySelector('.nav-toggle');
-        const navLinks = document.querySelector('.nav-links-wrapper');
-        const toggleIcon = navToggle.querySelector('i');
+        // Nav & Footer managed by common.js
 
-        navToggle.addEventListener('click', () => {
-            const isExpanded = navLinks.classList.toggle('active');
-            navToggle.setAttribute('aria-expanded', isExpanded);
-            toggleIcon.classList.toggle('fa-bars', !isExpanded);
-            toggleIcon.classList.toggle('fa-times', isExpanded);
-        });
-
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                navToggle.setAttribute('aria-expanded', 'false');
-                toggleIcon.classList.replace('fa-times', 'fa-bars');
-            });
-        });
-
-        // ── Dropdown Menus ──
-        document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-            toggle.addEventListener('click', e => {
-                e.stopPropagation();
-                const menu = toggle.nextElementSibling;
-                document.querySelectorAll('.dropdown-menu.show').forEach(m => { if (m !== menu) m.classList.remove('show'); });
-                if (menu) menu.classList.toggle('show');
-            });
-        });
-        document.addEventListener('click', e => {
-            if (!e.target.closest('.nav-item.dropdown'))
-                document.querySelectorAll('.dropdown-menu.show').forEach(m => m.classList.remove('show'));
-        });
-
-        // ── FAQ Accordion ──
-        document.querySelectorAll('.faq-question').forEach(btn => {
-            btn.addEventListener('click', () => {
-                const expanded = btn.getAttribute('aria-expanded') === 'true';
-                document.querySelectorAll('.faq-question').forEach(b => {
-                    b.setAttribute('aria-expanded', 'false');
-                    b.nextElementSibling.classList.remove('open');
-                });
-                if (!expanded) {
-                    btn.setAttribute('aria-expanded', 'true');
-                    btn.nextElementSibling.classList.add('open');
-                }
-            });
-        });
-
-        // ── Copyright Year ──
-        document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
 
 </body>
