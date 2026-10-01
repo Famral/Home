@@ -543,6 +543,7 @@
                         <li><a href="/exam/kcet">KCET 2027</a></li>
                         <li><a href="/exam/keam">KEAM 2027</a></li>
                         <li><a href="/exam/tnea">TNEA 2027</a></li>
+                        <li><a href="/exam/mht-cet">MHT CET 2027</a></li>
 
                     </ul>
                 </div>
