@@ -537,7 +537,6 @@
                         <li><a href="https://jeecounselling.com/jee-main">JEE Main 2027</a></li>
                         <li><a href="https://jeerankpredictor.com/">JEE Rank Predictor</a></li>
                         <li><a href="https://mpdtecounselling.in/">MP DTE Counselling</a></li>
-                        <li><a href="https://acpccounselling.com/">ACPC Counselling</a></li>
                         <li><a href="/exam/reap">REAP 2027</a></li>
                         <li><a href="/exam/comedk">COMEDK 2027</a></li>
                         <li><a href="/exam/kcet">KCET 2027</a></li>
