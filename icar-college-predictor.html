@@ -39,6 +39,26 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7876432493491415"
+        crossorigin="anonymous"></script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H57NCR0QYN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-H57NCR0QYN');
+    </script>
+
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+    <script>
+        window.OneSignalDeferred = window.OneSignalDeferred || [];
+        OneSignalDeferred.push(async function (OneSignal) {
+            await OneSignal.init({ appId: "72462423-a0fd-4ef3-9cf5-a279f6e03553" });
+        });
+    </script>
+    
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -3190,51 +3210,6 @@
         }
     </script>
 
-    <!-- Interaction delayed loader for Google Adsense, Analytics & OneSignal -->
-    <script>
-        (function () {
-            let loaded = false;
-            function loadDeferredScripts() {
-                if (loaded) return;
-                loaded = true;
-
-                // 1. Google Analytics
-                const ga = document.createElement('script');
-                ga.async = true;
-                ga.src = "https://www.googletagmanager.com/gtag/js?id=G-H57NCR0QYN";
-                document.head.appendChild(ga);
-                ga.onload = function () {
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag() { dataLayer.push(arguments); }
-                    gtag('js', new Date());
-                    gtag('config', 'G-H57NCR0QYN');
-                };
-
-                // 2. Google AdSense
-                const adsense = document.createElement('script');
-                adsense.async = true;
-                adsense.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7876432493491415";
-                adsense.crossOrigin = "anonymous";
-                document.head.appendChild(adsense);
-
-                // 3. OneSignal
-                const onesignal = document.createElement('script');
-                onesignal.defer = true;
-                onesignal.src = "https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js";
-                document.head.appendChild(onesignal);
-            }
-
-            // Trigger on first user interaction
-            ['touchstart', 'scroll', 'mouseover', 'keydown'].forEach(event => {
-                window.addEventListener(event, loadDeferredScripts, { once: true, passive: true });
-            });
-
-            // Fallback: load after 4 seconds of idle time
-            window.addEventListener('load', () => {
-                setTimeout(loadDeferredScripts, 4000);
-            });
-        })();
-    </script>
 </body>
 
 </html>
