@@ -545,6 +545,7 @@
                         <li><a href="/exam/tnea">TNEA 2027</a></li>
                         <li><a href="/exam/mht-cet">MHT CET 2027</a></li>
                         <li><a href="/exam/wbjee">WBJEE 2027</a></li>
+                        <li><a href="/exam/gujcet">GUJCET 2027</a></li>
                     </ul>
                 </div>
             </div>
