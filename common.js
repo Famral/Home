@@ -534,7 +534,7 @@
                 <div>
                     <h4>About Famral</h4>
                     <ul>
-                        <li><a href="https://jeecounselling.com/jee-main">JEE Main 2027</a></li>
+                        <li><a href="/exam/jee-main">JEE Main 2027</a></li>
                         <li><a href="https://jeerankpredictor.com/">JEE Rank Predictor</a></li>
                         <li><a href="https://mpdtecounselling.in/">MP DTE Counselling</a></li>
                         <li><a href="/exam/reap">REAP 2027</a></li>
