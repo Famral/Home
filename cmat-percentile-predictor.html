@@ -167,44 +167,8 @@
 </head>
 <body>
   <header>
-    <nav class="navbar" aria-label="Main navigation">
-      <div class="nav-container">
-        <a href="https://www.famral.com/" class="nav-logo">
-          <img src="./favicon.png" alt="Famral Logo" width="32" height="32"> Famral
-        </a>
-        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
-          <i class="fas fa-bars"></i>
-        </button>
-        <div class="nav-links-wrapper" id="navLinks">
-          <a href="/" class="nav-link">Home</a>
-          <div class="nav-item dropdown">
-            <button class="nav-link dropdown-toggle" aria-expanded="false">
-              Rank Predictor <i class="fas fa-chevron-down fa-xs" style="margin-left:4px"></i>
-            </button>
-            <div class="dropdown-menu">
-              <a href="/gate-rank-predictor">GATE Rank Predictor</a>
-              <a href="/jee-main-rank-predictor">JEE Main Rank Predictor</a>
-              <a href="/mht-cet-rank-predictor">MHT CET Rank Predictor</a>
-              <a href="/kcet-rank-predictor">KCET Rank Predictor</a>
-              <a href="/wbjee-rank-predictor">WBJEE Rank Predictor</a>
-              <a href="/rank-predictor" style="border-top:1px solid var(--border-color);font-weight:600;color:var(--primary-color)">View All Predictors &rarr;</a>
-            </div>
-          </div>
-          <div class="nav-item dropdown">
-            <button class="nav-link dropdown-toggle" aria-expanded="false">
-              College Predictor <i class="fas fa-chevron-down fa-xs" style="margin-left:4px"></i>
-            </button>
-            <div class="dropdown-menu">
-              <a href="/gate-college-predictor">GATE College Predictor</a>
-              <a href="/jee-main-college-predictor">JEE Main College Predictor</a>
-              <a href="/mht-cet-college-predictor">MHT CET College Predictor</a>
-              <a href="/kcet-college-predictor">KCET College Predictor</a>
-              <a href="/college-predictor" style="border-top:1px solid var(--border-color);font-weight:600;color:var(--primary-color)">View All Predictors &rarr;</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
+    <!-- Shared Global Navbar injected by common.js -->
+    <div id="navbar-placeholder"></div>
   </header>
 
   <main>
@@ -611,86 +575,15 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-links-grid">
-        <div>
-          <h4>National Predictors</h4>
-          <ul>
-            <li><a href="/gate-rank-predictor">GATE Rank Predictor</a></li>
-            <li><a href="/gate-college-predictor">GATE College Predictor</a></li>
-            <li><a href="/jee-main-rank-predictor">JEE Main Rank Predictor</a></li>
-            <li><a href="/jee-advanced-rank-predictor">JEE Advanced Rank Predictor</a></li>
-            <li><a href="/cuet-rank-predictor">CUET UG Rank Predictor</a></li>
-            <li><a href="/cmat-percentile-predictor">CMAT Percentile Predictor</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>State &amp; Private Entrance</h4>
-          <ul>
-            <li><a href="/mht-cet-rank-predictor">MHT CET Rank Predictor</a></li>
-            <li><a href="/mht-cet-college-predictor">MHT CET College Predictor</a></li>
-            <li><a href="/met-rank-predictor">MET Rank Predictor</a></li>
-            <li><a href="/comedk-rank-predictor">COMEDK Rank Predictor</a></li>
-            <li><a href="/kcet-rank-predictor">KCET Rank Predictor</a></li>
-            <li><a href="/wbjee-rank-predictor">WBJEE Rank Predictor</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Resources &amp; Info</h4>
-          <ul>
-            <li><a href="#faqs">Frequently Asked Questions</a></li>
-            <li><a href="#score-vs-percentile">CMAT Score vs Percentile</a></li>
-            <li><a href="#percentile-formula">CMAT Percentile Formula</a></li>
-            <li><a href="#exam-pattern">CMAT Exam Pattern</a></li>
-            <li><a href="#historical-trends">Historical Trends</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>About Us</h4>
-          <ul>
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/privacy">Privacy Policy</a></li>
-            <li><a href="/terms">Terms &amp; Conditions</a></li>
-            <li><a href="/contact">Contact Us</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-content">
-        <p>&copy; <span id="current-year"></span> Famral. All Rights Reserved.</p>
-        <p><a href="#" class="back-to-top">Back to Top <i class="fas fa-arrow-up"></i></a></p>
-      </div>
-    </div>
-  </footer>
+  <!-- Shared Global Footer injected by common.js -->
+    <div id="footer-placeholder"></div>
+
+    <script src="/common.js"></script>
 
   <script>
     // ── Nav ──────────────────────────────────────────────────────────────────
-    const navToggle = document.querySelector('.nav-toggle');
-    const navLinksWrapper = document.querySelector('.nav-links-wrapper');
-    const toggleIconEl = navToggle ? navToggle.querySelector('i') : null;
-    if (navToggle) {
-      navToggle.addEventListener('click', () => {
-        const isExpanded = navLinksWrapper.classList.toggle('active');
-        navToggle.setAttribute('aria-expanded', isExpanded);
-        if (toggleIconEl) {
-          if (isExpanded) toggleIconEl.classList.replace('fa-bars','fa-times');
-          else toggleIconEl.classList.replace('fa-times','fa-bars');
-        }
-      });
-    }
-    document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-      toggle.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const menu = toggle.nextElementSibling;
-        document.querySelectorAll('.dropdown-menu.show').forEach(m => { if (m !== menu) m.classList.remove('show'); });
-        if (menu) menu.classList.toggle('show');
-      });
-    });
-    document.addEventListener('click', (e) => {
-      if (!e.target.closest('.nav-item.dropdown'))
-        document.querySelectorAll('.dropdown-menu.show').forEach(m => m.classList.remove('show'));
-    });
-    document.getElementById('current-year').textContent = new Date().getFullYear();
+        // Nav & Footer managed by common.js
+
 
     // ── CMAT Percentile Logic ────────────────────────────────────────────────
     // Based on NTA CMAT 2024 official results: 65,127 appeared (May 15, 2024)
