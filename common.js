@@ -546,6 +546,7 @@
                         <li><a href="/exam/mht-cet">MHT CET 2027</a></li>
                         <li><a href="/exam/wbjee">WBJEE 2027</a></li>
                         <li><a href="/exam/gujcet">GUJCET 2027</a></li>
+                        <li><a href="/exams" style="font-weight: 600; color: var(--primary-color, #0067b8);">View All Exams &rarr;</a></li>
                     </ul>
                 </div>
             </div>
