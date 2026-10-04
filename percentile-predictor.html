@@ -886,89 +886,8 @@
         </symbol>
     </svg>
 
-    <nav class="navbar" aria-label="Main navigation">
-        <div class="nav-container">
-            <!-- Logo -->
-            <a href="https://www.famral.com/" class="nav-logo">
-                <img src="./favicon.png" alt="Famral Logo" width="32" height="32">
-                Famral
-            </a>
-
-            <!-- Mobile Menu Toggle Button -->
-            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
-                <svg class="icon icon-bars">
-                    <use href="#icon-bars"></use>
-                </svg>
-                <svg class="icon icon-times" style="display: none;">
-                    <use href="#icon-times"></use>
-                </svg>
-            </button>
-
-            <!-- Navigation Links -->
-            <div class="nav-links-wrapper" id="navLinks">
-                <a href="/" class="nav-link">Home</a>
-                <div class="nav-item dropdown">
-                    <button class="nav-link dropdown-toggle">Rank Predictor <svg class="icon">
-                            <use href="#icon-chevron-down"></use>
-                        </svg></button>
-                    <div class="dropdown-menu">
-                        <div class="mega-column" style="padding: 0.5rem;">
-                            <a href="/tg-eapcet-rank-predictor">TG EAPCET Rank Predictor</a>
-                            <a href="/ap-eapcet-rank-predictor">AP EAPCET Rank Predictor</a>
-                            <a href="/kcet-rank-predictor">KCET Rank Predictor</a>
-                            <a href="/comedk-rank-predictor">COMEDK Rank Predictor</a>
-                            <a href="/jee-main-rank-predictor">JEE Main Rank Predictor</a>
-                            <a href="/mht-cet-rank-predictor">MHT CET Rank Predictor</a>
-                            <a href="/keam-rank-predictor">KEAM Rank Predictor</a>
-                            <a href="/wbjee-rank-predictor">WBJEE Rank Predictor</a>
-                            <a href="/tnea-rank-predictor">TNEA Rank Predictor</a>
-                            <a href="/rank-predictor"
-                                style="border-top: 1px solid var(--border-color); font-weight: 600; color: var(--primary-color);">View
-                                All Predictors &rarr;</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="nav-item dropdown">
-                    <button class="nav-link dropdown-toggle active" aria-current="page">Percentile Predictor <svg
-                            class="icon">
-                            <use href="#icon-chevron-down"></use>
-                        </svg></button>
-                    <div class="dropdown-menu">
-                        <div class="mega-column" style="padding: 0.5rem;">
-                            <a href="/jee-main-percentile-predictor">JEE Main Percentile Predictor</a>
-                            <a href="/mht-cet-percentile-predictor">MHT CET Percentile Predictor</a>
-                            <a href="/cat-percentile-predictor">CAT Percentile Predictor</a>
-                            <a href="/nmat-percentile-predictor">NMAT Percentile Predictor</a>
-                            <a href="/percentile-predictor"
-                                style="border-top: 1px solid var(--border-color); font-weight: 600; color: var(--primary-color);">View
-                                All Predictors &rarr;</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="nav-item dropdown">
-                    <button class="nav-link dropdown-toggle">College Predictor <svg class="icon">
-                            <use href="#icon-chevron-down"></use>
-                        </svg></button>
-                    <div class="dropdown-menu">
-                        <div class="mega-column" style="padding: 0.5rem;">
-                            <a href="/tg-eapcet-college-predictor">TG EAPCET College Predictor</a>
-                            <a href="/ap-eapcet-college-predictor">AP EAPCET College Predictor</a>
-                            <a href="/kcet-college-predictor">KCET College Predictor</a>
-                            <a href="/comedk-college-predictor">COMEDK College Predictor</a>
-                            <a href="/jee-main-college-predictor">JEE Main College Predictor</a>
-                            <a href="/jee-advanced-college-predictor">JEE Advanced Predictor</a>
-                            <a href="/mht-cet-college-predictor">MHT CET College Predictor</a>
-                            <a href="/cuet-college-predictor">CUET UG College Predictor</a>
-                            <a href="/bitsat-college-predictor">BITSAT College Predictor</a>
-                            <a href="/college-predictor"
-                                style="border-top: 1px solid var(--border-color); font-weight: 600; color: var(--primary-color);">View
-                                All Predictors &rarr;</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <!-- Shared Global Navbar injected by common.js -->
+    <div id="navbar-placeholder"></div>
 
 
     <main>
@@ -1127,111 +1046,15 @@
         </section>
 
         <!-- Footer -->
-        <footer class="site-footer">
-            <div class="container">
+        <!-- Shared Global Footer injected by common.js -->
+    <div id="footer-placeholder"></div>
 
-                <!-- Footer Links Section -->
-                <div class="footer-links-grid">
-                    <div>
-                        <h4>Percentile Predictors</h4>
-                        <ul>
-                            <li><a href="/jee-main-percentile-predictor">JEE Main Percentile Predictor</a></li>
-                            <li><a href="/mht-cet-percentile-predictor">MHT CET Percentile Predictor</a></li>
-                            <li><a href="/cat-percentile-predictor">CAT Percentile Predictor</a></li>
-                            <li><a href="/nmat-percentile-predictor">NMAT Percentile Predictor</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4>Rank Predictors</h4>
-                        <ul>
-                            <li><a href="/mht-cet-rank-predictor">MHT CET Rank Predictor</a></li>
-                            <li><a href="/reap-rank-predictor">REAP Rank Predictor</a></li>
-                            <li><a href="/comedk-rank-predictor">COMEDK Rank Predictor</a></li>
-                            <li><a href="/wbjee-rank-predictor">WBJEE Rank Predictor</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4>Resources &amp; Info</h4>
-                        <ul>
-                            <li><a href="#faqs">Frequently Asked Questions</a></li>
-                            <li><a href="#faqs">Score vs Percentile Guide</a></li>
-                            <li><a href="#faqs">Normalization Explained</a></li>
-                            <li><a href="#faqs">Reservation Percentages</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4>About Us</h4>
-                        <ul>
-                            <li><a href="/about">About Us</a></li>
-                            <li><a href="/privacy">Privacy Policy</a></li>
-                            <li><a href="/terms">Terms &amp; Conditions</a></li>
-                            <li><a href="/contact">Contact Us</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="footer-content">
-                    <p>&copy; <span id="current-year"></span> Famral. All Rights Reserved.</p>
-                    <p><a href="#" class="back-to-top">Back to Top</a></p>
-                </div>
-            </div>
-        </footer>
+    <script src="/common.js"></script>
 
         <!-- Simple JS for Mobile Menu Toggle -->
         <script>
-            const navToggle = document.querySelector('.nav-toggle');
-            const navLinks = document.querySelector('.nav-links-wrapper');
-            const iconBars = navToggle.querySelector('.icon-bars');
-            const iconTimes = navToggle.querySelector('.icon-times');
+        // Nav & Footer managed by common.js
 
-            navToggle.addEventListener('click', () => {
-                const isExpanded = navLinks.classList.toggle('active');
-                navToggle.setAttribute('aria-expanded', isExpanded);
-
-                if (isExpanded) {
-                    iconBars.style.display = 'none';
-                    iconTimes.style.display = 'inline-block';
-                } else {
-                    iconBars.style.display = 'inline-block';
-                    iconTimes.style.display = 'none';
-                }
-            });
-
-            navLinks.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    if (navLinks.classList.contains('active')) {
-                        navLinks.classList.remove('active');
-                        navToggle.setAttribute('aria-expanded', 'false');
-                        iconBars.style.display = 'inline-block';
-                        iconTimes.style.display = 'none';
-                    }
-                });
-            });
-
-            const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
-
-            dropdownToggles.forEach(toggle => {
-                toggle.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    const menu = toggle.nextElementSibling;
-
-                    document.querySelectorAll('.dropdown-menu.show').forEach(openMenu => {
-                        if (openMenu !== menu) openMenu.classList.remove('show');
-                    });
-
-                    if (menu) menu.classList.toggle('show');
-                });
-            });
-
-            document.addEventListener('click', (e) => {
-                if (!e.target.closest('.nav-item.dropdown')) {
-                    document.querySelectorAll('.dropdown-menu.show').forEach(menu => {
-                        menu.classList.remove('show');
-                    });
-                }
-            });
-
-            document.getElementById('current-year').textContent = new Date().getFullYear();
 
             // FAQ Accordion Toggle
             const faqItems = document.querySelectorAll('.faq-item');
