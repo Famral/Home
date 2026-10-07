@@ -34,7 +34,14 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+          as="style"
+          onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+      <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    </noscript>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7876432493491415"
         crossorigin="anonymous"></script>
@@ -1166,33 +1173,8 @@
 </head>
 
 <body>
-    <nav class="navbar" aria-label="Main navigation">
-        <div class="nav-container">
-            <a href="https://www.famral.com/" class="nav-logo">
-                <img src="https://www.famral.com/favicon.png" alt="Famral Logo" width="32" height="32">
-                Famral
-            </a>
-            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
-                <i class="fas fa-bars"></i>
-            </button>
-            <div class="nav-links-wrapper" id="navLinks">
-                <a href="/" class="nav-link">Home</a>
-                <div class="nav-item dropdown">
-                    <button class="nav-link dropdown-toggle">College Predictor <i
-                            class="fas fa-chevron-down fa-xs"></i></button>
-                    <div class="dropdown-menu">
-                        <div class="mega-column" style="padding: 0.5rem;">
-                            <a href="/ojee-college-predictor">OJEE College Predictor</a>
-                            <a href="/tnea-college-predictor">TNEA College Predictor</a>
-                            <a href="/tg-eapcet-college-predictor">TG EAPCET College Predictor</a>
-                            <a href="/reap-college-predictor">REAP College Predictor</a>
-                            <a href="/mp-dte-college-predictor">MP DTE College Predictor</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <!-- Shared Global Navbar injected by common.js -->
+    <div id="navbar-placeholder"></div>
 
     <main>
         <!-- Hero Section -->
@@ -1225,6 +1207,11 @@
                         </li>
                     </ol>
                 </nav>
+                <div style="margin-top: 1rem;">
+                    <a href="/exam/ojee" style="display:inline-flex;align-items:center;gap:0.45rem;background:#eff6ff;color:var(--primary-color);padding:0.4rem 0.95rem;border-radius:9999px;font-size:0.875rem;font-weight:600;text-decoration:none;border:1px solid #bfdbfe;transition:transform 0.15s ease;">
+                        <span>📚</span> OJEE 2027 Full Authority Guide &amp; Cutoffs &rarr;
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -1680,83 +1667,15 @@
         </div>
     </div>
 
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-links-grid">
-                <div>
-                    <h4>Predictor &amp; Rounds</h4>
-                    <ul>
-                        <li><a href="#predictor-tool">OJEE College Predictor</a></li>
-                        <li><a href="#admission-info">Round 1 Allotment</a></li>
-                        <li><a href="#admission-info">Round 2 Allotment</a></li>
-                        <li><a href="#admission-info">Spot / Mop-Up Round</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Resources &amp; Info</h4>
-                    <ul>
-                        <li><a href="#faqs">Frequently Asked Questions</a></li>
-                        <li><a href="#counseling-guide">OJEE Counselling Guide</a></li>
-                        <li><a href="#admission-info">Reservation Category Rules</a></li>
-                        <li><a href="#admission-info">Top Odisha Engineering Colleges</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>About Us</h4>
-                    <ul>
-                        <li><a href="/about">About Us</a></li>
-                        <li><a href="/privacy">Privacy Policy</a></li>
-                        <li><a href="/terms">Terms &amp; Conditions</a></li>
-                        <li><a href="/contact">Contact Us</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-content">
-                <p>&copy; <span id="current-year"></span> Famral. All Rights Reserved.</p>
-                <p><a href="#" class="back-to-top">Back to Top <i class="fas fa-arrow-up"></i></a></p>
-            </div>
-        </div>
-    </footer>
+    <!-- Shared Global Footer injected by common.js -->
+    <div id="footer-placeholder"></div>
+
+    <script src="/common.js"></script>
 
     <script>
         // Nav toggle
-        const navToggle = document.querySelector('.nav-toggle');
-        const navLinksWrapper = document.querySelector('.nav-links-wrapper');
-        const toggleIconEl = navToggle.querySelector('i');
+        // Nav & Footer managed by common.js
 
-        navToggle.addEventListener('click', () => {
-            const isExpanded = navLinksWrapper.classList.toggle('active');
-            navToggle.setAttribute('aria-expanded', isExpanded);
-            if (isExpanded) { toggleIconEl.classList.replace('fa-bars', 'fa-times'); }
-            else { toggleIconEl.classList.replace('fa-times', 'fa-bars'); }
-        });
-
-        navLinksWrapper.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                if (navLinksWrapper.classList.contains('active')) {
-                    navLinksWrapper.classList.remove('active');
-                    navToggle.setAttribute('aria-expanded', 'false');
-                    toggleIconEl.classList.replace('fa-times', 'fa-bars');
-                }
-            });
-        });
-
-        document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-            toggle.addEventListener('click', (e) => {
-                e.stopPropagation();
-                const menu = toggle.nextElementSibling;
-                document.querySelectorAll('.dropdown-menu.show').forEach(m => { if (m !== menu) m.classList.remove('show'); });
-                if (menu) menu.classList.toggle('show');
-            });
-        });
-
-        document.addEventListener('click', (e) => {
-            if (!e.target.closest('.nav-item.dropdown')) {
-                document.querySelectorAll('.dropdown-menu.show').forEach(m => m.classList.remove('show'));
-            }
-        });
-
-        document.getElementById('current-year').textContent = new Date().getFullYear();
 
         // ==========================================
         // OJEE Odisha Colleges Database
