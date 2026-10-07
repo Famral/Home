@@ -3260,31 +3260,99 @@
         }
 
         // 8. Active Sub-Navbar Scroll Tracking & Init
-        window.addEventListener('DOMContentLoaded', () => {
+        function initJeeSubNavScroll() {
             evaluateJeeEligibility();
             calculateJeeScoreAndRank();
             simulateJosaaDecision();
 
             const sections = document.querySelectorAll('section[id]');
             const navLinks = document.querySelectorAll('.sub-nav-link');
+            const subNavContainer = document.getElementById('subNavBar');
 
-            window.addEventListener('scroll', () => {
+            function updateActiveSubNav() {
+                const scrollPos = window.scrollY || window.pageYOffset;
                 let current = '';
+
                 sections.forEach(section => {
-                    const top = section.offsetTop - 140;
-                    if (window.scrollY >= top) {
+                    const rect = section.getBoundingClientRect();
+                    if (rect.top <= 140) {
                         current = section.getAttribute('id');
                     }
                 });
 
+                if ((window.innerHeight + scrollPos) >= document.documentElement.scrollHeight - 60) {
+                    if (sections.length > 0) {
+                        current = sections[sections.length - 1].getAttribute('id');
+                    }
+                }
+
+                if (!current && sections.length > 0) {
+                    current = sections[0].getAttribute('id');
+                }
+
+                let activeLink = null;
                 navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === `#${current}`) {
+                    const href = link.getAttribute('href');
+                    if (href === `#${current}`) {
                         link.classList.add('active');
+                        activeLink = link;
+                    } else {
+                        link.classList.remove('active');
                     }
                 });
-            }, { passive: true });
-        });
+
+                if (subNavContainer && activeLink) {
+                    const linkLeft = activeLink.offsetLeft;
+                    const linkWidth = activeLink.offsetWidth;
+                    const containerWidth = subNavContainer.clientWidth;
+                    const targetScroll = linkLeft - (containerWidth / 2) + (linkWidth / 2);
+
+                    subNavContainer.scrollTo({
+                        left: Math.max(0, targetScroll),
+                        behavior: 'smooth'
+                    });
+                }
+            }
+
+            window.addEventListener('scroll', updateActiveSubNav, { passive: true });
+            window.addEventListener('resize', updateActiveSubNav, { passive: true });
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    const targetId = link.getAttribute('href');
+                    if (targetId && targetId.startsWith('#')) {
+                        const targetEl = document.querySelector(targetId);
+                        if (targetEl) {
+                            e.preventDefault();
+                            const targetTop = targetEl.getBoundingClientRect().top + window.pageYOffset - 110;
+                            window.scrollTo({
+                                top: targetTop,
+                                behavior: 'smooth'
+                            });
+                            navLinks.forEach(l => l.classList.remove('active'));
+                            link.classList.add('active');
+                            if (subNavContainer) {
+                                const linkLeft = link.offsetLeft;
+                                const linkWidth = link.offsetWidth;
+                                const containerWidth = subNavContainer.clientWidth;
+                                subNavContainer.scrollTo({
+                                    left: Math.max(0, linkLeft - (containerWidth / 2) + (linkWidth / 2)),
+                                    behavior: 'smooth'
+                                });
+                            }
+                        }
+                    }
+                });
+            });
+
+            updateActiveSubNav();
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initJeeSubNavScroll);
+        } else {
+            initJeeSubNavScroll();
+        }
     </script>
 </body>
 
