@@ -532,7 +532,7 @@
 
                 <!-- Col 5: Exams & Counselling -->
                 <div>
-                    <h4>About Famral</h4>
+                    <h4>Exams & Counselling</h4>
                     <ul>
                         <li><a href="/exam/jee-main">JEE Main 2027</a></li>
                         <li><a href="/exam/jee-advanced">JEE Advanced 2027</a></li>
