@@ -456,6 +456,7 @@
                         <a href="/college-predictor" style="font-weight: 600; color: var(--primary-color, #0067b8); background: var(--surface-color, #f8fafc);">View All College Predictors &rarr;</a>
                     </div>
                 </div>
+                <a href="/exams" class="nav-link">Exams</a>
             </div>
         </div>
     </nav>
