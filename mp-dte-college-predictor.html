@@ -26,7 +26,14 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+          as="style"
+          onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+      <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    </noscript>
 
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7876432493491415"
@@ -1375,37 +1382,8 @@
 
 <body>
 
-    <nav class="navbar">
-        <div class="nav-container">
-            <!-- Logo -->
-            <a href="https://www.famral.com/" class="nav-logo">
-                <img src="https://www.famral.com/favicon.png" alt="Famral Logo" width="32" height="32">
-                Famral
-            </a>
-
-            <!-- Mobile Menu Toggle Button -->
-            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
-                <i class="fas fa-bars"></i>
-            </button>
-
-            <!-- Navigation Links -->
-            <div class="nav-links-wrapper" id="navLinks">
-                <a href="/" class="nav-link">Home</a>
-                <div class="nav-item dropdown">
-                    <button class="nav-link dropdown-toggle">College Predictor <i
-                            class="fas fa-chevron-down fa-xs"></i></button>
-                    <div class="dropdown-menu">
-                        <div class="mega-column" style="padding: 0.5rem;">
-                            <a href="/reap-college-predictor" class="active">REAP College Predictor</a>
-                            <a href="/mp-dte-college-predictor">MP DTE College Predictor</a>
-                            <a href="/hstes-college-predictor">HSTES College Predictor</a>
-                            <a href="/acpc-college-predictor">ACPC College Predictor</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <!-- Shared Global Navbar injected by common.js -->
+    <div id="navbar-placeholder"></div>
 
 
     <main>
@@ -1683,6 +1661,15 @@
                     top-tier colleges. Use our guidelines, document checklist, and reservation stats to prepare.
                 </p>
 
+                <div style="background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); border: 1px solid #bfdbfe; border-radius: 12px; padding: 1.25rem 1.75rem; margin-bottom: 2rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+                    <div>
+                        <span style="font-size: .8rem; font-weight: 700; color: #1e40af; text-transform: uppercase; letter-spacing: .05em;">Official Authority Guide</span>
+                        <h3 style="font-size: 1.15rem; color: #1e3a8a; margin: .25rem 0;">MP DTE 2027 Complete Counselling &amp; Cutoff Guide</h3>
+                        <p style="font-size: .9rem; color: #1e40af; margin: 0;">Explore SGSITS &amp; IET DAVV cutoffs, 90% domicile rules, 30% women quota, internal sliding, and CLC dates.</p>
+                    </div>
+                    <a href="/exam/mp-dte" class="btn" style="background: #1e40af; color: #fff; padding: .6rem 1.2rem; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: .9rem;">Explore MP DTE 2027 &rarr;</a>
+                </div>
+
                 <div class="content-grid">
                     <!-- Choice Filling Strategy Card -->
                     <div class="content-card">
@@ -1899,107 +1886,15 @@
 
 
     <!-- Footer -->
-    <footer class="site-footer">
-        <div class="container">
+    <!-- Shared Global Footer injected by common.js -->
+    <div id="footer-placeholder"></div>
 
-            <!-- Footer Links Section -->
-            <div class="footer-links-grid">
-                <div>
-                    <h4>Predictor & Rounds</h4>
-                    <ul>
-                        <li><a href="#predictor-tool">College Predictor</a></li>
-                        <li><a href="#counseling-guide">Main Round (Round 1)</a></li>
-                        <li><a href="#counseling-guide">Round 1 Upgrade</a></li>
-                        <li><a href="#counseling-guide">Round 2 Allotment</a></li>
-                        <li><a href="#counseling-guide">College Level Counseling</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Resources & Info</h4>
-                    <ul>
-                        <li><a href="#faqs">Frequently Asked Questions</a></li>
-                        <li><a href="#strategy-guides">Choice Filling Strategy</a></li>
-                        <li><a href="#strategy-guides">Document Checklist</a></li>
-                        <li><a href="#strategy-guides">Reservation Percentages</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>About Us</h4>
-                    <ul>
-                        <li><a href="/about">About Us</a></li>
-                        <li><a href="/privacy">Privacy Policy</a></li>
-                        <li><a href="/terms">Terms & Conditions</a></li>
-                        <li><a href="/contact">Contact Us</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="footer-content">
-                <p>&copy; <span id="current-year"></span> Famral. All Rights Reserved.</p>
-                <p><a href="#" class="back-to-top">Back to Top <i class="fas fa-arrow-up"></i></a></p>
-            </div>
-        </div>
-    </footer>
+    <script src="/common.js"></script>
 
     <!-- Simple JS for Mobile Menu Toggle -->
     <script>
-        const navToggle = document.querySelector('.nav-toggle');
-        const navLinks = document.querySelector('.nav-links-wrapper');
-        const toggleIcon = navToggle.querySelector('i'); // Get the icon element
+        // Nav & Footer managed by common.js
 
-        navToggle.addEventListener('click', () => {
-            const isExpanded = navLinks.classList.toggle('active');
-            navToggle.setAttribute('aria-expanded', isExpanded);
-
-            // Change icon from bars to times (X) when open
-            if (isExpanded) {
-                toggleIcon.classList.remove('fa-bars');
-                toggleIcon.classList.add('fa-times');
-            } else {
-                toggleIcon.classList.remove('fa-times');
-                toggleIcon.classList.add('fa-bars');
-            }
-        });
-
-        // Close menu when a link is clicked
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                if (navLinks.classList.contains('active')) {
-                    navLinks.classList.remove('active');
-                    navToggle.setAttribute('aria-expanded', 'false');
-                    toggleIcon.classList.remove('fa-times');
-                    toggleIcon.classList.add('fa-bars');
-                }
-            });
-        });
-
-        // Multiple Dropdown Menus Toggle
-        const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
-
-        dropdownToggles.forEach(toggle => {
-            toggle.addEventListener('click', (e) => {
-                e.stopPropagation();
-                const menu = toggle.nextElementSibling;
-
-                // Close other open menus
-                document.querySelectorAll('.dropdown-menu.show').forEach(openMenu => {
-                    if (openMenu !== menu) openMenu.classList.remove('show');
-                });
-
-                if (menu) menu.classList.toggle('show');
-            });
-        });
-
-        document.addEventListener('click', (e) => {
-            if (!e.target.closest('.nav-item.dropdown')) {
-                document.querySelectorAll('.dropdown-menu.show').forEach(menu => {
-                    menu.classList.remove('show');
-                });
-            }
-        });
-
-        // Update the copyright year automatically
-        document.getElementById('current-year').textContent = new Date().getFullYear();
 
         // ==========================================
         // MP DTE College Predictor JavaScript Logic
