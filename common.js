@@ -538,10 +538,10 @@
                         <li><a href="/exam/jee-main">JEE Main 2027</a></li>
                         <li><a href="/exam/jee-advanced">JEE Advanced 2027</a></li>
                         <li><a href="https://jeerankpredictor.com/">JEE Rank Predictor</a></li>
-                        <li><a href="https://mpdtecounselling.in/">MP DTE Counselling</a></li>
+                        <li><a href="/exam/mp-dte">MP DTE Counselling</a></li>
                         <li><a href="/exam/reap">REAP 2027</a></li>
                         <li><a href="/exam/comedk">COMEDK 2027</a></li>
-                        <li><a href="/exam/kcet">KCET 2027</a></li>
+                        <li><a href="/exam/kcet">KCET Counselling</a></li>
                         <li><a href="/exam/keam">KEAM 2027</a></li>
                         <li><a href="/exam/tnea">TNEA 2027</a></li>
                         <li><a href="/exam/mht-cet">MHT CET 2027</a></li>
