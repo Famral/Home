@@ -34,7 +34,14 @@
   <noscript>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   </noscript>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+          as="style"
+          onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+      <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    </noscript>
   <!-- SEO Structured Data / Schemas -->
   <script type="application/ld+json">
   {
@@ -930,42 +937,8 @@
 
 <body>
   <header>
-    <nav class="navbar" aria-label="Main navigation">
-      <div class="nav-container">
-        <a href="https://www.famral.com/" class="nav-logo"><img src="./favicon.png" alt="Famral Logo" width="32"
-            height="32" loading="eager" decoding="async">Famral</a>
-        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><i
-            class="fas fa-bars"></i></button>
-        <div class="nav-links-wrapper" id="navLinks">
-          <a href="/" class="nav-link">Home</a>
-          <div class="nav-item dropdown">
-            <button class="nav-link dropdown-toggle">Rank Predictors <i class="fas fa-chevron-down fa-xs"></i></button>
-            <div class="dropdown-menu">
-              <div style="padding:.5rem;">
-                <a href="/wbjee-rank-predictor">WBJEE Rank Predictor</a>
-                <a href="/reap-rank-predictor">REAP Rank Predictor</a>
-              </div>
-            </div>
-          </div>
-          <div class="nav-item dropdown">
-            <button class="nav-link dropdown-toggle">College Predictors <i
-                class="fas fa-chevron-down fa-xs"></i></button>
-            <div class="dropdown-menu">
-              <div style="padding:.5rem;">
-                <a href="/wbjee-college-predictor">WBJEE College Predictor</a>
-                <a href="/reap-college-predictor">REAP Predictor</a>
-                <a href="/ipu-cet-college-predictor">IPU CET Predictor</a>
-                <a href="/cat-college-predictor">CAT Predictor</a>
-                <a href="/jee-main-college-predictor">JEE Main Predictor</a>
-                <a href="/jee-advanced-college-predictor">JEE Advanced Predictor</a>
-                <a href="/mht-cet-college-predictor">MHT CET Predictor</a>
-                <a href="/comedk-college-predictor">COMEDK Predictor</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
+    <!-- Shared Global Navbar injected by common.js -->
+    <div id="navbar-placeholder"></div>
   </header>
   <main>
     <section class="hero">
@@ -1419,59 +1392,14 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-links-grid">
-        <div>
-          <h4>Rank Predictors</h4>
-          <ul>
-            <li><a href="#predictor-tool">WBJEE Rank Predictor</a></li>
-            <li><a href="/reap-rank-predictor">REAP Rank Predictor</a></li>
-            <li><a href="/jee-main-college-predictor">JEE Main Predictor</a></li>
-            <li><a href="/ipu-cet-college-predictor">IPU CET Predictor</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Categories &amp; Quotas</h4>
-          <ul>
-            <li><a href="#admission-info">Home State (HS) Quota</a></li>
-            <li><a href="#admission-info">Other State (OS) Quota</a></li>
-            <li><a href="#admission-info">OBC-A / OBC-B Quota</a></li>
-            <li><a href="#admission-info">SC / ST &amp; TFW Quota</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Resources &amp; Info</h4>
-          <ul>
-            <li><a href="#faqs">Frequently Asked Questions</a></li>
-            <li><a href="#counseling-guide">WBJEE Rank Guide</a></li>
-            <li><a href="#institutes-list">WBJEE Directory</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>About Us</h4>
-          <ul>
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/privacy">Privacy Policy</a></li>
-            <li><a href="/terms">Terms &amp; Conditions</a></li>
-            <li><a href="/contact">Contact Us</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-content">
-        <p>&copy; <span id="current-year"></span> Famral. All Rights Reserved.</p>
-        <p><a href="#">Back to Top <i class="fas fa-arrow-up"></i></a></p>
-      </div>
-    </div>
-  </footer>
+  <!-- Shared Global Footer injected by common.js -->
+    <div id="footer-placeholder"></div>
+
+    <script src="/common.js"></script>
 
   <script>
-    const navToggle = document.querySelector('.nav-toggle'), navLinksWrapper = document.querySelector('.nav-links-wrapper'), toggleIconEl = navToggle.querySelector('i');
-    navToggle.addEventListener('click', () => { const e = navLinksWrapper.classList.toggle('active'); navToggle.setAttribute('aria-expanded', e); e ? toggleIconEl.classList.replace('fa-bars', 'fa-times') : toggleIconEl.classList.replace('fa-times', 'fa-bars'); });
-    navLinksWrapper.querySelectorAll('a').forEach(a => { a.addEventListener('click', () => { navLinksWrapper.classList.remove('active'); navToggle.setAttribute('aria-expanded', 'false'); toggleIconEl.classList.replace('fa-times', 'fa-bars'); }); });
-    document.querySelectorAll('.dropdown-toggle').forEach(t => { t.addEventListener('click', e => { e.stopPropagation(); const m = t.nextElementSibling; document.querySelectorAll('.dropdown-menu.show').forEach(x => { if (x !== m) x.classList.remove('show'); }); if (m) m.classList.toggle('show'); }); });
-    document.addEventListener('click', e => { if (!e.target.closest('.nav-item.dropdown')) document.querySelectorAll('.dropdown-menu.show').forEach(m => m.classList.remove('show')); });
-    document.getElementById('current-year').textContent = new Date().getFullYear();
+        // Nav & Footer managed by common.js
+
 
     // Authentic WBJEE Marks vs General Merit Rank (GMR) dataset based on official WBJEE result trends
     const wbjeeRealData = [
