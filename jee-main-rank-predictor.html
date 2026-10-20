@@ -56,7 +56,14 @@
   <noscript>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   </noscript>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+          as="style"
+          onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+      <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    </noscript>
   <style>
     * {
       margin: 0;
@@ -788,47 +795,8 @@
 
 <body>
   <header>
-    <nav class="navbar" aria-label="Main navigation">
-      <div class="nav-container">
-        <a href="https://www.famral.com/" class="nav-logo"><img src="./favicon.png" alt="Famral Logo" width="32"
-            height="32" loading="eager" decoding="async">Famral</a>
-        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><i
-            class="fas fa-bars"></i></button>
-        <div class="nav-links-wrapper" id="navLinks">
-          <a href="/" class="nav-link">Home</a>
-          <div class="nav-item dropdown">
-            <button class="nav-link dropdown-toggle">Rank Predictors <i class="fas fa-chevron-down fa-xs"></i></button>
-            <div class="dropdown-menu">
-              <div style="padding:.5rem;">
-                <a href="/jee-main-rank-predictor">JEE Main Rank Predictor</a>
-                <a href="/mht-cet-rank-predictor">MHT-CET Rank Predictor</a>
-                <a href="/keam-rank-predictor">KEAM Rank Predictor</a>
-                <a href="/tnea-rank-predictor">TNEA Rank Predictor</a>
-                <a href="/wbjee-rank-predictor">WBJEE Rank Predictor</a>
-                <a href="/reap-rank-predictor">REAP Rank Predictor</a>
-                <a href="/comedk-rank-predictor">COMEDK Rank Predictor</a>
-              </div>
-            </div>
-          </div>
-          <div class="nav-item dropdown">
-            <button class="nav-link dropdown-toggle">College Predictors <i
-                class="fas fa-chevron-down fa-xs"></i></button>
-            <div class="dropdown-menu">
-              <div style="padding:.5rem;">
-                <a href="/jee-main-college-predictor">JEE Main Predictor</a>
-                <a href="/jee-advanced-college-predictor">JEE Advanced Predictor</a>
-                <a href="/mht-cet-college-predictor">MHT CET Predictor</a>
-                <a href="/wbjee-college-predictor">WBJEE College Predictor</a>
-                <a href="/reap-college-predictor">REAP Predictor</a>
-                <a href="/ipu-cet-college-predictor">IPU CET Predictor</a>
-                <a href="/cat-college-predictor">CAT Predictor</a>
-                <a href="/comedk-college-predictor">COMEDK Predictor</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
+    <!-- Shared Global Navbar injected by common.js -->
+    <div id="navbar-placeholder"></div>
   </header>
   <main id="main-content" aria-label="JEE Main Rank Predictor 2026">
     <section class="hero">
@@ -1615,74 +1583,14 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-links-grid">
-        <div>
-          <h4>Rank Predictors</h4>
-          <ul>
-            <li><a href="/jee-main-rank-predictor">JEE Main Rank Predictor</a></li>
-            <li><a href="/mht-cet-rank-predictor">MHT-CET Rank Predictor</a></li>
-            <li><a href="/keam-rank-predictor">KEAM Rank Predictor</a></li>
-            <li><a href="/tnea-rank-predictor">TNEA Rank Predictor</a></li>
-            <li><a href="/comedk-rank-predictor">COMEDK Rank Predictor</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>College Predictors</h4>
-          <ul>
-            <li><a href="/jee-main-college-predictor">JEE Main Predictor</a></li>
-            <li><a href="/jee-advanced-college-predictor">JEE Advanced Predictor</a></li>
-            <li><a href="/mht-cet-college-predictor">MHT CET College Predictor</a></li>
-            <li><a href="/wbjee-college-predictor">WBJEE College Predictor</a></li>
-            <li><a href="/comedk-college-predictor">COMEDK Predictor</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/college-predictor">All Predictors</a></li>
-            <li><a href="/about">About Famral</a></li>
-            <li><a href="/contact">Contact Us</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Official Resources</h4>
-          <ul>
-            <li><a href="https://jeemain.nta.ac.in/" target="_blank" rel="noopener noreferrer">NTA JEE Main Official
-                Portal</a></li>
-            <li><a href="https://josaa.nic.in/" target="_blank" rel="noopener noreferrer">JoSAA Official Website</a>
-            </li>
-            <li><a href="https://csab.nic.in/" target="_blank" rel="noopener noreferrer">CSAB Official Website</a></li>
-            <li><a href="https://www.nta.ac.in/" target="_blank" rel="noopener noreferrer">NTA Official Website</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-content">
-        <span>&copy; 2026 Famral. All rights reserved.</span>
-        <span>Data Source: NTA Official JEE Main 2026 Results &amp; JoSAA 2026 Closing Ranks</span>
-      </div>
-    </div>
-  </footer>
+  <!-- Shared Global Footer injected by common.js -->
+    <div id="footer-placeholder"></div>
+
+    <script src="/common.js"></script>
 
   <script>
-    // Navigation
-    const navToggle = document.querySelector('.nav-toggle');
-    const navLinks = document.getElementById('navLinks');
-    navToggle.addEventListener('click', () => {
-      const isExpanded = navLinks.classList.toggle('active');
-      navToggle.setAttribute('aria-expanded', isExpanded);
-    });
-    document.querySelectorAll('.dropdown-toggle').forEach(btn => {
-      btn.addEventListener('click', e => {
-        e.stopPropagation();
-        const menu = btn.nextElementSibling;
-        document.querySelectorAll('.dropdown-menu.show').forEach(m => { if (m !== menu) m.classList.remove('show'); });
-        menu.classList.toggle('show');
-      });
-    });
-    document.addEventListener('click', () => document.querySelectorAll('.dropdown-menu.show').forEach(m => m.classList.remove('show')));
+        // Nav & Footer managed by common.js
+
 
     // JEE Main Rank Prediction Logic
     // Total Score = Physics (100) + Chemistry (100) + Mathematics (100) = 300
