@@ -44,7 +44,12 @@
     <noscript>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     </noscript>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    </noscript>
 
     <script type="application/ld+json">
     {
@@ -1288,54 +1293,30 @@
     <noscript>
         <div
             style="background:#fff3cd;border:2px solid #ffc107;padding:1rem;text-align:center;font-family:sans-serif;font-size:0.95rem;">
-            JavaScript is required to use the JAC Delhi College Predictor. Please enable JavaScript in your browser settings.
+            JavaScript is required to use the JAC Delhi College Predictor. Please enable JavaScript in your browser
+            settings.
         </div>
     </noscript>
 </head>
 
 <body>
     <header>
-        <nav class="navbar" aria-label="Main navigation">
-            <div class="nav-container">
-                <a href="https://www.famral.com/" class="nav-logo">
-                    <img src="./favicon.png" alt="Famral Logo" width="32" height="32" loading="eager" decoding="async">
-                    Famral
-                </a>
-                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"
-                    aria-controls="navLinks">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <div class="nav-links-wrapper" id="navLinks">
-                    <a href="/" class="nav-link">Home</a>
-                    <div class="nav-item dropdown">
-                        <button class="nav-link dropdown-toggle">College Predictor <i
-                                class="fas fa-chevron-down fa-xs"></i></button>
-                        <div class="dropdown-menu">
-                            <div class="mega-column" style="padding: 0.5rem;">
-                                <a href="/jac-delhi-college-predictor"
-                                    style="font-weight: 700; color: var(--primary-color);">JAC Delhi Predictor</a>
-                                <a href="/jee-main-college-predictor">JEE Main Predictor</a>
-                                <a href="/jee-advanced-college-predictor">JEE Advanced Predictor</a>
-                                <a href="/mht-cet-college-predictor">MHT CET Predictor</a>
-                                <a href="/comedk-college-predictor">COMEDK Predictor</a>
-                                <a href="/keam-college-predictor">KEAM Predictor</a>
-                                <a href="/wbjee-college-predictor">WBJEE Predictor</a>
-                                <a href="/ap-eapcet-college-predictor">AP EAPCET Predictor</a>
-                                <a href="/nata-college-predictor">NATA Predictor</a>
-                                <a href="/uceed-college-predictor">UCEED Predictor</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </nav>
+        <!-- Shared Global Navbar injected by common.js -->
+        <div id="navbar-placeholder"></div>
     </header>
 
     <main>
         <section class="hero">
             <div class="container">
                 <h1>JAC Delhi College Predictor 2026</h1>
-                <p>Predict your B.Tech &amp; B.Arch admission chances in DTU, NSUT, IIIT Delhi, IGDTUW, and DSEU based on official JEE Main cutoff ranks across Delhi 85% &amp; Outside Delhi 15% quotas.</p>
+                <p>Predict your B.Tech &amp; B.Arch admission chances in DTU, NSUT, IIIT Delhi, IGDTUW, and DSEU based
+                    on official JEE Main cutoff ranks across Delhi 85% &amp; Outside Delhi 15% quotas.</p>
+                <div style="margin-top:1rem;">
+                    <a href="/exam/jac-delhi"
+                        style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--primary-color, #0067b8);color:#fff;padding:0.5rem 1.1rem;border-radius:4px;font-size:0.9rem;font-weight:600;text-decoration:none;box-shadow:0 2px 4px rgba(0,0,0,0.1);">
+                        <span>📘</span> Complete JAC Delhi 2027 Guide &amp; Cutoffs &rarr;
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -1351,13 +1332,16 @@
                                     <input type="number" id="jee-rank" class="form-control"
                                         placeholder="Enter your JEE Main Rank (e.g. 18500)" required min="1"
                                         max="500000" step="1">
-                                    <small style="color: var(--text-light); font-size: 0.78rem;">Enter your overall JEE Main Common Rank List (CRL) or Category Rank for precise predictions.</small>
+                                    <small style="color: var(--text-light); font-size: 0.78rem;">Enter your overall JEE
+                                        Main Common Rank List (CRL) or Category Rank for precise predictions.</small>
                                 </div>
                                 <div class="form-group">
                                     <label for="quota-region">Home State Domicile Region</label>
                                     <select id="quota-region" class="form-control">
-                                        <option value="DELHI" selected>Delhi Region (85% Quota - Passed 12th in NCT Delhi)</option>
-                                        <option value="OUTSIDE_DELHI">Outside Delhi Region (15% Quota - Passed 12th outside Delhi)</option>
+                                        <option value="DELHI" selected>Delhi Region (85% Quota - Passed 12th in NCT
+                                            Delhi)</option>
+                                        <option value="OUTSIDE_DELHI">Outside Delhi Region (15% Quota - Passed 12th
+                                            outside Delhi)</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
@@ -1375,10 +1359,12 @@
                                 <div class="form-group">
                                     <label for="college-type">Preferred University / Campus</label>
                                     <select id="college-type" class="form-control">
-                                        <option value="ALL" selected>All Participating Universities (DTU, NSUT, IIITD, IGDTUW, DSEU)</option>
+                                        <option value="ALL" selected>All Participating Universities (DTU, NSUT, IIITD,
+                                            IGDTUW, DSEU)</option>
                                         <option value="DTU">Delhi Technological University (DTU / DCE)</option>
                                         <option value="NSUT_MAIN">NSUT Main Campus (Dwarka)</option>
-                                        <option value="NSUT_SATELLITE">NSUT East &amp; West Campuses (Geeta Colony / Jaffarpur)</option>
+                                        <option value="NSUT_SATELLITE">NSUT East &amp; West Campuses (Geeta Colony /
+                                            Jaffarpur)</option>
                                         <option value="IIITD">IIIT Delhi (Indraprastha Institute of Info Tech)</option>
                                         <option value="IGDTUW">IGDTUW (Women Only - B.Tech &amp; B.Arch)</option>
                                         <option value="DSEU">DSEU (Delhi Skill &amp; Entrepreneurship Univ)</option>
@@ -1388,20 +1374,27 @@
                                     <label for="branches">Preferred Discipline / Stream</label>
                                     <select id="branches" class="form-control">
                                         <option value="ALL" selected>All Engineering Streams &amp; B.Arch</option>
-                                        <option value="CSE_IT_SE">Computer Science, IT &amp; Software Engg (COE, CSE, SE, IT)</option>
-                                        <option value="AI_DS_MAC">AI, Data Science &amp; Maths &amp; Computing (CSAI, AI-DS, MAC, CSAM)</option>
-                                        <option value="ECE_VLSI">Electronics &amp; Communication / VLSI (ECE, ECAM, ECE-VLSI)</option>
+                                        <option value="CSE_IT_SE">Computer Science, IT &amp; Software Engg (COE, CSE,
+                                            SE, IT)</option>
+                                        <option value="AI_DS_MAC">AI, Data Science &amp; Maths &amp; Computing (CSAI,
+                                            AI-DS, MAC, CSAM)</option>
+                                        <option value="ECE_VLSI">Electronics &amp; Communication / VLSI (ECE, ECAM,
+                                            ECE-VLSI)</option>
                                         <option value="EE">Electrical Engg &amp; Instrumentation (EE, ICE)</option>
-                                        <option value="ME_AUTO">Mechanical, Automation &amp; Robotics (ME, MAM, MAE)</option>
-                                        <option value="CIVIL_CHEM_ENV">Civil, Chemical &amp; Environmental Engg (CE, CHE, ENE)</option>
-                                        <option value="BIOTECH_PHYSICS">Biotechnology, Engg Physics &amp; PIE (BT, EP, PIE)</option>
+                                        <option value="ME_AUTO">Mechanical, Automation &amp; Robotics (ME, MAM, MAE)
+                                        </option>
+                                        <option value="CIVIL_CHEM_ENV">Civil, Chemical &amp; Environmental Engg (CE,
+                                            CHE, ENE)</option>
+                                        <option value="BIOTECH_PHYSICS">Biotechnology, Engg Physics &amp; PIE (BT, EP,
+                                            PIE)</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="gender">Candidate Gender</label>
                                     <select id="gender" class="form-control">
                                         <option value="GENDER_NEUTRAL" selected>Gender Neutral (Male / Female)</option>
-                                        <option value="FEMALE_ONLY">Female Candidate Only (Includes IGDTUW &amp; Female Quotas)</option>
+                                        <option value="FEMALE_ONLY">Female Candidate Only (Includes IGDTUW &amp; Female
+                                            Quotas)</option>
                                     </select>
                                 </div>
                             </div>
@@ -1419,26 +1412,32 @@
                 <div id="results-placeholder" class="predictor-card empty-state">
                     <i class="fas fa-graduation-cap"></i>
                     <h3>Your JAC Delhi Admission Predictions Await</h3>
-                    <p>Enter your JEE Main Rank and select your region quota (Delhi 85% or Outside Delhi 15%) above to see customized B.Tech branch allotment probabilities across DTU, NSUT, IIIT Delhi, IGDTUW, and DSEU.</p>
+                    <p>Enter your JEE Main Rank and select your region quota (Delhi 85% or Outside Delhi 15%) above to
+                        see customized B.Tech branch allotment probabilities across DTU, NSUT, IIIT Delhi, IGDTUW, and
+                        DSEU.</p>
                 </div>
 
                 <div id="results-loading" class="predictor-card empty-state" style="display: none; padding: 3rem 1rem;">
                     <div class="loader-spinner"></div>
                     <h3 style="margin-top: 1.5rem; color: var(--text-dark);">Analyzing JAC Delhi Cutoff Trends...</h3>
-                    <p style="color: var(--text-light); margin-top: 0.5rem; font-size: 0.95rem;">Comparing your JEE Main rank against official Joint Admission Counseling (JAC) Delhi closing ranks and calculating seat allotment probabilities...</p>
+                    <p style="color: var(--text-light); margin-top: 0.5rem; font-size: 0.95rem;">Comparing your JEE Main
+                        rank against official Joint Admission Counseling (JAC) Delhi closing ranks and calculating seat
+                        allotment probabilities...</p>
                 </div>
 
                 <div id="results-section" class="results-section">
                     <div class="results-header">
                         <h3>Admission Predictions</h3>
-                        <span id="results-count" style="font-weight: 600; color: var(--primary-color);">Found 0 options</span>
+                        <span id="results-count" style="font-weight: 600; color: var(--primary-color);">Found 0
+                            options</span>
                     </div>
                     <div class="predictor-card" style="padding: 1rem; margin-bottom: 1rem;">
                         <div
                             style="display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center; width: 100%;">
                             <div class="form-group" style="margin: 0; width: 100%;">
                                 <input type="text" id="search-input" class="form-control"
-                                    placeholder="Search by university name, branch, or code..." oninput="filterResults()">
+                                    placeholder="Search by university name, branch, or code..."
+                                    oninput="filterResults()">
                             </div>
                             <div class="form-group" style="margin: 0;">
                                 <select id="chance-filter" class="form-control" onchange="filterResults()">
@@ -1472,7 +1471,8 @@
                 <div id="choice-basket-section" class="predictor-card choice-basket-section" style="display: none;">
                     <div class="basket-header">
                         <h3 style="margin: 0; display: flex; align-items: center; gap: 0.5rem;">
-                            <i class="fas fa-list-ol" style="color: var(--primary-color);"></i> My Selected JAC Delhi Preference List
+                            <i class="fas fa-list-ol" style="color: var(--primary-color);"></i> My Selected JAC Delhi
+                            Preference List
                         </h3>
                         <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
                             <select id="basket-sort" onchange="sortBasket(this.value)" class="form-control"
@@ -1493,11 +1493,13 @@
                         </div>
                     </div>
                     <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 1rem;">
-                        These are your selected JAC Delhi options. Reorder them using the Up/Down buttons or use the dropdown to sort them strategically for your official JAC Delhi choice filling submission.
+                        These are your selected JAC Delhi options. Reorder them using the Up/Down buttons or use the
+                        dropdown to sort them strategically for your official JAC Delhi choice filling submission.
                     </p>
                     <div id="choice-list" class="choice-list"></div>
                     <div id="basket-empty-state" style="text-align: center; color: var(--text-light); padding: 1rem 0;">
-                        No choices added yet. Click the <i class="fas fa-plus"></i> or "Add to List" button next to predicted branches above.
+                        No choices added yet. Click the <i class="fas fa-plus"></i> or "Add to List" button next to
+                        predicted branches above.
                     </div>
                 </div>
             </div>
@@ -1509,7 +1511,8 @@
                 <h2 style="margin-bottom: 0.5rem;">Popular College Predictors</h2>
                 <p
                     style="color: var(--text-light); margin-bottom: 2rem; font-size: 0.95rem; line-height: 1.6; max-width: 800px;">
-                    Explore our suite of admission predictors for other national and state engineering and entrance exams across India.</p>
+                    Explore our suite of admission predictors for other national and state engineering and entrance
+                    exams across India.</p>
                 <div class="predictors-grid">
                     <a href="/jee-main-college-predictor" class="predictor-compact-card">
                         <div class="icon"><i class="fas fa-university"></i></div>
@@ -1569,38 +1572,47 @@
             <div class="container">
                 <h2>About the JAC Delhi B.Tech College Predictor 2026</h2>
                 <p style="color: var(--text-light); max-width: 800px; margin-bottom: 2rem;">
-                    The <strong>JAC Delhi College Predictor</strong> is an advanced, data-driven tool designed to assist engineering aspirants in forecasting their B.Tech and B.Arch seat allocation probabilities across top Delhi government institutions (DTU, NSUT Dwarka, NSUT East/West, IIIT Delhi, IGDTUW, and DSEU).
+                    The <strong>JAC Delhi College Predictor</strong> is an advanced, data-driven tool designed to assist
+                    engineering aspirants in forecasting their B.Tech and B.Arch seat allocation probabilities across
+                    top Delhi government institutions (DTU, NSUT Dwarka, NSUT East/West, IIIT Delhi, IGDTUW, and DSEU).
                 </p>
                 <div class="services-list">
                     <div class="service-box">
                         <span class="service-icon" aria-hidden="true"><i class="fas fa-bullseye"></i></span>
                         <h3>Official Cutoff Ranks</h3>
-                        <p>Connected to official Joint Admission Counseling (JAC) Delhi data, covering 85% Delhi Region and 15% Outside Delhi quotas across General, EWS, OBC-NCL, SC, ST, Defense, and PwD categories.</p>
+                        <p>Connected to official Joint Admission Counseling (JAC) Delhi data, covering 85% Delhi Region
+                            and 15% Outside Delhi quotas across General, EWS, OBC-NCL, SC, ST, Defense, and PwD
+                            categories.</p>
                     </div>
                     <div class="service-box">
                         <span class="service-icon" aria-hidden="true"><i class="fas fa-shield-halved"></i></span>
                         <h3>5 Premier Delhi Universities</h3>
-                        <p>Incorporate precise JEE Main rank closing cutoffs for DTU (formerly DCE), NSUT (Dwarka Main, East &amp; West), IIIT Delhi, IGDTUW (Women), and DSEU campuses.</p>
+                        <p>Incorporate precise JEE Main rank closing cutoffs for DTU (formerly DCE), NSUT (Dwarka Main,
+                            East &amp; West), IIIT Delhi, IGDTUW (Women), and DSEU campuses.</p>
                     </div>
                     <div class="service-box">
                         <span class="service-icon" aria-hidden="true"><i class="fas fa-indian-rupee-sign"></i></span>
                         <h3>FFS &amp; Fee Waiver Schemes</h3>
-                        <p>Provides details on Delhi Govt Financial Assistance Scheme (FFS) offering 100%, 50%, or 25% fee concession based on parental income.</p>
+                        <p>Provides details on Delhi Govt Financial Assistance Scheme (FFS) offering 100%, 50%, or 25%
+                            fee concession based on parental income.</p>
                     </div>
                     <div class="service-box">
                         <span class="service-icon" aria-hidden="true"><i class="fas fa-lightbulb"></i></span>
                         <h3>Strategic Choice Tips</h3>
-                        <p>Classifies options into Dream, Target, or Safety choices with strategic recommendations for official JAC Delhi choice filling rounds.</p>
+                        <p>Classifies options into Dream, Target, or Safety choices with strategic recommendations for
+                            official JAC Delhi choice filling rounds.</p>
                     </div>
                     <div class="service-box">
                         <span class="service-icon" aria-hidden="true"><i class="fas fa-scale-balanced"></i></span>
                         <h3>Side-by-Side Compare</h3>
-                        <p>Add up to 3 options to the comparison tray to evaluate campus size, NIRF rankings, average/highest placements, fees, and infrastructure pros/cons.</p>
+                        <p>Add up to 3 options to the comparison tray to evaluate campus size, NIRF rankings,
+                            average/highest placements, fees, and infrastructure pros/cons.</p>
                     </div>
                     <div class="service-box">
                         <span class="service-icon" aria-hidden="true"><i class="fas fa-list-check"></i></span>
                         <h3>Choice Basket &amp; Export</h3>
-                        <p>Build and order your preference list. Export the final strategic sequence as a formatted text file for reference during online JAC Delhi choice filling.</p>
+                        <p>Build and order your preference list. Export the final strategic sequence as a formatted text
+                            file for reference during online JAC Delhi choice filling.</p>
                     </div>
                 </div>
             </div>
@@ -1609,16 +1621,24 @@
         <section class="section" id="counseling-guide" style="border-top: 1px solid var(--border-color);">
             <div class="container">
                 <div style="max-width: 900px; margin: 0 auto;">
-                    <h2 style="margin-bottom: 1.5rem;">How to Use the JAC Delhi College Predictor for B.Tech Admissions</h2>
+                    <h2 style="margin-bottom: 1.5rem;">How to Use the JAC Delhi College Predictor for B.Tech Admissions
+                    </h2>
                     <p style="color: var(--text-light); line-height: 1.8; margin-bottom: 1.5rem; font-size: 1rem;">
-                        Securing admission in top Delhi engineering universities like DTU, NSUT, and IIIT Delhi requires accurate insights into JAC Delhi closing ranks and regional seat reservation rules. The <strong>JAC Delhi College Predictor</strong> compares your rank with multi-year cutoff trends to help you build an optimal preference list.
+                        Securing admission in top Delhi engineering universities like DTU, NSUT, and IIIT Delhi requires
+                        accurate insights into JAC Delhi closing ranks and regional seat reservation rules. The
+                        <strong>JAC Delhi College Predictor</strong> compares your rank with multi-year cutoff trends to
+                        help you build an optimal preference list.
                     </p>
                     <h3 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.3rem; color: var(--text-dark);">
                         Understanding 85% Delhi Region vs 15% Outside Delhi Quota</h3>
                     <p style="color: var(--text-light); line-height: 1.8; margin-bottom: 1.25rem;">
-                        JAC Delhi seat matrix is divided based on the location of the school from which you completed Class 12th:
-                        <strong style="color: var(--primary-color); display: block; margin-top: 0.5rem;">• Delhi Region (85% Quota): Candidates who passed 10+2 from any school located within NCT of Delhi.</strong>
-                        <strong style="color: var(--primary-color); display: block; margin-top: 0.25rem;">• Outside Delhi Region (15% Quota): Candidates who passed 10+2 from any school outside Delhi.</strong>
+                        JAC Delhi seat matrix is divided based on the location of the school from which you completed
+                        Class 12th:
+                        <strong style="color: var(--primary-color); display: block; margin-top: 0.5rem;">• Delhi Region
+                            (85% Quota): Candidates who passed 10+2 from any school located within NCT of
+                            Delhi.</strong>
+                        <strong style="color: var(--primary-color); display: block; margin-top: 0.25rem;">• Outside
+                            Delhi Region (15% Quota): Candidates who passed 10+2 from any school outside Delhi.</strong>
                     </p>
                     <h3 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.3rem; color: var(--text-dark);">
                         Fee Structure &amp; Financial Assistance Scheme (FFS)</h3>
@@ -1628,74 +1648,90 @@
                             style="display: flex; gap: 0.75rem; align-items: flex-start; color: var(--text-light); line-height: 1.7;">
                             <i class="fas fa-circle-check"
                                 style="color: var(--primary-color); margin-top: 0.25rem; font-size: 0.95rem;"></i>
-                            <div><strong>DTU &amp; NSUT Annual Fee:</strong> ₹2.19L to ₹2.29L per year covering tuition, examination, student activity, and university facilities.</div>
+                            <div><strong>DTU &amp; NSUT Annual Fee:</strong> ₹2.19L to ₹2.29L per year covering tuition,
+                                examination, student activity, and university facilities.</div>
                         </li>
                         <li
                             style="display: flex; gap: 0.75rem; align-items: flex-start; color: var(--text-light); line-height: 1.7;">
                             <i class="fas fa-circle-check"
                                 style="color: var(--primary-color); margin-top: 0.25rem; font-size: 0.95rem;"></i>
-                            <div><strong>Delhi Govt Fee Waiver (FFS):</strong> Family income &lt; ₹2.5L gets 100% tuition waiver; income ₹2.5L-₹6.0L gets 50% waiver; income ₹6.0L-₹8.0L gets 25% waiver.</div>
+                            <div><strong>Delhi Govt Fee Waiver (FFS):</strong> Family income &lt; ₹2.5L gets 100%
+                                tuition waiver; income ₹2.5L-₹6.0L gets 50% waiver; income ₹6.0L-₹8.0L gets 25% waiver.
+                            </div>
                         </li>
                         <li
                             style="display: flex; gap: 0.75rem; align-items: flex-start; color: var(--text-light); line-height: 1.7;">
                             <i class="fas fa-circle-check"
                                 style="color: var(--primary-color); margin-top: 0.25rem; font-size: 0.95rem;"></i>
-                            <div><strong>IIIT Delhi Bonus Points:</strong> Up to 2 extra bonus percentile points awarded for achievements in Olympiads, Progate, Sports, Chess, Culture, and Innovation.</div>
+                            <div><strong>IIIT Delhi Bonus Points:</strong> Up to 2 extra bonus percentile points awarded
+                                for achievements in Olympiads, Progate, Sports, Chess, Culture, and Innovation.</div>
                         </li>
                     </ul>
-                    <h3 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.3rem; color: var(--text-dark);">Steps to Build Your JAC Delhi Choice List</h3>
+                    <h3 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.3rem; color: var(--text-dark);">Steps
+                        to Build Your JAC Delhi Choice List</h3>
                     <ul
                         style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.8rem; margin-bottom: 2rem;">
                         <li
                             style="display: flex; gap: 0.75rem; align-items: flex-start; color: var(--text-light); line-height: 1.7;">
                             <i class="fas fa-circle-check"
                                 style="color: var(--primary-color); margin-top: 0.25rem; font-size: 0.95rem;"></i>
-                            <div><strong>Input Your JEE Main Rank:</strong> Enter your official CRL rank or Category rank.</div>
+                            <div><strong>Input Your JEE Main Rank:</strong> Enter your official CRL rank or Category
+                                rank.</div>
                         </li>
                         <li
                             style="display: flex; gap: 0.75rem; align-items: flex-start; color: var(--text-light); line-height: 1.7;">
                             <i class="fas fa-circle-check"
                                 style="color: var(--primary-color); margin-top: 0.25rem; font-size: 0.95rem;"></i>
-                            <div><strong>Select Region &amp; Category:</strong> Choose Delhi 85% or Outside Delhi 15% along with your reservation category (General, OBC-NCL, EWS, SC, ST, PwD, Defense).</div>
+                            <div><strong>Select Region &amp; Category:</strong> Choose Delhi 85% or Outside Delhi 15%
+                                along with your reservation category (General, OBC-NCL, EWS, SC, ST, PwD, Defense).
+                            </div>
                         </li>
                         <li
                             style="display: flex; gap: 0.75rem; align-items: flex-start; color: var(--text-light); line-height: 1.7;">
                             <i class="fas fa-circle-check"
                                 style="color: var(--primary-color); margin-top: 0.25rem; font-size: 0.95rem;"></i>
-                            <div><strong>Compare &amp; Refine:</strong> Filter predictions by probability. Select up to 3 options to compare side-by-side on placements, campus stats, and fees.</div>
+                            <div><strong>Compare &amp; Refine:</strong> Filter predictions by probability. Select up to
+                                3 options to compare side-by-side on placements, campus stats, and fees.</div>
                         </li>
                         <li
                             style="display: flex; gap: 0.75rem; align-items: flex-start; color: var(--text-light); line-height: 1.7;">
                             <i class="fas fa-circle-check"
                                 style="color: var(--primary-color); margin-top: 0.25rem; font-size: 0.95rem;"></i>
-                            <div><strong>Export Preference List:</strong> Add preferred choices to your Preference List, reorder them, and export to guide your official JAC Delhi online choice submission.</div>
+                            <div><strong>Export Preference List:</strong> Add preferred choices to your Preference List,
+                                reorder them, and export to guide your official JAC Delhi online choice submission.
+                            </div>
                         </li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <section class="section" id="institutes-list" style="border-top: 1px solid var(--border-color); background: #ffffff;">
+        <section class="section" id="institutes-list"
+            style="border-top: 1px solid var(--border-color); background: #ffffff;">
             <div class="container">
                 <h2 style="margin-bottom: 0.5rem;">Directory of JAC Delhi Participating Technical Universities</h2>
                 <p
                     style="color: var(--text-light); margin-bottom: 2rem; font-size: 0.95rem; line-height: 1.6; max-width: 800px;">
-                    Complete list of Delhi government technical universities admitting students via Joint Admission Counseling (JAC) Delhi. Categorized by tier, location, top branches, and average placement CTCs.
+                    Complete list of Delhi government technical universities admitting students via Joint Admission
+                    Counseling (JAC) Delhi. Categorized by tier, location, top branches, and average placement CTCs.
                 </p>
                 <div style="margin-bottom: 1.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
                     <button onclick="filterInstituteTable('ALL', this)" class="btn btn-primary inst-tab-btn"
-                        style="padding: 0.5rem 1rem; font-size: 0.85rem; border: 1px solid var(--primary-color);">All JAC Delhi Universities</button>
+                        style="padding: 0.5rem 1rem; font-size: 0.85rem; border: 1px solid var(--primary-color);">All
+                        JAC Delhi Universities</button>
                     <button onclick="filterInstituteTable('TOP_TIER', this)" class="btn btn-secondary inst-tab-btn"
                         style="padding: 0.5rem 1rem; font-size: 0.85rem;">Flagship (DTU &amp; NSUT Main)</button>
                     <button onclick="filterInstituteTable('METRO', this)" class="btn btn-secondary inst-tab-btn"
                         style="padding: 0.5rem 1rem; font-size: 0.85rem;">Specialized (IIIT Delhi &amp; IGDTUW)</button>
                     <button onclick="filterInstituteTable('REGIONAL', this)" class="btn btn-secondary inst-tab-btn"
-                        style="padding: 0.5rem 1rem; font-size: 0.85rem;">Satellite &amp; Skill (NSUT East/West &amp; DSEU)</button>
+                        style="padding: 0.5rem 1rem; font-size: 0.85rem;">Satellite &amp; Skill (NSUT East/West &amp;
+                        DSEU)</button>
                 </div>
                 <div
                     style="font-size: 0.8rem; color: var(--text-light); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.4rem;">
                     <i class="fas fa-arrows-left-right" style="color: var(--primary-color);"></i>
-                    <span><strong>Tip:</strong> Swipe horizontally on small screens to view full university &amp; placement columns.</span>
+                    <span><strong>Tip:</strong> Swipe horizontally on small screens to view full university &amp;
+                        placement columns.</span>
                 </div>
                 <div class="table-responsive" style="max-height: 600px; overflow-y: auto;">
                     <table class="results-table" id="institutes-directory-table" style="min-width: 680px; width: 100%;">
@@ -1710,7 +1746,8 @@
                         <tbody>
                             <tr class="inst-row inst-TOP_TIER">
                                 <td><strong>Delhi Technological University (DTU)</strong><br><span
-                                        style="font-size:0.75rem; background:#e3f2fd; color:#0d47a1; padding:2px 6px; border-radius:2px;">#29 NIRF | Formerly DCE</span>
+                                        style="font-size:0.75rem; background:#e3f2fd; color:#0d47a1; padding:2px 6px; border-radius:2px;">#29
+                                        NIRF | Formerly DCE</span>
                                 </td>
                                 <td>Bawana Road, Shahbad Daulatpur, Delhi</td>
                                 <td>1941 | State Govt Tech Univ</td>
@@ -1718,7 +1755,8 @@
                             </tr>
                             <tr class="inst-row inst-TOP_TIER">
                                 <td><strong>NSUT Main Campus (Dwarka)</strong><br><span
-                                        style="font-size:0.75rem; background:#e3f2fd; color:#0d47a1; padding:2px 6px; border-radius:2px;">#60 NIRF | Formerly NSIT</span>
+                                        style="font-size:0.75rem; background:#e3f2fd; color:#0d47a1; padding:2px 6px; border-radius:2px;">#60
+                                        NIRF | Formerly NSIT</span>
                                 </td>
                                 <td>Sector 3, Dwarka, New Delhi</td>
                                 <td>1983 | State Govt Tech Univ</td>
@@ -1726,7 +1764,8 @@
                             </tr>
                             <tr class="inst-row inst-METRO">
                                 <td><strong>Indraprastha Institute of Info Tech (IIIT Delhi)</strong><br><span
-                                        style="font-size:0.75rem; background:#f3e5f5; color:#7b1fa2; padding:2px 6px; border-radius:2px;">#68 NIRF | Premier Tech Center</span>
+                                        style="font-size:0.75rem; background:#f3e5f5; color:#7b1fa2; padding:2px 6px; border-radius:2px;">#68
+                                        NIRF | Premier Tech Center</span>
                                 </td>
                                 <td>Okhla Phase III, New Delhi</td>
                                 <td>2008 | State Autonomous Univ</td>
@@ -1734,7 +1773,8 @@
                             </tr>
                             <tr class="inst-row inst-METRO">
                                 <td><strong>IGDTUW (Women University)</strong><br><span
-                                        style="font-size:0.75rem; background:#f3e5f5; color:#7b1fa2; padding:2px 6px; border-radius:2px;">#77 NIRF | Premier Women Univ</span>
+                                        style="font-size:0.75rem; background:#f3e5f5; color:#7b1fa2; padding:2px 6px; border-radius:2px;">#77
+                                        NIRF | Premier Women Univ</span>
                                 </td>
                                 <td>Kashmere Gate, Heritage Campus, New Delhi</td>
                                 <td>1998 | State Govt Women Univ</td>
@@ -1742,7 +1782,8 @@
                             </tr>
                             <tr class="inst-row inst-REGIONAL">
                                 <td><strong>NSUT East Campus (Geeta Colony)</strong><br><span
-                                        style="font-size:0.75rem; background:#fff3e0; color:#e65100; padding:2px 6px; border-radius:2px;">Specialized CS &amp; IoT Campus</span>
+                                        style="font-size:0.75rem; background:#fff3e0; color:#e65100; padding:2px 6px; border-radius:2px;">Specialized
+                                        CS &amp; IoT Campus</span>
                                 </td>
                                 <td>Geeta Colony, East Delhi</td>
                                 <td>2020 | NSUT Satellite Campus</td>
@@ -1750,7 +1791,8 @@
                             </tr>
                             <tr class="inst-row inst-REGIONAL">
                                 <td><strong>NSUT West Campus (Jaffarpur)</strong><br><span
-                                        style="font-size:0.75rem; background:#fff3e0; color:#e65100; padding:2px 6px; border-radius:2px;">Civil &amp; EV Tech Campus</span>
+                                        style="font-size:0.75rem; background:#fff3e0; color:#e65100; padding:2px 6px; border-radius:2px;">Civil
+                                        &amp; EV Tech Campus</span>
                                 </td>
                                 <td>Jaffarpur, West Delhi</td>
                                 <td>2020 | NSUT Satellite Campus</td>
@@ -1758,7 +1800,8 @@
                             </tr>
                             <tr class="inst-row inst-REGIONAL">
                                 <td><strong>Delhi Skill &amp; Entrepreneurship Univ (DSEU)</strong><br><span
-                                        style="font-size:0.75rem; background:#fff3e0; color:#e65100; padding:2px 6px; border-radius:2px;">Okhla Technical Campuses</span>
+                                        style="font-size:0.75rem; background:#fff3e0; color:#e65100; padding:2px 6px; border-radius:2px;">Okhla
+                                        Technical Campuses</span>
                                 </td>
                                 <td>Okhla Phase I &amp; GB Pant Campus, Delhi</td>
                                 <td>2020 | State Skill Univ</td>
@@ -1774,64 +1817,77 @@
             <div class="container">
                 <h2>JAC Delhi Seat Reservation &amp; Domicile Structure</h2>
                 <p style="color: var(--text-light); max-width: 800px; margin-bottom: 2rem;">
-                    Understanding category reservation quotas, 85% Delhi Region rules, and JAC Delhi online counselling round dynamics.
+                    Understanding category reservation quotas, 85% Delhi Region rules, and JAC Delhi online counselling
+                    round dynamics.
                 </p>
                 <div class="content-grid">
                     <div class="content-card">
                         <h3
                             style="display: flex; align-items: center; gap: 0.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;">
-                            <i class="fas fa-building-columns" style="color: var(--primary-color);"></i> Statutory Reservation &amp; Domicile Rules
+                            <i class="fas fa-building-columns" style="color: var(--primary-color);"></i> Statutory
+                            Reservation &amp; Domicile Rules
                         </h3>
-                        <p style="margin-top: 1rem; font-size: 0.95rem; line-height: 1.7;">JAC Delhi seat allocation strictly adheres to Delhi state statutory reservation quotas:</p>
+                        <p style="margin-top: 1rem; font-size: 0.95rem; line-height: 1.7;">JAC Delhi seat allocation
+                            strictly adheres to Delhi state statutory reservation quotas:</p>
                         <ul class="checklist-list" style="margin-top: 1rem;">
                             <li class="checklist-item">
                                 <i class="fas fa-circle-chevron-right"
                                     style="color: var(--primary-color); margin-top: 0.25rem;"></i>
-                                <div><strong>Delhi Region Quota (85%):</strong> 85% of total seats reserved for candidates passing Class 12th from schools located within NCT of Delhi.</div>
+                                <div><strong>Delhi Region Quota (85%):</strong> 85% of total seats reserved for
+                                    candidates passing Class 12th from schools located within NCT of Delhi.</div>
                             </li>
                             <li class="checklist-item">
                                 <i class="fas fa-circle-chevron-right"
                                     style="color: var(--primary-color); margin-top: 0.25rem;"></i>
-                                <div><strong>Outside Delhi Quota (15%):</strong> 15% seats open for All-India candidates passing Class 12th from outside Delhi.</div>
+                                <div><strong>Outside Delhi Quota (15%):</strong> 15% seats open for All-India candidates
+                                    passing Class 12th from outside Delhi.</div>
                             </li>
                             <li class="checklist-item">
                                 <i class="fas fa-circle-chevron-right"
                                     style="color: var(--primary-color); margin-top: 0.25rem;"></i>
-                                <div><strong>OBC-NCL Reservation (27%):</strong> 27% seats for Non-Creamy Layer OBC candidates (Delhi OBC list mandatory for 85% quota).</div>
+                                <div><strong>OBC-NCL Reservation (27%):</strong> 27% seats for Non-Creamy Layer OBC
+                                    candidates (Delhi OBC list mandatory for 85% quota).</div>
                             </li>
                             <li class="checklist-item">
                                 <i class="fas fa-circle-chevron-right"
                                     style="color: var(--primary-color); margin-top: 0.25rem;"></i>
-                                <div><strong>SC (15%) &amp; ST (7.5%):</strong> Scheduled Caste and Scheduled Tribe reservations with significant rank relaxation.</div>
+                                <div><strong>SC (15%) &amp; ST (7.5%):</strong> Scheduled Caste and Scheduled Tribe
+                                    reservations with significant rank relaxation.</div>
                             </li>
                             <li class="checklist-item">
                                 <i class="fas fa-circle-chevron-right"
                                     style="color: var(--primary-color); margin-top: 0.25rem;"></i>
-                                <div><strong>EWS Reservation (10%):</strong> 10% seats reserved for Economically Weaker Section candidates in DTU, NSUT, and IGDTUW.</div>
+                                <div><strong>EWS Reservation (10%):</strong> 10% seats reserved for Economically Weaker
+                                    Section candidates in DTU, NSUT, and IGDTUW.</div>
                             </li>
                         </ul>
                     </div>
                     <div class="content-card">
                         <h3
                             style="display: flex; align-items: center; gap: 0.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;">
-                            <i class="fas fa-chart-line" style="color: var(--primary-color);"></i> JAC Counselling Rounds &amp; Spot Round
+                            <i class="fas fa-chart-line" style="color: var(--primary-color);"></i> JAC Counselling
+                            Rounds &amp; Spot Round
                         </h3>
-                        <p style="margin-top: 1rem; font-size: 0.95rem; line-height: 1.7;">Closing JEE Main ranks across counselling stages depend on:</p>
+                        <p style="margin-top: 1rem; font-size: 0.95rem; line-height: 1.7;">Closing JEE Main ranks across
+                            counselling stages depend on:</p>
                         <ul class="checklist-list" style="margin-top: 1rem;">
                             <li class="checklist-item">
                                 <i class="fas fa-circle-chevron-right"
                                     style="color: var(--primary-color); margin-top: 0.25rem;"></i>
-                                <div><strong>5 Centralized Rounds:</strong> Regular online seat allotment rounds based on submitted choice preferences.</div>
+                                <div><strong>5 Centralized Rounds:</strong> Regular online seat allotment rounds based
+                                    on submitted choice preferences.</div>
                             </li>
                             <li class="checklist-item">
                                 <i class="fas fa-circle-chevron-right"
                                     style="color: var(--primary-color); margin-top: 0.25rem;"></i>
-                                <div><strong>Upgradation Round:</strong> Internal branch sliding within the admitted university after Round 5.</div>
+                                <div><strong>Upgradation Round:</strong> Internal branch sliding within the admitted
+                                    university after Round 5.</div>
                             </li>
                             <li class="checklist-item">
                                 <i class="fas fa-circle-chevron-right"
                                     style="color: var(--primary-color); margin-top: 0.25rem;"></i>
-                                <div><strong>Spot Round:</strong> Physical round conducted at DTU campus for remaining vacant seats with relaxed closing ranks.</div>
+                                <div><strong>Spot Round:</strong> Physical round conducted at DTU campus for remaining
+                                    vacant seats with relaxed closing ranks.</div>
                             </li>
                         </ul>
                     </div>
@@ -1844,24 +1900,44 @@
                 <h2>Frequently Asked Questions</h2>
                 <div class="faq-accordion">
                     <div class="faq-item">
-                        <div class="faq-question" onclick="toggleFaq(this)">What is the JAC Delhi College Predictor and how does it work? <i class="fas fa-chevron-down"></i></div>
-                        <div class="faq-answer">The JAC Delhi College Predictor is a free online tool that estimates your B.Tech and B.Arch admission chances across top Delhi government institutions (DTU, NSUT Dwarka, IIIT Delhi, IGDTUW, DSEU). Enter your JEE Main Rank (CRL or Category Rank), select your region quota (Delhi 85% or Outside Delhi 15%) and reservation category to see High, Medium, or Low admission probabilities based on official closing cutoffs.</div>
+                        <div class="faq-question" onclick="toggleFaq(this)">What is the JAC Delhi College Predictor and
+                            how does it work? <i class="fas fa-chevron-down"></i></div>
+                        <div class="faq-answer">The JAC Delhi College Predictor is a free online tool that estimates
+                            your B.Tech and B.Arch admission chances across top Delhi government institutions (DTU, NSUT
+                            Dwarka, IIIT Delhi, IGDTUW, DSEU). Enter your JEE Main Rank (CRL or Category Rank), select
+                            your region quota (Delhi 85% or Outside Delhi 15%) and reservation category to see High,
+                            Medium, or Low admission probabilities based on official closing cutoffs.</div>
                     </div>
                     <div class="faq-item">
-                        <div class="faq-question" onclick="toggleFaq(this)">Who is eligible for the 85% Delhi Region Quota in JAC Delhi? <i class="fas fa-chevron-down"></i></div>
-                        <div class="faq-answer">Candidates who have passed their Class 12th / qualifying examination from a school or college located within the National Capital Territory (NCT) of Delhi qualify for the 85% Delhi Region Quota, regardless of their native home state. Candidates passing 12th outside Delhi come under the 15% Outside Delhi Quota.</div>
+                        <div class="faq-question" onclick="toggleFaq(this)">Who is eligible for the 85% Delhi Region
+                            Quota in JAC Delhi? <i class="fas fa-chevron-down"></i></div>
+                        <div class="faq-answer">Candidates who have passed their Class 12th / qualifying examination
+                            from a school or college located within the National Capital Territory (NCT) of Delhi
+                            qualify for the 85% Delhi Region Quota, regardless of their native home state. Candidates
+                            passing 12th outside Delhi come under the 15% Outside Delhi Quota.</div>
                     </div>
                     <div class="faq-item">
-                        <div class="faq-question" onclick="toggleFaq(this)">How are IIIT Delhi Bonus Points awarded in JAC Delhi? <i class="fas fa-chevron-down"></i></div>
-                        <div class="faq-answer">IIIT Delhi grants up to 2 extra bonus percentile points during seat allocation for accomplishments in National/International Olympiads (Maths, Physics, Informatics), Progate, National Sports, Chess, Cultural events, and Innovation contests.</div>
+                        <div class="faq-question" onclick="toggleFaq(this)">How are IIIT Delhi Bonus Points awarded in
+                            JAC Delhi? <i class="fas fa-chevron-down"></i></div>
+                        <div class="faq-answer">IIIT Delhi grants up to 2 extra bonus percentile points during seat
+                            allocation for accomplishments in National/International Olympiads (Maths, Physics,
+                            Informatics), Progate, National Sports, Chess, Cultural events, and Innovation contests.
+                        </div>
                     </div>
                     <div class="faq-item">
-                        <div class="faq-question" onclick="toggleFaq(this)">What fee concession schemes exist for DTU, NSUT, and IIIT Delhi students? <i class="fas fa-chevron-down"></i></div>
-                        <div class="faq-answer">Under the Delhi Government Financial Assistance Scheme (FFS), students with annual family income up to ₹2.5 Lakhs get a 100% tuition fee waiver. Income between ₹2.5L to ₹6.0L gets a 50% tuition waiver, and income between ₹6.0L to ₹8.0L gets a 25% fee concession across DTU, NSUT, IIIT Delhi, IGDTUW, and DSEU.</div>
+                        <div class="faq-question" onclick="toggleFaq(this)">What fee concession schemes exist for DTU,
+                            NSUT, and IIIT Delhi students? <i class="fas fa-chevron-down"></i></div>
+                        <div class="faq-answer">Under the Delhi Government Financial Assistance Scheme (FFS), students
+                            with annual family income up to ₹2.5 Lakhs get a 100% tuition fee waiver. Income between
+                            ₹2.5L to ₹6.0L gets a 50% tuition waiver, and income between ₹6.0L to ₹8.0L gets a 25% fee
+                            concession across DTU, NSUT, IIIT Delhi, IGDTUW, and DSEU.</div>
                     </div>
                     <div class="faq-item">
-                        <div class="faq-question" onclick="toggleFaq(this)">Can male candidates get admission to IGDTUW through JAC Delhi? <i class="fas fa-chevron-down"></i></div>
-                        <div class="faq-answer">No. IGDTUW (Indira Gandhi Delhi Technical University for Women) is exclusively for female candidates. Male candidates can apply for DTU, NSUT Dwarka, NSUT East/West campuses, IIIT Delhi, and DSEU.</div>
+                        <div class="faq-question" onclick="toggleFaq(this)">Can male candidates get admission to IGDTUW
+                            through JAC Delhi? <i class="fas fa-chevron-down"></i></div>
+                        <div class="faq-answer">No. IGDTUW (Indira Gandhi Delhi Technical University for Women) is
+                            exclusively for female candidates. Male candidates can apply for DTU, NSUT Dwarka, NSUT
+                            East/West campuses, IIIT Delhi, and DSEU.</div>
                     </div>
                 </div>
             </div>
@@ -1881,96 +1957,27 @@
         <div class="container">
             <div class="compare-drawer-header">
                 <h3 style="margin:0; display:flex; align-items:center; gap:0.5rem;">
-                    <i class="fas fa-scale-balanced" style="color:var(--primary-color);"></i> JAC Delhi College &amp; Branch Comparison
+                    <i class="fas fa-scale-balanced" style="color:var(--primary-color);"></i> JAC Delhi College &amp;
+                    Branch Comparison
                 </h3>
                 <button class="compare-close-btn" onclick="closeComparisonTray()"><i class="fas fa-times"></i></button>
             </div>
             <div id="compare-grid" class="compare-grid"></div>
             <div id="compare-empty-state"
-                style="text-align: center; padding: 2rem 0; color: var(--text-light); display: block;">Select 2 or more choices from the predictions to compare their stats side-by-side.</div>
+                style="text-align: center; padding: 2rem 0; color: var(--text-light); display: block;">Select 2 or more
+                choices from the predictions to compare their stats side-by-side.</div>
         </div>
     </div>
 
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-links-grid">
-                <div>
-                    <h4>Predictor &amp; Quotas</h4>
-                    <ul>
-                        <li><a href="#predictor-tool">JAC Delhi Predictor</a></li>
-                        <li><a href="#counseling-guide">Delhi 85% Quota Rules</a></li>
-                        <li><a href="#counseling-guide">Outside Delhi 15% Quota</a></li>
-                        <li><a href="#admission-info">Category Reservation</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Top University Cutoffs</h4>
-                    <ul>
-                        <li><a href="#predictor-tool">DTU Bawana Cutoff</a></li>
-                        <li><a href="#admission-info">NSUT Dwarka Cutoff</a></li>
-                        <li><a href="#admission-info">IIIT Delhi CSE Cutoff</a></li>
-                        <li><a href="#admission-info">IGDTUW Women Cutoff</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Resources &amp; Info</h4>
-                    <ul>
-                        <li><a href="#faqs">Frequently Asked Questions</a></li>
-                        <li><a href="#counseling-guide">FFS Fee Waiver Scheme</a></li>
-                        <li><a href="#institutes-list">All JAC Delhi Universities</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>About Us</h4>
-                    <ul>
-                        <li><a href="/about">About Us</a></li>
-                        <li><a href="/privacy">Privacy Policy</a></li>
-                        <li><a href="/terms">Terms &amp; Conditions</a></li>
-                        <li><a href="/contact">Contact Us</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-content">
-                <p>&copy; <span id="current-year"></span> Famral. All Rights Reserved.</p>
-                <p><a href="#" class="back-to-top">Back to Top <i class="fas fa-arrow-up"></i></a></p>
-            </div>
-        </div>
-    </footer>
+    <!-- Shared Global Footer injected by common.js -->
+    <div id="footer-placeholder"></div>
+
+    <script src="/common.js"></script>
 
     <script>
         // ====== Nav toggle ======
-        const navToggle = document.querySelector('.nav-toggle');
-        const navLinksWrapper = document.querySelector('.nav-links-wrapper');
-        const toggleIconEl = navToggle.querySelector('i');
-        navToggle.addEventListener('click', () => {
-            const isExpanded = navLinksWrapper.classList.toggle('active');
-            navToggle.setAttribute('aria-expanded', isExpanded);
-            if (isExpanded) { toggleIconEl.classList.replace('fa-bars', 'fa-times'); }
-            else { toggleIconEl.classList.replace('fa-times', 'fa-bars'); }
-        });
-        navLinksWrapper.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                if (navLinksWrapper.classList.contains('active')) {
-                    navLinksWrapper.classList.remove('active');
-                    navToggle.setAttribute('aria-expanded', 'false');
-                    toggleIconEl.classList.replace('fa-times', 'fa-bars');
-                }
-            });
-        });
-        document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-            toggle.addEventListener('click', (e) => {
-                e.stopPropagation();
-                const menu = toggle.nextElementSibling;
-                document.querySelectorAll('.dropdown-menu.show').forEach(m => { if (m !== menu) m.classList.remove('show'); });
-                if (menu) menu.classList.toggle('show');
-            });
-        });
-        document.addEventListener('click', (e) => {
-            if (!e.target.closest('.nav-item.dropdown')) {
-                document.querySelectorAll('.dropdown-menu.show').forEach(m => m.classList.remove('show'));
-            }
-        });
-        document.getElementById('current-year').textContent = new Date().getFullYear();
+        // Nav & Footer managed by common.js
+
 
         // ====== Global state & Metadata ======
         let currentPredictions = [];
@@ -2316,7 +2323,7 @@
                 const strategyTip = item.chance === 'High Chance' ? 'This is a <strong>Safety Branch Option</strong>. Place it towards the middle/lower section of your JAC Delhi choice filling list.'
                     : (item.chance === 'Medium Chance' ? 'This is a <strong>Target/Match Choice</strong>. Place it in the middle of your choice filling list.'
                         : (item.chance === 'Low / Borderline' ? 'This is a <strong>Dream/Reach Branch</strong>. Place it near the top of your JAC choice list.'
-                        : 'This choice has a higher closing rank requirement. Keep as a stretch option for Spot round.'));
+                            : 'This choice has a higher closing rank requirement. Keep as a stretch option for Spot round.'));
                 trDetail.innerHTML = `
           <td colspan="6" style="padding:1.5rem;text-align:left;border-bottom:2px solid var(--border-color);">
             <div style="display:grid;grid-template-columns:1.2fr 1fr;gap:2rem;">
