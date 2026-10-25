@@ -44,7 +44,14 @@
     <noscript>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     </noscript>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+          as="style"
+          onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+      <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    </noscript>
 
     <script type="application/ld+json">
     {
@@ -1296,40 +1303,8 @@
 
 <body>
     <header>
-        <nav class="navbar" aria-label="Main navigation">
-            <div class="nav-container">
-                <a href="https://www.famral.com/" class="nav-logo">
-                    <img src="./favicon.png" alt="Famral Logo" width="32" height="32" loading="eager" decoding="async">
-                    Famral
-                </a>
-                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"
-                    aria-controls="navLinks">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <div class="nav-links-wrapper" id="navLinks">
-                    <a href="/" class="nav-link">Home</a>
-                    <div class="nav-item dropdown">
-                        <button class="nav-link dropdown-toggle">College Predictor <i
-                                class="fas fa-chevron-down fa-xs"></i></button>
-                        <div class="dropdown-menu">
-                            <div class="mega-column" style="padding: 0.5rem;">
-                                <a href="/viteee-college-predictor"
-                                    style="font-weight: 700; color: var(--primary-color);">VITEEE Predictor</a>
-                                <a href="/jac-delhi-college-predictor">JAC Delhi Predictor</a>
-                                <a href="/jee-main-college-predictor">JEE Main Predictor</a>
-                                <a href="/jee-advanced-college-predictor">JEE Advanced Predictor</a>
-                                <a href="/mht-cet-college-predictor">MHT CET Predictor</a>
-                                <a href="/comedk-college-predictor">COMEDK Predictor</a>
-                                <a href="/keam-college-predictor">KEAM Predictor</a>
-                                <a href="/wbjee-college-predictor">WBJEE Predictor</a>
-                                <a href="/ap-eapcet-college-predictor">AP EAPCET Predictor</a>
-                                <a href="/uceed-college-predictor">UCEED Predictor</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </nav>
+        <!-- Shared Global Navbar injected by common.js -->
+    <div id="navbar-placeholder"></div>
     </header>
 
     <main>
@@ -1338,6 +1313,12 @@
                 <h1>VITEEE College Predictor 2026</h1>
                 <p>Predict your B.Tech admission chances &amp; seat allotment in VIT Vellore, VIT Chennai, VIT AP, and
                     VIT Bhopal across Category 1 to Category 5 fee slabs based on official VITEEE rank cutoffs.</p>
+                <div style="margin-top:1rem;display:flex;gap:0.75rem;flex-wrap:wrap;justify-content:center;">
+                    <a href="/exam/viteee"
+                        style="display:inline-flex;align-items:center;gap:0.4rem;padding:0.45rem 1rem;background:var(--primary-color);color:#fff;border-radius:4px;font-size:0.875rem;font-weight:600;text-decoration:none;">
+                        <span>📘</span> VITEEE 2027 Authority Guide &amp; Cutoffs &rarr;
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -1941,86 +1922,15 @@
         </div>
     </div>
 
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-links-grid">
-                <div>
-                    <h4>Predictor &amp; Campuses</h4>
-                    <ul>
-                        <li><a href="#predictor-tool">VITEEE Predictor</a></li>
-                        <li><a href="#predictor-tool">VIT Vellore Cutoff</a></li>
-                        <li><a href="#predictor-tool">VIT Chennai Cutoff</a></li>
-                        <li><a href="#predictor-tool">VIT AP &amp; Bhopal Cutoff</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Fee Categories</h4>
-                    <ul>
-                        <li><a href="#admission-info">Category 1 Fee Slab</a></li>
-                        <li><a href="#admission-info">Category 2 Fee Slab</a></li>
-                        <li><a href="#admission-info">Category 3 Fee Slab</a></li>
-                        <li><a href="#admission-info">Category 4 &amp; 5 Slabs</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Resources &amp; Info</h4>
-                    <ul>
-                        <li><a href="#faqs">Frequently Asked Questions</a></li>
-                        <li><a href="#counseling-guide">VIT STARS Scholarship</a></li>
-                        <li><a href="#institutes-list">Directory of VIT Campuses</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>About Us</h4>
-                    <ul>
-                        <li><a href="/about">About Us</a></li>
-                        <li><a href="/privacy">Privacy Policy</a></li>
-                        <li><a href="/terms">Terms &amp; Conditions</a></li>
-                        <li><a href="/contact">Contact Us</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-content">
-                <p>&copy; <span id="current-year"></span> Famral. All Rights Reserved.</p>
-                <p><a href="#" class="back-to-top">Back to Top <i class="fas fa-arrow-up"></i></a></p>
-            </div>
-        </div>
-    </footer>
+    <!-- Shared Global Footer injected by common.js -->
+    <div id="footer-placeholder"></div>
+
+    <script src="/common.js"></script>
 
     <script>
         // ====== Nav toggle ======
-        const navToggle = document.querySelector('.nav-toggle');
-        const navLinksWrapper = document.querySelector('.nav-links-wrapper');
-        const toggleIconEl = navToggle.querySelector('i');
-        navToggle.addEventListener('click', () => {
-            const isExpanded = navLinksWrapper.classList.toggle('active');
-            navToggle.setAttribute('aria-expanded', isExpanded);
-            if (isExpanded) { toggleIconEl.classList.replace('fa-bars', 'fa-times'); }
-            else { toggleIconEl.classList.replace('fa-times', 'fa-bars'); }
-        });
-        navLinksWrapper.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                if (navLinksWrapper.classList.contains('active')) {
-                    navLinksWrapper.classList.remove('active');
-                    navToggle.setAttribute('aria-expanded', 'false');
-                    toggleIconEl.classList.replace('fa-times', 'fa-bars');
-                }
-            });
-        });
-        document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-            toggle.addEventListener('click', (e) => {
-                e.stopPropagation();
-                const menu = toggle.nextElementSibling;
-                document.querySelectorAll('.dropdown-menu.show').forEach(m => { if (m !== menu) m.classList.remove('show'); });
-                if (menu) menu.classList.toggle('show');
-            });
-        });
-        document.addEventListener('click', (e) => {
-            if (!e.target.closest('.nav-item.dropdown')) {
-                document.querySelectorAll('.dropdown-menu.show').forEach(m => m.classList.remove('show'));
-            }
-        });
-        document.getElementById('current-year').textContent = new Date().getFullYear();
+        // Nav & Footer managed by common.js
+
 
         // ====== Global state & Metadata ======
         let currentPredictions = [];
