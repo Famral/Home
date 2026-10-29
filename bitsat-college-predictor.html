@@ -37,7 +37,14 @@
   </noscript>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+          as="style"
+          onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+      <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    </noscript>
 
   <!-- jsPDF for Choice Basket PDF Export -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
@@ -1003,34 +1010,8 @@
 
 <body>
   <header>
-    <nav class="navbar" aria-label="Main navigation">
-      <div class="nav-container">
-        <a href="https://www.famral.com/" class="nav-logo">
-          <img src="./favicon.png" alt="Famral Logo" width="32" height="32">
-          Famral
-        </a>
-        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
-          <i class="fas fa-bars"></i>
-        </button>
-        <div class="nav-links-wrapper" id="navLinks">
-          <a href="/" class="nav-link">Home</a>
-          <div class="nav-item dropdown">
-            <button class="nav-link dropdown-toggle">College Predictor <i
-                class="fas fa-chevron-down fa-xs"></i></button>
-            <div class="dropdown-menu">
-              <div class="mega-column" style="padding: 0.5rem;">
-                <a href="/bitsat-college-predictor">BITSAT College Predictor</a>
-                <a href="/jee-advanced-college-predictor">JEE Advanced Predictor</a>
-                <a href="/keam-college-predictor">KEAM College Predictor</a>
-                <a href="/tnea-college-predictor">TNEA College Predictor</a>
-                <a href="/tg-eapcet-college-predictor">TG EAPCET College Predictor</a>
-                <a href="/mp-dte-college-predictor">MP DTE College Predictor</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
+    <!-- Shared Global Navbar injected by common.js -->
+    <div id="navbar-placeholder"></div>
   </header>
 
   <main>
@@ -1050,6 +1031,12 @@
               <div class="trust-pill"><i class="fas fa-shield-halved"></i> Official Cutoffs (390 Marks)</div>
               <div class="trust-pill"><i class="fas fa-file-pdf"></i> PDF Choice List Export</div>
               <div class="trust-pill"><i class="fas fa-layer-group"></i> Iteration Round Estimator</div>
+            </div>
+
+            <div style="margin-top: 1.25rem;">
+              <a href="/exam/bitsat" class="btn btn-secondary" style="background: rgba(0, 103, 184, 0.08); border: 1.5px solid var(--primary-color); color: var(--primary-color); border-radius: 6px; padding: 0.6rem 1.15rem; font-size: 0.9rem; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; transition: all 0.2s ease;">
+                <i class="fas fa-graduation-cap"></i> Explore BITSAT 2027 Exam Guide &amp; Iteration Cutoffs →
+              </a>
             </div>
 
           </div>
@@ -1561,86 +1548,16 @@
   </div>
 
   <!-- Site Footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-links-grid">
-        <div>
-          <h4>BITSAT Cutoffs &amp; Predictor</h4>
-          <ul>
-            <li><a href="#predictor-tool">BITS Pilani CS Cutoff</a></li>
-            <li><a href="#predictor-tool">BITS Goa CS Cutoff</a></li>
-            <li><a href="#predictor-tool">BITS Hyderabad CS Cutoff</a></li>
-            <li><a href="#predictor-tool">BITS Pilani MnC Cutoff</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Top BITS Programs</h4>
-          <ul>
-            <li><a href="#predictor-tool">BITS Pilani ECE / EEE Cutoff</a></li>
-            <li><a href="#predictor-tool">BITS Pilani M.Sc. Economics</a></li>
-            <li><a href="#predictor-tool">BITS Goa ECE / EEE Cutoff</a></li>
-            <li><a href="#predictor-tool">BITS Hyderabad ECE Cutoff</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Resources &amp; Info</h4>
-          <ul>
-            <li><a href="#faqs">Frequently Asked Questions</a></li>
-            <li><a href="#marks-vs-rank">Marks vs Branch Placement</a></li>
-            <li><a href="#admission-info">BITSAT Iteration Round Guide</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>About Us</h4>
-          <ul>
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/privacy">Privacy Policy</a></li>
-            <li><a href="/terms">Terms &amp; Conditions</a></li>
-            <li><a href="/contact">Contact Us</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-content">
-        <p>&copy; <span id="current-year"></span> Famral. All Rights Reserved.</p>
-        <p><a href="#" class="back-to-top">Back to Top <i class="fas fa-arrow-up"></i></a></p>
-      </div>
-    </div>
-  </footer>
+  <!-- Shared Global Footer injected by common.js -->
+    <div id="footer-placeholder"></div>
+
+    <script src="/common.js"></script>
 
   <!-- Application JavaScript Engine -->
   <script>
     // Nav toggle & dropdowns
-    const navToggle = document.querySelector('.nav-toggle');
-    const navLinksWrapper = document.querySelector('.nav-links-wrapper');
-    const toggleIconEl = navToggle ? navToggle.querySelector('i') : null;
+        // Nav & Footer managed by common.js
 
-    if (navToggle) {
-      navToggle.addEventListener('click', () => {
-        const isExpanded = navLinksWrapper.classList.toggle('active');
-        navToggle.setAttribute('aria-expanded', isExpanded);
-        if (toggleIconEl) {
-          if (isExpanded) { toggleIconEl.classList.replace('fa-bars', 'fa-times'); }
-          else { toggleIconEl.classList.replace('fa-times', 'fa-bars'); }
-        }
-      });
-    }
-
-    document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-      toggle.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const menu = toggle.nextElementSibling;
-        document.querySelectorAll('.dropdown-menu.show').forEach(m => { if (m !== menu) m.classList.remove('show'); });
-        if (menu) menu.classList.toggle('show');
-      });
-    });
-
-    document.addEventListener('click', (e) => {
-      if (!e.target.closest('.nav-item.dropdown')) {
-        document.querySelectorAll('.dropdown-menu.show').forEach(m => m.classList.remove('show'));
-      }
-    });
-
-    document.getElementById('current-year').textContent = new Date().getFullYear();
 
     // ==========================================
     // BITSAT Official 2024 Cutoff Database (collegesDb)
