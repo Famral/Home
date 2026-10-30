@@ -37,7 +37,14 @@
     </noscript>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+          as="style"
+          onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+      <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    </noscript>
 
     <script type="application/ld+json">
     {
@@ -1280,36 +1287,8 @@
 
 <body>
     <header>
-        <nav class="navbar" aria-label="Main navigation">
-            <div class="nav-container">
-                <a href="https://www.famral.com/" class="nav-logo">
-                    <img src="./favicon.png" alt="Famral Logo" width="32" height="32">
-                    Famral
-                </a>
-                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"
-                    aria-controls="navLinks">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <div class="nav-links-wrapper" id="navLinks">
-                    <a href="/" class="nav-link">Home</a>
-                    <div class="nav-item dropdown">
-                        <button class="nav-link dropdown-toggle">College Predictor <i
-                                class="fas fa-chevron-down fa-xs"></i></button>
-                        <div class="dropdown-menu">
-                            <div class="mega-column" style="padding: 0.5rem;">
-                                <a href="/cg-pet-college-predictor" style="font-weight: 700; color: var(--primary-color);">CG PET College Predictor</a>
-                                <a href="/jcece-college-predictor">JCECE Predictor</a>
-                                <a href="/ugeac-college-predictor">Bihar UGEAC Predictor</a>
-                                <a href="/jee-main-college-predictor">JEE Main Predictor</a>
-                                <a href="/jee-advanced-college-predictor">JEE Advanced Predictor</a>
-                                <a href="/kcet-college-predictor">KCET College Predictor</a>
-                                <a href="/mp-dte-college-predictor">MP DTE College Predictor</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </nav>
+        <!-- Shared Global Navbar injected by common.js -->
+    <div id="navbar-placeholder"></div>
     </header>
 
     <main>
@@ -1320,6 +1299,11 @@
                     chances in top Chhattisgarh engineering colleges like GEC Raipur, GEC Bilaspur, BIT Durg, SSTC Bhilai, GEC Jagdalpur, CSVTU UTD Bhilai, RCET Bhilai, CCET Raipur, CSIT Durg, and OPJU Raigarh.
                     Enter your CG PET rank, select your reservation category, and preferred branch to get category-wise
                     rank-based matches instantly.</p>
+                <div style="margin-top: 1.25rem;">
+                    <a href="/exam/cg-pet" class="btn btn-secondary" style="background: rgba(0, 103, 184, 0.08); border: 1.5px solid var(--primary-color); color: var(--primary-color); border-radius: 4px; padding: 0.6rem 1.15rem; font-size: 0.9rem; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; transition: all 0.2s ease;">
+                        <i class="fas fa-graduation-cap"></i> Explore CG PET 2027 Master Exam Guide &amp; GEC Cutoffs &rarr;
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -1930,87 +1914,15 @@
         </div>
     </div>
 
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-links-grid">
-                <div>
-                    <h4>Predictor &amp; Rounds</h4>
-                    <ul>
-                        <li><a href="#predictor-tool">CG PET Predictor</a></li>
-                        <li><a href="#counseling-guide">CG DTE Choice Filling</a></li>
-                        <li><a href="#counseling-guide">Mock &amp; Allotment Rounds</a></li>
-                        <li><a href="#admission-info">Chhattisgarh Quota &amp; Categories</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Chhattisgarh College Cutoffs</h4>
-                    <ul>
-                        <li><a href="#predictor-tool">GEC Raipur Cutoff</a></li>
-                        <li><a href="#admission-info">GEC Bilaspur Cutoff</a></li>
-                        <li><a href="#admission-info">BIT Durg Cutoff</a></li>
-                        <li><a href="#admission-info">SSTC Bhilai Cutoff</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Resources &amp; Info</h4>
-                    <ul>
-                        <li><a href="#faqs">Frequently Asked Questions</a></li>
-                        <li><a href="#marks-vs-rank">Marks vs Rank Analysis</a></li>
-                        <li><a href="#admission-info">Category Reservation Rules</a></li>
-                        <li><a href="#iits-list">Top Chhattisgarh Engineering Colleges</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>About Us</h4>
-                    <ul>
-                        <li><a href="/about">About Us</a></li>
-                        <li><a href="/privacy">Privacy Policy</a></li>
-                        <li><a href="/terms">Terms &amp; Conditions</a></li>
-                        <li><a href="/contact">Contact Us</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-content">
-                <p>&copy; <span id="current-year"></span> Famral. All Rights Reserved.</p>
-                <p><a href="#" class="back-to-top">Back to Top <i class="fas fa-arrow-up"></i></a></p>
-            </div>
-        </div>
-    </footer>
+    <!-- Shared Global Footer injected by common.js -->
+    <div id="footer-placeholder"></div>
+
+    <script src="/common.js"></script>
 
     <script>
         // ====== Nav toggle ======
-        const navToggle = document.querySelector('.nav-toggle');
-        const navLinksWrapper = document.querySelector('.nav-links-wrapper');
-        const toggleIconEl = navToggle.querySelector('i');
-        navToggle.addEventListener('click', () => {
-            const isExpanded = navLinksWrapper.classList.toggle('active');
-            navToggle.setAttribute('aria-expanded', isExpanded);
-            if (isExpanded) { toggleIconEl.classList.replace('fa-bars', 'fa-times'); }
-            else { toggleIconEl.classList.replace('fa-times', 'fa-bars'); }
-        });
-        navLinksWrapper.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                if (navLinksWrapper.classList.contains('active')) {
-                    navLinksWrapper.classList.remove('active');
-                    navToggle.setAttribute('aria-expanded', 'false');
-                    toggleIconEl.classList.replace('fa-times', 'fa-bars');
-                }
-            });
-        });
-        document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-            toggle.addEventListener('click', (e) => {
-                e.stopPropagation();
-                const menu = toggle.nextElementSibling;
-                document.querySelectorAll('.dropdown-menu.show').forEach(m => { if (m !== menu) m.classList.remove('show'); });
-                if (menu) menu.classList.toggle('show');
-            });
-        });
-        document.addEventListener('click', (e) => {
-            if (!e.target.closest('.nav-item.dropdown')) {
-                document.querySelectorAll('.dropdown-menu.show').forEach(m => m.classList.remove('show'));
-            }
-        });
-        document.getElementById('current-year').textContent = new Date().getFullYear();
+        // Nav & Footer managed by common.js
+
 
         // ====== Chhattisgarh CG PET / CG DTE Colleges Database ======
         const collegesDb = [
