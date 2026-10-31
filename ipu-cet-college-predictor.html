@@ -45,6 +45,29 @@
       <link rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
     </noscript>
+
+      <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7876432493491415"
+        crossorigin="anonymous"></script>
+
+    <!-- Google Analytics (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H57NCR0QYN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-H57NCR0QYN');
+    </script>
+
+    <!-- OneSignal Web Push Notifications -->
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+    <script>
+        window.OneSignalDeferred = window.OneSignalDeferred || [];
+        OneSignalDeferred.push(async function (OneSignal) {
+            await OneSignal.init({ appId: "72462423-a0fd-4ef3-9cf5-a279f6e03553" });
+        });
+    </script>
+
   <script
     type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"IPU CET College Predictor","url":"https://www.famral.com/ipu-cet-college-predictor","applicationCategory":"EducationalApplication","operatingSystem":"All","description":"Free IPU CET & GGSIPU College Predictor 2026","offers":{"@type":"Offer","price":"0.00","priceCurrency":"INR"},"publisher":{"@type":"Organization","name":"Famral","url":"https://www.famral.com"}}</script>
   <script
@@ -2387,7 +2410,6 @@
       el.classList.toggle('active');
     }
   </script>
-  <script>(function () { let loaded = false; function load() { if (loaded) return; loaded = true; const ga = document.createElement('script'); ga.async = true; ga.src = "https://www.googletagmanager.com/gtag/js?id=G-H57NCR0QYN"; document.head.appendChild(ga); ga.onload = function () { window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-H57NCR0QYN'); }; const a = document.createElement('script'); a.async = true; a.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7876432493491415"; a.crossOrigin = "anonymous"; document.head.appendChild(a); const o = document.createElement('script'); o.defer = true; o.src = "https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js"; document.head.appendChild(o); } ['touchstart', 'scroll', 'mouseover', 'keydown'].forEach(e => { window.addEventListener(e, load, { once: true, passive: true }); }); window.addEventListener('load', () => { setTimeout(load, 4000); }); })();</script>
 </body>
 
 </html>
