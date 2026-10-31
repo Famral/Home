@@ -44,8 +44,35 @@
     <noscript>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     </noscript>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    </noscript>
 
+        <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7876432493491415"
+        crossorigin="anonymous"></script>
+
+    <!-- Google Analytics (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H57NCR0QYN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-H57NCR0QYN');
+    </script>
+
+    <!-- OneSignal Web Push Notifications -->
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+    <script>
+        window.OneSignalDeferred = window.OneSignalDeferred || [];
+        OneSignalDeferred.push(async function (OneSignal) {
+            await OneSignal.init({ appId: "72462423-a0fd-4ef3-9cf5-a279f6e03553" });
+        });
+    </script>
+    
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -1296,39 +1323,8 @@
 
 <body>
     <header>
-        <nav class="navbar" aria-label="Main navigation">
-            <div class="nav-container">
-                <a href="https://www.famral.com/" class="nav-logo">
-                    <img src="./favicon.png" alt="Famral Logo" width="32" height="32" loading="eager" decoding="async">
-                    Famral
-                </a>
-                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"
-                    aria-controls="navLinks">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <div class="nav-links-wrapper" id="navLinks">
-                    <a href="/" class="nav-link">Home</a>
-                    <div class="nav-item dropdown">
-                        <button class="nav-link dropdown-toggle">College Predictor <i
-                                class="fas fa-chevron-down fa-xs"></i></button>
-                        <div class="dropdown-menu">
-                            <div class="mega-column" style="padding: 0.5rem;">
-                                <a href="/viteee-college-predictor">VITEEE Predictor</a>
-                                <a href="/jac-delhi-college-predictor">JAC Delhi Predictor</a>
-                                <a href="/jee-main-college-predictor">JEE Main Predictor</a>
-                                <a href="/jee-advanced-college-predictor">JEE Advanced Predictor</a>
-                                <a href="/mht-cet-college-predictor">MHT CET Predictor</a>
-                                <a href="/comedk-college-predictor">COMEDK Predictor</a>
-                                <a href="/keam-college-predictor">KEAM Predictor</a>
-                                <a href="/wbjee-college-predictor">WBJEE Predictor</a>
-                                <a href="/ap-eapcet-college-predictor">AP EAPCET Predictor</a>
-                                <a href="/uceed-college-predictor">UCEED Predictor</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </nav>
+        <!-- Shared Global Navbar injected by common.js -->
+        <div id="navbar-placeholder"></div>
     </header>
 
     <main>
@@ -1337,6 +1333,12 @@
                 <h1>MAT College Predictor 2026</h1>
                 <p>Predict your MBA &amp; PGDM admission chances in premier B-Schools (PUMBA, SIMSREE, BIMTECH, XIME,
                     Jaipuria, JIMS, IPE, KSOM &amp; 600+ institutes) based on official AIMA MAT percentile cutoffs.</p>
+                <div style="margin-top: 1.5rem;">
+                    <a href="/exam/mat"
+                        style="display: inline-flex; align-items: center; gap: 0.5rem; background: var(--primary-color); color: #ffffff; padding: 0.75rem 1.35rem; border-radius: 4px; font-weight: 600; font-size: 0.95rem; text-decoration: none; transition: opacity 0.2s ease;">
+                        <i class="fas fa-graduation-cap"></i> MAT 2027 Master Exam Guide, Pattern &amp; Cutoffs &rarr;
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -1971,86 +1973,15 @@
         </div>
     </div>
 
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-links-grid">
-                <div>
-                    <h4>Predictor &amp; B-Schools</h4>
-                    <ul>
-                        <li><a href="#predictor-tool">MAT College Predictor</a></li>
-                        <li><a href="#predictor-tool">PUMBA Pune Cutoff</a></li>
-                        <li><a href="#predictor-tool">SIMSREE Mumbai Cutoff</a></li>
-                        <li><a href="#predictor-tool">BIMTECH &amp; XIME Cutoff</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>MBA Specializations</h4>
-                    <ul>
-                        <li><a href="#admission-info">PGDM Core / General MBA</a></li>
-                        <li><a href="#admission-info">PGDM Marketing Management</a></li>
-                        <li><a href="#admission-info">PGDM Financial Management</a></li>
-                        <li><a href="#admission-info">PGDM Business Analytics</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Resources &amp; Info</h4>
-                    <ul>
-                        <li><a href="#faqs">Frequently Asked Questions</a></li>
-                        <li><a href="#counseling-guide">MAT GD-PI Selection Guide</a></li>
-                        <li><a href="#institutes-list">Directory of B-Schools</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>About Us</h4>
-                    <ul>
-                        <li><a href="/about">About Us</a></li>
-                        <li><a href="/privacy">Privacy Policy</a></li>
-                        <li><a href="/terms">Terms &amp; Conditions</a></li>
-                        <li><a href="/contact">Contact Us</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-content">
-                <p>&copy; <span id="current-year"></span> Famral. All Rights Reserved.</p>
-                <p><a href="#" class="back-to-top">Back to Top <i class="fas fa-arrow-up"></i></a></p>
-            </div>
-        </div>
-    </footer>
+    <!-- Shared Global Footer injected by common.js -->
+    <div id="footer-placeholder"></div>
+
+    <script src="/common.js"></script>
 
     <script>
         // ====== Nav toggle ======
-        const navToggle = document.querySelector('.nav-toggle');
-        const navLinksWrapper = document.querySelector('.nav-links-wrapper');
-        const toggleIconEl = navToggle.querySelector('i');
-        navToggle.addEventListener('click', () => {
-            const isExpanded = navLinksWrapper.classList.toggle('active');
-            navToggle.setAttribute('aria-expanded', isExpanded);
-            if (isExpanded) { toggleIconEl.classList.replace('fa-bars', 'fa-times'); }
-            else { toggleIconEl.classList.replace('fa-times', 'fa-bars'); }
-        });
-        navLinksWrapper.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                if (navLinksWrapper.classList.contains('active')) {
-                    navLinksWrapper.classList.remove('active');
-                    navToggle.setAttribute('aria-expanded', 'false');
-                    toggleIconEl.classList.replace('fa-times', 'fa-bars');
-                }
-            });
-        });
-        document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-            toggle.addEventListener('click', (e) => {
-                e.stopPropagation();
-                const menu = toggle.nextElementSibling;
-                document.querySelectorAll('.dropdown-menu.show').forEach(m => { if (m !== menu) m.classList.remove('show'); });
-                if (menu) menu.classList.toggle('show');
-            });
-        });
-        document.addEventListener('click', (e) => {
-            if (!e.target.closest('.nav-item.dropdown')) {
-                document.querySelectorAll('.dropdown-menu.show').forEach(m => m.classList.remove('show'));
-            }
-        });
-        document.getElementById('current-year').textContent = new Date().getFullYear();
+        // Nav & Footer managed by common.js
+
 
         // ====== Global state & Metadata ======
         let currentPredictions = [];
@@ -2980,46 +2911,6 @@
         }
     </script>
 
-    <!-- Deferred script loader -->
-    <script>
-        (function () {
-            let loaded = false;
-            function loadDeferredScripts() {
-                if (loaded) return;
-                loaded = true;
-
-                const ga = document.createElement('script');
-                ga.async = true;
-                ga.src = "https://www.googletagmanager.com/gtag/js?id=G-H57NCR0QYN";
-                document.head.appendChild(ga);
-                ga.onload = function () {
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag() { dataLayer.push(arguments); }
-                    gtag('js', new Date());
-                    gtag('config', 'G-H57NCR0QYN');
-                };
-
-                const adsense = document.createElement('script');
-                adsense.async = true;
-                adsense.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7876432493491415";
-                adsense.crossOrigin = "anonymous";
-                document.head.appendChild(adsense);
-
-                const onesignal = document.createElement('script');
-                onesignal.defer = true;
-                onesignal.src = "https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js";
-                document.head.appendChild(onesignal);
-            }
-
-            ['touchstart', 'scroll', 'mouseover', 'keydown'].forEach(event => {
-                window.addEventListener(event, loadDeferredScripts, { once: true, passive: true });
-            });
-
-            window.addEventListener('load', () => {
-                setTimeout(loadDeferredScripts, 4000);
-            });
-        })();
-    </script>
 </body>
 
 </html>
