@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JEECUP 2027 — UP Polytechnic Exam Dates, Eligibility, Group A Cutoffs, Counselling &amp; Seat Matrix | Famral</title>
     <meta name="description"
-        content="Definitive authority guide to JEECUP 2027 (UP Polytechnic) by Joint Entrance Examination Council UP — Group A, E &amp; K eligibility, 400 marks CBT pattern, zero negative marking, marks vs rank predictor, seat allotment simulator, and opening &amp; closing cutoffs for GP Lucknow, GP Kanpur, GP Ghaziabad, and 150+ UP Government Polytechnics." />
+        content="Definitive authority guide to JEECUP 2027 (UP Polytechnic) by Joint Entrance Examination Council UP — Group A, E &amp; K eligibility, 400 marks CBT pattern, zero negative marking, marks vs rank predictor, counselling roadmap, and opening &amp; closing cutoffs for GP Lucknow, GP Kanpur, GP Ghaziabad, and 150+ UP Government Polytechnics." />
     <meta name="keywords"
         content="JEECUP 2027, UP Polytechnic 2027, jeecup.admissions.nic.in, JEECUP exam date 2027, UP polytechnic counselling 2027, Government Polytechnic Lucknow cutoffs, Government Polytechnic Kanpur cutoffs, Government Polytechnic Ghaziabad, JEECUP marks vs rank, JEECUP eligibility criteria, UP polytechnic fees, Group A polytechnic syllabus, BTEUP Lucknow, JEECUP rank card 2027" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -53,7 +53,7 @@
     <meta name="twitter:title"
         content="JEECUP 2027 — UP Polytechnic Exam Dates, Eligibility, Group A Cutoffs | Famral" />
     <meta name="twitter:description"
-        content="Master guide to UP Polytechnic JEECUP 2027: Exam dates, CBT pattern, marks vs rank predictor, counselling simulator, and closing rank cutoffs for top UP government polytechnics." />
+        content="Master guide to UP Polytechnic JEECUP 2027: Exam dates, CBT pattern, marks vs rank predictor, counselling roadmap, and closing rank cutoffs for top UP government polytechnics." />
     <meta name="twitter:image" content="https://www.famral.com/image/jeecup.webp" />
     <meta name="twitter:image:alt" content="JEECUP 2027 UP Polytechnic Guide | Famral" />
     <meta name="twitter:label1" content="Exam Authority" />
@@ -163,7 +163,7 @@
         "@id": "https://www.famral.com/exam/jeecup#webpage",
         "url": "https://www.famral.com/exam/jeecup",
         "name": "JEECUP 2027 — UP Polytechnic Exam Dates, Eligibility, Group A Cutoffs, Counselling & Seat Matrix | Famral",
-        "description": "Comprehensive authority guide to JEECUP 2027 (UP Polytechnic) conducted by Joint Entrance Examination Council UP — Group A, E & K eligibility, 400 marks CBT pattern, zero negative marking, marks vs rank predictor, seat allotment simulator, and opening & closing cutoffs for GP Lucknow, GP Kanpur, GP Ghaziabad, and 150+ UP Government Polytechnics.",
+        "description": "Comprehensive authority guide to JEECUP 2027 (UP Polytechnic) conducted by Joint Entrance Examination Council UP — Group A, E & K eligibility, 400 marks CBT pattern, zero negative marking, marks vs rank predictor, counselling roadmap, and opening & closing cutoffs for GP Lucknow, GP Kanpur, GP Ghaziabad, and 150+ UP Government Polytechnics.",
         "inLanguage": "en-IN",
         "datePublished": "2026-11-02",
         "dateModified": "2026-11-02",
@@ -249,7 +249,7 @@
                 "position": 5,
                 "name": "Seat Allotment Result & Freeze vs Float Selection",
                 "text": "Check your round allotment result. If satisfied, choose 'Freeze' to take final admission. If desiring a higher preference in the next round, choose 'Float' while paying the ₹3,250 seat acceptance fee.",
-                "url": "https://www.famral.com/exam/jeecup#counselling-simulator"
+                "url": "https://www.famral.com/exam/jeecup#roadmap"
             },
             {
                 "@type": "HowToStep",
@@ -385,9 +385,13 @@
             "validFrom": "2027-01-15T09:00:00+05:30"
         },
         "organizer": {
-            "@type": "GovernmentOrganization",
+            "@type": "Organization",
             "name": "Joint Entrance Examination Council, Uttar Pradesh (JEECUP)",
             "url": "https://jeecup.admissions.nic.in"
+        },
+        "performer": {
+            "@type": "Organization",
+            "name": "Joint Entrance Examination Council, Uttar Pradesh (JEECUP)"
         }
     }
     </script>
@@ -545,6 +549,10 @@
             margin: 0;
             padding: 0;
             -webkit-font-smoothing: antialiased;
+        }
+
+        body, p, li, h1, h2, h3, h4, span, td, th {
+            overflow-wrap: break-word;
         }
 
         section[id] {
@@ -1634,6 +1642,7 @@
         @media (max-width: 992px) {
             .hero-stats {
                 grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
             }
 
             .grid-3 {
@@ -1666,9 +1675,37 @@
                 height: 90px;
             }
 
+            .hero-badge {
+                font-size: 0.8rem;
+                padding: 0.35rem 0.75rem;
+                white-space: normal;
+                line-height: 1.35;
+                max-width: 100%;
+            }
+
+            /* HERO BUTTONS: FULL WIDTH & STACKED ON TABLET/MOBILE */
+            .hero-buttons {
+                flex-direction: column;
+                width: 100%;
+                gap: 0.75rem;
+                margin-top: 1.25rem;
+            }
+
+            .hero-buttons .btn {
+                width: 100%;
+                padding: 0.75rem 1rem;
+                font-size: 0.9rem;
+                justify-content: center;
+                text-align: center;
+                box-sizing: border-box;
+                min-height: 44px;
+                white-space: normal;
+                touch-action: manipulation;
+            }
+
             .hero-stats {
-                grid-template-columns: 1fr;
-                gap: .85rem;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.85rem;
             }
 
             .grid-2,
@@ -1696,52 +1733,47 @@
                 z-index: 2;
             }
 
+            .sub-nav-scroll {
+                padding: 0.65rem 0.5rem;
+                gap: 1.15rem;
+            }
+
+            .sub-nav-link {
+                font-size: 0.8125rem;
+                padding: 0.45rem 0.15rem;
+                min-height: 40px;
+                display: inline-flex;
+                align-items: center;
+            }
+
             section[id] {
                 scroll-margin-top: 96px;
             }
 
-            .table-scroll-hint {
-                display: flex;
-            }
-
-            /* OVERVIEW TABLE RESPONSIVE CARD DISPLAY */
-            .overview-table,
-            .overview-table tbody,
-            .overview-table tr,
-            .overview-table td {
-                display: block;
-                width: 100% !important;
+            /* ALL INTERACTIVE ACTION & TOOL BUTTONS */
+            .tool-card > .btn,
+            .tool-card button.btn,
+            .tool-card a.btn,
+            .card > .btn,
+            .card button.btn,
+            .card a.btn,
+            .pred-cta-btn-wrap .btn {
+                width: 100%;
+                min-height: 44px;
+                padding: 0.75rem 1.25rem;
+                font-size: 0.9rem;
+                justify-content: center;
+                text-align: center;
+                white-space: normal;
                 box-sizing: border-box;
+                touch-action: manipulation;
             }
 
-            .overview-table tr {
-                border-bottom: 1px solid var(--border-color);
-                padding: 0.65rem 0;
-            }
-
-            .overview-table tr:last-child {
-                border-bottom: none;
-                padding-bottom: 0;
-            }
-
-            .overview-table td:first-child {
-                background: transparent;
-                border-right: none;
-                padding: 0.35rem 0.85rem 0.15rem;
-                font-weight: 700;
-                color: var(--primary-color);
-                font-size: 0.825rem;
-                text-transform: uppercase;
-                letter-spacing: 0.03em;
-            }
-
-            .overview-table td:last-child {
-                padding: 0.15rem 0.85rem 0.5rem;
-                font-size: 0.875rem;
-            }
-
-            .form-control {
-                font-size: 16px;
+            .form-control,
+            input[type="text"],
+            input[type="number"],
+            select {
+                font-size: 16px !important;
                 min-height: 44px;
             }
 
@@ -1762,6 +1794,7 @@
                 text-align: center;
                 white-space: normal;
                 min-height: 44px;
+                touch-action: manipulation;
             }
 
             .filter-bar {
@@ -1779,14 +1812,15 @@
 
             .filter-search-box .search-input {
                 min-height: 44px;
-                font-size: 16px;
+                font-size: 16px !important;
                 padding: 0.65rem 2.25rem 0.65rem 2.5rem;
             }
 
             .filter-search-box .search-clear-btn {
-                width: 30px;
-                height: 30px;
+                width: 36px;
+                height: 36px;
                 font-size: 0.85rem;
+                touch-action: manipulation;
             }
 
             .pill-group-wrapper {
@@ -1837,11 +1871,25 @@
                 font-size: 0.8125rem;
                 white-space: nowrap;
                 scroll-snap-align: start;
+                touch-action: manipulation;
             }
 
             .filter-meta-bar {
                 padding: 0 0.15rem 0.85rem;
                 font-size: 0.8rem;
+            }
+
+            .filter-reset-link {
+                min-height: 36px;
+                display: inline-flex;
+                align-items: center;
+                gap: 0.35rem;
+                touch-action: manipulation;
+            }
+
+            .elig-result-header {
+                align-items: flex-start;
+                gap: 0.75rem;
             }
 
             .pred-summary-header {
@@ -1874,18 +1922,52 @@
                 border-top: 1px solid #f1f5f9;
             }
 
-            .pred-cta-btn-wrap .btn {
-                width: 100%;
-                justify-content: center;
-                text-align: center;
-                min-height: 44px;
-            }
-
             .exam-cards-grid {
                 grid-template-columns: 1fr;
             }
 
             /* DATA TABLES RESPONSIVE SCROLLABILITY */
+            .table-scroll-hint {
+                display: flex;
+                touch-action: manipulation;
+            }
+
+            .overview-table,
+            .overview-table tbody,
+            .overview-table tr,
+            .overview-table td {
+                display: block;
+                width: 100% !important;
+                box-sizing: border-box;
+            }
+
+            .overview-table tr {
+                border-bottom: 1px solid var(--border-color);
+                padding: 0.65rem 0;
+            }
+
+            .overview-table tr:last-child {
+                border-bottom: none;
+                padding-bottom: 0;
+            }
+
+            .overview-table td:first-child {
+                background: transparent;
+                border-right: none;
+                padding: 0.35rem 0.85rem 0.15rem;
+                font-weight: 700;
+                color: var(--primary-color);
+                font-size: 0.825rem;
+                text-transform: uppercase;
+                letter-spacing: 0.03em;
+            }
+
+            .overview-table td:last-child {
+                padding: 0.15rem 0.85rem 0.5rem;
+                font-size: 0.875rem;
+                line-height: 1.5;
+            }
+
             .table-responsive {
                 margin: 0 0 1.25rem;
                 border-radius: 6px;
@@ -1895,11 +1977,11 @@
             }
 
             .data-table {
-                min-width: 640px;
+                min-width: 620px;
             }
 
             #jeecupDataTable {
-                min-width: 780px;
+                min-width: 760px;
             }
 
             .data-table th,
@@ -1915,32 +1997,42 @@
 
             #jeecupDataTable td:nth-child(1),
             #jeecupDataTable th:nth-child(1) {
-                min-width: 185px;
+                min-width: 175px;
                 white-space: normal;
             }
 
             #jeecupDataTable td:nth-child(2),
             #jeecupDataTable th:nth-child(2) {
-                min-width: 120px;
+                min-width: 110px;
                 white-space: normal;
             }
 
             #jeecupDataTable td:nth-child(3),
             #jeecupDataTable th:nth-child(3) {
-                min-width: 160px;
+                min-width: 150px;
                 white-space: normal;
             }
 
             #jeecupDataTable td:nth-child(4),
             #jeecupDataTable td:nth-child(5),
-            #jeecupDataTable td:nth-child(6),
-            #jeecupDataTable td:nth-child(7),
             #jeecupDataTable th:nth-child(4),
-            #jeecupDataTable th:nth-child(5),
-            #jeecupDataTable th:nth-child(6),
-            #jeecupDataTable th:nth-child(7) {
+            #jeecupDataTable th:nth-child(5) {
+                min-width: 120px;
                 white-space: nowrap;
                 text-align: center;
+            }
+
+            #jeecupDataTable td:nth-child(6),
+            #jeecupDataTable th:nth-child(6) {
+                min-width: 100px;
+                white-space: nowrap;
+                text-align: center;
+            }
+
+            #jeecupDataTable td:nth-child(7),
+            #jeecupDataTable th:nth-child(7) {
+                min-width: 160px;
+                white-space: normal;
             }
         }
 
@@ -1969,19 +2061,12 @@
             }
 
             .hero-buttons {
-                flex-direction: column;
-                width: 100%;
                 gap: 0.65rem;
             }
 
             .hero-buttons .btn {
-                width: 100%;
                 padding: 0.75rem 1rem;
                 font-size: 0.9rem;
-                justify-content: center;
-                text-align: center;
-                box-sizing: border-box;
-                min-height: 44px;
             }
 
             .sub-navbar {
@@ -2000,15 +2085,6 @@
             .tool-header h3 {
                 font-size: 1.15rem;
                 flex-wrap: wrap;
-            }
-
-            .tool-card>.btn {
-                width: 100%;
-                min-height: 44px;
-                padding: 0.75rem 1.25rem;
-                font-size: 0.9rem;
-                justify-content: center;
-                text-align: center;
             }
 
             .strategy-card,
@@ -2043,6 +2119,7 @@
             .faq-question {
                 padding: 1rem 1.15rem;
                 font-size: 0.925rem;
+                touch-action: manipulation;
             }
 
             .faq-answer {
@@ -2062,12 +2139,6 @@
 
             .filter-reset-link {
                 font-size: 0.775rem;
-            }
-
-            .card>.btn {
-                width: 100%;
-                min-height: 44px;
-                justify-content: center;
             }
         }
 
@@ -2102,14 +2173,27 @@
                 font-size: 0.875rem;
             }
 
-            .hero-buttons .btn {
+            .hero-badge {
+                font-size: 0.725rem;
+                padding: 0.3rem 0.65rem;
+            }
+
+            .hero-buttons .btn,
+            .btn {
                 padding: 0.7rem 0.85rem;
                 font-size: 0.875rem;
                 min-height: 44px;
+                white-space: normal;
+                box-sizing: border-box;
+            }
+
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.65rem;
             }
 
             .stat-card {
-                padding: 0.85rem;
+                padding: 0.85rem 0.65rem;
             }
 
             .stat-card-num {
@@ -2117,7 +2201,8 @@
             }
 
             .stat-card-label {
-                font-size: 0.775rem;
+                font-size: 0.75rem;
+                line-height: 1.3;
             }
 
             .section-title {
@@ -2155,12 +2240,13 @@
 
             .table-scroll-hint {
                 font-size: 0.725rem;
-                padding: 0.4rem 0.65rem;
+                padding: 0.45rem 0.65rem;
+                min-height: 38px;
             }
 
             .table-scroll-hint-action {
                 font-size: 0.675rem;
-                padding: 0.1rem 0.35rem;
+                padding: 0.15rem 0.45rem;
             }
 
             .timeline {
@@ -2186,7 +2272,7 @@
 
             .filter-search-box .search-input {
                 min-height: 42px;
-                font-size: 16px;
+                font-size: 16px !important;
                 padding: 0.55rem 2.1rem 0.55rem 2.35rem;
             }
 
@@ -2220,6 +2306,11 @@
             .doc-item {
                 padding: 0.75rem 0.65rem;
             }
+
+            .doc-item input[type="checkbox"] {
+                width: 18px;
+                height: 18px;
+            }
         }
 
         @media (max-width: 360px) {
@@ -2237,6 +2328,11 @@
                 height: 60px;
             }
 
+            .hero-badge {
+                font-size: 0.68rem;
+                padding: 0.25rem 0.5rem;
+            }
+
             .section-title {
                 font-size: 1.15rem;
                 padding-left: 0.75rem;
@@ -2247,10 +2343,17 @@
                 font-size: 0.825rem;
                 padding: 0.65rem 0.75rem;
                 min-height: 44px;
+                white-space: normal;
+                box-sizing: border-box;
+            }
+
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.5rem;
             }
 
             .stat-card {
-                padding: 0.7rem;
+                padding: 0.65rem 0.45rem;
             }
 
             .stat-card-num {
@@ -2258,7 +2361,7 @@
             }
 
             .stat-card-label {
-                font-size: 0.725rem;
+                font-size: 0.7rem;
             }
 
             .tool-card {
@@ -2271,7 +2374,7 @@
 
             .filter-search-box .search-input {
                 min-height: 40px;
-                font-size: 15px;
+                font-size: 16px !important;
                 padding: 0.5rem 1.9rem 0.5rem 2.15rem;
             }
 
@@ -2390,7 +2493,6 @@
                     <a href="#eligibility-checker" class="sub-nav-link">Eligibility &amp; Groups</a>
                     <a href="#exam-pattern" class="sub-nav-link">Exam Pattern</a>
                     <a href="#percentile-calculator" class="sub-nav-link">Marks vs Rank</a>
-                    <a href="#counselling-simulator" class="sub-nav-link">Seat Simulator</a>
                     <a href="#quotas-reservations" class="sub-nav-link">Quotas &amp; Reservations</a>
                     <a href="#schedule" class="sub-nav-link">Dates &amp; Schedule</a>
                     <a href="#roadmap" class="sub-nav-link">Counselling Roadmap</a>
@@ -2828,100 +2930,8 @@
             </div>
         </section>
 
-        <!-- SECTION 5: COUNSELLING SIMULATOR -->
-        <section class="section" id="counselling-simulator">
-            <div class="container">
-                <h2 class="section-title">JEECUP 2027 Centralized Counselling &amp; Seat Simulator</h2>
-                <p class="section-subtitle">
-                    JEECUP conducts online centralized seat allotment across multiple rounds. Understand the vital distinction between 'Freeze' and 'Float', mandatory ₹3,250 seat acceptance deposits, and Help Center document verification rules.
-                </p>
-
-                <!-- Interactive Tool 3 -->
-                <div class="tool-card">
-                    <div class="tool-header">
-                        <h3><i class="fas fa-sliders" aria-hidden="true"></i> Freeze vs Float Seat Decision Simulator</h3>
-                        <p>Simulate your counselling decision to see immediate action items, fee obligations, and reporting deadlines.</p>
-                    </div>
-
-                    <div class="form-grid">
-                        <div class="form-group">
-                            <label for="simRound" class="form-label">Current Allotment Round</label>
-                            <select id="simRound" class="form-control">
-                                <option value="1" selected>Round 1 (UP Domicile Only)</option>
-                                <option value="2">Round 2 (UP Domicile Upgradation)</option>
-                                <option value="3">Round 3 (Last Round for Auto-Freeze in UP Govt)</option>
-                                <option value="4">Round 4 (Special Round: Open to Other State Candidates)</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="simChoice" class="form-label">Choice Preference Number Allotted</label>
-                            <select id="simChoice" class="form-control">
-                                <option value="1">Choice #1 (First Preference Allotted — Auto Freeze)</option>
-                                <option value="2_5" selected>Choice #2 to #5 (Intermediate Preference)</option>
-                                <option value="below_5">Choice #6 or Lower (Safety Option Allotted)</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="simDecision" class="form-label">Intended Seat Decision</label>
-                            <select id="simDecision" class="form-control">
-                                <option value="freeze" selected>FREEZE — Accept current institute &amp; finalize admission</option>
-                                <option value="float">FLOAT — Hold current seat &amp; compete for higher choices</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="simFeePaid" class="form-label">Seat Acceptance Fee (₹3,250)</label>
-                            <select id="simFeePaid" class="form-control">
-                                <option value="yes" selected>Ready to Pay Online (Mandatory for both Freeze/Float)</option>
-                                <option value="no">Not Paying (Seat will be cancelled!)</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <button type="button" class="btn btn-primary" style="background:var(--primary-color);color:#fff;" onclick="simulateJeecupSeatDecision()">
-                        <i class="fas fa-play" aria-hidden="true"></i> Simulate Counselling Action Plan
-                    </button>
-
-                    <div class="tool-result-box" id="jeecupSimResult"></div>
-                </div>
-
-                <!-- Strategy Cards -->
-                <div class="grid-2">
-                    <div class="strategy-card">
-                        <h3 style="font-size:1.15rem;color:#1e40af;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem;">
-                            <span>🎯</span> Recommended Choice Filling Strategy
-                        </h3>
-                        <p style="font-size:0.9rem;color:#1e3a8a;line-height:1.6;margin-bottom:1rem;">
-                            Organize your preference basket into three strategic tiers to maximize admission probability without risking complete seat forfeiture:
-                        </p>
-                        <div class="strategy-card-box">
-                            <strong>1. Dream Tier (Top 10 Choices):</strong> GP Lucknow (CSE/IT/EE), GP Kanpur (CSE/IT/ME), GP Ghaziabad (CSE/IT), IERT Prayagraj.<br />
-                            <strong>2. Realistic Tier (Choices 11–30):</strong> GP Gorakhpur, Hewett Lucknow, GP Bareilly, GP Agra, GP Varanasi (Core branches).<br />
-                            <strong>3. Safe Tier (Choices 31–50+):</strong> GP Jhansi, GP Banda, GP Basti, GP Moradabad, GP Firozabad, District Government Polytechnics near your hometown.
-                        </div>
-                    </div>
-
-                    <div class="strategy-card-amber">
-                        <h3 style="font-size:1.15rem;color:#9a3412;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem;">
-                            <span>⚠️</span> Mandatory Help Center Verification Warning
-                        </h3>
-                        <p style="font-size:0.9rem;color:#c2410c;line-height:1.6;margin-bottom:1rem;">
-                            CRITICAL RULE: Even if you choose <strong>FLOAT</strong>, you MUST:
-                        </p>
-                        <ul style="padding-left:1.25rem;font-size:0.875rem;color:#7c2d12;line-height:1.65;margin:0;">
-                            <li>Pay the <strong>₹3,250 Seat Acceptance Fee</strong> online before the round deadline.</li>
-                            <li>Physically report to your designated <strong>District Help Center (Government Polytechnic)</strong> for original document verification.</li>
-                            <li>If you fail to verify documents in Round 1, your allotted seat is <strong>permanently cancelled</strong> and you are ejected from subsequent rounds!</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION 6: RESERVATIONS & QUOTAS -->
-        <section class="section bg-surface" id="quotas-reservations">
+        <!-- SECTION 5: RESERVATIONS & QUOTAS -->
+        <section class="section" id="quotas-reservations">
             <div class="container">
                 <h2 class="section-title">UP Polytechnic Reservation Policy, Domicile Norms &amp; Quotas</h2>
                 <p class="section-subtitle">
@@ -3050,8 +3060,8 @@
             </div>
         </section>
 
-        <!-- SECTION 7: IMPORTANT DATES -->
-        <section class="section" id="schedule">
+        <!-- SECTION 6: IMPORTANT DATES -->
+        <section class="section bg-surface" id="schedule">
             <div class="container">
                 <h2 class="section-title">JEECUP 2027 Important Dates &amp; Counselling Calendar</h2>
                 <p class="section-subtitle">
@@ -3144,8 +3154,8 @@
             </div>
         </section>
 
-        <!-- SECTION 8: STEP-BY-STEP ROADMAP -->
-        <section class="section bg-surface" id="roadmap">
+        <!-- SECTION 7: STEP-BY-STEP ROADMAP -->
+        <section class="section" id="roadmap">
             <div class="container">
                 <h2 class="section-title">Step-by-Step JEECUP 2027 Admission Roadmap</h2>
                 <p class="section-subtitle">
@@ -3204,8 +3214,8 @@
             </div>
         </section>
 
-        <!-- SECTION 9: TOP COLLEGES & CUTOFFS MATRIX -->
-        <section class="section" id="college-cutoffs">
+        <!-- SECTION 8: TOP COLLEGES & CUTOFFS MATRIX -->
+        <section class="section bg-surface" id="college-cutoffs">
             <div class="container">
                 <h2 class="section-title">Top Uttar Pradesh Polytechnic Colleges &amp; Closing Cutoffs</h2>
                 <p class="section-subtitle">
@@ -3442,14 +3452,26 @@
                                 <td><strong>₹10,370 / yr</strong></td>
                                 <td>3.0 LPA &bull; Glass Industry, Borosil, Saint-Gobain</td>
                             </tr>
+
+                            <!-- Empty State Row for Search/Filter -->
+                            <tr id="jeecupNoResultsRow" style="display:none;">
+                                <td colspan="7" style="text-align:center;padding:2.5rem 1rem;color:var(--text-light);">
+                                    <div style="font-size:1.75rem;margin-bottom:0.5rem;color:var(--text-muted);"><i class="fas fa-search" aria-hidden="true"></i></div>
+                                    <div style="font-weight:700;font-size:1.05rem;color:var(--text-dark);margin-bottom:0.35rem;">No Polytechnic Institutes Found</div>
+                                    <p style="margin:0 0 1rem;font-size:0.875rem;">No institutes match your current search query or institute filter.</p>
+                                    <button type="button" onclick="resetJeecupFilters()" class="btn btn-outline" style="color:var(--primary-color);border-color:var(--primary-color);padding:0.45rem 1rem;font-size:0.825rem;display:inline-flex;align-items:center;gap:0.4rem;min-height:38px;justify-content:center;">
+                                        <i class="fas fa-undo-alt" aria-hidden="true"></i> Reset All Filters
+                                    </button>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION 10: MANDATORY DOCUMENTS CHECKLIST -->
-        <section class="section bg-surface" id="documents">
+        <!-- SECTION 9: MANDATORY DOCUMENTS CHECKLIST -->
+        <section class="section" id="documents">
             <div class="container">
                 <h2 class="section-title">JEECUP 2027 Mandatory Documents &amp; Help Center DV Checklist</h2>
                 <p class="section-subtitle">
@@ -3461,9 +3483,9 @@
                     <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.75rem;">
                         <div>
                             <span style="font-size:.8rem;text-transform:uppercase;font-weight:700;color:var(--primary-color);">Document Readiness Progress</span>
-                            <div style="font-weight:700;font-size:1.15rem;color:var(--text-dark);" id="jeecupDocProgressText">0% (0 / 12 Verified)</div>
+                            <div style="font-weight:700;font-size:1.15rem;color:var(--text-dark);" id="jeecupDocProgressText">0% (0 / 14 Ready)</div>
                         </div>
-                        <div style="width:240px;height:10px;background:#e2e8f0;border-radius:9999px;overflow:hidden;">
+                        <div style="width:100%;max-width:240px;flex:1 1 180px;height:10px;background:#e2e8f0;border-radius:9999px;overflow:hidden;">
                             <div id="jeecupDocProgressBar" style="width:0%;height:100%;background:var(--primary-color);transition:width 0.3s ease;"></div>
                         </div>
                     </div>
@@ -3545,8 +3567,8 @@
             </div>
         </section>
 
-        <!-- SECTION 11: FAQS ACCORDION -->
-        <section class="section" id="faqs">
+        <!-- SECTION 10: FAQS ACCORDION -->
+        <section class="section bg-surface" id="faqs">
             <div class="container">
                 <h2 class="section-title">Frequently Asked Questions (FAQs) — JEECUP 2027</h2>
                 <p class="section-subtitle">
@@ -3637,8 +3659,8 @@
             </div>
         </section>
 
-        <!-- SECTION 12: OTHER ADMISSIONS -->
-        <section class="section bg-surface" id="other-exams">
+        <!-- SECTION 11: OTHER ADMISSIONS -->
+        <section class="section" id="other-exams">
             <div class="container">
                 <h2 class="section-title">Explore Other Premier Technical Admissions &amp; Counsellings</h2>
                 <p class="section-subtitle">
@@ -3673,8 +3695,8 @@
             </div>
         </section>
 
-        <!-- SECTION 13: RELATED RESOURCES -->
-        <section class="section" id="related-resources">
+        <!-- SECTION 12: RELATED RESOURCES -->
+        <section class="section bg-surface" id="related-resources">
             <div class="container">
                 <h2 class="section-title">Official Portals &amp; Polytechnic Preparation Resources</h2>
                 <p class="section-subtitle">
@@ -3733,8 +3755,19 @@
             const category = document.getElementById('eligCategory').value;
             const resultBox = document.getElementById('jeecupEligResult');
 
-            if (percent <= 0) {
-                alert('Please enter a valid aggregate percentage.');
+            if (percent <= 0 || percent > 100) {
+                resultBox.innerHTML = `
+                    <div class="elig-result-header">
+                        <div class="elig-result-icon elig-icon-danger">
+                            <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <h4 style="margin:0;color:#b91c1c;font-size:1.15rem;">Invalid Percentage Input</h4>
+                            <p style="margin:0.2rem 0 0;font-size:0.85rem;color:var(--text-light);">Please enter a valid academic aggregate percentage between 1% and 100%.</p>
+                        </div>
+                    </div>
+                `;
+                resultBox.style.display = 'block';
                 return;
             }
 
@@ -3844,7 +3877,18 @@
             const resultBox = document.getElementById('jeecupPredResult');
 
             if (score < 0 || score > 400) {
-                alert('Please enter a valid raw score between 0 and 400.');
+                resultBox.innerHTML = `
+                    <div class="elig-result-header">
+                        <div class="elig-result-icon elig-icon-danger">
+                            <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <h4 style="margin:0;color:#b91c1c;font-size:1.15rem;">Invalid Exam Score Input</h4>
+                            <p style="margin:0.2rem 0 0;font-size:0.85rem;color:var(--text-light);">Please enter an anticipated CBT exam score between 0 and 400 marks.</p>
+                        </div>
+                    </div>
+                `;
+                resultBox.style.display = 'block';
                 return;
             }
 
@@ -3958,106 +4002,7 @@
             resultBox.style.display = 'block';
         }
 
-        // ==================== 3. COUNSELLING SEAT DECISION SIMULATOR ====================
-        function simulateJeecupSeatDecision() {
-            const round = document.getElementById('simRound').value;
-            const choice = document.getElementById('simChoice').value;
-            const decision = document.getElementById('simDecision').value;
-            const feePaid = document.getElementById('simFeePaid').value;
-            const resultBox = document.getElementById('jeecupSimResult');
-
-            let html = '';
-
-            if (feePaid === 'no') {
-                html = `
-                    <div class="elig-result-header">
-                        <div class="elig-result-icon elig-icon-danger">
-                            <i class="fas fa-triangle-exclamation" aria-hidden="true"></i>
-                        </div>
-                        <div>
-                            <h4 style="margin:0;color:#b91c1c;font-size:1.15rem;">Allotment Forfeiture: Seat Cancelled!</h4>
-                            <p style="margin:0.2rem 0 0;font-size:0.85rem;color:var(--text-light);">Failure to deposit the ₹3,250 seat acceptance fee leads to automatic disqualification.</p>
-                        </div>
-                    </div>
-                    <div class="elig-result-box" style="border:1px solid #fecaca;color:#7f1d1d;">
-                        <strong>Consequences of Non-Payment:</strong>
-                        <ul style="margin:0.5rem 0 0 1.25rem;padding:0;">
-                            <li>Your allotted seat in Round ${round} is cancelled immediately.</li>
-                            <li>You are debarred from participating in subsequent regular rounds (Rounds 2 &amp; 3).</li>
-                            <li>You can only participate in special mop-up rounds (Round 4+) if vacancies remain.</li>
-                        </ul>
-                    </div>
-                `;
-            } else if (choice === '1' && decision === 'float') {
-                html = `
-                    <div class="elig-result-header">
-                        <div class="elig-result-icon elig-icon-danger">
-                            <i class="fas fa-info-circle" aria-hidden="true"></i>
-                        </div>
-                        <div>
-                            <h4 style="margin:0;color:#ea580c;font-size:1.15rem;">Float Not Allowed for Choice #1 (Auto-Freeze Mandated)</h4>
-                            <p style="margin:0.2rem 0 0;font-size:0.85rem;color:var(--text-light);">Since you were allotted your first preference, there are no higher choices above it.</p>
-                        </div>
-                    </div>
-                    <div class="elig-result-box" style="border:1px solid #fed7aa;color:#9a3412;">
-                        <strong>Required Next Steps:</strong>
-                        <ul style="margin:0.5rem 0 0 1.25rem;padding:0;">
-                            <li>Your seat is <strong>automatically frozen</strong>.</li>
-                            <li>Pay the ₹3,250 seat acceptance fee online.</li>
-                            <li>Report to your designated <strong>District Help Center (Government Polytechnic)</strong> with original documents for verification.</li>
-                            <li>Pay the remaining balance fee online to confirm final admission.</li>
-                        </ul>
-                    </div>
-                `;
-            } else if (decision === 'freeze') {
-                html = `
-                    <div class="elig-result-header">
-                        <div class="elig-result-icon elig-icon-success">
-                            <i class="fas fa-circle-check" aria-hidden="true"></i>
-                        </div>
-                        <div>
-                            <h4 style="margin:0;color:#15803d;font-size:1.15rem;">Seat Frozen: Proceed to Document Verification</h4>
-                            <p style="margin:0.2rem 0 0;font-size:0.85rem;color:var(--text-light);">You have accepted your allotted seat in Round ${round} as your final admission choice.</p>
-                        </div>
-                    </div>
-                    <div class="elig-result-box" style="border:1px solid #bbf7d0;color:#14532d;">
-                        <strong>Action Checklist &amp; Timeline:</strong>
-                        <ul style="margin:0.5rem 0 0 1.25rem;padding:0;">
-                            <li><strong>Step 1:</strong> Download your <em>Provisional Seat Allotment Order</em> from jeecup.admissions.nic.in.</li>
-                            <li><strong>Step 2:</strong> Visit your chosen <strong>District Help Center</strong> with original Class 10th marksheet, category/domicile certificates, medical certificate, and 6 photos.</li>
-                            <li><strong>Step 3:</strong> After document verification approval, pay the balance institutional fee (Total Govt Fee: ₹10,370 &minus; ₹3,000 paid = ₹7,370 balance).</li>
-                            <li><strong>Step 4:</strong> Download the Final Admission Confirmation Letter.</li>
-                        </ul>
-                    </div>
-                `;
-            } else {
-                html = `
-                    <div class="elig-result-header">
-                        <div class="elig-result-icon elig-icon-success">
-                            <i class="fas fa-arrows-spin" aria-hidden="true"></i>
-                        </div>
-                        <div>
-                            <h4 style="margin:0;color:#0067b8;font-size:1.15rem;">Float Confirmed: Seat Secured as Safety Net</h4>
-                            <p style="margin:0.2rem 0 0;font-size:0.85rem;color:var(--text-light);">Your Round ${round} seat is locked while you compete for higher choices in the next round.</p>
-                        </div>
-                    </div>
-                    <div class="elig-result-box" style="border:1px solid #bfdbfe;color:#1e40af;">
-                        <strong>Mandatory Actions Required to Stay in Counselling:</strong>
-                        <ul style="margin:0.5rem 0 0 1.25rem;padding:0;">
-                            <li><strong>Crucial Warning:</strong> Even for FLOAT, you <strong>MUST visit the District Help Center</strong> for document verification in Round 1.</li>
-                            <li>If a higher preference choice is allotted in Round ${parseInt(round) + 1}, your previous seat will be automatically relinquished.</li>
-                            <li>If no higher preference is allotted, your current seat remains 100% safe and guaranteed.</li>
-                            <li>Your ₹3,000 seat acceptance deposit will automatically transfer to any newly upgraded seat.</li>
-                        </ul>
-                    </div>
-                `;
-            }
-
-            resultBox.innerHTML = html;
-            resultBox.style.display = 'block';
-        }
-
-        // ==================== 4. CUTOFFS FILTER & SEARCH ====================
+        // ==================== 3. CUTOFFS FILTER & SEARCH ====================
         let currentJeecupFilter = 'all';
 
         function filterJeecupCutoffs(filterKey, btn) {
@@ -4118,7 +4063,7 @@
 
         function applyJeecupFilters() {
             const searchVal = (document.getElementById('jeecupSearchInput')?.value || '').toLowerCase().trim();
-            const rows = document.querySelectorAll('#jeecupDataTable tbody tr');
+            const rows = document.querySelectorAll('#jeecupDataTable tbody tr:not(#jeecupNoResultsRow)');
             let visibleCount = 0;
 
             rows.forEach(row => {
@@ -4136,6 +4081,11 @@
                 }
             });
 
+            const noResultsRow = document.getElementById('jeecupNoResultsRow');
+            if (noResultsRow) {
+                noResultsRow.style.display = (visibleCount === 0) ? '' : 'none';
+            }
+
             const countBadge = document.getElementById('jeecupResultCount');
             if (countBadge) {
                 countBadge.innerHTML = `<i class="fas fa-list-check" aria-hidden="true"></i> Showing ${visibleCount} of ${rows.length} Polytechnic Institutes`;
@@ -4151,7 +4101,7 @@
             }
         }
 
-        // ==================== 5. DOCUMENT PROGRESS BAR ====================
+        // ==================== 4. DOCUMENT PROGRESS BAR ====================
         function updateJeecupDocProgress() {
             const checkboxes = document.querySelectorAll('.doc-item input[type="checkbox"]');
             const total = checkboxes.length;
@@ -4167,7 +4117,7 @@
             if (barEl) barEl.style.width = `${percent}%`;
         }
 
-        // ==================== 6. FAQ ACCORDION ====================
+        // ==================== 5. FAQ ACCORDION ====================
         function toggleJeecupFaq(btn) {
             const item = btn.closest('.faq-item');
             if (item) {
@@ -4175,14 +4125,17 @@
             }
         }
 
-        // ==================== 7. SUB-NAV ACTIVE ON SCROLL & SMOOTH HORIZONTAL SCROLL ====================
+        // ==================== 6. SUB-NAV ACTIVE ON SCROLL & SMOOTH HORIZONTAL SCROLL ====================
         document.addEventListener('DOMContentLoaded', () => {
             const subNavLinks = document.querySelectorAll('.sub-nav-link');
             const sections = document.querySelectorAll('main > section[id]');
 
             function getNavOffset() {
+                const mainNav = document.querySelector('.navbar');
                 const subNav = document.querySelector('.sub-navbar');
-                return subNav ? subNav.offsetHeight + 60 : 100;
+                const mainNavH = mainNav ? mainNav.offsetHeight : 55;
+                const subNavH = subNav ? subNav.offsetHeight : 45;
+                return mainNavH + subNavH + 20;
             }
 
             function updateActiveSubNav() {
@@ -4222,8 +4175,50 @@
 
             window.addEventListener('scroll', updateActiveSubNav, { passive: true });
             updateActiveSubNav();
+            updateJeecupDocProgress();
 
-            // Interactive Table Horizontal Scroll Hints
+            // Smooth Scroll Handler for Internal Anchor Navigation Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#' || targetId === '') return;
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        e.preventDefault();
+                        const mainNav = document.querySelector('.navbar');
+                        const subNav = document.querySelector('.sub-navbar');
+                        const mainNavH = mainNav ? mainNav.offsetHeight : 55;
+                        const subNavH = subNav ? subNav.offsetHeight : 45;
+                        const navOffset = mainNavH + subNavH + 16;
+                        const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                        const offsetPosition = elementPosition - navOffset;
+
+                        window.scrollTo({
+                            top: Math.max(0, offsetPosition),
+                            behavior: 'smooth'
+                        });
+
+                        // Instantly update active sub-nav item
+                        subNavLinks.forEach(link => {
+                            if (link.getAttribute('href') === targetId) {
+                                link.classList.add('active');
+                                if (typeof link.scrollIntoView === 'function') {
+                                    link.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                                }
+                            } else {
+                                link.classList.remove('active');
+                            }
+                        });
+
+                        // Keep URL hash updated without abrupt jump
+                        if (history.pushState) {
+                            history.pushState(null, null, targetId);
+                        }
+                    }
+                });
+            });
+
+            // Interactive Table Horizontal Scroll Hints with Smooth Bidirectional Scrolling
             document.querySelectorAll('.table-scroll-hint').forEach(hint => {
                 hint.addEventListener('click', function () {
                     const tableWrap = this.nextElementSibling;
@@ -4232,7 +4227,7 @@
                         if (tableWrap.scrollLeft >= maxScroll - 20) {
                             tableWrap.scrollTo({ left: 0, behavior: 'smooth' });
                         } else {
-                            tableWrap.scrollBy({ left: 220, behavior: 'smooth' });
+                            tableWrap.scrollBy({ left: 240, behavior: 'smooth' });
                         }
                     }
                 });
@@ -4242,6 +4237,24 @@
                         this.click();
                     }
                 });
+            });
+
+            // Dynamically synchronize scroll hint indicator with table scroll position
+            document.querySelectorAll('.table-responsive').forEach(wrap => {
+                const hint = wrap.previousElementSibling;
+                if (hint && hint.classList.contains('table-scroll-hint')) {
+                    const actionText = hint.querySelector('.table-scroll-hint-action');
+                    wrap.addEventListener('scroll', function () {
+                        const maxScroll = wrap.scrollWidth - wrap.clientWidth;
+                        if (actionText) {
+                            if (wrap.scrollLeft >= maxScroll - 20) {
+                                actionText.innerHTML = 'Reset <i class="fas fa-rotate-left" aria-hidden="true"></i>';
+                            } else {
+                                actionText.innerHTML = 'Scroll <i class="fas fa-chevron-right" aria-hidden="true"></i>';
+                            }
+                        }
+                    }, { passive: true });
+                }
             });
         });
     </script>
