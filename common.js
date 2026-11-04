@@ -374,7 +374,7 @@
         <div class="nav-container">
             <!-- Logo -->
             <a href="https://www.famral.com/" class="nav-logo">
-                <img src="/favicon.png" alt="Famral Logo" width="32" height="32">
+                <img src="/diwali.gif" alt="Famral Logo" width="32" height="32">
                 Famral
             </a>
 
