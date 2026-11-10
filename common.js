@@ -106,8 +106,7 @@
             display: none;
             position: absolute;
             top: calc(100% + 0.4rem);
-            right: 0;
-            left: auto;
+            left: 0;
             background: #ffffff;
             border: 1px solid var(--border-color);
             border-radius: 8px;
@@ -121,6 +120,16 @@
 
         .dropdown-menu.show {
             display: block;
+        }
+
+        .dropdown-toggle .famral-icon {
+            transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            pointer-events: none;
+            display: inline-block;
+        }
+
+        .dropdown-toggle[aria-expanded="true"] .famral-icon {
+            transform: rotate(180deg);
         }
 
         .dropdown-menu a {
@@ -163,9 +172,25 @@
             color: var(--text-dark);
             cursor: pointer;
             padding: 0.5rem;
-            border-radius: 4px;
+            border-radius: 6px;
             align-items: center;
             justify-content: center;
+            min-width: 44px;
+            min-height: 44px;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+            transition: background-color 0.15s ease, color 0.15s ease;
+        }
+
+        .nav-toggle:hover,
+        .nav-toggle:focus-visible {
+            background-color: var(--primary-light, #eff6ff);
+            color: var(--primary-color, #0067b8);
+            outline: none;
+        }
+
+        .nav-toggle svg {
+            pointer-events: none;
         }
 
         /* Footer Layout & Styling */
@@ -298,7 +323,29 @@
             }
         }
 
+        @media (min-width: 769px) and (max-width: 960px) {
+            .nav-container {
+                padding: 0 1rem;
+            }
+            .nav-link {
+                padding: 0.45rem 0.55rem;
+                font-size: 0.88rem;
+                gap: 0.25rem;
+            }
+            .nav-links-wrapper {
+                gap: 0.2rem;
+            }
+        }
+
         @media (max-width: 768px) {
+            .navbar {
+                padding: 0.5rem 0;
+            }
+
+            .nav-container {
+                padding: 0 1rem;
+            }
+
             .nav-toggle {
                 display: inline-flex;
             }
@@ -309,15 +356,21 @@
                 top: 100%;
                 left: 0;
                 right: 0;
+                width: 100%;
                 background: #ffffff;
                 flex-direction: column;
-                padding: 1rem 1.25rem;
+                align-items: stretch;
+                padding: 0.75rem 1rem 1.25rem;
                 border-bottom: 2px solid var(--border-color);
-                box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
-                align-items: flex-start;
-                gap: 0.5rem;
-                max-height: 80vh;
+                box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12);
+                gap: 0.35rem;
+                max-height: calc(100vh - 65px);
+                max-height: calc(100dvh - 65px);
                 overflow-y: auto;
+                -webkit-overflow-scrolling: touch;
+                overscroll-behavior: contain;
+                z-index: 1001;
+                box-sizing: border-box;
             }
 
             .nav-links-wrapper.active {
@@ -326,31 +379,94 @@
 
             .nav-item.dropdown {
                 width: 100%;
+                position: relative;
             }
 
             .nav-link {
                 width: 100%;
+                height: auto !important;
+                min-height: 44px;
+                display: flex;
+                align-items: center;
                 justify-content: space-between;
-                padding: 0.65rem 0.5rem;
-                font-size: 1rem;
-            }
-
-            .dropdown-menu {
-                position: static;
-                box-shadow: none;
-                border: 1px solid #f1f5f9;
-                background-color: #f8fafc;
-                padding-left: 0.5rem;
-                max-height: none;
-                margin-top: 0.25rem;
+                padding: 0.7rem 0.85rem;
+                font-size: 0.98rem;
                 border-radius: 6px;
-                width: 100%;
+                white-space: normal;
+                touch-action: manipulation;
+                -webkit-tap-highlight-color: transparent;
                 box-sizing: border-box;
             }
 
+            .dropdown-toggle {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .dropdown-toggle .famral-icon {
+                width: 14px;
+                height: 14px;
+            }
+
+            .dropdown-toggle[aria-expanded="true"] {
+                background-color: var(--primary-light, #eff6ff);
+                color: var(--primary-color, #0067b8);
+                font-weight: 600;
+            }
+
+            .dropdown-menu {
+                position: static !important;
+                top: auto;
+                left: auto;
+                right: auto;
+                float: none;
+                width: 100% !important;
+                min-width: 0 !important;
+                max-width: 100% !important;
+                max-height: none;
+                box-shadow: none;
+                border: 1px solid #e2e8f0;
+                background-color: #f8fafc;
+                border-radius: 8px;
+                padding: 0.25rem 0;
+                margin: 0.35rem 0 0.5rem 0;
+                box-sizing: border-box;
+                overflow: hidden;
+                animation: none;
+            }
+
+            .dropdown-menu.show {
+                display: block !important;
+            }
+
             .dropdown-menu a {
-                padding: 0.55rem 0.85rem;
-                font-size: 0.88rem;
+                display: block;
+                padding: 0.7rem 1rem;
+                font-size: 0.9rem;
+                line-height: 1.4;
+                color: var(--text-medium, #374151);
+                text-align: left;
+                text-decoration: none;
+                border-bottom: 1px solid #edf2f7;
+                white-space: normal;
+                word-break: break-word;
+                min-height: 42px;
+                box-sizing: border-box;
+                touch-action: manipulation;
+                -webkit-tap-highlight-color: transparent;
+            }
+
+            .dropdown-menu a:last-child {
+                border-bottom: none;
+            }
+
+            .dropdown-menu a:hover,
+            .dropdown-menu a:focus-visible,
+            .dropdown-menu a.active {
+                background-color: #eff6ff;
+                color: var(--primary-color, #0067b8);
             }
         }
 
@@ -374,12 +490,12 @@
         <div class="nav-container">
             <!-- Logo -->
             <a href="https://www.famral.com/" class="nav-logo">
-                <img src="/diwali.gif" alt="Famral Logo" width="32" height="32">
+                <img src="/favicon.png" alt="Famral Logo" width="32" height="32">
                 Famral
             </a>
 
             <!-- Mobile Menu Toggle Button -->
-            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
+            <button type="button" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
                 <svg class="famral-icon icon-bars" style="width: 24px; height: 24px;" viewBox="0 0 24 24" stroke-width="2">
                     <line x1="3" y1="12" x2="21" y2="12"></line>
                     <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -397,7 +513,7 @@
 
                 <!-- Rank Predictor Dropdown -->
                 <div class="nav-item dropdown">
-                    <button class="nav-link dropdown-toggle" aria-expanded="false">
+                    <button type="button" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">
                         Rank Predictor
                         <svg class="famral-icon" style="width: 12px; height: 12px;" viewBox="0 0 24 24" stroke-width="2.5">
                             <polyline points="6 9 12 15 18 9"></polyline>
@@ -419,7 +535,7 @@
 
                 <!-- Percentile Predictor Dropdown -->
                 <div class="nav-item dropdown">
-                    <button class="nav-link dropdown-toggle" aria-expanded="false">
+                    <button type="button" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">
                         Percentile Predictor
                         <svg class="famral-icon" style="width: 12px; height: 12px;" viewBox="0 0 24 24" stroke-width="2.5">
                             <polyline points="6 9 12 15 18 9"></polyline>
@@ -437,7 +553,7 @@
 
                 <!-- College Predictor Dropdown -->
                 <div class="nav-item dropdown">
-                    <button class="nav-link dropdown-toggle" aria-expanded="false">
+                    <button type="button" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">
                         College Predictor
                         <svg class="famral-icon" style="width: 12px; height: 12px;" viewBox="0 0 24 24" stroke-width="2.5">
                             <polyline points="6 9 12 15 18 9"></polyline>
@@ -483,6 +599,7 @@
                         <li><a href="/ap-eapcet-college-predictor">AP EAPCET College Predictor</a></li>
                         <li><a href="/tnea-college-predictor">TNEA College Predictor</a></li>
                         <li><a href="/wbjee-college-predictor">WBJEE College Predictor</a></li>
+                        <li><a href="/uptac-college-predictor">UPTAC College Predictor</a></li>
                         <li><a href="/college-predictor" style="font-weight: 600; color: var(--primary-color, #0067b8);">View All College Predictors &rarr;</a></li>
                     </ul>
                 </div>
@@ -520,7 +637,7 @@
                     </ul>
                 </div>
 
-                <!-- Col 4: Colleges -->
+                <!-- Col 4: Colleges & Tools -->
                 <div>
                     <h4>Colleges</h4>
                     <ul>
@@ -528,6 +645,10 @@
                         <li><a href="/college/mbm-jodhpur">MBM Jodhpur</a></li>
                         <li><a href="/college/skit-jaipur">SKIT Jaipur</a></li>
                         <li><a href="/college/ctae-udaipur">CTAE Udaipur</a></li>
+                    </ul>
+                    <h4 style="margin-top: 1.25rem;">SEO Tools</h4>
+                    <ul>
+                        <li><a href="/seo/open-graph-generator">Open Graph Generator</a></li>
                     </ul>
                 </div>
 
@@ -537,9 +658,14 @@
                     <ul>
                         <li><a href="/exam/jee-main">JEE Main 2027</a></li>
                         <li><a href="/exam/jee-advanced">JEE Advanced 2027</a></li>
+                        <li><a href="/exam/cuet">CUET UG 2027</a></li>
+                        <li><a href="/exam/viteee">VITEEE 2027</a></li>
                         <li><a href="https://jeerankpredictor.com/">JEE Rank Predictor</a></li>
-                        <li><a href="/exam/mp-dte">MP DTE Counselling</a></li>
+                        <li><a href="https://mpdtecounselling.in/">MP DTE Counselling</a></li>
                         <li><a href="/exam/reap">REAP 2027</a></li>
+                        <li><a href="/exam/uptac">UPTAC 2027</a></li>
+                        <li><a href="/exam/jac-delhi">JAC Delhi 2027</a></li>
+                        <li><a href="/exam/ipu-cet">IPU CET 2027</a></li>
                         <li><a href="/exam/comedk">COMEDK 2027</a></li>
                         <li><a href="/exam/kcet">KCET 2027</a></li>
                         <li><a href="/exam/keam">KEAM 2027</a></li>
@@ -617,95 +743,110 @@
 
     // 7. Initialize Interactive Events
     function initInteractivity() {
-        // Mobile Toggle
+        // Mobile Toggle Elements
         const navToggle = document.querySelector('.nav-toggle');
         const navLinks = document.querySelector('.nav-links-wrapper');
         const iconBars = navToggle ? navToggle.querySelector('.icon-bars') : null;
         const iconTimes = navToggle ? navToggle.querySelector('.icon-times') : null;
+        const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
+        function setMobileNavOpen(isOpen) {
+            if (!navToggle || !navLinks) return;
+            navLinks.classList.toggle('active', isOpen);
+            navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            if (iconBars && iconTimes) {
+                iconBars.style.display = isOpen ? 'none' : 'inline-block';
+                iconTimes.style.display = isOpen ? 'inline-block' : 'none';
+            }
+            if (!isOpen) {
+                // When mobile menu closes, also close all open dropdowns
+                closeAllDropdowns();
+            }
+        }
+
+        function closeAllDropdowns() {
+            document.querySelectorAll('.dropdown-menu.show').forEach(menu => {
+                menu.classList.remove('show');
+            });
+            dropdownToggles.forEach(toggle => {
+                toggle.setAttribute('aria-expanded', 'false');
+            });
+        }
 
         if (navToggle && navLinks) {
             navToggle.addEventListener('click', (e) => {
                 e.stopPropagation();
-                const isExpanded = navLinks.classList.toggle('active');
-                navToggle.setAttribute('aria-expanded', isExpanded);
-
-                if (iconBars && iconTimes) {
-                    iconBars.style.display = isExpanded ? 'none' : 'inline-block';
-                    iconTimes.style.display = isExpanded ? 'inline-block' : 'none';
-                }
+                const isCurrentlyActive = navLinks.classList.contains('active');
+                setMobileNavOpen(!isCurrentlyActive);
             });
 
-            // Close mobile menu on link click
+            // Close mobile menu on clicking any navigation link
             navLinks.querySelectorAll('a').forEach(link => {
                 link.addEventListener('click', () => {
                     if (navLinks.classList.contains('active')) {
-                        navLinks.classList.remove('active');
-                        navToggle.setAttribute('aria-expanded', 'false');
-                        if (iconBars && iconTimes) {
-                            iconBars.style.display = 'inline-block';
-                            iconTimes.style.display = 'none';
-                        }
+                        setMobileNavOpen(false);
                     }
                 });
             });
         }
 
         // Dropdown Menus
-        const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
         dropdownToggles.forEach(toggle => {
             toggle.addEventListener('click', (e) => {
+                e.preventDefault();
                 e.stopPropagation();
                 const menu = toggle.nextElementSibling;
                 const isCurrentlyOpen = menu && menu.classList.contains('show');
 
-                // Close all other dropdowns
-                document.querySelectorAll('.dropdown-menu.show').forEach(openMenu => {
-                    if (openMenu !== menu) openMenu.classList.remove('show');
+                // Close all other dropdowns and reset their aria-expanded
+                dropdownToggles.forEach(otherToggle => {
+                    if (otherToggle !== toggle) {
+                        otherToggle.setAttribute('aria-expanded', 'false');
+                        const otherMenu = otherToggle.nextElementSibling;
+                        if (otherMenu) otherMenu.classList.remove('show');
+                    }
                 });
 
+                // Toggle current dropdown
                 if (menu) {
-                    menu.classList.toggle('show', !isCurrentlyOpen);
-                    toggle.setAttribute('aria-expanded', !isCurrentlyOpen);
+                    if (isCurrentlyOpen) {
+                        menu.classList.remove('show');
+                        toggle.setAttribute('aria-expanded', 'false');
+                    } else {
+                        menu.classList.add('show');
+                        toggle.setAttribute('aria-expanded', 'true');
+                    }
                 }
             });
         });
 
-        // Close dropdowns & mobile menu on document click
+        // Close dropdowns & mobile menu on document click outside
         document.addEventListener('click', (e) => {
             if (!e.target.closest('.nav-item.dropdown')) {
-                document.querySelectorAll('.dropdown-menu.show').forEach(menu => {
-                    menu.classList.remove('show');
-                });
-                dropdownToggles.forEach(t => t.setAttribute('aria-expanded', 'false'));
+                closeAllDropdowns();
             }
 
             if (navLinks && navToggle && !navLinks.contains(e.target) && !navToggle.contains(e.target)) {
                 if (navLinks.classList.contains('active')) {
-                    navLinks.classList.remove('active');
-                    navToggle.setAttribute('aria-expanded', 'false');
-                    if (iconBars && iconTimes) {
-                        iconBars.style.display = 'inline-block';
-                        iconTimes.style.display = 'none';
-                    }
+                    setMobileNavOpen(false);
                 }
             }
         });
 
-        // Escape Key closes menus
+        // Close menus on Escape key
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
-                document.querySelectorAll('.dropdown-menu.show').forEach(menu => {
-                    menu.classList.remove('show');
-                });
-                dropdownToggles.forEach(t => t.setAttribute('aria-expanded', 'false'));
+                closeAllDropdowns();
                 if (navLinks && navLinks.classList.contains('active')) {
-                    navLinks.classList.remove('active');
-                    if (navToggle) navToggle.setAttribute('aria-expanded', 'false');
-                    if (iconBars && iconTimes) {
-                        iconBars.style.display = 'inline-block';
-                        iconTimes.style.display = 'none';
-                    }
+                    setMobileNavOpen(false);
                 }
+            }
+        });
+
+        // Reset mobile menu if resized to desktop viewport
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768 && navLinks && navLinks.classList.contains('active')) {
+                setMobileNavOpen(false);
             }
         });
 
