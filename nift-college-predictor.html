@@ -20,8 +20,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Famral" />
     <meta property="og:url" content="https://www.famral.com/nift-college-predictor" />
-    <meta property="og:title"
-        content="NIFT B.Des & B.FTech College Predictor 2026 - Admission Predictor | Famral" />
+    <meta property="og:title" content="NIFT B.Des & B.FTech College Predictor 2026 - Admission Predictor | Famral" />
     <meta property="og:description"
         content="Free NIFT College Predictor 2026: Predict B.Des & B.FTech admission chances in all 18 NIFT campuses based on NIFT Common Merit Rank (CMR). Supports OPEN, EWS, OBC-NCL, SC, ST, PwD, and State Domicile quotas." />
     <meta property="og:image" content="https://www.famral.com/college-predictor.png" />
@@ -37,9 +36,14 @@
     </noscript>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    </noscript>
 
-        <!-- Google AdSense -->
+    <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7876432493491415"
         crossorigin="anonymous"></script>
 
@@ -1291,46 +1295,28 @@
 
 <body>
     <header>
-        <nav class="navbar" aria-label="Main navigation">
-            <div class="nav-container">
-                <a href="https://www.famral.com/" class="nav-logo">
-                    <img src="./favicon.png" alt="Famral Logo" width="32" height="32">
-                    Famral
-                </a>
-                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"
-                    aria-controls="navLinks">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <div class="nav-links-wrapper" id="navLinks">
-                    <a href="/" class="nav-link">Home</a>
-                    <div class="nav-item dropdown">
-                        <button class="nav-link dropdown-toggle">College Predictor <i
-                                class="fas fa-chevron-down fa-xs"></i></button>
-                        <div class="dropdown-menu">
-                            <div class="mega-column" style="padding: 0.5rem;">
-                                <a href="/nift-college-predictor"
-                                    style="font-weight: 700; color: var(--primary-color);">NIFT Predictor</a>
-                                <a href="/uceed-college-predictor">UCEED Predictor</a>
-                                <a href="/met-college-predictor">MET College Predictor</a>
-                                <a href="/jee-advanced-college-predictor">JEE Advanced Predictor</a>
-                                <a href="/jee-main-college-predictor">JEE Main Predictor</a>
-                                <a href="/uktech-college-predictor">UKTECH College Predictor</a>
-                                <a href="/cg-pet-college-predictor">CG PET Predictor</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </nav>
+        <!-- Shared Global Navbar injected by common.js -->
+        <div id="navbar-placeholder"></div>
     </header>
 
     <main>
         <section class="hero">
             <div class="container">
                 <h1>NIFT College Predictor 2026</h1>
-                <p>The most comprehensive <strong>NIFT College Predictor</strong> to estimate your B.Des (Bachelor of Design) and B.FTech (Bachelor of Fashion Technology) admission
-                    chances across all 18 National Institute of Fashion Technology campuses (NIFT New Delhi, Mumbai, Bengaluru, Hyderabad, Chennai, Kolkata, Gandhinagar, Panchkula, Varanasi, Patna, Bhopal, Jodhpur, Kangra, Bhubaneswar, Raebareli, Shillong, Srinagar, Daman).
-                    Enter your NIFT Common Merit Rank (CMR), select your reservation category, and preferred design/technology stream to get instant official seat allocation predictions.</p>
+                <p>The most comprehensive <strong>NIFT College Predictor</strong> to estimate your B.Des (Bachelor of
+                    Design) and B.FTech (Bachelor of Fashion Technology) admission
+                    chances across all 18 National Institute of Fashion Technology campuses (NIFT New Delhi, Mumbai,
+                    Bengaluru, Hyderabad, Chennai, Kolkata, Gandhinagar, Panchkula, Varanasi, Patna, Bhopal, Jodhpur,
+                    Kangra, Bhubaneswar, Raebareli, Shillong, Srinagar, Daman).
+                    Enter your NIFT Common Merit Rank (CMR), select your reservation category, and preferred
+                    design/technology stream to get instant official seat allocation predictions.</p>
+                <div style="margin-top: 0.85rem;">
+                    <a href="/exam/nift"
+                        style="display: inline-flex; align-items: center; gap: 0.45rem; background: #be123c; color: #fff; padding: 0.45rem 1rem; border-radius: 4px; text-decoration: none; font-size: 0.85rem; font-weight: 600; box-shadow: 0 2px 6px rgba(190, 18, 60, 0.3);">
+                        <i class="fas fa-book-open" aria-hidden="true"></i> Explore Complete NIFT 2027 Exam Guide
+                        (Dates, CAT &amp; GAT Pattern, Cutoffs) &rarr;
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -1344,14 +1330,16 @@
                                 <div class="form-group">
                                     <label for="cgpet-score">NIFT Common Merit Rank (CMR)</label>
                                     <input type="number" id="cgpet-score" class="form-control"
-                                        placeholder="Enter your NIFT CMR (e.g. 150)" required min="1"
-                                        max="60000" step="1">
-                                    <small style="color: var(--text-light); font-size: 0.78rem;">Enter your official NIFT Common Merit Rank (CMR 1 - 50,000) for instant seat predictions.</small>
+                                        placeholder="Enter your NIFT CMR (e.g. 150)" required min="1" max="60000"
+                                        step="1">
+                                    <small style="color: var(--text-light); font-size: 0.78rem;">Enter your official
+                                        NIFT Common Merit Rank (CMR 1 - 50,000) for instant seat predictions.</small>
                                 </div>
                                 <div class="form-group">
                                     <label for="community">Reservation Category</label>
                                     <select id="community" class="form-control">
-                                        <option value="GENERAL" selected>OPEN (General / Unreserved / All India Merit)</option>
+                                        <option value="GENERAL" selected>OPEN (General / Unreserved / All India Merit)
+                                        </option>
                                         <option value="OBC">OBC-NCL (Other Backward Classes - Non-Creamy Layer)</option>
                                         <option value="EWS">EWS (Economically Weaker Section)</option>
                                         <option value="SC">SC (Scheduled Caste)</option>
@@ -1369,16 +1357,21 @@
                                     <label for="college-type">Preferred Campus Tier</label>
                                     <select id="college-type" class="form-control">
                                         <option value="ALL" selected>All 18 NIFT Campuses</option>
-                                        <option value="TOP_TIER">Top Tier Flagship (New Delhi, Mumbai, Bengaluru, Hyderabad)</option>
-                                        <option value="METRO">Metro &amp; Established (Kolkata, Chennai, Gandhinagar, Panchkula)</option>
-                                        <option value="REGIONAL">Regional &amp; Domicile (Patna, Bhopal, Jodhpur, Kangra, Bhubaneswar, Raebareli, Shillong, Srinagar, Daman, Varanasi)</option>
+                                        <option value="TOP_TIER">Top Tier Flagship (New Delhi, Mumbai, Bengaluru,
+                                            Hyderabad)</option>
+                                        <option value="METRO">Metro &amp; Established (Kolkata, Chennai, Gandhinagar,
+                                            Panchkula)</option>
+                                        <option value="REGIONAL">Regional &amp; Domicile (Patna, Bhopal, Jodhpur,
+                                            Kangra, Bhubaneswar, Raebareli, Shillong, Srinagar, Daman, Varanasi)
+                                        </option>
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="quota-region">Seat Allocation Quota</label>
                                     <select id="quota-region" class="form-control">
                                         <option value="AI" selected>All India Open Seat Allocation (80% Seats)</option>
-                                        <option value="DOMICILE">State Domicile Quota (20% Seats in non-Delhi Campuses)</option>
+                                        <option value="DOMICILE">State Domicile Quota (20% Seats in non-Delhi Campuses)
+                                        </option>
                                         <option value="NRI">NRI / SAARC / Foreign National Quota</option>
                                     </select>
                                 </div>
@@ -1388,21 +1381,27 @@
                                         <option value="ALL" selected>All Programs (B.Des &amp; B.FTech)</option>
                                         <option value="Fashion Communication">Fashion Communication (B.Des FC)</option>
                                         <option value="Fashion Design">Fashion Design (B.Des FD)</option>
-                                        <option value="Apparel Production (B.FTech)">Apparel Production (B.FTech AP)</option>
+                                        <option value="Apparel Production (B.FTech)">Apparel Production (B.FTech AP)
+                                        </option>
                                         <option value="Accessory Design">Accessory Design (B.Des AD)</option>
                                         <option value="Textile Design">Textile Design (B.Des TD)</option>
                                         <option value="Knitwear Design">Knitwear Design (B.Des KD)</option>
                                         <option value="Leather Design">Leather Design (B.Des LD)</option>
-                                        <option value="B.Des (General Design Discipline)">B.Des (General Design Discipline)</option>
+                                        <option value="B.Des (General Design Discipline)">B.Des (General Design
+                                            Discipline)</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="family-income">Family Annual Income (For SARTHAK Fee Waiver)</label>
                                     <select id="family-income" class="form-control">
-                                        <option value="FULL" selected>Standard Fees Structure (~Rs 1.55 Lakh / semester)</option>
-                                        <option value="LOW">Below Rs 1.5 Lakhs / year (100% Tuition Fee Waiver under Sarthak Scheme)</option>
-                                        <option value="MID_75">Rs 1.5 Lakhs to Rs 2.5 Lakhs / year (75% Tuition Fee Waiver under Sarthak Scheme)</option>
-                                        <option value="MID_50">Rs 2.5 Lakhs to Rs 4.0 Lakhs / year (50% Tuition Fee Waiver under Sarthak Scheme)</option>
+                                        <option value="FULL" selected>Standard Fees Structure (~Rs 1.55 Lakh / semester)
+                                        </option>
+                                        <option value="LOW">Below Rs 1.5 Lakhs / year (100% Tuition Fee Waiver under
+                                            Sarthak Scheme)</option>
+                                        <option value="MID_75">Rs 1.5 Lakhs to Rs 2.5 Lakhs / year (75% Tuition Fee
+                                            Waiver under Sarthak Scheme)</option>
+                                        <option value="MID_50">Rs 2.5 Lakhs to Rs 4.0 Lakhs / year (50% Tuition Fee
+                                            Waiver under Sarthak Scheme)</option>
                                     </select>
                                 </div>
                             </div>
@@ -1420,19 +1419,23 @@
                 <div id="results-placeholder" class="predictor-card empty-state">
                     <i class="fas fa-shirt"></i>
                     <h3>Your NIFT Admission Predictions Await</h3>
-                    <p>Enter your NIFT Common Merit Rank (CMR) and select your reservation category above to see customized B.Des and B.FTech admission probabilities in all 18 NIFT campuses.</p>
+                    <p>Enter your NIFT Common Merit Rank (CMR) and select your reservation category above to see
+                        customized B.Des and B.FTech admission probabilities in all 18 NIFT campuses.</p>
                 </div>
 
                 <div id="results-loading" class="predictor-card empty-state" style="display: none; padding: 3rem 1rem;">
                     <div class="loader-spinner"></div>
                     <h3 style="margin-top: 1.5rem; color: var(--text-dark);">Analyzing NIFT Closing Rank Trends...</h3>
-                    <p style="color: var(--text-light); margin-top: 0.5rem; font-size: 0.95rem;">Comparing your CMR against official NIFT e-Counselling closing ranks and calculating category seat allotment probabilities...</p>
+                    <p style="color: var(--text-light); margin-top: 0.5rem; font-size: 0.95rem;">Comparing your CMR
+                        against official NIFT e-Counselling closing ranks and calculating category seat allotment
+                        probabilities...</p>
                 </div>
 
                 <div id="results-section" class="results-section">
                     <div class="results-header">
                         <h3>Admission Predictions</h3>
-                        <span id="results-count" style="font-weight: 600; color: var(--primary-color);">Found 0 options</span>
+                        <span id="results-count" style="font-weight: 600; color: var(--primary-color);">Found 0
+                            options</span>
                     </div>
                     <div class="predictor-card" style="padding: 1rem; margin-bottom: 1rem;">
                         <div
@@ -1473,7 +1476,8 @@
                 <div id="choice-basket-section" class="predictor-card choice-basket-section" style="display: none;">
                     <div class="basket-header">
                         <h3 style="margin: 0; display: flex; align-items: center; gap: 0.5rem;">
-                            <i class="fas fa-list-ol" style="color: var(--primary-color);"></i> My Selected NIFT Preference List
+                            <i class="fas fa-list-ol" style="color: var(--primary-color);"></i> My Selected NIFT
+                            Preference List
                         </h3>
                         <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
                             <select id="basket-sort" onchange="sortBasket(this.value)" class="form-control"
@@ -1494,11 +1498,13 @@
                         </div>
                     </div>
                     <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 1rem;">
-                        These are your selected NIFT campuses. Reorder them using the Up/Down buttons or use the dropdown to sort them strategically for your official NIFT e-Counselling preference list.
+                        These are your selected NIFT campuses. Reorder them using the Up/Down buttons or use the
+                        dropdown to sort them strategically for your official NIFT e-Counselling preference list.
                     </p>
                     <div id="choice-list" class="choice-list"></div>
                     <div id="basket-empty-state" style="text-align: center; color: var(--text-light); padding: 1rem 0;">
-                        No campuses added yet. Click the <i class="fas fa-plus"></i> or "Add to List" button next to predicted campuses above.
+                        No campuses added yet. Click the <i class="fas fa-plus"></i> or "Add to List" button next to
+                        predicted campuses above.
                     </div>
                 </div>
             </div>
@@ -1510,7 +1516,8 @@
                 <h2 style="margin-bottom: 0.5rem;">Popular College Predictors</h2>
                 <p
                     style="color: var(--text-light); margin-bottom: 2rem; font-size: 0.95rem; line-height: 1.6; max-width: 800px;">
-                    Explore our suite of admission predictors for other national design, architecture, and engineering entrance exams across India.</p>
+                    Explore our suite of admission predictors for other national design, architecture, and engineering
+                    entrance exams across India.</p>
                 <div class="predictors-grid">
                     <a href="/uceed-college-predictor" class="predictor-compact-card">
                         <div class="icon"><i class="fas fa-compass"></i></div>
@@ -1521,7 +1528,8 @@
                     <a href="/met-college-predictor" class="predictor-compact-card">
                         <div class="icon"><i class="fas fa-university"></i></div>
                         <h3>MET College Predictor</h3>
-                        <p>Predict B.Tech &amp; B.Des seat allotment chances in Manipal Academy of Higher Education (MAHE) campuses.</p>
+                        <p>Predict B.Tech &amp; B.Des seat allotment chances in Manipal Academy of Higher Education
+                            (MAHE) campuses.</p>
                         <span class="link-text">Use Predictor <i class="fas fa-chevron-right fa-xs"></i></span>
                     </a>
                     <a href="/jee-advanced-college-predictor" class="predictor-compact-card">
@@ -1550,38 +1558,48 @@
             <div class="container">
                 <h2>About the NIFT B.Des &amp; B.FTech College Predictor 2026</h2>
                 <p style="color: var(--text-light); max-width: 800px; margin-bottom: 2rem;">
-                    The <strong>NIFT College Predictor</strong> is an advanced, data-driven tool designed to assist fashion design and apparel technology aspirants in forecasting their seat allocation probabilities across all 18 National Institute of Fashion Technology campuses (NIFT Delhi, Mumbai, Bengaluru, Hyderabad, Chennai, Kolkata, Gandhinagar, Panchkula, etc.).
+                    The <strong>NIFT College Predictor</strong> is an advanced, data-driven tool designed to assist
+                    fashion design and apparel technology aspirants in forecasting their seat allocation probabilities
+                    across all 18 National Institute of Fashion Technology campuses (NIFT Delhi, Mumbai, Bengaluru,
+                    Hyderabad, Chennai, Kolkata, Gandhinagar, Panchkula, etc.).
                 </p>
                 <div class="services-list">
                     <div class="service-box">
                         <span class="service-icon" aria-hidden="true"><i class="fas fa-bullseye"></i></span>
                         <h3>Official Cutoff Data</h3>
-                        <p>Connected to official NIFT e-Counselling data, covering OPEN, EWS, OBC-NCL, SC, ST, PwD, and State Domicile reservation quotas.</p>
+                        <p>Connected to official NIFT e-Counselling data, covering OPEN, EWS, OBC-NCL, SC, ST, PwD, and
+                            State Domicile reservation quotas.</p>
                     </div>
                     <div class="service-box">
                         <span class="service-icon" aria-hidden="true"><i class="fas fa-shield-halved"></i></span>
                         <h3>18 Campuses &amp; 7 Specializations</h3>
-                        <p>Incorporate precise Common Merit Rank (CMR) closing adjustments across all 18 NIFT campuses for Fashion Design, Fashion Comm, Accessory Design, Textile Design, Knitwear Design, Leather Design, and B.FTech Apparel Production.</p>
+                        <p>Incorporate precise Common Merit Rank (CMR) closing adjustments across all 18 NIFT campuses
+                            for Fashion Design, Fashion Comm, Accessory Design, Textile Design, Knitwear Design, Leather
+                            Design, and B.FTech Apparel Production.</p>
                     </div>
                     <div class="service-box">
                         <span class="service-icon" aria-hidden="true"><i class="fas fa-indian-rupee-sign"></i></span>
                         <h3>SARTHAK Financial Assistance Slabs</h3>
-                        <p>Provides details on tuition fee waivers (100%, 75%, 50%) under NIFT's SARTHAK scholarship scheme based on annual parental income.</p>
+                        <p>Provides details on tuition fee waivers (100%, 75%, 50%) under NIFT's SARTHAK scholarship
+                            scheme based on annual parental income.</p>
                     </div>
                     <div class="service-box">
                         <span class="service-icon" aria-hidden="true"><i class="fas fa-lightbulb"></i></span>
                         <h3>Strategic Choice Tips</h3>
-                        <p>Classifies options into Dream, Target, or Safety choices with strategic recommendations for official NIFT preference list entry.</p>
+                        <p>Classifies options into Dream, Target, or Safety choices with strategic recommendations for
+                            official NIFT preference list entry.</p>
                     </div>
                     <div class="service-box">
                         <span class="service-icon" aria-hidden="true"><i class="fas fa-scale-balanced"></i></span>
                         <h3>Side-by-Side Compare</h3>
-                        <p>Add up to 3 NIFT campus options to the comparison tray to evaluate location, established year, average placements, fees, ratings, and studio pros/cons.</p>
+                        <p>Add up to 3 NIFT campus options to the comparison tray to evaluate location, established
+                            year, average placements, fees, ratings, and studio pros/cons.</p>
                     </div>
                     <div class="service-box">
                         <span class="service-icon" aria-hidden="true"><i class="fas fa-list-check"></i></span>
                         <h3>Choice Basket &amp; Export</h3>
-                        <p>Build and order your choice-filling list. Export the final strategic sequence as a formatted text file for reference during official NIFT e-Counselling.</p>
+                        <p>Build and order your choice-filling list. Export the final strategic sequence as a formatted
+                            text file for reference during official NIFT e-Counselling.</p>
                     </div>
                 </div>
             </div>
@@ -1592,12 +1610,18 @@
                 <div style="max-width: 900px; margin: 0 auto;">
                     <h2 style="margin-bottom: 1.5rem;">How to Use the NIFT College Predictor for Admissions</h2>
                     <p style="color: var(--text-light); line-height: 1.8; margin-bottom: 1.5rem; font-size: 1rem;">
-                        Securing a seat in top NIFT campuses requires accurate insights into Common Merit Rank (CMR) cutoffs and specialization preferences. The <strong>NIFT College Predictor</strong> compares your CMR with multi-year cutoff trends to help you build an optimal preference list.
+                        Securing a seat in top NIFT campuses requires accurate insights into Common Merit Rank (CMR)
+                        cutoffs and specialization preferences. The <strong>NIFT College Predictor</strong> compares
+                        your CMR with multi-year cutoff trends to help you build an optimal preference list.
                     </p>
                     <h3 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.3rem; color: var(--text-dark);">
                         Understanding NIFT Common Merit Rank (CMR) &amp; Seat Allotment</h3>
                     <p style="color: var(--text-light); line-height: 1.8; margin-bottom: 1.25rem;">
-                        NIFT entrance examination score for B.Des comprises <strong>GAT (30%) + CAT (50%)</strong> followed by the <strong>Situation Test (20%)</strong>. For B.FTech, seat allotment is based strictly on GAT scores. NIFT publishes a <strong>Common Merit Rank (CMR)</strong>, which serves as the primary benchmark during central e-Counselling seat allocation across all 5 rounds and spot admission.
+                        NIFT entrance examination score for B.Des comprises <strong>GAT (30%) + CAT (50%)</strong>
+                        followed by the <strong>Situation Test (20%)</strong>. For B.FTech, seat allotment is based
+                        strictly on GAT scores. NIFT publishes a <strong>Common Merit Rank (CMR)</strong>, which serves
+                        as the primary benchmark during central e-Counselling seat allocation across all 5 rounds and
+                        spot admission.
                     </p>
                     <h3 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.3rem; color: var(--text-dark);">
                         NIFT Fee Structure &amp; SARTHAK Scholarship Scheme</h3>
@@ -1607,47 +1631,59 @@
                             style="display: flex; gap: 0.75rem; align-items: flex-start; color: var(--text-light); line-height: 1.7;">
                             <i class="fas fa-circle-check"
                                 style="color: var(--primary-color); margin-top: 0.25rem; font-size: 0.95rem;"></i>
-                            <div><strong>Standard NIFT Fee Structure:</strong> Tuition fee is approx. ₹1.55 Lakh per semester (approx. ₹3.10 Lakhs/year). Total 4-year course fee is approx ₹13.5 - ₹14.5 Lakhs.</div>
+                            <div><strong>Standard NIFT Fee Structure:</strong> Tuition fee is approx. ₹1.55 Lakh per
+                                semester (approx. ₹3.10 Lakhs/year). Total 4-year course fee is approx ₹13.5 - ₹14.5
+                                Lakhs.</div>
                         </li>
                         <li
                             style="display: flex; gap: 0.75rem; align-items: flex-start; color: var(--text-light); line-height: 1.7;">
                             <i class="fas fa-circle-check"
                                 style="color: var(--primary-color); margin-top: 0.25rem; font-size: 0.95rem;"></i>
-                            <div><strong>100% Tuition Fee Waiver (Income &lt; ₹1.5 Lakhs):</strong> Under SARTHAK Financial Assistance Scheme, candidates with annual family income up to ₹1.5 Lakhs receive 100% tuition fee waiver.</div>
+                            <div><strong>100% Tuition Fee Waiver (Income &lt; ₹1.5 Lakhs):</strong> Under SARTHAK
+                                Financial Assistance Scheme, candidates with annual family income up to ₹1.5 Lakhs
+                                receive 100% tuition fee waiver.</div>
                         </li>
                         <li
                             style="display: flex; gap: 0.75rem; align-items: flex-start; color: var(--text-light); line-height: 1.7;">
                             <i class="fas fa-circle-check"
                                 style="color: var(--primary-color); margin-top: 0.25rem; font-size: 0.95rem;"></i>
-                            <div><strong>75% &amp; 50% Fee Subsidies (Income ₹1.5L to ₹4.0L):</strong> 75% tuition fee waiver for income ₹1.5L - ₹2.5L/year, and 50% waiver for income ₹2.5L - ₹4.0L/year.</div>
+                            <div><strong>75% &amp; 50% Fee Subsidies (Income ₹1.5L to ₹4.0L):</strong> 75% tuition fee
+                                waiver for income ₹1.5L - ₹2.5L/year, and 50% waiver for income ₹2.5L - ₹4.0L/year.
+                            </div>
                         </li>
                     </ul>
-                    <h3 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.3rem; color: var(--text-dark);">Steps to Build Your NIFT Preference List</h3>
+                    <h3 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.3rem; color: var(--text-dark);">Steps
+                        to Build Your NIFT Preference List</h3>
                     <ul
                         style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.8rem; margin-bottom: 2rem;">
                         <li
                             style="display: flex; gap: 0.75rem; align-items: flex-start; color: var(--text-light); line-height: 1.7;">
                             <i class="fas fa-circle-check"
                                 style="color: var(--primary-color); margin-top: 0.25rem; font-size: 0.95rem;"></i>
-                            <div><strong>Input Your NIFT CMR:</strong> Enter your official NIFT Common Merit Rank (1 to 50,000).</div>
+                            <div><strong>Input Your NIFT CMR:</strong> Enter your official NIFT Common Merit Rank (1 to
+                                50,000).</div>
                         </li>
                         <li
                             style="display: flex; gap: 0.75rem; align-items: flex-start; color: var(--text-light); line-height: 1.7;">
                             <i class="fas fa-circle-check"
                                 style="color: var(--primary-color); margin-top: 0.25rem; font-size: 0.95rem;"></i>
-                            <div><strong>Select Reservation Category &amp; Domicile:</strong> Choose your category (OPEN, OBC-NCL, EWS, SC, ST, PwD, or State Domicile).</div>
+                            <div><strong>Select Reservation Category &amp; Domicile:</strong> Choose your category
+                                (OPEN, OBC-NCL, EWS, SC, ST, PwD, or State Domicile).</div>
                         </li>
                         <li
                             style="display: flex; gap: 0.75rem; align-items: flex-start; color: var(--text-light); line-height: 1.7;">
                             <i class="fas fa-circle-check"
                                 style="color: var(--primary-color); margin-top: 0.25rem; font-size: 0.95rem;"></i>
-                            <div><strong>Compare &amp; Refine:</strong> Filter predictions by probability. Select up to 3 campuses to compare side-by-side on placements, fees, and campus infrastructure.</div>
+                            <div><strong>Compare &amp; Refine:</strong> Filter predictions by probability. Select up to
+                                3 campuses to compare side-by-side on placements, fees, and campus infrastructure.</div>
                         </li>
                         <li
                             style="display: flex; gap: 0.75rem; align-items: flex-start; color: var(--text-light); line-height: 1.7;">
                             <i class="fas fa-circle-check"
                                 style="color: var(--primary-color); margin-top: 0.25rem; font-size: 0.95rem;"></i>
-                            <div><strong>Export Preference List:</strong> Add preferred choices to your Preference List, reorder them, and export to guide your official NIFT e-Counselling choice filling submission.</div>
+                            <div><strong>Export Preference List:</strong> Add preferred choices to your Preference List,
+                                reorder them, and export to guide your official NIFT e-Counselling choice filling
+                                submission.</div>
                         </li>
                     </ul>
                 </div>
@@ -1659,11 +1695,13 @@
                 <h2 style="margin-bottom: 0.5rem;">Directory of All 18 NIFT Campuses Across India</h2>
                 <p
                     style="color: var(--text-light); margin-bottom: 2rem; font-size: 0.95rem; line-height: 1.6; max-width: 800px;">
-                    Complete list of all National Institute of Fashion Technology campuses. Categorized by tier, location, specializations, and placement packages.
+                    Complete list of all National Institute of Fashion Technology campuses. Categorized by tier,
+                    location, specializations, and placement packages.
                 </p>
                 <div style="margin-bottom: 1.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
                     <button onclick="filterInstituteTable('ALL', this)" class="btn btn-primary inst-tab-btn"
-                        style="padding: 0.5rem 1rem; font-size: 0.85rem; border: 1px solid var(--primary-color);">All 18 Campuses</button>
+                        style="padding: 0.5rem 1rem; font-size: 0.85rem; border: 1px solid var(--primary-color);">All 18
+                        Campuses</button>
                     <button onclick="filterInstituteTable('TOP_TIER', this)" class="btn btn-secondary inst-tab-btn"
                         style="padding: 0.5rem 1rem; font-size: 0.85rem;">Top Tier (Delhi, Mum, Blr, Hyd)</button>
                     <button onclick="filterInstituteTable('METRO', this)" class="btn btn-secondary inst-tab-btn"
@@ -1674,7 +1712,8 @@
                 <div
                     style="font-size: 0.8rem; color: var(--text-light); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.4rem;">
                     <i class="fas fa-arrows-left-right" style="color: var(--primary-color);"></i>
-                    <span><strong>Tip:</strong> Swipe horizontally on small screens to view full campus &amp; placement columns.</span>
+                    <span><strong>Tip:</strong> Swipe horizontally on small screens to view full campus &amp; placement
+                        columns.</span>
                 </div>
                 <div class="table-responsive" style="max-height: 600px; overflow-y: auto;">
                     <table class="results-table" id="institutes-directory-table" style="min-width: 680px; width: 100%;">
@@ -1689,7 +1728,8 @@
                         <tbody>
                             <tr class="inst-row inst-TOP_TIER">
                                 <td><strong>NIFT New Delhi</strong><br><span
-                                        style="font-size:0.75rem; background:#e3f2fd; color:#0d47a1; padding:2px 6px; border-radius:2px;">Flagship #1 NIFT Campus</span>
+                                        style="font-size:0.75rem; background:#e3f2fd; color:#0d47a1; padding:2px 6px; border-radius:2px;">Flagship
+                                        #1 NIFT Campus</span>
                                 </td>
                                 <td>Hauz Khas, New Delhi</td>
                                 <td>1986 | 10 Acres Urban</td>
@@ -1697,7 +1737,8 @@
                             </tr>
                             <tr class="inst-row inst-TOP_TIER">
                                 <td><strong>NIFT Mumbai</strong><br><span
-                                        style="font-size:0.75rem; background:#e3f2fd; color:#0d47a1; padding:2px 6px; border-radius:2px;">Top Tier Campus</span>
+                                        style="font-size:0.75rem; background:#e3f2fd; color:#0d47a1; padding:2px 6px; border-radius:2px;">Top
+                                        Tier Campus</span>
                                 </td>
                                 <td>Kharghar, Navi Mumbai, Maharashtra</td>
                                 <td>1995 | 10 Acres Campus</td>
@@ -1705,7 +1746,8 @@
                             </tr>
                             <tr class="inst-row inst-TOP_TIER">
                                 <td><strong>NIFT Bengaluru</strong><br><span
-                                        style="font-size:0.75rem; background:#e3f2fd; color:#0d47a1; padding:2px 6px; border-radius:2px;">Top Tier Campus</span>
+                                        style="font-size:0.75rem; background:#e3f2fd; color:#0d47a1; padding:2px 6px; border-radius:2px;">Top
+                                        Tier Campus</span>
                                 </td>
                                 <td>HSR Layout, Bengaluru, Karnataka</td>
                                 <td>1997 | 15 Acres Campus</td>
@@ -1713,7 +1755,8 @@
                             </tr>
                             <tr class="inst-row inst-TOP_TIER">
                                 <td><strong>NIFT Hyderabad</strong><br><span
-                                        style="font-size:0.75rem; background:#e3f2fd; color:#0d47a1; padding:2px 6px; border-radius:2px;">Top Tier Campus</span>
+                                        style="font-size:0.75rem; background:#e3f2fd; color:#0d47a1; padding:2px 6px; border-radius:2px;">Top
+                                        Tier Campus</span>
                                 </td>
                                 <td>Madhapur, HITEC City, Hyderabad</td>
                                 <td>1995 | 8 Acres Campus</td>
@@ -1721,7 +1764,8 @@
                             </tr>
                             <tr class="inst-row inst-METRO">
                                 <td><strong>NIFT Gandhinagar</strong><br><span
-                                        style="font-size:0.75rem; background:#f3e5f5; color:#7b1fa2; padding:2px 6px; border-radius:2px;">Metro Campus</span>
+                                        style="font-size:0.75rem; background:#f3e5f5; color:#7b1fa2; padding:2px 6px; border-radius:2px;">Metro
+                                        Campus</span>
                                 </td>
                                 <td>GH-0 Road, Gandhinagar, Gujarat</td>
                                 <td>1995 | 20 Acres Campus</td>
@@ -1729,7 +1773,8 @@
                             </tr>
                             <tr class="inst-row inst-METRO">
                                 <td><strong>NIFT Chennai</strong><br><span
-                                        style="font-size:0.75rem; background:#f3e5f5; color:#7b1fa2; padding:2px 6px; border-radius:2px;">Metro Campus</span>
+                                        style="font-size:0.75rem; background:#f3e5f5; color:#7b1fa2; padding:2px 6px; border-radius:2px;">Metro
+                                        Campus</span>
                                 </td>
                                 <td>Taramani, Chennai, Tamil Nadu</td>
                                 <td>1995 | 14 Acres Campus</td>
@@ -1737,7 +1782,8 @@
                             </tr>
                             <tr class="inst-row inst-METRO">
                                 <td><strong>NIFT Kolkata</strong><br><span
-                                        style="font-size:0.75rem; background:#f3e5f5; color:#7b1fa2; padding:2px 6px; border-radius:2px;">Metro Campus</span>
+                                        style="font-size:0.75rem; background:#f3e5f5; color:#7b1fa2; padding:2px 6px; border-radius:2px;">Metro
+                                        Campus</span>
                                 </td>
                                 <td>Salt Lake, Kolkata, West Bengal</td>
                                 <td>1995 | 12 Acres Campus</td>
@@ -1745,7 +1791,8 @@
                             </tr>
                             <tr class="inst-row inst-METRO">
                                 <td><strong>NIFT Panchkula</strong><br><span
-                                        style="font-size:0.75rem; background:#f3e5f5; color:#7b1fa2; padding:2px 6px; border-radius:2px;">Established NCR Campus</span>
+                                        style="font-size:0.75rem; background:#f3e5f5; color:#7b1fa2; padding:2px 6px; border-radius:2px;">Established
+                                        NCR Campus</span>
                                 </td>
                                 <td>Sector 23, Panchkula, Haryana</td>
                                 <td>2019 | 10 Acres Campus</td>
@@ -1753,7 +1800,8 @@
                             </tr>
                             <tr class="inst-row inst-REGIONAL">
                                 <td><strong>NIFT Varanasi</strong><br><span
-                                        style="font-size:0.75rem; background:#fff3e0; color:#e65100; padding:2px 6px; border-radius:2px;">Newer NIFT Campus</span>
+                                        style="font-size:0.75rem; background:#fff3e0; color:#e65100; padding:2px 6px; border-radius:2px;">Newer
+                                        NIFT Campus</span>
                                 </td>
                                 <td>Varanasi, Uttar Pradesh</td>
                                 <td>2023 | 10 Acres Campus</td>
@@ -1761,7 +1809,8 @@
                             </tr>
                             <tr class="inst-row inst-REGIONAL">
                                 <td><strong>NIFT Patna</strong><br><span
-                                        style="font-size:0.75rem; background:#fff3e0; color:#e65100; padding:2px 6px; border-radius:2px;">Regional Campus</span>
+                                        style="font-size:0.75rem; background:#fff3e0; color:#e65100; padding:2px 6px; border-radius:2px;">Regional
+                                        Campus</span>
                                 </td>
                                 <td>Mithapur, Patna, Bihar</td>
                                 <td>2008 | 7 Acres Campus</td>
@@ -1769,7 +1818,8 @@
                             </tr>
                             <tr class="inst-row inst-REGIONAL">
                                 <td><strong>NIFT Bhopal</strong><br><span
-                                        style="font-size:0.75rem; background:#fff3e0; color:#e65100; padding:2px 6px; border-radius:2px;">Regional Campus</span>
+                                        style="font-size:0.75rem; background:#fff3e0; color:#e65100; padding:2px 6px; border-radius:2px;">Regional
+                                        Campus</span>
                                 </td>
                                 <td>Bhauri, Bhopal, Madhya Pradesh</td>
                                 <td>2008 | 29 Acres Campus</td>
@@ -1777,7 +1827,8 @@
                             </tr>
                             <tr class="inst-row inst-REGIONAL">
                                 <td><strong>NIFT Jodhpur</strong><br><span
-                                        style="font-size:0.75rem; background:#fff3e0; color:#e65100; padding:2px 6px; border-radius:2px;">Regional Campus</span>
+                                        style="font-size:0.75rem; background:#fff3e0; color:#e65100; padding:2px 6px; border-radius:2px;">Regional
+                                        Campus</span>
                                 </td>
                                 <td>Karwar, Jodhpur, Rajasthan</td>
                                 <td>2010 | 20 Acres Campus</td>
@@ -1785,7 +1836,8 @@
                             </tr>
                             <tr class="inst-row inst-REGIONAL">
                                 <td><strong>NIFT Kangra</strong><br><span
-                                        style="font-size:0.75rem; background:#fff3e0; color:#e65100; padding:2px 6px; border-radius:2px;">Regional Campus</span>
+                                        style="font-size:0.75rem; background:#fff3e0; color:#e65100; padding:2px 6px; border-radius:2px;">Regional
+                                        Campus</span>
                                 </td>
                                 <td>Chheb, Kangra, Himachal Pradesh</td>
                                 <td>2009 | 26 Acres Campus</td>
@@ -1793,7 +1845,8 @@
                             </tr>
                             <tr class="inst-row inst-REGIONAL">
                                 <td><strong>NIFT Bhubaneswar</strong><br><span
-                                        style="font-size:0.75rem; background:#fff3e0; color:#e65100; padding:2px 6px; border-radius:2px;">Regional Campus</span>
+                                        style="font-size:0.75rem; background:#fff3e0; color:#e65100; padding:2px 6px; border-radius:2px;">Regional
+                                        Campus</span>
                                 </td>
                                 <td>Chandaka, Bhubaneswar, Odisha</td>
                                 <td>2010 | 10 Acres Campus</td>
@@ -1801,7 +1854,8 @@
                             </tr>
                             <tr class="inst-row inst-REGIONAL">
                                 <td><strong>NIFT Raebareli</strong><br><span
-                                        style="font-size:0.75rem; background:#fff3e0; color:#e65100; padding:2px 6px; border-radius:2px;">Regional Campus</span>
+                                        style="font-size:0.75rem; background:#fff3e0; color:#e65100; padding:2px 6px; border-radius:2px;">Regional
+                                        Campus</span>
                                 </td>
                                 <td>Doorbhash Nagar, Raebareli, UP</td>
                                 <td>2007 | 11 Acres Campus</td>
@@ -1809,7 +1863,8 @@
                             </tr>
                             <tr class="inst-row inst-REGIONAL">
                                 <td><strong>NIFT Shillong</strong><br><span
-                                        style="font-size:0.75rem; background:#fff3e0; color:#e65100; padding:2px 6px; border-radius:2px;">Regional Campus</span>
+                                        style="font-size:0.75rem; background:#fff3e0; color:#e65100; padding:2px 6px; border-radius:2px;">Regional
+                                        Campus</span>
                                 </td>
                                 <td>Nongthmmai, Shillong, Meghalaya</td>
                                 <td>2008 | 20 Acres Campus</td>
@@ -1817,7 +1872,8 @@
                             </tr>
                             <tr class="inst-row inst-REGIONAL">
                                 <td><strong>NIFT Srinagar</strong><br><span
-                                        style="font-size:0.75rem; background:#fff3e0; color:#e65100; padding:2px 6px; border-radius:2px;">Regional Campus</span>
+                                        style="font-size:0.75rem; background:#fff3e0; color:#e65100; padding:2px 6px; border-radius:2px;">Regional
+                                        Campus</span>
                                 </td>
                                 <td>Sidco Complex, Srinagar, J&amp;K</td>
                                 <td>2013 | 20 Acres Campus</td>
@@ -1825,7 +1881,8 @@
                             </tr>
                             <tr class="inst-row inst-REGIONAL">
                                 <td><strong>NIFT Daman</strong><br><span
-                                        style="font-size:0.75rem; background:#fff3e0; color:#e65100; padding:2px 6px; border-radius:2px;">Regional Campus</span>
+                                        style="font-size:0.75rem; background:#fff3e0; color:#e65100; padding:2px 6px; border-radius:2px;">Regional
+                                        Campus</span>
                                 </td>
                                 <td>Govt Engg Campus, Daman</td>
                                 <td>2022 | 10 Acres Campus</td>
@@ -1841,59 +1898,72 @@
             <div class="container">
                 <h2>NIFT Admissions &amp; Quota Distribution</h2>
                 <p style="color: var(--text-light); max-width: 800px; margin-bottom: 2rem;">
-                    Understanding category reservation quotas, state domicile seats, and Common Merit Rank (CMR) seat allotment dynamics across NIFT campuses.
+                    Understanding category reservation quotas, state domicile seats, and Common Merit Rank (CMR) seat
+                    allotment dynamics across NIFT campuses.
                 </p>
                 <div class="content-grid">
                     <div class="content-card">
                         <h3
                             style="display: flex; align-items: center; gap: 0.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;">
-                            <i class="fas fa-building-columns" style="color: var(--primary-color);"></i> NIFT Statutory Reservation Structure
+                            <i class="fas fa-building-columns" style="color: var(--primary-color);"></i> NIFT Statutory
+                            Reservation Structure
                         </h3>
-                        <p style="margin-top: 1rem; font-size: 0.95rem; line-height: 1.7;">NIFT seat allocation strictly adheres to central government statutory reservation quotas:</p>
+                        <p style="margin-top: 1rem; font-size: 0.95rem; line-height: 1.7;">NIFT seat allocation strictly
+                            adheres to central government statutory reservation quotas:</p>
                         <ul class="checklist-list" style="margin-top: 1rem;">
                             <li class="checklist-item">
                                 <i class="fas fa-circle-chevron-right"
                                     style="color: var(--primary-color); margin-top: 0.25rem;"></i>
-                                <div><strong>OBC-NCL Reservation (27%):</strong> 27% seats reserved for Non-Creamy Layer OBC candidates across all 18 NIFT campuses.</div>
+                                <div><strong>OBC-NCL Reservation (27%):</strong> 27% seats reserved for Non-Creamy Layer
+                                    OBC candidates across all 18 NIFT campuses.</div>
                             </li>
                             <li class="checklist-item">
                                 <i class="fas fa-circle-chevron-right"
                                     style="color: var(--primary-color); margin-top: 0.25rem;"></i>
-                                <div><strong>SC (15%) &amp; ST (7.5%):</strong> Scheduled Caste and Scheduled Tribe candidates receive reserved seats in category rank order.</div>
+                                <div><strong>SC (15%) &amp; ST (7.5%):</strong> Scheduled Caste and Scheduled Tribe
+                                    candidates receive reserved seats in category rank order.</div>
                             </li>
                             <li class="checklist-item">
                                 <i class="fas fa-circle-chevron-right"
                                     style="color: var(--primary-color); margin-top: 0.25rem;"></i>
-                                <div><strong>EWS Reservation (10%):</strong> 10% seats reserved for Economically Weaker Section candidates in central NIFT campuses.</div>
+                                <div><strong>EWS Reservation (10%):</strong> 10% seats reserved for Economically Weaker
+                                    Section candidates in central NIFT campuses.</div>
                             </li>
                             <li class="checklist-item">
                                 <i class="fas fa-circle-chevron-right"
                                     style="color: var(--primary-color); margin-top: 0.25rem;"></i>
-                                <div><strong>State Domicile Quota (20%):</strong> 20% seats reserved for local state candidates in non-Delhi regional campuses (Patna, Bhopal, Kangra, Srinagar, Shillong, etc.).</div>
+                                <div><strong>State Domicile Quota (20%):</strong> 20% seats reserved for local state
+                                    candidates in non-Delhi regional campuses (Patna, Bhopal, Kangra, Srinagar,
+                                    Shillong, etc.).</div>
                             </li>
                         </ul>
                     </div>
                     <div class="content-card">
                         <h3
                             style="display: flex; align-items: center; gap: 0.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;">
-                            <i class="fas fa-chart-line" style="color: var(--primary-color);"></i> NIFT e-Counselling Factors
+                            <i class="fas fa-chart-line" style="color: var(--primary-color);"></i> NIFT e-Counselling
+                            Factors
                         </h3>
-                        <p style="margin-top: 1rem; font-size: 0.95rem; line-height: 1.7;">Closing ranks across rounds are governed by:</p>
+                        <p style="margin-top: 1rem; font-size: 0.95rem; line-height: 1.7;">Closing ranks across rounds
+                            are governed by:</p>
                         <ul class="checklist-list" style="margin-top: 1rem;">
                             <li class="checklist-item">
                                 <i class="fas fa-circle-chevron-right"
                                     style="color: var(--primary-color); margin-top: 0.25rem;"></i>
-                                <div><strong>Common Merit Rank (CMR):</strong> Overall All India Rank computed from GAT + CAT + Situation Test (B.Des) or GAT (B.FTech).</div>
+                                <div><strong>Common Merit Rank (CMR):</strong> Overall All India Rank computed from GAT
+                                    + CAT + Situation Test (B.Des) or GAT (B.FTech).</div>
                             </li>
                             <li class="checklist-item">
                                 <i class="fas fa-circle-chevron-right"
                                     style="color: var(--primary-color); margin-top: 0.25rem;"></i>
-                                <div><strong>Preference Choice Hierarchy:</strong> Allotment strictly follows candidate choice preference order submitted online.</div>
+                                <div><strong>Preference Choice Hierarchy:</strong> Allotment strictly follows candidate
+                                    choice preference order submitted online.</div>
                             </li>
                             <li class="checklist-item">
                                 <i class="fas fa-circle-chevron-right"
                                     style="color: var(--primary-color); margin-top: 0.25rem;"></i>
-                                <div><strong>Multiple Counselling Rounds:</strong> 5 main online rounds followed by Spot Admission rounds for vacant seats.</div>
+                                <div><strong>Multiple Counselling Rounds:</strong> 5 main online rounds followed by Spot
+                                    Admission rounds for vacant seats.</div>
                             </li>
                         </ul>
                     </div>
@@ -1906,24 +1976,43 @@
                 <h2>Frequently Asked Questions</h2>
                 <div class="faq-accordion">
                     <div class="faq-item">
-                        <div class="faq-question" onclick="toggleFaq(this)">What is the NIFT College Predictor and how does it work? <i class="fas fa-chevron-down"></i></div>
-                        <div class="faq-answer">The NIFT College Predictor is a free tool that estimates your B.Des and B.FTech admission chances across all 18 NIFT campuses (NIFT Delhi, Mumbai, Bengaluru, Hyderabad, Chennai, Kolkata, Gandhinagar, etc.). Enter your NIFT Common Merit Rank (CMR), select your reservation category, and the tool compares your rank against official NIFT closing ranks to show High, Medium, or Low admission probabilities.</div>
+                        <div class="faq-question" onclick="toggleFaq(this)">What is the NIFT College Predictor and how
+                            does it work? <i class="fas fa-chevron-down"></i></div>
+                        <div class="faq-answer">The NIFT College Predictor is a free tool that estimates your B.Des and
+                            B.FTech admission chances across all 18 NIFT campuses (NIFT Delhi, Mumbai, Bengaluru,
+                            Hyderabad, Chennai, Kolkata, Gandhinagar, etc.). Enter your NIFT Common Merit Rank (CMR),
+                            select your reservation category, and the tool compares your rank against official NIFT
+                            closing ranks to show High, Medium, or Low admission probabilities.</div>
                     </div>
                     <div class="faq-item">
-                        <div class="faq-question" onclick="toggleFaq(this)">What is CMR in NIFT Admissions? <i class="fas fa-chevron-down"></i></div>
-                        <div class="faq-answer">CMR stands for Common Merit Rank. It is the overall All India Rank assigned to every student based on cumulative scores in GAT, CAT, and Situation Test (or GAT for B.FTech). Seat allotment across all 18 NIFT campuses during e-Counselling strictly follows the candidate's CMR.</div>
+                        <div class="faq-question" onclick="toggleFaq(this)">What is CMR in NIFT Admissions? <i
+                                class="fas fa-chevron-down"></i></div>
+                        <div class="faq-answer">CMR stands for Common Merit Rank. It is the overall All India Rank
+                            assigned to every student based on cumulative scores in GAT, CAT, and Situation Test (or GAT
+                            for B.FTech). Seat allotment across all 18 NIFT campuses during e-Counselling strictly
+                            follows the candidate's CMR.</div>
                     </div>
                     <div class="faq-item">
-                        <div class="faq-question" onclick="toggleFaq(this)">Is the predicted NIFT seat guaranteed? <i class="fas fa-chevron-down"></i></div>
-                        <div class="faq-answer">No. Actual seat allotments are determined by NIFT Admission Authority during official e-Counselling rounds based on candidate CMR, filled preference list, category seat quotas, and actual closing cutoffs in the current admission cycle.</div>
+                        <div class="faq-question" onclick="toggleFaq(this)">Is the predicted NIFT seat guaranteed? <i
+                                class="fas fa-chevron-down"></i></div>
+                        <div class="faq-answer">No. Actual seat allotments are determined by NIFT Admission Authority
+                            during official e-Counselling rounds based on candidate CMR, filled preference list,
+                            category seat quotas, and actual closing cutoffs in the current admission cycle.</div>
                     </div>
                     <div class="faq-item">
-                        <div class="faq-question" onclick="toggleFaq(this)">What is the difference between B.Des and B.FTech programs? <i class="fas fa-chevron-down"></i></div>
-                        <div class="faq-answer">B.Des (Bachelor of Design) focuses on creative design disciplines such as Fashion Design, Fashion Communication, Accessory Design, Textile Design, Knitwear Design, and Leather Design. B.FTech (Bachelor of Fashion Technology) focuses on garment manufacturing, apparel production technology, quality control, and management.</div>
+                        <div class="faq-question" onclick="toggleFaq(this)">What is the difference between B.Des and
+                            B.FTech programs? <i class="fas fa-chevron-down"></i></div>
+                        <div class="faq-answer">B.Des (Bachelor of Design) focuses on creative design disciplines such
+                            as Fashion Design, Fashion Communication, Accessory Design, Textile Design, Knitwear Design,
+                            and Leather Design. B.FTech (Bachelor of Fashion Technology) focuses on garment
+                            manufacturing, apparel production technology, quality control, and management.</div>
                     </div>
                     <div class="faq-item">
-                        <div class="faq-question" onclick="toggleFaq(this)">What fee concessions or scholarships are available under SARTHAK Scheme? <i class="fas fa-chevron-down"></i></div>
-                        <div class="faq-answer">NIFT offers the SARTHAK Financial Assistance Scheme. Candidates with annual family income up to ₹1.5 Lakhs get 100% tuition fee waiver. Income between ₹1.5L and ₹2.5L gets 75% waiver, and income between ₹2.5L and ₹4.0L gets 50% waiver.</div>
+                        <div class="faq-question" onclick="toggleFaq(this)">What fee concessions or scholarships are
+                            available under SARTHAK Scheme? <i class="fas fa-chevron-down"></i></div>
+                        <div class="faq-answer">NIFT offers the SARTHAK Financial Assistance Scheme. Candidates with
+                            annual family income up to ₹1.5 Lakhs get 100% tuition fee waiver. Income between ₹1.5L and
+                            ₹2.5L gets 75% waiver, and income between ₹2.5L and ₹4.0L gets 50% waiver.</div>
                     </div>
                 </div>
             </div>
@@ -1949,90 +2038,20 @@
             </div>
             <div id="compare-grid" class="compare-grid"></div>
             <div id="compare-empty-state"
-                style="text-align: center; padding: 2rem 0; color: var(--text-light); display: block;">Select 2 or more campuses from the predictions to compare their stats side-by-side.</div>
+                style="text-align: center; padding: 2rem 0; color: var(--text-light); display: block;">Select 2 or more
+                campuses from the predictions to compare their stats side-by-side.</div>
         </div>
     </div>
 
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-links-grid">
-                <div>
-                    <h4>Predictor &amp; Rounds</h4>
-                    <ul>
-                        <li><a href="#predictor-tool">NIFT Predictor</a></li>
-                        <li><a href="#counseling-guide">e-Counselling Guide</a></li>
-                        <li><a href="#counseling-guide">Counselling Rounds</a></li>
-                        <li><a href="#admission-info">Category Quotas</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Top Campus Cutoffs</h4>
-                    <ul>
-                        <li><a href="#predictor-tool">NIFT New Delhi Cutoff</a></li>
-                        <li><a href="#admission-info">NIFT Mumbai Cutoff</a></li>
-                        <li><a href="#admission-info">NIFT Bengaluru Cutoff</a></li>
-                        <li><a href="#admission-info">NIFT Hyderabad Cutoff</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Resources &amp; Info</h4>
-                    <ul>
-                        <li><a href="#faqs">Frequently Asked Questions</a></li>
-                        <li><a href="#counseling-guide">SARTHAK Fee Waiver</a></li>
-                        <li><a href="#nift-list">All 18 NIFT Campuses</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>About Us</h4>
-                    <ul>
-                        <li><a href="/about">About Us</a></li>
-                        <li><a href="/privacy">Privacy Policy</a></li>
-                        <li><a href="/terms">Terms &amp; Conditions</a></li>
-                        <li><a href="/contact">Contact Us</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-content">
-                <p>&copy; <span id="current-year"></span> Famral. All Rights Reserved.</p>
-                <p><a href="#" class="back-to-top">Back to Top <i class="fas fa-arrow-up"></i></a></p>
-            </div>
-        </div>
-    </footer>
+    <!-- Shared Global Footer injected by common.js -->
+    <div id="footer-placeholder"></div>
+
+    <script src="/common.js"></script>
 
     <script>
         // ====== Nav toggle ======
-        const navToggle = document.querySelector('.nav-toggle');
-        const navLinksWrapper = document.querySelector('.nav-links-wrapper');
-        const toggleIconEl = navToggle.querySelector('i');
-        navToggle.addEventListener('click', () => {
-            const isExpanded = navLinksWrapper.classList.toggle('active');
-            navToggle.setAttribute('aria-expanded', isExpanded);
-            if (isExpanded) { toggleIconEl.classList.replace('fa-bars', 'fa-times'); }
-            else { toggleIconEl.classList.replace('fa-times', 'fa-bars'); }
-        });
-        navLinksWrapper.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                if (navLinksWrapper.classList.contains('active')) {
-                    navLinksWrapper.classList.remove('active');
-                    navToggle.setAttribute('aria-expanded', 'false');
-                    toggleIconEl.classList.replace('fa-times', 'fa-bars');
-                }
-            });
-        });
-        document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-            toggle.addEventListener('click', (e) => {
-                e.stopPropagation();
-                const menu = toggle.nextElementSibling;
-                document.querySelectorAll('.dropdown-menu.show').forEach(m => { if (m !== menu) m.classList.remove('show'); });
-                if (menu) menu.classList.toggle('show');
-            });
-        });
-        document.addEventListener('click', (e) => {
-            if (!e.target.closest('.nav-item.dropdown')) {
-                document.querySelectorAll('.dropdown-menu.show').forEach(m => m.classList.remove('show'));
-            }
-        });
-        document.getElementById('current-year').textContent = new Date().getFullYear();
+        // Nav & Footer managed by common.js
+
 
         // ====== Global state & Metadata ======
         let currentPredictions = [];
@@ -2558,7 +2577,7 @@
                 const strategyTip = item.chance === 'High Chance' ? 'This is a <strong>Safety Campus Option</strong>. Place it towards the middle/lower section of your preference list.'
                     : (item.chance === 'Medium Chance' ? 'This is a <strong>Target/Match Choice</strong>. Place it in the middle of your preference list.'
                         : (item.chance === 'Low / Borderline' ? 'This is a <strong>Dream/Reach Campus</strong>. Place it near the top of your preference list.'
-                        : 'This choice has a higher closing CMR threshold. Keep as a stretch option.'));
+                            : 'This choice has a higher closing CMR threshold. Keep as a stretch option.'));
                 trDetail.innerHTML = `
           <td colspan="6" style="padding:1.5rem;text-align:left;border-bottom:2px solid var(--border-color);">
             <div style="display:grid;grid-template-columns:1.2fr 1fr;gap:2rem;">
@@ -2937,7 +2956,6 @@
             answer.classList.toggle('show');
         }
     </script>
-
 </body>
 
 </html>
