@@ -649,6 +649,7 @@
                     <h4 style="margin-top: 1.25rem;">SEO Tools</h4>
                     <ul>
                         <li><a href="/seo/open-graph-generator">Open Graph Generator</a></li>
+                        <li><a href="/seo/meta-tag-generator">Meta Tag Generator</a></li>
                     </ul>
                 </div>
 
