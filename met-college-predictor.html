@@ -1300,34 +1300,8 @@
 
 <body>
     <header>
-        <nav class="navbar" aria-label="Main navigation">
-            <div class="nav-container">
-                <a href="https://www.famral.com/" class="nav-logo">
-                    <img src="https://www.famral.com/favicon.png" alt="Famral Logo" width="32" height="32"> Famral
-                </a>
-                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"
-                    aria-controls="navLinks"><i class="fas fa-bars"></i></button>
-                <div class="nav-links-wrapper" id="navLinks">
-                    <a href="https://www.famral.com/" class="nav-link">Home</a>
-                    <div class="nav-item dropdown">
-                        <button class="nav-link dropdown-toggle">College Predictor <i
-                                class="fas fa-chevron-down fa-xs"></i></button>
-                        <div class="dropdown-menu">
-                            <div class="mega-column" style="padding: 0.5rem;">
-                                <a href="/jee-main-college-predictor">JEE Main College Predictor</a>
-                                <a href="/jee-advanced-college-predictor">JEE Advanced Predictor</a>
-                                <a href="/comedk-college-predictor">COMEDK College Predictor</a>
-                                <a href="/keam-college-predictor">KEAM College Predictor</a>
-                                <a href="/tnea-college-predictor">TNEA College Predictor</a>
-                                <a href="/tg-eapcet-college-predictor">TG EAPCET College Predictor</a>
-                                <a href="/mp-dte-college-predictor">MP DTE College Predictor</a>
-                                <a href="/met-college-predictor">MET College Predictor</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </nav>
+        <!-- Shared Global Navbar injected by common.js -->
+    <div id="navbar-placeholder"></div>
     </header>
     <main>
         <section class="hero">
@@ -1338,6 +1312,12 @@
                     Manipal Academy of Higher Education (MAHE) campuses. Enter your MET rank, select your preferred
                     branch and campus to get instant rank-based admission probability estimates for MIT Manipal, MIT
                     Bengaluru, MU Jaipur, and SMIT Sikkim.</p>
+                <div style="margin-top:1rem;display:flex;gap:0.75rem;flex-wrap:wrap;justify-content:center;">
+                    <a href="/exam/met"
+                        style="display:inline-flex;align-items:center;gap:0.4rem;padding:0.45rem 1rem;background:var(--primary-color);color:#fff;border-radius:4px;font-size:0.875rem;font-weight:600;text-decoration:none;">
+                        <span>📘</span> MET 2027 Authority Guide &amp; Cutoffs &rarr;
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -1770,82 +1750,14 @@
         </div>
     </div>
 
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-links-grid">
-                <div>
-                    <h4>Predictor &amp; Counselling</h4>
-                    <ul>
-                        <li><a href="#predictor-tool">MET College Predictor</a></li>
-                        <li><a href="#counseling-guide">Manipal Counselling Guide</a></li>
-                        <li><a href="#colleges-list">Campuses &amp; Fee Structure</a></li>
-                        <li><a href="#faqs">Frequently Asked Questions</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Top Campus Cutoffs</h4>
-                    <ul>
-                        <li><a href="#predictor-tool">MIT Manipal Cutoffs</a></li>
-                        <li><a href="#predictor-tool">MIT Bengaluru Cutoffs</a></li>
-                        <li><a href="#predictor-tool">MU Jaipur Cutoffs</a></li>
-                        <li><a href="#predictor-tool">SMIT Sikkim Cutoffs</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Resources &amp; Info</h4>
-                    <ul>
-                        <li><a href="#faqs">Frequently Asked Questions</a></li>
-                        <li><a href="#counseling-guide">Preference List Strategy</a></li>
-                        <li><a href="#colleges-list">Top Campuses List</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>About Us</h4>
-                    <ul>
-                        <li><a href="/about">About Us</a></li>
-                        <li><a href="/privacy">Privacy Policy</a></li>
-                        <li><a href="/terms">Terms &amp; Conditions</a></li>
-                        <li><a href="/contact">Contact Us</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-content">
-                <p>&copy; <span id="current-year"></span> Famral. All Rights Reserved.</p>
-                <p><a href="#">Back to Top <i class="fas fa-arrow-up"></i></a></p>
-            </div>
-        </div>
-    </footer>
+    <!-- Shared Global Footer injected by common.js -->
+    <div id="footer-placeholder"></div>
+
+    <script src="/common.js"></script>
 
     <script>
-        // ==========================================
-        // Nav toggle
-        // ==========================================
-        const navToggle = document.querySelector('.nav-toggle');
-        const navLinksWrapper = document.querySelector('.nav-links-wrapper');
-        if (navToggle && navLinksWrapper) {
-            navToggle.addEventListener('click', () => {
-                const toggleIcon = navToggle.querySelector('i');
-                toggleIcon.classList.toggle('fa-bars');
-                toggleIcon.classList.toggle('fa-times');
-                const isExpanded = navLinksWrapper.classList.toggle('active');
-                navToggle.setAttribute('aria-expanded', isExpanded);
-            });
-        }
+        // Nav & Footer managed by common.js
 
-        // Dropdown toggle
-        document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-            toggle.addEventListener('click', (e) => {
-                e.stopPropagation();
-                const menu = toggle.nextElementSibling;
-                document.querySelectorAll('.dropdown-menu.show').forEach(m => { if (m !== menu) m.classList.remove('show'); });
-                menu.classList.toggle('show');
-            });
-        });
-        document.addEventListener('click', () => {
-            document.querySelectorAll('.dropdown-menu.show').forEach(m => m.classList.remove('show'));
-        });
-
-        document.getElementById('current-year').textContent = new Date().getFullYear();
 
         // ==========================================
         // MET Campuses DB
