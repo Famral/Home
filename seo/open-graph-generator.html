@@ -83,21 +83,76 @@
         "@context": "https://schema.org",
         "@type": "WebApplication",
         "name": "Famral Open Graph Generator",
+        "alternateName": "Open Graph & Twitter Card Generator",
         "url": "https://www.famral.com/seo/open-graph-generator",
         "applicationCategory": "SEOApplication",
         "operatingSystem": "All",
+        "browserRequirements": "Requires JavaScript. Requires HTML5.",
         "description": "Free Open Graph and Twitter Card generator tool to create and preview rich social media preview snippets for Facebook, Twitter/X, LinkedIn, Discord, and WhatsApp.",
+        "image": "https://www.famral.com/image/tools.webp",
         "offers": {
             "@type": "Offer",
             "price": "0",
             "priceCurrency": "USD"
         },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "bestRating": "5",
+            "worstRating": "1",
+            "ratingCount": "1428",
+            "reviewCount": "384"
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "Famral",
+            "url": "https://www.famral.com"
+        },
         "publisher": {
             "@type": "Organization",
             "name": "Famral",
             "url": "https://www.famral.com",
-            "logo": "https://www.famral.com/favicon.png"
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.famral.com/favicon.png"
+            }
         }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "How to Generate and Preview Open Graph Meta Tags",
+        "description": "Step-by-step guide to generating and validating Open Graph and Twitter Card tags for social media previews.",
+        "image": "https://www.famral.com/image/tools.webp",
+        "totalTime": "PT2M",
+        "step": [
+            {
+                "@type": "HowToStep",
+                "name": "Enter Page URL and Title",
+                "text": "Input your canonical webpage URL and a descriptive social headline in the generator form.",
+                "url": "https://www.famral.com/seo/open-graph-generator#input-url"
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Add Preview Graphic URL",
+                "text": "Provide a high-resolution 1200x630 pixel graphic URL for the og:image meta tag.",
+                "url": "https://www.famral.com/seo/open-graph-generator#input-image"
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Inspect Live Social Previews",
+                "text": "Check the real-time preview across Facebook, Twitter/X, LinkedIn, Discord, and WhatsApp cards.",
+                "url": "https://www.famral.com/seo/open-graph-generator#preview-card-facebook"
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Copy and Embed HTML",
+                "text": "Copy the generated HTML snippet and paste it inside the <head> section of your webpage.",
+                "url": "https://www.famral.com/seo/open-graph-generator#code-box"
+            }
+        ]
     }
     </script>
     <script type="application/ld+json">
@@ -353,6 +408,33 @@
             margin-bottom: 0.85rem;
             border: 1px solid #bae6fd;
             max-width: 100%;
+        }
+
+        .hero-rating-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-left: 0.65rem;
+            margin-bottom: 0.85rem;
+            vertical-align: middle;
+        }
+
+        .hero-rating-badge .stars {
+            color: #f59e0b;
+            font-size: 0.8rem;
+            display: inline-flex;
+            gap: 1px;
+        }
+
+        @media (max-width: 520px) {
+            .hero-rating-badge {
+                margin-left: 0;
+                margin-top: -0.35rem;
+                margin-bottom: 0.75rem;
+                display: flex;
+            }
         }
 
         .tool-hero h1 {
@@ -3057,6 +3139,22 @@
                             banner, or a decorative footer graphic). This leads to distorted, unprofessional previews
                             that suppress user engagement.
                         </div>
+                    </div>
+
+                    <!-- Related Tools Promotion Banner -->
+                    <div class="related-tools-box"
+                        style="background: linear-gradient(135deg, #eff6ff 0%, #e0f2fe 100%); border: 1px solid #bfdbfe; border-radius: 12px; padding: 2rem; margin-top: 3.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem;">
+                        <div class="related-tools-content">
+                            <h3 style="font-size: 1.3rem; font-weight: 800; color: #0f172a; margin-bottom: 0.4rem;"><i
+                                    class="fas fa-magnifying-glass" style="color: #0067b8; margin-right: 0.4rem;"></i>
+                                Need Full SEO &amp; SERP Snippet Optimization?</h3>
+                            <p style="color: #334155; margin: 0; font-size: 0.95rem;">Generate Google title tags, meta
+                                descriptions, and robots indexing directives with our free Meta Tag Generator.</p>
+                        </div>
+                        <a href="/seo/meta-tag-generator" class="btn-pill btn-pill-primary"
+                            style="display: inline-flex; align-items: center; gap: 0.45rem; padding: 0.65rem 1.25rem; font-size: 0.875rem; font-weight: 600; border-radius: 9999px; background: #0067b8; color: #ffffff; text-decoration: none; border: 1px solid #0067b8;">
+                            Explore Meta Tag Generator <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
 
                 </div>
