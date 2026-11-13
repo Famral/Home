@@ -650,6 +650,7 @@
                     <ul>
                         <li><a href="/seo/open-graph-generator">Open Graph Generator</a></li>
                         <li><a href="/seo/meta-tag-generator">Meta Tag Generator</a></li>
+                        <li><a href="/seo/schema-markup-generator">Schema Markup Generator</a></li>
                     </ul>
                 </div>
 
@@ -661,6 +662,8 @@
                         <li><a href="/exam/jee-advanced">JEE Advanced 2027</a></li>
                         <li><a href="/exam/cuet">CUET UG 2027</a></li>
                         <li><a href="/exam/viteee">VITEEE 2027</a></li>
+                        <li><a href="/exam/bitsat">BITSAT 2027</a></li>
+                        <li><a href="/exam/met">MET 2027</a></li>
                         <li><a href="https://jeerankpredictor.com/">JEE Rank Predictor</a></li>
                         <li><a href="https://mpdtecounselling.in/">MP DTE Counselling</a></li>
                         <li><a href="/exam/reap">REAP 2027</a></li>
