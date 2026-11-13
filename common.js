@@ -637,24 +637,7 @@
                     </ul>
                 </div>
 
-                <!-- Col 4: Colleges & Tools -->
-                <div>
-                    <h4>Colleges</h4>
-                    <ul>
-                        <li><a href="/college/rtu-kota">RTU Kota</a></li>
-                        <li><a href="/college/mbm-jodhpur">MBM Jodhpur</a></li>
-                        <li><a href="/college/skit-jaipur">SKIT Jaipur</a></li>
-                        <li><a href="/college/ctae-udaipur">CTAE Udaipur</a></li>
-                    </ul>
-                    <h4 style="margin-top: 1.25rem;">SEO Tools</h4>
-                    <ul>
-                        <li><a href="/seo/open-graph-generator">Open Graph Generator</a></li>
-                        <li><a href="/seo/meta-tag-generator">Meta Tag Generator</a></li>
-                        <li><a href="/seo/schema-markup-generator">Schema Markup Generator</a></li>
-                    </ul>
-                </div>
-
-                <!-- Col 5: Exams & Counselling -->
+                <!-- Col 4: Exams & Counselling -->
                 <div>
                     <h4>Exams & Counselling</h4>
                     <ul>
@@ -665,7 +648,6 @@
                         <li><a href="/exam/bitsat">BITSAT 2027</a></li>
                         <li><a href="/exam/met">MET 2027</a></li>
                         <li><a href="https://jeerankpredictor.com/">JEE Rank Predictor</a></li>
-                        <li><a href="https://mpdtecounselling.in/">MP DTE Counselling</a></li>
                         <li><a href="/exam/reap">REAP 2027</a></li>
                         <li><a href="/exam/uptac">UPTAC 2027</a></li>
                         <li><a href="/exam/jac-delhi">JAC Delhi 2027</a></li>
@@ -678,6 +660,17 @@
                         <li><a href="/exam/wbjee">WBJEE 2027</a></li>
                         <li><a href="/exam/gujcet">GUJCET 2027</a></li>
                         <li><a href="/exams" style="font-weight: 600; color: var(--primary-color, #0067b8);">View All Exams &rarr;</a></li>
+                    </ul>
+                </div>
+
+
+                <!-- Col 5: Online Tools -->
+                <div>
+                    <h4>Online Tools</h4>
+                    <ul>
+                        <li><a href="/seo/open-graph-generator">Open Graph Generator</a></li>
+                        <li><a href="/seo/meta-tag-generator">Meta Tag Generator</a></li>
+                        <li><a href="/seo/schema-markup-generator">Schema Markup Generator</a></li>
                     </ul>
                 </div>
             </div>
