@@ -668,9 +668,11 @@
                 <div>
                     <h4>Online Tools</h4>
                     <ul>
-                        <li><a href="/seo/open-graph-generator">Open Graph Generator</a></li>
-                        <li><a href="/seo/meta-tag-generator">Meta Tag Generator</a></li>
-                        <li><a href="/seo/schema-markup-generator">Schema Markup Generator</a></li>
+                        <li><a href="https://tools.famral.com/image">Image Tools</a></li>
+                        <li><a href="https://tools.famral.com/developer">Developer Utilities</a></li>
+                        <li><a href="https://tools.famral.com/academic">Academic Calculators</a></li>
+                        <li><a href="https://tools.famral.com/pdf">PDF Utilities</a></li>
+                        <li><a href="https://tools.famral.com/seo">SEO Tools</a></li>
                     </ul>
                 </div>
             </div>
