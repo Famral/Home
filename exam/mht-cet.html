@@ -15,7 +15,7 @@
     <meta name="format-detection" content="telephone=no" />
     <meta name="geo.region" content="IN-MH" />
     <meta name="geo.placename" content="Maharashtra, India" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="icon" type="image/webp" href="/famral.webp" />
 
     <link rel="canonical" href="https://www.famral.com/exam/mht-cet" />
     <meta property="og:type" content="website" />
@@ -41,29 +41,39 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet" />
+    <link rel="preload"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+          as="style"
+          onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+      <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" />
+    </noscript>
 
+    <!-- Schema.org JSON-LD Markup -->
+        <!-- Adsense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7876432493491415"
         crossorigin="anonymous"></script>
-
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-H57NCR0QYN"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
+
         gtag('config', 'G-H57NCR0QYN');
     </script>
-
+    <!-- OneSignal -->
     <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
     <script>
         window.OneSignalDeferred = window.OneSignalDeferred || [];
         OneSignalDeferred.push(async function (OneSignal) {
-            await OneSignal.init({ appId: "72462423-a0fd-4ef3-9cf5-a279f6e03553" });
+            await OneSignal.init({
+                appId: "72462423-a0fd-4ef3-9cf5-a279f6e03553",
+            });
         });
     </script>
 
-    <!-- Schema.org JSON-LD Markup -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -84,7 +94,7 @@
         "@type": "Organization",
         "name": "Famral",
         "url": "https://www.famral.com",
-        "logo": "https://www.famral.com/favicon.png",
+        "logo": "https://www.famral.com/famral.webp",
         "sameAs": [
             "https://twitter.com/famralofficial",
             "https://www.facebook.com/famralofficial",

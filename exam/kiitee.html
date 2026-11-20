@@ -31,8 +31,8 @@
     <meta name="twitter:image" content="https://famral.com/image/kiitee.webp" />
 
     <!-- Favicon & Touch Icons -->
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="apple-touch-icon" href="/favicon.png" />
+    <link rel="icon" type="image/webp" href="/famral.webp" />
+    <link rel="apple-touch-icon" href="/famral.webp" />
 
     <!-- Google Fonts & FontAwesome -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -46,28 +46,31 @@
     <link rel="stylesheet" href="/style.css" />
 
     <!-- Google AdSense -->
+    <!-- Google Analytics (gtag.js) -->
+    <!-- Structured Data (JSON-LD 1: WebSite) -->
+        <!-- Adsense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7876432493491415"
         crossorigin="anonymous"></script>
-
-    <!-- Google Analytics (gtag.js) -->
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-H57NCR0QYN"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
+
         gtag('config', 'G-H57NCR0QYN');
     </script>
-
-    <!-- OneSignal Web Push Notifications -->
+    <!-- OneSignal -->
     <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
     <script>
         window.OneSignalDeferred = window.OneSignalDeferred || [];
         OneSignalDeferred.push(async function (OneSignal) {
-            await OneSignal.init({ appId: "72462423-a0fd-4ef3-9cf5-a279f6e03553" });
+            await OneSignal.init({
+                appId: "72462423-a0fd-4ef3-9cf5-a279f6e03553",
+            });
         });
     </script>
 
-    <!-- Structured Data (JSON-LD 1: WebSite) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -143,7 +146,7 @@
         "name": "Famral",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://famral.com/favicon.png"
+          "url": "https://www.famral.com/famral.webp"
         }
       },
       "datePublished": "2026-11-19T00:00:00+05:30",
@@ -1614,7 +1617,7 @@
                         <img src="/image/kiitee.webp"
                             alt="KIITEE 2027 Official Entrance Exam Seal Emblem — KIIT Deemed to be University Bhubaneswar"
                             class="hero-logo" width="140" height="140" loading="eager"
-                            onerror="this.src='/favicon.png'" />
+                            onerror="this.src='/famral.webp'" />
                     </div>
                     <div class="hero-content-col">
                         <div class="hero-badge-wrap">

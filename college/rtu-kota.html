@@ -17,7 +17,7 @@
   <!-- Geo SEO -->
   <meta name="geo.region" content="IN-RJ" />
   <meta name="geo.placename" content="Kota, Rajasthan, India" />
-  <link rel="icon" type="image/png" href="https://www.famral.com/favicon.png">
+  <link rel="icon" type="image/webp" href="/famral.webp">
 
   <!-- Canonical & Open Graph -->
   <link rel="canonical" href="https://www.famral.com/college/rtu-kota" />
@@ -55,31 +55,37 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="https://www.famral.com/image/rtu-kota.webp" type="image/webp"
     fetchpriority="high">
-    <!-- Google AdSense -->
+
+
+
+
+
+  <!-- Schema.org Markup -->
+  <!-- 1. WebSite -->
+      <!-- Adsense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7876432493491415"
         crossorigin="anonymous"></script>
-
-    <!-- Google Analytics (gtag.js) -->
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-H57NCR0QYN"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
+
         gtag('config', 'G-H57NCR0QYN');
     </script>
-
-    <!-- OneSignal Web Push Notifications -->
+    <!-- OneSignal -->
     <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
     <script>
         window.OneSignalDeferred = window.OneSignalDeferred || [];
         OneSignalDeferred.push(async function (OneSignal) {
-            await OneSignal.init({ appId: "72462423-a0fd-4ef3-9cf5-a279f6e03553" });
+            await OneSignal.init({
+                appId: "72462423-a0fd-4ef3-9cf5-a279f6e03553",
+            });
         });
     </script>
 
-  <!-- Schema.org Markup -->
-  <!-- 1. WebSite -->
-  <script type="application/ld+json">
+    <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
@@ -104,7 +110,7 @@
       "url": "https://www.famral.com",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.famral.com/favicon.png",
+        "url": "https://www.famral.com/famral.webp",
         "width": 48,
         "height": 48
       },
@@ -2088,7 +2094,6 @@
         </div>
       </div>
     </div>
-    </div>
   </section>
 
   <!-- Footer -->
@@ -2198,7 +2203,9 @@
     });
   </script>
 
-
+  <!-- Interaction delayed loader for Google Adsense, Analytics & OneSignal -->
+  <script>
+    </script>
 </body>
 
 </html>
