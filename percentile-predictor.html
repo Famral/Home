@@ -15,7 +15,7 @@
     <meta name="author" content="Famral" />
     <meta name="theme-color" content="#0067b8" />
     <meta name="format-detection" content="telephone=no" />
-    <link rel="icon" type="image/png" href="./favicon.png">
+    <link rel="icon" type="image/webp" href="/famral.webp">
 
     <!-- Canonical & Open Graph -->
     <link rel="canonical" href="https://www.famral.com/percentile-predictor" />
@@ -38,31 +38,41 @@
         content="Estimate your percentile for JEE Main, MHT CET, CAT, and NMAT. Enter your score and get an instant percentile estimate." />
     <meta name="twitter:image" content="https://www.famral.com/percentile-predictor.png" />
 
-        <!-- Google AdSense -->
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    </noscript>
+
+
+
+    <!-- Adsense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7876432493491415"
         crossorigin="anonymous"></script>
-
-    <!-- Google Analytics (gtag.js) -->
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-H57NCR0QYN"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
+
         gtag('config', 'G-H57NCR0QYN');
     </script>
-
-    <!-- OneSignal Web Push Notifications -->
+    <!-- OneSignal -->
     <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
     <script>
         window.OneSignalDeferred = window.OneSignalDeferred || [];
         OneSignalDeferred.push(async function (OneSignal) {
-            await OneSignal.init({ appId: "72462423-a0fd-4ef3-9cf5-a279f6e03553" });
+            await OneSignal.init({
+                appId: "72462423-a0fd-4ef3-9cf5-a279f6e03553",
+            });
         });
     </script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <script type="application/ld+json">
     {
@@ -912,7 +922,7 @@
         <!-- Hero Section -->
         <section class="hero">
             <div class="container">
-                <h1>Free Percentile Predictor</h1>
+                <h1>Free Percentile Predictor 2027</h1>
                 <p>Choose your exam below and estimate your likely percentile
                     instantly — free, accurate, and based on historical score-percentile data.</p>
             </div>
@@ -989,7 +999,7 @@
                             Predict Now
                         </div>
                     </a>
-                    
+
 
                 </div>
             </div>
@@ -1007,8 +1017,10 @@
                             <span class="faq-icon"></span>
                         </button>
                         <div class="faq-answer">
-                            <p>A Percentile Predictor is a free tool that estimates your likely percentile for competitive
-                                exams like JEE Main, MHT CET, CAT, and NMAT based on your raw score or marks. It compares your score
+                            <p>A Percentile Predictor is a free tool that estimates your likely percentile for
+                                competitive
+                                exams like JEE Main, MHT CET, CAT, and NMAT based on your raw score or marks. It
+                                compares your score
                                 against historical score-percentile distribution data from previous years to give you
                                 an indicative percentile range that helps with planning and college shortlisting.</p>
                         </div>
@@ -1021,7 +1033,8 @@
                         <div class="faq-answer">
                             <p>Famral offers free percentile predictors for JEE Main (National Engineering), MHT CET
                                 (Maharashtra Engineering/Pharmacy), CAT (National MBA/Management), and NMAT by GMAC
-                                (NMIMS &amp; Top Business Schools). Each predictor uses exam-specific historical score-percentile
+                                (NMIMS &amp; Top Business Schools). Each predictor uses exam-specific historical
+                                score-percentile
                                 data for accurate estimates.</p>
                         </div>
                     </div>
@@ -1032,8 +1045,10 @@
                         </button>
                         <div class="faq-answer">
                             <p>No. Percentile indicates the percentage of candidates who scored equal to or below your
-                                score. For example, a 99 percentile in CAT, NMAT, or JEE Main means you scored higher than 99% of all
-                                test-takers. Percentage is simply your raw marks divided by total marks multiplied by 100.</p>
+                                score. For example, a 99 percentile in CAT, NMAT, or JEE Main means you scored higher
+                                than 99% of all
+                                test-takers. Percentage is simply your raw marks divided by total marks multiplied by
+                                100.</p>
                         </div>
                     </div>
                     <div class="faq-item">
@@ -1044,7 +1059,8 @@
                         <div class="faq-answer">
                             <p>No. Percentile Predictors provide indicative estimates based on historical
                                 score-to-percentile data from previous exam sessions. Actual percentiles depend on the
-                                current year's difficulty level, slot-wise normalization, and the total number of candidates.
+                                current year's difficulty level, slot-wise normalization, and the total number of
+                                candidates.
                                 Always wait for the official result before making any final decisions.</p>
                         </div>
                     </div>
@@ -1063,45 +1079,50 @@
             </div>
         </section>
 
-        <!-- Footer -->
-        <!-- Shared Global Footer injected by common.js -->
+    </main>
+
+    <!-- Footer -->
+    <!-- Shared Global Footer injected by common.js -->
     <div id="footer-placeholder"></div>
 
     <script src="/common.js"></script>
 
-        <!-- Simple JS for Mobile Menu Toggle -->
-        <script>
+    <!-- Simple JS for Mobile Menu Toggle -->
+    <script>
         // Nav & Footer managed by common.js
 
 
-            // FAQ Accordion Toggle
-            const faqItems = document.querySelectorAll('.faq-item');
-            faqItems.forEach(item => {
-                const question = item.querySelector('.faq-question');
-                const answer = item.querySelector('.faq-answer');
+        // FAQ Accordion Toggle
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            const answer = item.querySelector('.faq-answer');
 
-                question.addEventListener('click', () => {
-                    const isActive = item.classList.contains('active');
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
 
-                    faqItems.forEach(otherItem => {
-                        if (otherItem !== item && otherItem.classList.contains('active')) {
-                            otherItem.classList.remove('active');
-                            otherItem.querySelector('.faq-answer').style.maxHeight = '0';
-                        }
-                    });
-
-                    if (isActive) {
-                        item.classList.remove('active');
-                        answer.style.maxHeight = '0';
-                    } else {
-                        item.classList.add('active');
-                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item && otherItem.classList.contains('active')) {
+                        otherItem.classList.remove('active');
+                        otherItem.querySelector('.faq-answer').style.maxHeight = '0';
                     }
                 });
+
+                if (isActive) {
+                    item.classList.remove('active');
+                    answer.style.maxHeight = '0';
+                } else {
+                    item.classList.add('active');
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                }
             });
+        });
 
-        </script>
+    </script>
 
+    <!-- Interaction delayed loader for Google Adsense, Analytics & OneSignal -->
+    <script>
+    </script>
 </body>
 
 </html>

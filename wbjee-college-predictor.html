@@ -18,7 +18,7 @@
   <!-- Geo SEO -->
   <meta name="geo.region" content="IN-WB" />
   <meta name="geo.placename" content="Kolkata, West Bengal, India" />
-  <link rel="icon" type="image/png" href="./favicon.png">
+  <link rel="icon" type="image/webp" href="/famral.webp">
 
   <!-- Canonical & Open Graph -->
   <link rel="canonical" href="https://www.famral.com/wbjee-college-predictor" />
@@ -47,22 +47,30 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+          as="style"
+          onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+      <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    </noscript>
 
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7876432493491415"
-    crossorigin="anonymous"></script>
+  <!-- Schema.org Markup -->
+      <!-- Adsense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7876432493491415"
+        crossorigin="anonymous"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H57NCR0QYN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H57NCR0QYN"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-H57NCR0QYN');
-  </script>
-
-      <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+        gtag('config', 'G-H57NCR0QYN');
+    </script>
+    <!-- OneSignal -->
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
     <script>
         window.OneSignalDeferred = window.OneSignalDeferred || [];
         OneSignalDeferred.push(async function (OneSignal) {
@@ -71,9 +79,8 @@
             });
         });
     </script>
-  
-  <!-- Schema.org Markup -->
-  <script type="application/ld+json">
+
+    <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
@@ -92,7 +99,7 @@
       "@type": "Organization",
       "name": "Famral",
       "url": "https://www.famral.com",
-      "logo": "https://www.famral.com/favicon.png",
+      "logo": "https://www.famral.com/famral.webp",
       "sameAs": [
         "https://www.facebook.com/famralofficial",
         "https://twitter.com/famralofficial"
@@ -1344,35 +1351,8 @@
 
 <body>
 
-  <nav class="navbar" aria-label="Main navigation">
-    <div class="container nav-container">
-      <!-- Logo -->
-      <a href="https://www.famral.com/" class="nav-logo">
-        <img src="https://www.famral.com/favicon.png" alt="Famral Logo">
-        Famral
-      </a>
-
-      <!-- Mobile Menu Toggle Button -->
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
-        <i class="fas fa-bars"></i>
-      </button>
-
-      <!-- Navigation Links -->
-      <div class="nav-links-wrapper" id="navLinks">
-        <a href="/" class="nav-link">Home</a>
-        <div class="nav-item dropdown">
-          <button class="nav-link dropdown-toggle" id="dropdownBtn">College Predictor <i
-              class="fas fa-chevron-down fa-xs"></i></button>
-          <div class="dropdown-menu" id="dropdownMenu">
-            <a href="/wbjee-college-predictor">WBJEE College Predictor</a>
-            <a href="/cuet-college-predictor">CUET College Predictor</a>
-            <a href="/reap-college-predictor">REAP College Predictor</a>
-            <a href="/mp-dte-college-predictor">MP DTE College Predictor</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </nav>
+  <!-- Shared Global Navbar injected by common.js -->
+    <div id="navbar-placeholder"></div>
 
   <main>
     <!-- Hero Section -->
@@ -1882,87 +1862,16 @@
   </div>
 
   <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <!-- Footer Links Section -->
-      <div class="footer-links-grid">
-        <div>
-          <h4>WBJEE Admissions</h4>
-          <ul>
-            <li><a href="/wbjee-college-predictor">WBJEE Predictor</a></li>
-            <li><a href="https://wbjeeb.nic.in/" target="_blank" rel="noopener">Official WBJEE Board</a></li>
-            <li><a href="https://wbjeeb.in/" target="_blank" rel="noopener">WBJEE Counseling Portal</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Counseling Portals</h4>
-          <ul>
-            <li><a href="/cuet-college-predictor">CUET Predictor</a></li>
-            <li><a href="/mp-dte-college-predictor">MP DTE Predictor</a></li>
-            <li><a href="/reap-college-predictor">REAP Predictor</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Support &amp; Resources</h4>
-          <ul>
-            <li><a href="#faqs">Counseling FAQs</a></li>
-            <li><a href="#admission-info">Admission Insights</a></li>
-            <li><a href="#predictor-tool">Cutoff Estimator</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Company</h4>
-          <ul>
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/privacy">Privacy Policy</a></li>
-            <li><a href="/terms">Terms &amp; Conditions</a></li>
-            <li><a href="/contact">Contact Us</a></li>
-          </ul>
-        </div>
-      </div>
+  <!-- Shared Global Footer injected by common.js -->
+    <div id="footer-placeholder"></div>
 
-      <div class="footer-content">
-        <p>&copy; <span id="current-year">2027</span> Famral. All Rights Reserved.</p>
-        <p><a href="#" class="back-to-top">Back to Top <i class="fas fa-arrow-up"></i></a></p>
-      </div>
-    </div>
-  </footer>
+    <script src="/common.js"></script>
 
   <!-- JavaScript logic for navigation and predictor functions -->
   <script>
     // Navbar Mobile Toggle
-    const navToggle = document.querySelector('.nav-toggle');
-    const navLinks = document.querySelector('.nav-links-wrapper');
-    const toggleIcon = navToggle.querySelector('i');
+        // Nav & Footer managed by common.js
 
-    navToggle.addEventListener('click', () => {
-      const isExpanded = navLinks.classList.toggle('active');
-      navToggle.setAttribute('aria-expanded', isExpanded);
-
-      if (isExpanded) {
-        toggleIcon.classList.remove('fa-bars');
-        toggleIcon.classList.add('fa-times');
-      } else {
-        toggleIcon.classList.remove('fa-times');
-        toggleIcon.classList.add('fa-bars');
-      }
-    });
-
-    // Dropdown menu toggle
-    const dropdownBtn = document.getElementById('dropdownBtn');
-    const dropdownMenu = document.getElementById('dropdownMenu');
-
-    dropdownBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      dropdownMenu.classList.toggle('show');
-    });
-
-    document.addEventListener('click', () => {
-      dropdownMenu.classList.remove('show');
-    });
-
-    // Current Year Update
-    document.getElementById('current-year').textContent = new Date().getFullYear();
 
     // ==========================================
     // WBJEE Colleges and cutoffs database 2027

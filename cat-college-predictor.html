@@ -16,7 +16,7 @@
   <meta name="format-detection" content="telephone=no" />
   <meta name="geo.region" content="IN" />
   <meta name="geo.placename" content="India" />
-  <link rel="icon" type="image/png" href="./favicon.png">
+  <link rel="icon" type="image/webp" href="/famral.webp">
   <link rel="canonical" href="https://www.famral.com/cat-college-predictor" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Famral" />
@@ -38,31 +38,38 @@
   <noscript>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   </noscript>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-      <!-- Google AdSense -->
+  <link rel="preload"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+          as="style"
+          onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+      <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    </noscript>
+      <!-- Adsense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7876432493491415"
         crossorigin="anonymous"></script>
-
-    <!-- Google Analytics (gtag.js) -->
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-H57NCR0QYN"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
+
         gtag('config', 'G-H57NCR0QYN');
     </script>
-
-    <!-- OneSignal Web Push Notifications -->
+    <!-- OneSignal -->
     <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
     <script>
         window.OneSignalDeferred = window.OneSignalDeferred || [];
         OneSignalDeferred.push(async function (OneSignal) {
-            await OneSignal.init({ appId: "72462423-a0fd-4ef3-9cf5-a279f6e03553" });
+            await OneSignal.init({
+                appId: "72462423-a0fd-4ef3-9cf5-a279f6e03553",
+            });
         });
     </script>
 
-  <script
+    <script
     type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"CAT College Predictor","url":"https://www.famral.com/cat-college-predictor","applicationCategory":"EducationalApplication","operatingSystem":"All","description":"Free CAT College Predictor 2027","offers":{"@type":"Offer","price":"0.00","priceCurrency":"INR"},"publisher":{"@type":"Organization","name":"Famral","url":"https://www.famral.com"}}</script>
   <script
     type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the CAT College Predictor and how does it work?","acceptedAnswer":{"@type":"Answer","text":"The CAT College Predictor estimates MBA and PGDM admission call chances in IIMs (BLACKI, New, and Baby IIMs) and top Non-IIM B-Schools (FMS, MDI, SPJIMR, IIT B-Schools) based on official CAT percentile cutoffs and category."}},{"@type":"Question","name":"What CAT percentile is required for IIM Ahmedabad, Bangalore, and Calcutta?","acceptedAnswer":{"@type":"Answer","text":"For General category candidates, IIM Ahmedabad, Bangalore, and Calcutta typically require a CAT percentile of 99.2 to 99.5+ for Engineers, alongside strong sectional percentiles and academic scores."}},{"@type":"Question","name":"What is FMS Delhi's CAT cutoff percentile and fees?","acceptedAnswer":{"@type":"Answer","text":"Faculty of Management Studies (FMS), Delhi University requires a CAT cutoff of ~98.8 to 99.3+ percentile for General candidates. FMS offers unmatched ROI with total 2-year MBA fees of under Rs. 2.0 Lakhs and average placements of Rs. 34.1 LPA."}},{"@type":"Question","name":"What is the CAP (Common Admission Process) cutoff for New IIMs?","acceptedAnswer":{"@type":"Answer","text":"The CAP percentile cutoff for General candidates across 10 New/Baby IIMs (such as IIM Udaipur, Trichy, Ranchi, Raipur, Kashipur, Bodh Gaya, Jammu, Sambalpur, Sirmaur) is generally 92 to 93 percentile overall."}}]}</script>
@@ -1207,34 +1214,8 @@
 
 <body>
   <header>
-    <nav class="navbar" aria-label="Main navigation">
-      <div class="nav-container">
-        <a href="https://www.famral.com/" class="nav-logo"><img src="./favicon.png" alt="Famral Logo" width="32"
-            height="32" loading="eager" decoding="async">Famral</a>
-        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><i
-            class="fas fa-bars"></i></button>
-        <div class="nav-links-wrapper" id="navLinks">
-          <a href="/" class="nav-link">Home</a>
-          <div class="nav-item dropdown">
-            <button class="nav-link dropdown-toggle">College Predictor <i
-                class="fas fa-chevron-down fa-xs"></i></button>
-            <div class="dropdown-menu">
-              <div style="padding:.5rem;">
-                <a href="/cat-college-predictor" style="font-weight:600;color:var(--primary-color);">CAT Predictor</a>
-                <a href="/jee-main-college-predictor">JEE Main Predictor</a>
-                <a href="/jee-advanced-college-predictor">JEE Advanced Predictor</a>
-                <a href="/viteee-college-predictor">VITEEE Predictor</a>
-                <a href="/mht-cet-college-predictor">MHT CET Predictor</a>
-                <a href="/comedk-college-predictor">COMEDK Predictor</a>
-                <a href="/keam-college-predictor">KEAM Predictor</a>
-                <a href="/wbjee-college-predictor">WBJEE Predictor</a>
-                <a href="/ap-eapcet-college-predictor">AP EAPCET Predictor</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
+    <!-- Shared Global Navbar injected by common.js -->
+    <div id="navbar-placeholder"></div>
   </header>
   <main>
     <section class="hero">
@@ -1729,58 +1710,13 @@
       <div id="compare-empty-state" style="text-align:center;padding:2rem 0;color:var(--text-light);">Select 2 or more choices from the predictions to compare their stats side-by-side.</div>
     </div>
   </div>
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-links-grid">
-        <div>
-          <h4>Predictor &amp; Colleges</h4>
-          <ul>
-            <li><a href="#predictor-tool">CAT Predictor</a></li>
-            <li><a href="#predictor-tool">IIM Ahmedabad Cutoff</a></li>
-            <li><a href="#predictor-tool">FMS Delhi MBA Cutoff</a></li>
-            <li><a href="#predictor-tool">IIM Bangalore Cutoff</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Categories &amp; Tiers</h4>
-          <ul>
-            <li><a href="#admission-info">General Category Cutoff</a></li>
-            <li><a href="#admission-info">NC-OBC / EWS Cutoff</a></li>
-            <li><a href="#admission-info">SC / ST / PwD Cutoff</a></li>
-            <li><a href="#admission-info">CAP IIM Process</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Resources &amp; Info</h4>
-          <ul>
-            <li><a href="#faqs">Frequently Asked Questions</a></li>
-            <li><a href="#counseling-guide">IIM Shortlist Guide</a></li>
-            <li><a href="#institutes-list">B-School Directory</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>About Us</h4>
-          <ul>
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/privacy">Privacy Policy</a></li>
-            <li><a href="/terms">Terms &amp; Conditions</a></li>
-            <li><a href="/contact">Contact Us</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-content">
-        <p>&copy; <span id="current-year"></span> Famral. All Rights Reserved.</p>
-        <p><a href="#">Back to Top <i class="fas fa-arrow-up"></i></a></p>
-      </div>
-    </div>
-  </footer>
+  <!-- Shared Global Footer injected by common.js -->
+    <div id="footer-placeholder"></div>
+
+    <script src="/common.js"></script>
   <script>
-    const navToggle = document.querySelector('.nav-toggle'), navLinksWrapper = document.querySelector('.nav-links-wrapper'), toggleIconEl = navToggle.querySelector('i');
-    navToggle.addEventListener('click', () => { const e = navLinksWrapper.classList.toggle('active'); navToggle.setAttribute('aria-expanded', e); e ? toggleIconEl.classList.replace('fa-bars', 'fa-times') : toggleIconEl.classList.replace('fa-times', 'fa-bars'); });
-    navLinksWrapper.querySelectorAll('a').forEach(a => { a.addEventListener('click', () => { navLinksWrapper.classList.remove('active'); navToggle.setAttribute('aria-expanded', 'false'); toggleIconEl.classList.replace('fa-times', 'fa-bars'); }); });
-    document.querySelectorAll('.dropdown-toggle').forEach(t => { t.addEventListener('click', e => { e.stopPropagation(); const m = t.nextElementSibling; document.querySelectorAll('.dropdown-menu.show').forEach(x => { if (x !== m) x.classList.remove('show'); }); if (m) m.classList.toggle('show'); }); });
-    document.addEventListener('click', e => { if (!e.target.closest('.nav-item.dropdown')) document.querySelectorAll('.dropdown-menu.show').forEach(m => m.classList.remove('show')); });
-    document.getElementById('current-year').textContent = new Date().getFullYear();
+        // Nav & Footer managed by common.js
+
     let currentPredictions = [], selectedChoices = [], customOrderChoices = [], comparisonList = [];
     
     const collegeMeta = {
@@ -2406,6 +2342,7 @@
       el.classList.toggle('active');
     }
   </script>
+  
 </body>
 
 </html>

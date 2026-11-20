@@ -9,7 +9,7 @@
         content="Famral – India's trusted education technology platform helping students make informed college admission decisions with accurate college predictors, rank predictors, and free counselling tools.">
     <meta name="keywords"
         content="about famral, college predictor, college counselling, college admission, jee college predictor, famral college predictor, education technology india">
-    <link rel="icon" type="image/png" href="./favicon.png">
+    <link rel="icon" type="image/webp" href="/famral.webp">
 
     <!-- SEO & Social Tags -->
     <meta property="og:type" content="website" />
@@ -17,7 +17,7 @@
     <meta property="og:title" content="About Us | Famral – India's Free College Admission Platform" />
     <meta property="og:description"
         content="Learn about Famral – India's trusted education technology platform helping students make informed college admission decisions with accurate college predictors, rank predictors, and free counselling tools." />
-    <meta property="og:image" content="https://www.famral.com/favicon.png" />
+    <meta property="og:image" content="https://www.famral.com/famral.webp" />
     <meta name="twitter:card" content="summary_large_image" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -25,43 +25,53 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-        <!-- Google AdSense -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    </noscript>
+    <!-- Schema.org Markup -->
+    <!-- Adsense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7876432493491415"
         crossorigin="anonymous"></script>
-
-    <!-- Google Analytics (gtag.js) -->
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-H57NCR0QYN"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
+
         gtag('config', 'G-H57NCR0QYN');
     </script>
-
-    <!-- OneSignal Web Push Notifications -->
+    <!-- OneSignal -->
     <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
     <script>
         window.OneSignalDeferred = window.OneSignalDeferred || [];
         OneSignalDeferred.push(async function (OneSignal) {
-            await OneSignal.init({ appId: "72462423-a0fd-4ef3-9cf5-a279f6e03553" });
+            await OneSignal.init({
+                appId: "72462423-a0fd-4ef3-9cf5-a279f6e03553",
+            });
         });
     </script>
 
-    <!-- Schema.org Markup -->
     <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "AboutPage",
     "name": "About Famral",
     "url": "https://www.famral.com/about",
-    "description": "Famral is an education technology platform dedicated to helping students make informed college admission decisions through accurate prediction tools and reliable counselling resources.",
+    "description": "Famral is a free education and technology platform providing admission predictors for 50+ entrance exams and a suite of 100+ free online productivity, academic GPA, developer, and media utilities via Famral Tools.",
     "publisher": {
       "@type": "Organization",
       "name": "Famral",
       "url": "https://www.famral.com/",
-      "logo": "https://www.famral.com/favicon.png"
+      "logo": "https://www.famral.com/famral.webp",
+      "sameAs": [
+        "https://www.facebook.com/famralofficial",
+        "https://twitter.com/famralofficial",
+        "https://www.instagram.com/famralofficial"
+      ]
     }
   }
   </script>
@@ -1018,6 +1028,7 @@
         }
 
         @media (max-width: 480px) {
+
             html,
             body {
                 font-size: 15px;
@@ -1171,20 +1182,6 @@
     </style>
 
 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7876432493491415"
-        crossorigin="anonymous"></script>
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H57NCR0QYN"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-H57NCR0QYN');
-    </script>
-
-
     <!-- Schema.org Markup -->
     <script type="application/ld+json">
   {
@@ -1217,15 +1214,13 @@
             <div class="container">
                 <div class="hero-badge">
                     <i class="fas fa-graduation-cap"></i>
-                    India's Trusted Admission Platform
+                    Empowering Students &amp; Developers Across India
                 </div>
                 <h1 id="hero-heading">
                     Helping Every Student Find<br>
-                    <span>Their Right College</span>
+                    <span>Their Right College &amp; Tools</span>
                 </h1>
-                <p>Famral is an education technology platform dedicated to helping students make informed college
-                    admission decisions through accurate prediction tools, cutoff analysis, and reliable counselling
-                    resources &mdash; completely free.</p>
+                <p>Famral is India's premier free education and technology platform. We empower students with predictive college admission insights across 50+ entrance exams, and provide over 100+ free browser-based productivity, academic GPA, developer, and media utilities via <a href="https://tools.famral.com/" target="_blank" rel="noopener noreferrer" style="color: #ffffff; text-decoration: underline; font-weight: 600;">Famral Tools</a> &mdash; backed by 100% client-side privacy, accurate data algorithms, and comprehensive resources &mdash; completely free.</p>
                 <div class="hero-buttons">
                     <a href="https://www.famral.com/college-predictor" class="btn btn-primary"
                         id="hero-college-predictor">
@@ -1233,6 +1228,9 @@
                     </a>
                     <a href="https://www.famral.com/rank-predictor" class="btn btn-secondary" id="hero-rank-predictor">
                         <i class="fas fa-chart-line"></i> Rank Predictor
+                    </a>
+                    <a href="https://tools.famral.com/" target="_blank" rel="noopener noreferrer" class="btn btn-white" id="hero-famral-tools">
+                        <i class="fas fa-tools"></i> 100+ Online Tools
                     </a>
                 </div>
             </div>
@@ -1247,19 +1245,19 @@
                         <span class="stat-label">Admission Predictors</span>
                     </div>
                     <div class="stat-item">
+                        <span class="stat-number">100+</span>
+                        <span class="stat-label">Online Tools &amp; Calculators</span>
+                    </div>
+                    <div class="stat-item">
                         <span class="stat-number">40+</span>
                         <span class="stat-label">State Counselling Systems</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-number">500K+</span>
-                        <span class="stat-label">Predictions Calculated</span>
-                    </div>
-                    <div class="stat-item">
                         <span class="stat-number">100%</span>
-                        <span class="stat-label">Free &amp; Cutoff-Backed</span>
+                        <span class="stat-label">Client-Side Private</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-number">2026</span>
+                        <span class="stat-number">2027</span>
                         <span class="stat-label">Latest Cycle Covered</span>
                     </div>
                 </div>
@@ -1357,6 +1355,78 @@
                         <h3>Counselling Guides &amp; Resources</h3>
                         <p>In-depth articles on document checklists, seat allotment processes, score normalisation, and
                             admission timelines to keep you informed at every step.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ FAMRAL TOOLS ECOSYSTEM ══ -->
+        <section class="features-section" style="background: var(--surface);" aria-labelledby="tools-ecosystem-heading">
+            <div class="container">
+                <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem;">
+                    <div>
+                        <span class="section-label">Companion Suite</span>
+                        <h2 id="tools-ecosystem-heading">Famral Tools Ecosystem (100+ Free Online Utilities)</h2>
+                        <p class="section-desc" style="margin-bottom: 0;">Beyond admission predictors, our companion platform <a href="https://tools.famral.com/" target="_blank" rel="noopener noreferrer" style="color:var(--blue);font-weight:700;">tools.famral.com</a> delivers 100+ high-performance browser utilities engineered with 100% client-side privacy.</p>
+                    </div>
+                    <a href="https://tools.famral.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="white-space:nowrap;">
+                        <i class="fas fa-external-link-alt"></i> Open Famral Tools
+                    </a>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="f-icon" style="background:#fef3c7; color:#92400e;"><i class="fas fa-graduation-cap"></i></div>
+                        <h3>Academic Calculators</h3>
+                        <p>Calculate semester SGPA, cumulative CGPA, and equivalent percentage tailored for RTU, SKIT, MBM, and CBCS university grading schemes, plus our 75% attendance goal planner.</p>
+                        <div style="margin-top: 0.75rem; font-size: 0.85rem;">
+                            <a href="https://tools.famral.com/academic" target="_blank" rel="noopener noreferrer" style="color:var(--blue);font-weight:600;">Explore Academic Suite &rarr;</a>
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="f-icon" style="background:#e0e7ff; color:#3730a3;"><i class="fas fa-code"></i></div>
+                        <h3>Developer Utilities</h3>
+                        <p>Real-time formatters, minifiers, viewers, and validators for JSON, XML, YAML, SQL, HTML, CSS, and JavaScript. Perform complex conversions without sharing API keys or payloads.</p>
+                        <div style="margin-top: 0.75rem; font-size: 0.85rem;">
+                            <a href="https://tools.famral.com/developer" target="_blank" rel="noopener noreferrer" style="color:var(--blue);font-weight:600;">Explore Developer Suite &rarr;</a>
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="f-icon" style="background:#dcfce7; color:#166534;"><i class="fas fa-image"></i></div>
+                        <h3>Image Tools &amp; Editors</h3>
+                        <p>Compress, resize, crop, and convert images (JPG, PNG, WebP, HEIC) using browser WebAssembly. Your photos and graphics are processed 100% locally with zero cloud upload.</p>
+                        <div style="margin-top: 0.75rem; font-size: 0.85rem;">
+                            <a href="https://tools.famral.com/image" target="_blank" rel="noopener noreferrer" style="color:var(--blue);font-weight:600;">Explore Image Suite &rarr;</a>
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="f-icon" style="background:#fee2e2; color:#991b1b;"><i class="fas fa-file-pdf"></i></div>
+                        <h3>PDF Document Suite</h3>
+                        <p>Convert PDF to high-DPI JPG or PNG images, transform images to PDF, and manage document rendering in memory with complete data confidentiality.</p>
+                        <div style="margin-top: 0.75rem; font-size: 0.85rem;">
+                            <a href="https://tools.famral.com/pdf" target="_blank" rel="noopener noreferrer" style="color:var(--blue);font-weight:600;">Explore PDF Suite &rarr;</a>
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="f-icon" style="background:#e0f2fe; color:#0369a1;"><i class="fas fa-globe"></i></div>
+                        <h3>SEO &amp; Webmaster Suite</h3>
+                        <p>Generate Google-compliant Schema.org JSON-LD structured data, Open Graph meta tags, and Twitter Cards with real-time mobile and desktop SERP preview simulators.</p>
+                        <div style="margin-top: 0.75rem; font-size: 0.85rem;">
+                            <a href="https://tools.famral.com/seo" target="_blank" rel="noopener noreferrer" style="color:var(--blue);font-weight:600;">Explore SEO Suite &rarr;</a>
+                        </div>
+                    </div>
+
+                    <div class="feature-card" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: #ffffff;">
+                        <div class="f-icon" style="background: rgba(255,255,255,0.15); color: #38bdf8;"><i class="fas fa-shield-alt"></i></div>
+                        <h3 style="color:#ffffff;">Zero-Knowledge Client-Side Privacy</h3>
+                        <p style="color:#cbd5e1;">Unlike traditional web tools that store documents and code on remote servers, Famral Tools runs entirely on your device. Zero cloud uploads, zero data logs, and zero tracking.</p>
+                        <div style="margin-top: 0.75rem; font-size: 0.85rem;">
+                            <a href="https://tools.famral.com/" target="_blank" rel="noopener noreferrer" style="color:#38bdf8;font-weight:700;">Learn More About Security &rarr;</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1470,10 +1540,8 @@
                             always reflect the most current admission trends.</p>
                     </div>
                     <div class="value-card">
-                        <h3><i class="fas fa-shield-alt" style="color:var(--blue);margin-right:0.45rem;"></i>Privacy
-                            Respected</h3>
-                        <p>We don't require sign-ups to use our tools, and we never sell your data. Your information
-                            stays private.</p>
+                        <h3><i class="fas fa-shield-alt" style="color:var(--blue);margin-right:0.45rem;"></i>Client-Side Privacy</h3>
+                        <p>We don't require sign-ups to use our tools, and our companion platform (tools.famral.com) runs 100% client-side via WebAssembly. Your files, marks, and code never leave your browser.</p>
                     </div>
                 </div>
             </div>
@@ -1592,6 +1660,26 @@
                     </div>
 
                     <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-tools-1" id="faq-btn-tools-1">
+                            What is Famral Tools (tools.famral.com) and how does it relate to Famral?
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer" id="faq-tools-1" role="region" aria-labelledby="faq-btn-tools-1">
+                            Famral Tools (<a href="https://tools.famral.com/" target="_blank" rel="noopener noreferrer" style="color:var(--blue);font-weight:600;">tools.famral.com</a>) is our companion platform offering 100+ free online utilities across 5 core categories: Academic Grade Calculators (RTU, SKIT, MBM SGPA/CGPA, 75% Attendance Planner), Developer Utilities (JSON, XML, YAML formatters, code minifiers), Image Editors (client-side compression, HEIC/WebP converter), PDF Tools, and SEO Generators. Both platforms share the same founding philosophy: high-performance, completely free utilities with zero paywalls.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-tools-2" id="faq-btn-tools-2">
+                            Are my files, student records, and code safe on tools.famral.com?
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer" id="faq-tools-2" role="region" aria-labelledby="faq-btn-tools-2">
+                            Yes, 100%. Famral Tools uses a zero-knowledge, client-side execution model. All computations, image compressions, PDF conversions, and code formatting happen directly in your browser's local memory using modern JavaScript and WebAssembly. Your files, documents, and code are never transmitted, stored, or processed on remote cloud servers.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
                         <button class="faq-question" aria-expanded="false" aria-controls="faq-2" id="faq-btn-2">
                             Are all Famral tools completely free?
                             <i class="fas fa-chevron-down faq-icon"></i>
@@ -1685,8 +1773,8 @@
                         id="cta-rank-predictor">
                         <i class="fas fa-chart-line"></i> Rank Predictor
                     </a>
-                    <a href="https://www.famral.com/percentile-predictor"
-                        class="btn btn-outline-white" id="cta-rank-predictor">
+                    <a href="https://www.famral.com/percentile-predictor" class="btn btn-outline-white"
+                        id="cta-rank-predictor">
                         <i class="fab fa-chart-line"></i> Percentile Predictor
                     </a>
                 </div>
@@ -1702,9 +1790,29 @@
     <script src="/common.js"></script>
 
     <script>
-        // ── Mobile Nav Toggle ──
         // Nav & Footer managed by common.js
 
+        // FAQ Accordion Toggle
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const expanded = button.getAttribute('aria-expanded') === 'true';
+                const answer = button.nextElementSibling;
+
+                // Close other open questions
+                document.querySelectorAll('.faq-question').forEach(otherBtn => {
+                    if (otherBtn !== button) {
+                        otherBtn.setAttribute('aria-expanded', 'false');
+                        const otherAns = otherBtn.nextElementSibling;
+                        if (otherAns) otherAns.classList.remove('open');
+                    }
+                });
+
+                button.setAttribute('aria-expanded', !expanded);
+                if (answer) {
+                    answer.classList.toggle('open', !expanded);
+                }
+            });
+        });
     </script>
 
 </body>

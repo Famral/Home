@@ -490,7 +490,7 @@
         <div class="nav-container">
             <!-- Logo -->
             <a href="https://www.famral.com/" class="nav-logo">
-                <img src="/favicon.png" alt="Famral Logo" width="32" height="32">
+                <img src="/famral.webp" alt="Famral Logo" width="32" height="32">
                 Famral
             </a>
 
@@ -647,6 +647,8 @@
                         <li><a href="/exam/viteee">VITEEE 2027</a></li>
                         <li><a href="/exam/bitsat">BITSAT 2027</a></li>
                         <li><a href="/exam/met">MET 2027</a></li>
+                        <li><a href="/exam/srmjeee">SRMJEEE 2027</a></li>
+                        <li><a href="/exam/kiitee">KIITEE 2027</a></li>
                         <li><a href="https://jeerankpredictor.com/">JEE Rank Predictor</a></li>
                         <li><a href="/exam/reap">REAP 2027</a></li>
                         <li><a href="/exam/comedk">COMEDK 2027</a></li>

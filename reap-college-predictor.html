@@ -16,7 +16,7 @@
   <!-- Regional / Geo SEO -->
   <meta name="geo.region" content="IN-RJ" />
   <meta name="geo.placename" content="Rajasthan, India" />
-  <link rel="icon" type="image/png" href="./favicon.png">
+  <link rel="icon" type="image/webp" href="/famral.webp">
 
   <!-- Canonical & Open Graph -->
   <link rel="canonical" href="https://www.famral.com/reap-college-predictor" />
@@ -47,32 +47,47 @@
   </noscript>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+          as="style"
+          onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+      <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    </noscript>
 
-    <!-- Google AdSense -->
+
+
+
+
+
+
+
+  <!-- Schema.org Markup -->
+      <!-- Adsense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7876432493491415"
         crossorigin="anonymous"></script>
-
-    <!-- Google Analytics (gtag.js) -->
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-H57NCR0QYN"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
+
         gtag('config', 'G-H57NCR0QYN');
     </script>
-
-    <!-- OneSignal Web Push Notifications -->
+    <!-- OneSignal -->
     <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
     <script>
         window.OneSignalDeferred = window.OneSignalDeferred || [];
         OneSignalDeferred.push(async function (OneSignal) {
-            await OneSignal.init({ appId: "72462423-a0fd-4ef3-9cf5-a279f6e03553" });
+            await OneSignal.init({
+                appId: "72462423-a0fd-4ef3-9cf5-a279f6e03553",
+            });
         });
     </script>
 
-  <!-- Schema.org Markup -->
-  <script type="application/ld+json">
+    <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
@@ -1424,36 +1439,8 @@
 
 <body>
 
-  <nav class="navbar" aria-label="Main navigation">
-    <div class="nav-container">
-      <!-- Logo -->
-      <a href="https://www.famral.com/" class="nav-logo">
-        <img src="https://www.famral.com/favicon.png" alt="Famral Logo" width="32" height="32">
-        Famral
-      </a>
-
-      <!-- Mobile Menu Toggle Button -->
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
-        <i class="fas fa-bars"></i>
-      </button>
-
-      <!-- Navigation Links -->
-      <div class="nav-links-wrapper" id="navLinks">
-        <a href="/" class="nav-link">Home</a>
-        <div class="nav-item dropdown">
-          <button class="nav-link dropdown-toggle">College Predictor <i class="fas fa-chevron-down fa-xs"></i></button>
-          <div class="dropdown-menu">
-            <div class="mega-column" style="padding: 0.5rem;">
-              <a href="/reap-college-predictor">REAP College Predictor</a>
-              <a href="/mp-dte-college-predictor">MP DTE College Predictor</a>
-              <a href="/hstes-college-predictor">HSTES College Predictor</a>
-              <a href="/acpc-college-predictor">ACPC College Predictor</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </nav>
+  <!-- Shared Global Navbar injected by common.js -->
+    <div id="navbar-placeholder"></div>
 
 
   <main>
@@ -1968,110 +1955,15 @@
 
 
   <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container">
+  <!-- Shared Global Footer injected by common.js -->
+    <div id="footer-placeholder"></div>
 
-      <!-- Footer Links Section -->
-      <div class="footer-links-grid">
-        <div>
-          <h4>National Predictors</h4>
-          <ul>
-            <li><a href="/jee-main-college-predictor">JEE Main Predictor</a></li>
-            <li><a href="/jee-advanced-college-predictor">JEE Advanced Predictor</a></li>
-            <li><a href="/keam-college-predictor">KEAM Predictor</a></li>
-            <li><a href="/tnea-college-predictor">TNEA Predictor</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>State Predictors</h4>
-          <ul>
-            <li><a href="/reap-college-predictor">REAP Predictor</a></li>
-            <li><a href="/mp-dte-college-predictor">MP DTE Predictor</a></li>
-            <li><a href="/hstes-college-predictor">HSTES Predictor</a></li>
-            <li><a href="/acpc-college-predictor">ACPC Predictor</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Resources & Info</h4>
-          <ul>
-            <li><a href="#faqs">Frequently Asked Questions</a></li>
-            <li><a href="#strategy-guides">Choice Filling Strategy</a></li>
-            <li><a href="#strategy-guides">Document Checklist</a></li>
-            <li><a href="#strategy-guides">Reservation Percentages</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>About Us</h4>
-          <ul>
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/privacy">Privacy Policy</a></li>
-            <li><a href="/terms">Terms & Conditions</a></li>
-            <li><a href="/contact">Contact Us</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-content">
-        <p>&copy; <span id="current-year"></span> Famral. All Rights Reserved.</p>
-        <p><a href="#" class="back-to-top">Back to Top <i class="fas fa-arrow-up"></i></a></p>
-      </div>
-    </div>
-  </footer>
+    <script src="/common.js"></script>
 
   <!-- Simple JS for Mobile Menu Toggle -->
   <script>
-    const navToggle = document.querySelector('.nav-toggle');
-    const navLinks = document.querySelector('.nav-links-wrapper');
-    const toggleIcon = navToggle.querySelector('i');
+        // Nav & Footer managed by common.js
 
-    navToggle.addEventListener('click', () => {
-      const isExpanded = navLinks.classList.toggle('active');
-      navToggle.setAttribute('aria-expanded', isExpanded);
-
-      if (isExpanded) {
-        toggleIcon.classList.remove('fa-bars');
-        toggleIcon.classList.add('fa-times');
-      } else {
-        toggleIcon.classList.remove('fa-times');
-        toggleIcon.classList.add('fa-bars');
-      }
-    });
-
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        if (navLinks.classList.contains('active')) {
-          navLinks.classList.remove('active');
-          navToggle.setAttribute('aria-expanded', 'false');
-          toggleIcon.classList.remove('fa-times');
-          toggleIcon.classList.add('fa-bars');
-        }
-      });
-    });
-
-    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
-
-    dropdownToggles.forEach(toggle => {
-      toggle.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const menu = toggle.nextElementSibling;
-
-        document.querySelectorAll('.dropdown-menu.show').forEach(openMenu => {
-          if (openMenu !== menu) openMenu.classList.remove('show');
-        });
-
-        if (menu) menu.classList.toggle('show');
-      });
-    });
-
-    document.addEventListener('click', (e) => {
-      if (!e.target.closest('.nav-item.dropdown')) {
-        document.querySelectorAll('.dropdown-menu.show').forEach(menu => {
-          menu.classList.remove('show');
-        });
-      }
-    });
-
-    document.getElementById('current-year').textContent = new Date().getFullYear();
 
     // ==========================================
     // Official REAP Rajasthan Colleges Database (collegesDb)
@@ -3374,6 +3266,13 @@
     }
   </script>
 
+
+
+
+
+  <!-- Interaction delayed loader for Google Adsense, Analytics & OneSignal -->
+  <script>
+    </script>
 </body>
 
 </html>
